@@ -1,0 +1,176 @@
+# Plugin Panel v6.6（插件面板）
+
+DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
+
+> **版本 v0.6.6**：公开发布版本；保留 v6.5 的可靠翻译、v6.4 的向量索引并发保护，以及 v6.3 的全量目录与向量兼容修复。
+> **v6 新增：语义向量搜索** —— 搜索框旁「语义搜索」开关：关闭 = 关键词搜索；打开 = 向量语义检索（多语言）。默认连接**硅基流动 BAAI/bge-m3**，模型 / API 地址 / Key 可在设置中修改；目录向量索引构建一次后本地缓存（`~/.dsh/plugin-panel/vectors.json`），查询按余弦相似度排序。
+
+v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小批量 JSONL 输出并对缺项逐条重试；结果按原文指纹缓存，目录描述变更后会自动重新翻译；LLM 不可用或仍有缺项时，以社区插件采用的 Google gtx 方式逐条回退。客户端使用持久队列，修复请求进行中因重渲染而漏掉下一批的问题。v6.4 的向量索引并发保护及 v6.3 的全量目录、流式事件和向量兼容修复均保留。
+
+## 语义搜索（v6）
+
+- **开关**：搜索框右侧「语义搜索」勾选框。
+- **配置**：抽屉底部设置区「嵌入模型（语义搜索）」：API Key（必填）、模型（默认 `BAAI/bge-m3`）、API 地址（默认 `https://api.siliconflow.cn/v1`），保存后生效。
+- **建立索引**：开启开关后，若本地无向量索引且已配置 Key，点击「建立向量索引」——host 端分批嵌入全部目录条目（3109 条，约 32 次请求）并落盘缓存；之后查询只嵌入用户输入（1 次请求）。
+- **检索**：输入关键词（中/英文均可）→ host 嵌入查询 → 与缓存向量做余弦相似度 → 返回 Top 结果；与关键词搜索一样受分类/收藏/已安装筛选约束。
+- **安全**：API Key 仅存于本地 `~/.dsh/plugin-panel/state.json`，请求直达配置的 embeddings 端点（默认硅基流动），面板不记录 Key。
+
+## 功能
+
+> **版本 v0.4.0**：独立目录 `v4/`（v1/v2/v3 原样保留）。
+> **v4 新增：排序选项** —— 抽屉内「排序」下拉：默认 / 星标最多 / 星标最少 / 名称 A-Z / 名称 Z-A / 最新创建 / 最早创建；排序作用于筛选后的结果并持久化到设置。
+> **v3 架构（预构建离线索引）**：`scripts/build-catalog.mjs` 构建脚本（可续传、可配 token）服务端抓全 `dsh-plugin` topic 生成 **`catalog/catalog.json`** 随插件发布，面板“全部”目录秒级加载；刷新 = 下载一个文件。
+>
+> **覆盖完整性**：构建脚本对超过 1000 条的查询自动细分 —— 日期区间 → 单日按 `stars:` 区间 → 单星标值按 `size:` 区间，无法细分记入 `gaps` 并在 manifest 暴露覆盖率。
+
+## 功能
+
+- **入口**：侧边栏底部（设置上方）的 “插件面板” 按钮；窄栏（rail）态显示为图标。
+- **右侧抽屉**：点击按钮打开固定右侧抽屉，点遮罩或关闭按钮收起。
+- **双目录源**：搜索框下方「精选 / 全部」切换按钮，**鼠标悬停显示两者区别**：
+  - **精选**：社区人工维护、逐个验证可安装的 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 列表（约 550 个），质量优先；缓存 `catalog.cache.json`。
+  - **全部**：**预构建索引** `catalog/catalog.json`（~3000 个 dsh-plugin 标签仓库，含星级/分类/创建时间），随插件发布、秒级加载；缓存 `catalog.all.cache.json`。索引构建时间显示在抽屉标题栏；设置了远程目录 URL 后，刷新按钮变为一键下载最新索引。
+- **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
+- **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
+- **中英文关键词搜索**：标题、描述（中英）、标签、作者、仓库、npm 名均参与匹配。
+- **排序（v4）**：默认 / 星标最多 / 星标最少 / 名称 A-Z / 名称 Z-A / 最新创建 / 最早创建，持久化到设置。
+- **描述中文翻译**：精选条目内置人工翻译；一键切换 中文 / EN。
+- **收藏管理**：星标收藏，持久化于 `~/.dsh/plugin-panel/state.json`；可筛选“只看收藏”。
+- **已安装管理**：读取 `~/.dsh/profiles/<profile>/package.json` 的 bundle 列表与 `~/.dsh/skills`，标注“已安装”并可筛选。
+- **安装 / 更新 / 卸载（官方命令）**：调用 `dsh plugin --profile <profile> add|remove <spec>`。
+  - **确认**：按钮两段式确认（再点一次才执行）。
+  - **备份**：操作前把 profile 的 `package.json` / `cordis.patch.yml` / `pnpm-lock.yaml` 复制到 `~/.dsh/plugin-panel/backups/<时间戳>/`。
+  - **失败回滚**：命令失败自动恢复备份，并尽力执行反向命令。
+- **环境自检**：抽屉顶部显示 dsh CLI / pnpm 是否可用；pnpm 缺失时一键安装。
+- **安全**：HTTP API 仅接受 loopback 请求；安装来源为目录中列出的官方仓库 / npm 包（不执行任意命令，只转发到官方 `dsh plugin`）。
+
+## 目录构建（维护者用）
+
+```sh
+npm run build                                   # 先构建 lib
+node scripts/build-catalog.mjs --reset          # 全量重建（可续传，断点续跑）
+# 可选：GITHUB_TOKEN=<token> node scripts/build-catalog.mjs   # 提速（30 次/分钟）
+# 产物：catalog/catalog.json（manifest 含覆盖率）
+```
+
+爬取策略：日期分桶（>1 天按日期对半切）→ 单日饱和按 `stars:` 区间切 → 单星标值再按 `size:` 区间切；单查询稳定分页用 `sort=created`（星标排序分页在同星标下有跳变）；每轮限速 7s（未认证 10 次/分钟），403/网络错误自动退避重试；**manifest 记录 `count/totalHits/coveragePct/gaps`，覆盖率透明可见**。
+
+> 安装/卸载后需要**重启 GUI** 才加载/卸载插件本体（DSH 的 bundle 机制如此）；面板自身在重启前仍可继续浏览。
+
+## 安装
+
+使用官方 DSH 插件命令从 GitHub 安装：
+
+```sh
+dsh plugin --profile web add github:Dylan37670/dsh-plugin-panel
+```
+
+安装或更新后重启 DSH Web GUI，侧边栏底部会出现“插件面板”。
+
+开发者从源码构建：
+
+```sh
+# 克隆并进入仓库
+git clone https://github.com/Dylan37670/dsh-plugin-panel.git
+cd dsh-plugin-panel
+npm install
+npm run build && npm test
+
+# 挂载本地源码
+dsh plugin --profile web add .
+
+# 验证挂载
+dsh --profile web --dump-config | grep plugin-panel-market
+
+# 重启 GUI 后，侧边栏底部出现“插件面板”入口
+```
+
+## 目录结构
+
+```
+dsh-plugin-panel/
+├── package.json          # bundle 声明（dsh.bundle.patch + dsh.client）
+├── cordis.patch.yml      # profile 插入行
+├── tsconfig.json
+├── src/
+│   ├── index.ts          # host 入口：注册 /api/plugin-panel 路由
+│   ├── catalog.ts        # 目录服务：远程拉取 + 解析 + 磁盘缓存 + seed 合并
+│   ├── catalog-data.ts   # 精选 seed 目录（含中文翻译）
+│   ├── installed.ts      # 已安装检测（profile bundles + skills）
+│   ├── state.ts          # 收藏 + 设置持久化
+│   ├── lifecycle.ts      # dsh plugin 转发、备份、回滚
+│   ├── http.ts           # HTTP 路由（loopback only）
+│   ├── types.ts          # 共享 JSON 类型
+│   └── client/client.js  # client half（模块加载器格式，React 手写）
+├── scripts/copy-client.mjs
+└── tests/                # catalog / lifecycle / register 契约测试
+```
+
+## 架构
+
+| 端 | 职责 | 通信 |
+|---|---|---|
+| Host | 目录缓存/刷新、安装/更新/卸载（`dsh plugin`）、备份回滚、收藏状态 | 注册 `webServer` 前缀路由 `/api/plugin-panel/*`（仅 loopback） |
+| Client | 侧边栏入口 + 右侧抽屉 UI | 同源 `fetch` 到上述 HTTP API |
+
+插槽使用：`sidebar.footer.action`（入口，`id: plugin-panel-market`）；抽屉由同一组件用固定定位渲染（与内置 Cordis 面板同款做法），不占用额外插槽。
+
+## 测试
+
+```sh
+npm run build   # tsc + 拷贝 client bundle
+npm test        # catalog 解析/合并、状态持久化、备份回滚、注册契约
+```
+
+## 真实 Harness 运行验证（v0.1.0）
+
+在隔离的 `DSH_HOME` 下用官方命令初始化独立 profile `panel-runtime` 并挂载本插件，
+启动第二个 `dsh web`（端口 3081）做端到端验证：
+
+| 验证项 | 结果 |
+|---|---|
+| `dsh plugin add` 挂载 + `--dump-config` 出现 `plugin-panel-market` 行 | ✅ |
+| `GET /api/plugin-panel/catalog`（seed 64 条） | ✅ |
+| `POST /refresh` 拉取真实 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 列表 → 538 条、1.7s、分类正确 | ✅ |
+| 目录磁盘缓存（`plugin-panel/catalog.cache.json`） | ✅ |
+| `/favorite` 收藏持久化（`plugin-panel/state.json`） | ✅ |
+| `/installed` 按 profile 读取 bundles + skills | ✅ |
+| 安装 fixture 插件 → bundles 追加 + `/installed` 反映 | ✅ |
+| 卸载 → bundles 还原 | ✅ |
+| 失败安装（不存在路径）→ `rolledBack: true`，备份恢复，bundles 还原 | ✅ |
+| client bundle 经 `clientModules` 由 `/plugins/@dsh-community/plugin-panel/client.js` 提供（200） | ✅ |
+| `node --check` client bundle 语法 | ✅ |
+| `npm run typecheck` + `npm test`（14 用例） | ✅ |
+
+> 侧边栏入口 + 抽屉的浏览器内视觉验证需在**重启 GUI**（`dsh web`）后进行：
+> 本插件已挂载进真实 web profile，重启后即可在侧边栏底部看到“插件面板”入口。
+
+## 真实 Harness 运行验证（v0.2.0）
+
+v2 在隔离 DSH 实例（端口 3081）与真实 web profile 双重验证：
+
+| 验证项 | 结果 |
+|---|---|
+| v1 全部验证项（目录/缓存/收藏/已安装/安装卸载/回滚/client 服务） | ✅（继承） |
+| pnpm 检测修复（Windows `cmd` 解析 `pnpm.cmd`）→ `/env` `pnpmFound: true` | ✅ |
+| `GET /catalog?lens=curated`（538 条，命中磁盘缓存） | ✅ |
+| `POST /refresh {lens:'all'}` GitHub topic 检索 → **1020 条、totalHits 3058**、20s | ✅ |
+| 全部仓库分类：plugin 672 / client 198 / skill 81 / dev-resource 69 | ✅ |
+| client UI 冒烟测试（真实 bundle + jsdom）：入口按钮、抽屉、搜索、5 分类 tab、设置、**精选/全部仓库切换按钮 + 悬停 data-tip** | ✅ |
+| `npm run typecheck` + `npm test`（18 用例） | ✅ |
+
+> v0.1.0 的原始验证记录见 [v1 README](../v1/dsh-plugin-panel/README.md)。
+
+## 兼容性（v6.6）
+
+社区星标前十插件与本面板的兼容性检查见 [COMPATIBILITY.md](COMPATIBILITY.md)。结论：前十仓库均未注册任何 cordis 行/工具/服务/插槽/路由，与本面板（行 id `plugin-panel-market`、HTTP `/api/plugin-panel` 均唯一）及彼此之间**无运行时冲突**；但它们大多不是 bundle/registry 形态，点安装不会成为 profile 层（pnpm 会警告，面板原样显示）。
+
+## 致谢 / Credits
+
+- 目录数据来源：[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（社区精选列表，MIT 风格维护）与 [omdsh-dev](https://github.com/omdsh-dev) 组织仓库的 README 描述。
+- 参考了同类项目的优秀思路（未复制代码）：[dsh-market](https://github.com/dsh-market/dsh-market)（一键安装/更新/卸载、重启提示、pnpm 自检）、[dsh-store](https://github.com/huguangyu666/dsh-store)（npm+awesome 双源目录、官方命令安装）、[dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop)（中文关键词映射、双语描述）、[dsh-plugin-manager](https://github.com/Jesse-njx/dsh-plugin-manager)（多源搜索、doctor 审计）、[dsh-webui-market-plugin](https://github.com/Sanqi-normal/dsh-webui-market-plugin)。UI 采用侧边栏入口 + 抽屉的交互形态是原创设计。
+- DSH 平台机制参考：[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 官方仓库与 [dsh-plugin-dev](https://github.com/omdsh-dev/dsh-plugin-dev) 开发档案。
+
+## License
+
+MIT（见 LICENSE）。目录条目与其描述归各自项目所有。
