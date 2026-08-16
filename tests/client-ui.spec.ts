@@ -10,6 +10,8 @@
  * is evaluated verbatim.
  */
 import { describe, it, expect, beforeAll } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import type { ComponentType } from 'react';
 import React from 'react';
 
@@ -156,5 +158,14 @@ describe('built client bundle UI', () => {
     expect(container.querySelector('.pp-railbtn')).not.toBeNull();
     root.unmount();
     document.body.removeChild(container);
+  });
+});
+
+describe('catalog refresh regression', () => {
+  it('keeps the header refresh lightweight on the all-repos lens', () => {
+    const source = readFileSync(join(process.cwd(), 'src/client/client.js'), 'utf8');
+    expect(source).toContain('refreshLens(lens, false, t("panel.refresh"));');
+    expect(source).not.toContain('refreshLens(lens, lens === "all");');
+    expect(source).toContain('var timeoutMs = full ? 360000 : 120000;');
   });
 });
