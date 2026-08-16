@@ -154,6 +154,62 @@ export interface BackupRef {
   files: string[];
 }
 
+interface ProfileManifest {
+  dependencies?: Record<string, string>;
+  dsh?: { profile?: { bundles?: string[] } };
+}
+
+interface PluginManifest {
+  name?: string;
+  dsh?: { bundle?: { patch?: string } };
+}
+
+async function readProfile(ctx: LifecycleContext): Promise<ProfileManifest> {
+  try {
+    return JSON.parse(await readFile(join(ctx.dshHome, 'profiles', ctx.profile, 'package.json'), 'utf8')) as ProfileManifest;
+  } catch { return {}; }
+}
+
+async function readOptional(file: string): Promise<string> {
+  try { return await readFile(file, 'utf8'); } catch { return ''; }
+}
+
+/** Git/GitHub specs must be reused verbatim; only npm package names get @latest. */
+export function updateTarget(name: string, spec?: string): string {
+  const value = (spec || name).trim();
+  const git = /^(?:github:|git(?:\+[^:]+)?:|https?:\/\/.*github\.com\/|ssh:\/\/|git@)/i.test(value) || /\.git(?:#.*)?$/i.test(value);
+  if (git) return value;
+  const bare = value.startsWith('@') ? value.lastIndexOf('@') <= 0 : !value.includes('@');
+  return bare ? `${value}@latest` : value.replace(/@[^@/]+$/, '@latest');
+}
+
+function dependencyCandidates(before: ProfileManifest, after: ProfileManifest, spec: string): string[] {
+  const oldDeps = before.dependencies ?? {};
+  const deps = after.dependencies ?? {};
+  const added = Object.keys(deps).filter((name) => !(name in oldDeps));
+  if (added.length) return added;
+  const exact = Object.keys(deps).filter((name) => name === spec || deps[name] === spec);
+  if (exact.length) return exact;
+  const slug = spec.replace(/^github:/, '').replace(/[#/\\]+$/, '').split('/').pop()?.replace(/\.git$/i, '');
+  return Object.keys(deps).filter((name) => name.split('/').pop() === slug);
+}
+
+/** Verify the postcondition DSH needs to activate a profile Bundle. */
+export async function verifyBundle(ctx: LifecycleContext, packageName: string): Promise<{ ok: boolean; reason?: string }> {
+  const profile = await readProfile(ctx);
+  if (!(packageName in (profile.dependencies ?? {}))) return { ok: false, reason: '依赖没有写入 profile' };
+  if (!(profile.dsh?.profile?.bundles ?? []).includes(packageName)) return { ok: false, reason: '未启用：缺少 dsh.bundle' };
+  const packageFile = join(ctx.dshHome, 'profiles', ctx.profile, 'node_modules', packageName, 'package.json');
+  let manifest: PluginManifest;
+  try { manifest = JSON.parse(await readFile(packageFile, 'utf8')) as PluginManifest; }
+  catch { return { ok: false, reason: '找不到已安装包的 package.json' }; }
+  if (manifest.name && manifest.name !== packageName) return { ok: false, reason: `真实包名不匹配：${manifest.name}` };
+  const patch = manifest.dsh?.bundle?.patch;
+  if (!patch) return { ok: false, reason: '未启用：缺少 dsh.bundle.patch' };
+  if (!existsSync(join(dirname(packageFile), patch))) return { ok: false, reason: `Bundle 补丁文件不存在：${patch}` };
+  return { ok: true };
+}
+
 /** Copy the profile composition files into a timestamped backup directory. */
 export async function backupProfile(ctx: LifecycleContext): Promise<BackupRef> {
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
@@ -193,27 +249,37 @@ export async function runDshPlugin(ctx: LifecycleContext, args: string[], timeou
 /** Install a plugin spec into the profile via the official command. */
 export async function installPlugin(ctx: LifecycleContext, spec: string, label: string): Promise<LifecycleResult> {
   const backup = await backupProfile(ctx);
+  const before = await readProfile(ctx);
   const command = `dsh plugin --profile ${ctx.profile} add ${spec}`;
   try {
     const result = await runDshPlugin(ctx, ['add', spec], 120_000);
-    if (result.code === 0) {
+    const after = await readProfile(ctx);
+    const packageName = dependencyCandidates(before, after, spec)[0];
+    const verification = packageName ? await verifyBundle(ctx, packageName) : { ok: false, reason: '无法确认真实包名' };
+    if (result.code === 0 && packageName && verification.ok) {
       return {
         ok: true,
         command,
         output: result.output,
         backupPath: backup.path,
+        packageName,
         message: `已安装 ${label}（安装后需重启 GUI 生效）。`,
       };
     }
+    if (packageName && !(packageName in (before.dependencies ?? {}))) {
+      await runDshPlugin(ctx, ['remove', packageName]).catch(() => undefined);
+    }
     await restoreBackup(ctx, backup);
-    await runDshPlugin(ctx, ['remove', label]).catch(() => undefined);
     return {
       ok: false,
       command,
       output: result.output,
       backupPath: backup.path,
       rolledBack: true,
-      message: `安装失败，已回滚到备份（${backup.path}）。`,
+      packageName,
+      message: result.code === 0
+        ? `安装未生效：${verification.reason ?? '结果校验失败'}；已回滚。`
+        : `安装命令失败，已回滚到备份（${backup.path}）。`,
     };
   } catch (error) {
     await restoreBackup(ctx, backup).catch(() => undefined);
@@ -231,17 +297,23 @@ export async function installPlugin(ctx: LifecycleContext, spec: string, label: 
 /** Update a plugin (best-effort latest) via the official command. */
 export async function updatePlugin(ctx: LifecycleContext, name: string, spec: string | undefined): Promise<LifecycleResult> {
   const backup = await backupProfile(ctx);
-  const target = spec ?? name;
-  const command = `dsh plugin --profile ${ctx.profile} add ${target}@latest`;
+  const target = updateTarget(name, spec);
+  const lockFile = join(ctx.dshHome, 'profiles', ctx.profile, 'pnpm-lock.yaml');
+  const beforeLock = await readOptional(lockFile);
+  const command = `dsh plugin --profile ${ctx.profile} add ${target}`;
   try {
-    const result = await runDshPlugin(ctx, ['add', `${target}@latest`], 120_000);
-    if (result.code === 0) {
+    const result = await runDshPlugin(ctx, ['add', target], 120_000);
+    const verification = await verifyBundle(ctx, name);
+    if (result.code === 0 && verification.ok) {
+      const changed = beforeLock !== await readOptional(lockFile);
       return {
         ok: true,
         command,
         output: result.output,
         backupPath: backup.path,
-        message: `已更新 ${name}（需重启 GUI 生效）。`,
+        packageName: name,
+        alreadyLatest: !changed,
+        message: changed ? `已更新 ${name}（需重启 GUI 生效）。` : `${name} 已经是最新版。`,
       };
     }
     await restoreBackup(ctx, backup);
@@ -251,7 +323,8 @@ export async function updatePlugin(ctx: LifecycleContext, name: string, spec: st
       output: result.output,
       backupPath: backup.path,
       rolledBack: true,
-      message: `更新失败，已回滚到备份（${backup.path}）。`,
+      packageName: name,
+      message: result.code === 0 ? `更新后校验失败：${verification.reason ?? '未知原因'}；已回滚。` : `更新失败，已回滚到备份（${backup.path}）。`,
     };
   } catch (error) {
     await restoreBackup(ctx, backup).catch(() => undefined);
@@ -272,12 +345,15 @@ export async function uninstallPlugin(ctx: LifecycleContext, name: string): Prom
   const command = `dsh plugin --profile ${ctx.profile} remove ${name}`;
   try {
     const result = await runDshPlugin(ctx, ['remove', name]);
-    if (result.code === 0) {
+    const after = await readProfile(ctx);
+    const removed = !(name in (after.dependencies ?? {})) && !(after.dsh?.profile?.bundles ?? []).includes(name);
+    if (result.code === 0 && removed) {
       return {
         ok: true,
         command,
         output: result.output,
         backupPath: backup.path,
+        packageName: name,
         message: `已卸载 ${name}（需重启 GUI 生效）。`,
       };
     }
@@ -288,7 +364,8 @@ export async function uninstallPlugin(ctx: LifecycleContext, name: string): Prom
       output: result.output,
       backupPath: backup.path,
       rolledBack: true,
-      message: `卸载失败，已回滚到备份（${backup.path}）。`,
+      packageName: name,
+      message: result.code === 0 ? `卸载结果校验失败，已回滚到备份（${backup.path}）。` : `卸载失败，已回滚到备份（${backup.path}）。`,
     };
   } catch (error) {
     await restoreBackup(ctx, backup).catch(() => undefined);

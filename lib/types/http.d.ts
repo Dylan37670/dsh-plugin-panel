@@ -6,6 +6,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { CatalogService } from './catalog.ts';
 import type { StateStore } from './state.ts';
+import type { OperationStore } from './operations.ts';
 import { type LifecycleContext } from './lifecycle.ts';
 import { type TranslationRoute } from './translate.ts';
 import type { TranslationStore } from './translate.ts';
@@ -22,5 +23,6 @@ export interface PanelRoutes {
     translations: TranslationStore;
     /** Disk-backed vector index for semantic search (v6). */
     vectors: VectorStore;
+    operations: OperationStore;
 }
 export declare function createPanelHandler(routes: PanelRoutes): (req: IncomingMessage, res: ServerResponse) => Promise<void>;

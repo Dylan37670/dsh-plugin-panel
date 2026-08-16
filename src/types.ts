@@ -59,6 +59,17 @@ export interface CatalogSnapshot {
   totalHits?: number;
   /** True when this list is a partial view (e.g. fast top-1000 crawl). */
   partial?: boolean;
+  /** ISO time the data branch artifact was generated. */
+  generatedAt?: string;
+  /** Entries fetched from GitHub topic search before curated supplements. */
+  fetchedCount?: number;
+  /** Percent of GitHub topic hits represented by fetchedCount. */
+  coveragePct?: number;
+  /** Number of uncovered search buckets; must be zero for published data. */
+  gaps?: number;
+  /** HTTP validators used by the data-branch JSON download. */
+  etag?: string;
+  lastModified?: string;
 }
 
 /** One translation request/result item (host LLM on-demand zh). */
@@ -79,10 +90,18 @@ export type CatalogLens = 'curated' | 'all';
 
 /** One installed plugin record (profile bundle or user skill). */
 export interface InstalledItem {
-  /** Package name (bundle) or skill name. */
+  /** Real package name (bundle/dependency) or skill name. */
   name: string;
-  kind: 'bundle' | 'skill';
+  kind: 'bundle' | 'skill' | 'dependency';
   profile?: string;
+  /** Whether DSH will activate it after restart. */
+  enabled: boolean;
+  /** Exact dependency key used for update/remove. */
+  packageName: string;
+  /** Saved dependency spec (npm version, github: spec, URL...). */
+  spec?: string;
+  /** Human-readable reason for an inactive dependency. */
+  issue?: string;
 }
 
 /** Embedding (semantic search) configuration (v6). */
@@ -144,6 +163,10 @@ export interface LifecycleResult {
   rolledBack?: boolean;
   /** Human-readable message (error or success note). */
   message: string;
+  /** Exact dependency key discovered after installation. */
+  packageName?: string;
+  /** True when an update completed but the lockfile did not change. */
+  alreadyLatest?: boolean;
 }
 
 /** One in-flight / finished operation shown in the drawer. */
@@ -153,4 +176,5 @@ export interface OperationView {
   state: 'running' | 'ok' | 'error';
   detail?: string;
   startedAt: number;
+  finishedAt?: number;
 }

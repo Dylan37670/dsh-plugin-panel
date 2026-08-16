@@ -46,6 +46,13 @@ export interface BackupRef {
     path: string;
     files: string[];
 }
+/** Git/GitHub specs must be reused verbatim; only npm package names get @latest. */
+export declare function updateTarget(name: string, spec?: string): string;
+/** Verify the postcondition DSH needs to activate a profile Bundle. */
+export declare function verifyBundle(ctx: LifecycleContext, packageName: string): Promise<{
+    ok: boolean;
+    reason?: string;
+}>;
 /** Copy the profile composition files into a timestamped backup directory. */
 export declare function backupProfile(ctx: LifecycleContext): Promise<BackupRef>;
 /** Restore a backup's files back into the profile directory. */

@@ -1,7 +1,7 @@
 {
     "name":  "@dsh-community/plugin-panel",
-    "description":  "Plugin Panel v6.7 — fast, fail-safe catalog refresh: the header refresh no longer starts a full GitHub crawl, and stalled requests recover automatically.",
-    "version":  "0.6.7",
+    "description":  "Plugin Panel v6.8 — durable settings and operations, verified plugin lifecycle, and an hourly cloud-built full catalog.",
+    "version":  "0.6.8",
     "repository":  {
                        "type":  "git",
                        "url":  "git+https://github.com/Dylan37670/dsh-plugin-panel.git"
@@ -44,7 +44,8 @@
                     "prepack":  "npm run build",
                     "typecheck":  "tsc -p tsconfig.json --noEmit",
                     "test":  "vitest run",
-                    "sync:catalog":  "node scripts/build-catalog.mjs"
+                    "sync:catalog":  "node scripts/build-catalog.mjs",
+                    "validate:catalog":  "node scripts/validate-catalog.mjs catalog/catalog.json"
                 },
     "dsh":  {
                 "client":  {

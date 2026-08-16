@@ -12,6 +12,7 @@
  * categories and install specs survive even when a live source omits them.
  */
 import type { CatalogEntry, CatalogLens, CatalogSnapshot } from './types.ts';
+export declare const DEFAULT_FULL_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json";
 /** Parse the awesome-dsh-plugin README bullet list into entries. */
 export declare function parseAwesomeMarkdown(markdown: string): CatalogEntry[];
 /** Merge fetched entries with the curated seed (seed wins for curated fields). */
@@ -117,17 +118,6 @@ export declare class CatalogService {
      * path: one fast single-file download instead of crawling GitHub pages).
      */
     fetchPrebuiltAll(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot>;
-    /** Fetch the full-repo lens from the GitHub topic search (fast, top 1000). */
-    fetchAll(signal?: AbortSignal): Promise<CatalogSnapshot>;
-    /**
-     * Fetch EVERY repo for the all lens (adaptive created-date buckets, paced).
-     * Used by the offline catalog build script — the panel itself no longer
-     * crawls the full topic on every refresh.
-     */
-    fetchAllFull(signal?: AbortSignal, opts?: {
-        paceMs?: number;
-        maxQueries?: number;
-    }): Promise<CatalogSnapshot>;
     /** Invalidate one lens's in-memory cache (used after a failed refresh). */
     invalidate(lens: CatalogLens): void;
 }

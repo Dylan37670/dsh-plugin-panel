@@ -132,7 +132,10 @@ async function saveState(state) {
 }
 
 async function main() {
-  if (reset) await rm(STATE_FILE, { force: true }).catch(() => {});
+  if (reset) {
+    await rm(STATE_FILE, { force: true }).catch(() => {});
+    await rm(OUT_FILE, { force: true }).catch(() => {});
+  }
   const state = await loadState();
   const { done, gaps } = state;
   const queue = state.queue;
@@ -207,7 +210,7 @@ async function main() {
       totalHits,
       fetchedCount: entries.length,
       count: merged.length,
-      coveragePct: totalHits > 0 ? Math.min(100, Math.floor((entries.length / totalHits) * 100)) : 100,
+      coveragePct: totalHits > 0 ? Math.min(100, Number(((entries.length / totalHits) * 100).toFixed(3))) : 100,
       gaps: gaps.length,
       source: `github topic:${TOPIC}`,
       schema: 'plugin-panel-catalog@1',

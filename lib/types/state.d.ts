@@ -9,6 +9,8 @@ export declare class StateStore {
     constructor(dshHome: string);
     load(): Promise<PanelState>;
     save(next: PanelState): Promise<PanelState>;
+    /** Merge only supplied settings. Nested embedding fields are preserved. */
+    patchSettings(patch: Partial<PanelState['settings']>): Promise<PanelState>;
     /** Toggle one favorite id; returns the new favorites list. */
     toggleFavorite(id: string): Promise<string[]>;
     get(): PanelState;

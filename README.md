@@ -1,8 +1,8 @@
-# Plugin Panel v6.7（插件面板）
+# Plugin Panel v6.8（插件面板）
 
 DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
 
-> **版本 v0.6.7**：修复“全部”页点击右上角刷新后长期停在“获取中…”的问题。普通刷新只读取内置全量索引或下载配置的远程索引，不再误触发耗时的 GitHub 全量爬取；刷新期间按钮防重复点击，并增加 2 分钟快速刷新 / 6 分钟显式全量抓取的前端超时兜底，失败后保留原目录并恢复界面。
+> **版本 v0.6.8**：操作记录与嵌入配置在本机持久保存；安装、更新、卸载均验证真实 Bundle 状态，普通依赖不再误报成功；“全部”页从 `catalog-data` 数据分支下载每小时自动生成的全量 JSON，断网、损坏或异常缩水时保留旧缓存，刷新一定退出“获取中”。
 > **v6 新增：语义向量搜索** —— 搜索框旁「语义搜索」开关：关闭 = 关键词搜索；打开 = 向量语义检索（多语言）。默认连接**硅基流动 BAAI/bge-m3**，模型 / API 地址 / Key 可在设置中修改；目录向量索引构建一次后本地缓存（`~/.dsh/plugin-panel/vectors.json`），查询按余弦相似度排序。
 
 v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小批量 JSONL 输出并对缺项逐条重试；结果按原文指纹缓存，目录描述变更后会自动重新翻译；LLM 不可用或仍有缺项时，以社区插件采用的 Google gtx 方式逐条回退。客户端使用持久队列，修复请求进行中因重渲染而漏掉下一批的问题。v6.4 的向量索引并发保护及 v6.3 的全量目录、流式事件和向量兼容修复均保留。
@@ -13,7 +13,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **配置**：抽屉底部设置区「嵌入模型（语义搜索）」：API Key（必填）、模型（默认 `BAAI/bge-m3`）、API 地址（默认 `https://api.siliconflow.cn/v1`），保存后生效。
 - **建立索引**：开启开关后，若本地无向量索引且已配置 Key，点击「建立向量索引」——host 端分批嵌入全部目录条目（3109 条，约 32 次请求）并落盘缓存；之后查询只嵌入用户输入（1 次请求）。
 - **检索**：输入关键词（中/英文均可）→ host 嵌入查询 → 与缓存向量做余弦相似度 → 返回 Top 结果；与关键词搜索一样受分类/收藏/已安装筛选约束。
-- **安全**：API Key 仅存于本地 `~/.dsh/plugin-panel/state.json`，请求直达配置的 embeddings 端点（默认硅基流动），面板不记录 Key。
+- **安全**：API Key 仅在明确点击“保存嵌入设置”后写入本地 `~/.dsh/plugin-panel/state.json`，请求直达配置的 embeddings 端点（默认硅基流动），面板不记录 Key。
 
 ## 功能
 
@@ -29,31 +29,33 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **右侧抽屉**：点击按钮打开固定右侧抽屉，点遮罩或关闭按钮收起。
 - **双目录源**：搜索框下方「精选 / 全部」切换按钮，**鼠标悬停显示两者区别**：
   - **精选**：社区人工维护、逐个验证可安装的 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 列表（约 550 个），质量优先；缓存 `catalog.cache.json`。
-  - **全部**：**预构建索引** `catalog/catalog.json`（~3000 个 dsh-plugin 标签仓库，含星级/分类/创建时间），随插件发布、秒级加载；缓存 `catalog.all.cache.json`。索引构建时间显示在抽屉标题栏；设置了远程目录 URL 后，刷新按钮变为一键下载最新索引。
+  - **全部**：启动先显示随包目录或本地缓存，再从 [`catalog-data`](https://github.com/Dylan37670/dsh-plugin-panel/tree/catalog-data) 数据分支下载一个 `catalog.json`；GitHub Actions 每小时更新，用户电脑不再运行全量爬虫。
 - **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
 - **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
 - **中英文关键词搜索**：标题、描述（中英）、标签、作者、仓库、npm 名均参与匹配。
 - **排序（v4）**：默认 / 星标最多 / 星标最少 / 名称 A-Z / 名称 Z-A / 最新创建 / 最早创建，持久化到设置。
 - **描述中文翻译**：精选条目内置人工翻译；一键切换 中文 / EN。
 - **收藏管理**：星标收藏，持久化于 `~/.dsh/plugin-panel/state.json`；可筛选“只看收藏”。
-- **已安装管理**：读取 `~/.dsh/profiles/<profile>/package.json` 的 bundle 列表与 `~/.dsh/skills`，标注“已安装”并可筛选。
+- **操作记录**：默认两条、可展开最近 100 条或一键清空；保存在 `~/.dsh/plugin-panel/operations.json`，不保存命令原始输出或 API Key。
+- **已安装管理**：同时读取 profile 的依赖与 bundle 列表以及 `~/.dsh/skills`；区分已启用 Bundle、Skill 和“已下载但缺少 `dsh.bundle`”的普通依赖。
 - **安装 / 更新 / 卸载（官方命令）**：调用 `dsh plugin --profile <profile> add|remove <spec>`。
   - **确认**：按钮两段式确认（再点一次才执行）。
   - **备份**：操作前把 profile 的 `package.json` / `cordis.patch.yml` / `pnpm-lock.yaml` 复制到 `~/.dsh/plugin-panel/backups/<时间戳>/`。
-  - **失败回滚**：命令失败自动恢复备份，并尽力执行反向命令。
+  - **结果校验与回滚**：退出码为 0 仍会检查真实包名、`dsh.bundle.patch`、补丁文件及 profile bundles；失败自动恢复备份。GitHub 更新复用原 spec，卸载使用真实包名。
 - **环境自检**：抽屉顶部显示 dsh CLI / pnpm 是否可用；pnpm 缺失时一键安装。
 - **安全**：HTTP API 仅接受 loopback 请求；安装来源为目录中列出的官方仓库 / npm 包（不执行任意命令，只转发到官方 `dsh plugin`）。
 
-## 目录构建（维护者用）
+## 云端目录构建（维护者用）
 
 ```sh
 npm run build                                   # 先构建 lib
 node scripts/build-catalog.mjs --reset          # 全量重建（可续传，断点续跑）
+node scripts/validate-catalog.mjs catalog/catalog.json
 # 可选：GITHUB_TOKEN=<token> node scripts/build-catalog.mjs   # 提速（30 次/分钟）
 # 产物：catalog/catalog.json（manifest 含覆盖率）
 ```
 
-爬取策略：日期分桶（>1 天按日期对半切）→ 单日饱和按 `stars:` 区间切 → 单星标值再按 `size:` 区间切；单查询稳定分页用 `sort=created`（星标排序分页在同星标下有跳变）；每轮限速 7s（未认证 10 次/分钟），403/网络错误自动退避重试；**manifest 记录 `count/totalHits/coveragePct/gaps`，覆盖率透明可见**。
+`.github/workflows/update-catalog.yml` 每小时第 17 分钟运行，也可手动触发。发布前必须满足 schema 正确、ID 唯一、`gaps=0`、覆盖率至少 99.5%，且条目数不低于上一版的 95%；成功后只更新独立 `catalog-data` 分支。
 
 > 安装/卸载后需要**重启 GUI** 才加载/卸载插件本体（DSH 的 bundle 机制如此）；面板自身在重启前仍可继续浏览。
 
@@ -96,9 +98,10 @@ dsh-plugin-panel/
 │   ├── index.ts          # host 入口：注册 /api/plugin-panel 路由
 │   ├── catalog.ts        # 目录服务：远程拉取 + 解析 + 磁盘缓存 + seed 合并
 │   ├── catalog-data.ts   # 精选 seed 目录（含中文翻译）
-│   ├── installed.ts      # 已安装检测（profile bundles + skills）
-│   ├── state.ts          # 收藏 + 设置持久化
-│   ├── lifecycle.ts      # dsh plugin 转发、备份、回滚
+│   ├── installed.ts      # bundles + dependencies + skills 状态检测
+│   ├── state.ts          # 收藏 + 深度合并设置持久化
+│   ├── operations.ts     # 本地操作记录（最多 100 条）
+│   ├── lifecycle.ts      # dsh plugin 转发、结果校验、备份、回滚
 │   ├── http.ts           # HTTP 路由（loopback only）
 │   ├── types.ts          # 共享 JSON 类型
 │   └── client/client.js  # client half（模块加载器格式，React 手写）

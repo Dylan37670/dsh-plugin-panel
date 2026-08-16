@@ -7,6 +7,7 @@
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import type { CatalogService } from './catalog.ts';
 import type { StateStore } from './state.ts';
+import type { OperationStore } from './operations.ts';
 import {
   checkPnpm,
   setupPnpm,
@@ -58,10 +59,11 @@ export interface PanelRoutes {
   translations: TranslationStore;
   /** Disk-backed vector index for semantic search (v6). */
   vectors: VectorStore;
+  operations: OperationStore;
 }
 
 export function createPanelHandler(routes: PanelRoutes) {
-  const { catalog, state, lifecycle, translate, translations, vectors } = routes;
+  const { catalog, state, lifecycle, translate, translations, vectors, operations } = routes;
 
   /** v6.4: in-flight lock so a vector-index build cannot run concurrently. */
   let embeddingBuildInFlight = false;
@@ -96,6 +98,10 @@ export function createPanelHandler(routes: PanelRoutes) {
       case '/state': {
         const panelState = await state.load();
         sendJson(res, 200, { ok: true, state: panelState });
+        return;
+      }
+      case '/operations': {
+        sendJson(res, 200, { ok: true, operations: await operations.load() });
         return;
       }
       case '/installed': {
@@ -150,29 +156,10 @@ export function createPanelHandler(routes: PanelRoutes) {
         const lens = lensOf(body.lens);
         try {
           if (lens === 'all') {
-            if (url.trim()) {
-              // v3: refresh = one fast download of the prebuilt catalog.
-              const snapshot = await catalog.fetchPrebuiltAll(url, AbortSignal.timeout(90_000));
-              sendJson(res, 200, { ok: true, ...snapshot });
-            } else if (body.full === true) {
-              const snapshot = await catalog.fetchAllFull(AbortSignal.timeout(600_000));
-              sendJson(res, 200, { ok: true, ...snapshot });
-            } else {
-              const bundled = await catalog.readBundledAll();
-              if (bundled) {
-                // No remote URL configured: the bundled index is already the
-                // complete list; refresh is a no-op with an explanatory note.
-                sendJson(res, 200, {
-                  ok: true,
-                  ...bundled,
-                  note: '内置预构建索引（构建于 ' + (bundled.fetchedAt ?? '未知') + '），无需联网刷新；如需在线更新，请在设置中填写远程目录 URL。',
-                });
-              } else {
-                // No bundled index and no URL: last-resort fast GitHub crawl.
-                const snapshot = await catalog.fetchAll(AbortSignal.timeout(90_000));
-                sendJson(res, 200, { ok: true, ...snapshot });
-              }
-            }
+            // v6.8: clients only download the prebuilt data-branch JSON.
+            // Full GitHub crawling belongs exclusively to GitHub Actions.
+            const snapshot = await catalog.fetchPrebuiltAll(url, AbortSignal.timeout(90_000));
+            sendJson(res, 200, { ok: true, ...snapshot });
             return;
           }
           const snapshot = await catalog.fetchCurated(url, AbortSignal.timeout(60_000));
@@ -191,6 +178,28 @@ export function createPanelHandler(routes: PanelRoutes) {
         }
         const saved = await state.save(next);
         sendJson(res, 200, { ok: true, state: saved });
+        return;
+      }
+      case '/settings': {
+        const patch = body.settings as Partial<PanelState['settings']> | undefined;
+        if (!patch || typeof patch !== 'object') {
+          sendError(res, 400, 'missing settings');
+          return;
+        }
+        const saved = await state.patchSettings(patch);
+        sendJson(res, 200, { ok: true, state: saved });
+        return;
+      }
+      case '/operations': {
+        try {
+          const saved = await operations.upsert(body.operation);
+          sendJson(res, 200, { ok: true, operations: saved });
+        } catch { sendError(res, 400, 'invalid operation'); }
+        return;
+      }
+      case '/operations/clear': {
+        await operations.clear();
+        sendJson(res, 200, { ok: true });
         return;
       }
       case '/favorite': {
@@ -231,6 +240,13 @@ export function createPanelHandler(routes: PanelRoutes) {
           sendError(res, 400, 'missing name');
           return;
         }
+        const result = await uninstallPlugin(currentLifecycle(), name);
+        sendJson(res, result.ok ? 200 : 500, result);
+        return;
+      }
+      case '/cleanup-dependency': {
+        const name = typeof body.name === 'string' ? body.name : '';
+        if (!name) { sendError(res, 400, 'missing name'); return; }
         const result = await uninstallPlugin(currentLifecycle(), name);
         sendJson(res, result.ok ? 200 : 500, result);
         return;

@@ -1,0 +1,65 @@
+name: Update full catalog
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Download previous published catalog
+        run: curl --fail --silent --show-error --location "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/catalog-data/catalog.json" --output /tmp/previous-catalog.json || true
+
+      - name: Crawl the complete GitHub topic
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/build-catalog.mjs --reset --max-queries=300 --pace-ms=2200
+
+      - name: Validate before publishing
+        run: node scripts/validate-catalog.mjs catalog/catalog.json /tmp/previous-catalog.json
+
+      - name: Publish changed JSON to catalog-data
+        env:
+          REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}.git
+        run: |
+          mkdir /tmp/catalog-publish
+          cd /tmp/catalog-publish
+          git init
+          git remote add origin "$REPOSITORY_URL"
+          if git fetch --depth=1 origin catalog-data; then
+            git checkout -b catalog-data FETCH_HEAD
+          else
+            git checkout --orphan catalog-data
+          fi
+          cp "$GITHUB_WORKSPACE/catalog/catalog.json" catalog.json
+          git add catalog.json
+          if git diff --cached --quiet; then
+            echo "Catalog content is unchanged."
+            exit 0
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git commit -m "data: refresh full catalog"
+          git push origin HEAD:catalog-data

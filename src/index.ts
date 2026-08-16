@@ -19,6 +19,7 @@ import { createPanelHandler } from './http.ts';
 import { findDshBin } from './lifecycle.ts';
 import { TranslationStore } from './translate.ts';
 import { VectorStore } from './embeddings.ts';
+import { OperationStore } from './operations.ts';
 
 export const name = '@dsh-community/plugin-panel';
 
@@ -49,9 +50,11 @@ export function apply(ctx: Context): void {
   const state = new StateStore(dshHome);
   const translations = new TranslationStore(dshHome);
   const vectors = new VectorStore(dshHome);
+  const operations = new OperationStore(dshHome);
   void state.load();
   void translations.load();
   void vectors.load();
+  void operations.load();
 
   const lifecycle = {
     dshHome,
@@ -87,6 +90,7 @@ export function apply(ctx: Context): void {
       translate,
       translations,
       vectors,
+      operations,
     }) as never,
   }), 'plugin-panel: HTTP routes');
 

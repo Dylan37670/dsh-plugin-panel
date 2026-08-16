@@ -166,6 +166,14 @@ describe('catalog refresh regression', () => {
     const source = readFileSync(join(process.cwd(), 'src/client/client.js'), 'utf8');
     expect(source).toContain('refreshLens(lens, false, t("panel.refresh"));');
     expect(source).not.toContain('refreshLens(lens, lens === "all");');
-    expect(source).toContain('var timeoutMs = full ? 360000 : 120000;');
+    expect(source).toContain('api("/refresh", "POST", { remoteCatalogUrl: urlDraft, lens: l }, 120000)');
+    expect(source).not.toContain('full: !!full');
+  });
+
+  it('keeps operation history collapsed to two rows with expand and clear controls', () => {
+    const source = readFileSync(join(process.cwd(), 'src/client/client.js'), 'utf8');
+    expect(source).toContain('ops.slice(0, opsExpanded ? 100 : 2)');
+    expect(source).toContain('onClick: clearOperations');
+    expect(source).toContain('setOpsExpanded(!opsExpanded)');
   });
 });
