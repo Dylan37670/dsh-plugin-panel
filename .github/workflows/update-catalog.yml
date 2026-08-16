@@ -43,7 +43,9 @@ jobs:
       - name: Publish changed JSON to catalog-data
         env:
           REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}.git
+          GH_TOKEN: ${{ github.token }}
         run: |
+          gh auth setup-git
           mkdir /tmp/catalog-publish
           cd /tmp/catalog-publish
           git init
