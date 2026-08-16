@@ -45,6 +45,7 @@ export interface LifecycleContext {
 export interface BackupRef {
     path: string;
     files: string[];
+    missing: string[];
 }
 /** Git/GitHub specs must be reused verbatim; only npm package names get @latest. */
 export declare function updateTarget(name: string, spec?: string): string;
@@ -59,12 +60,20 @@ export declare function backupProfile(ctx: LifecycleContext): Promise<BackupRef>
 export declare function restoreBackup(ctx: LifecycleContext, backup: BackupRef): Promise<void>;
 /** Run `dsh plugin --profile <p> <args...>`. */
 export declare function runDshPlugin(ctx: LifecycleContext, args: string[], timeoutMs?: number): Promise<SpawnResult>;
+/** Verify a legacy/user-layer Cordis host plugin before registering it. */
+export declare function verifyHostPlugin(ctx: LifecycleContext, packageName: string): Promise<{
+    ok: boolean;
+    reason?: string;
+}>;
 /** Install a plugin spec into the profile via the official command. */
 export declare function installPlugin(ctx: LifecycleContext, spec: string, label: string): Promise<LifecycleResult>;
 /** Update a plugin (best-effort latest) via the official command. */
-export declare function updatePlugin(ctx: LifecycleContext, name: string, spec: string | undefined): Promise<LifecycleResult>;
+export declare function updatePlugin(ctx: LifecycleContext, name: string, spec: string | undefined, manual?: boolean): Promise<LifecycleResult>;
 /** Uninstall a plugin via the official command. */
-export declare function uninstallPlugin(ctx: LifecycleContext, name: string): Promise<LifecycleResult>;
+export declare function uninstallPlugin(ctx: LifecycleContext, name: string, options?: {
+    manual?: boolean;
+    panelManaged?: boolean;
+}): Promise<LifecycleResult>;
 /** Read a JSON request body from an incoming HTTP request. */
 export declare function readJsonBody(req: IncomingMessage): Promise<unknown>;
 /** Atomically write a text file (used by the self-update of settings files). */

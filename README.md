@@ -1,8 +1,10 @@
-# Plugin Panel v6.9（插件面板）
+# Plugin Panel v6.10（插件面板）
 
 DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
 
-> **版本 v0.6.9**：向量索引改为使用最新的云端目录缓存，而不是始终使用随包旧目录；目录变化会自动标记索引过期。“建立/重新建立索引”按钮保持显示，任务进行中按钮禁用，重复点击不会启动第二个任务。
+> **版本 v0.6.10**：重构插件生命周期。完整 GitHub topic 目录只负责“发现”，只有作者/社区登记过准确 npm 包、GitHub 子目录或包源的条目才显示安装按钮；例如 `dsh-web-ui` 会安装作者指定的 `@linxin666/dsh-web-ui-all`，不再错误安装仓库工作区根目录。安装后分别校验 Profile Bundle 或兼容的 Cordis 用户层注册，现有手动注册插件会显示“已启用（用户配置）”。用户自己的 patch 不会被面板自动删除。
+>
+> v0.6.9 的云端向量目录同步与常驻重建按钮继续保留。
 > **v6 新增：语义向量搜索** —— 搜索框旁「语义搜索」开关：关闭 = 关键词搜索；打开 = 向量语义检索（多语言）。默认连接**硅基流动 BAAI/bge-m3**，模型 / API 地址 / Key 可在设置中修改；目录向量索引构建一次后本地缓存（`~/.dsh/plugin-panel/vectors.json`），查询按余弦相似度排序。
 
 v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小批量 JSONL 输出并对缺项逐条重试；结果按原文指纹缓存，目录描述变更后会自动重新翻译；LLM 不可用或仍有缺项时，以社区插件采用的 Google gtx 方式逐条回退。客户端使用持久队列，修复请求进行中因重渲染而漏掉下一批的问题。v6.4 的向量索引并发保护及 v6.3 的全量目录、流式事件和向量兼容修复均保留。
@@ -28,7 +30,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **入口**：侧边栏底部（设置上方）的 “插件面板” 按钮；窄栏（rail）态显示为图标。
 - **右侧抽屉**：点击按钮打开固定右侧抽屉，点遮罩或关闭按钮收起。
 - **双目录源**：搜索框下方「精选 / 全部」切换按钮，**鼠标悬停显示两者区别**：
-  - **精选**：社区人工维护、逐个验证可安装的 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 列表（约 550 个），质量优先；缓存 `catalog.cache.json`。
+  - **精选**：社区人工维护的安装注册表（来源于 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)，由 [dsh-market](https://github.com/dsh-market/dsh-market) 生成 JSON），质量优先；缓存 `catalog.cache.json`。
   - **全部**：启动先显示随包目录或本地缓存，再从 [`catalog-data`](https://github.com/Dylan37670/dsh-plugin-panel/tree/catalog-data) 数据分支下载一个 `catalog.json`；GitHub Actions 每小时更新，用户电脑不再运行全量爬虫。
 - **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
 - **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
@@ -37,11 +39,11 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **描述中文翻译**：精选条目内置人工翻译；一键切换 中文 / EN。
 - **收藏管理**：星标收藏，持久化于 `~/.dsh/plugin-panel/state.json`；可筛选“只看收藏”。
 - **操作记录**：默认两条、可展开最近 100 条或一键清空；保存在 `~/.dsh/plugin-panel/operations.json`，不保存命令原始输出或 API Key。
-- **已安装管理**：同时读取 profile 的依赖与 bundle 列表以及 `~/.dsh/skills`；区分已启用 Bundle、Skill 和“已下载但缺少 `dsh.bundle`”的普通依赖。
+- **已安装管理**：同时读取 profile 的依赖、bundle 列表、`cordis.patch.yml` 用户层注册以及 `~/.dsh/skills`；区分已启用 Bundle、已启用（用户配置）、Skill 和仅下载依赖。
 - **安装 / 更新 / 卸载（官方命令）**：调用 `dsh plugin --profile <profile> add|remove <spec>`。
   - **确认**：按钮两段式确认（再点一次才执行）。
   - **备份**：操作前把 profile 的 `package.json` / `cordis.patch.yml` / `pnpm-lock.yaml` 复制到 `~/.dsh/plugin-panel/backups/<时间戳>/`。
-  - **结果校验与回滚**：退出码为 0 仍会检查真实包名、`dsh.bundle.patch`、补丁文件及 profile bundles；失败自动恢复备份。GitHub 更新复用原 spec，卸载使用真实包名。
+  - **结果校验与回滚**：退出码为 0 仍会检查真实包名、入口产物与激活状态；官方 Bundle 校验 patch 与 profile bundles，兼容型 Host 插件校验可加载的 `apply` 后写入带面板标记的用户层注册。失败自动恢复备份。GitHub/link 更新复用原 spec，卸载使用真实包名。
 - **环境自检**：抽屉顶部显示 dsh CLI / pnpm 是否可用；pnpm 缺失时一键安装。
 - **安全**：HTTP API 仅接受 loopback 请求；安装来源为目录中列出的官方仓库 / npm 包（不执行任意命令，只转发到官方 `dsh plugin`）。
 
@@ -164,13 +166,13 @@ v2 在隔离 DSH 实例（端口 3081）与真实 web profile 双重验证：
 
 > v0.1.0 的原始验证记录见 [v1 README](../v1/dsh-plugin-panel/README.md)。
 
-## 兼容性（v6.6）
+## 兼容性
 
-社区星标前十插件与本面板的兼容性检查见 [COMPATIBILITY.md](COMPATIBILITY.md)。结论：前十仓库均未注册任何 cordis 行/工具/服务/插槽/路由，与本面板（行 id `plugin-panel-market`、HTTP `/api/plugin-panel` 均唯一）及彼此之间**无运行时冲突**；但它们大多不是 bundle/registry 形态，点安装不会成为 profile 层（pnpm 会警告，面板原样显示）。
+社区星标前十插件与本面板的静态兼容性检查见 [COMPATIBILITY.md](COMPATIBILITY.md)。v6.10 不再把所有 topic 仓库根目录假定为可安装 Bundle；没有可靠安装目标的候选条目只提供项目链接。
 
 ## 致谢 / Credits
 
-- 目录数据来源：[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（社区精选列表，MIT 风格维护）与 [omdsh-dev](https://github.com/omdsh-dev) 组织仓库的 README 描述。
+- 目录数据来源：[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（社区精选列表）、[dsh-market registry snapshot](https://github.com/dsh-market/dsh-market/blob/main/data/registry-snapshot.json)（准确安装目标）与 [omdsh-dev](https://github.com/omdsh-dev) 组织仓库的 README 描述。这里只读取并标注数据来源，不复制其他市场的实现代码。
 - 参考了同类项目的优秀思路（未复制代码）：[dsh-market](https://github.com/dsh-market/dsh-market)（一键安装/更新/卸载、重启提示、pnpm 自检）、[dsh-store](https://github.com/huguangyu666/dsh-store)（npm+awesome 双源目录、官方命令安装）、[dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop)（中文关键词映射、双语描述）、[dsh-plugin-manager](https://github.com/Jesse-njx/dsh-plugin-manager)（多源搜索、doctor 审计）、[dsh-webui-market-plugin](https://github.com/Sanqi-normal/dsh-webui-market-plugin)。UI 采用侧边栏入口 + 抽屉的交互形态是原创设计。
 - DSH 平台机制参考：[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 官方仓库与 [dsh-plugin-dev](https://github.com/omdsh-dev/dsh-plugin-dev) 开发档案。
 

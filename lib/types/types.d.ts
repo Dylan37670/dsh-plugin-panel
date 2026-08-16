@@ -29,6 +29,10 @@ export interface CatalogEntry {
     npm?: string;
     /** Install spec handed to `dsh plugin add` (npm name, github: spec or URL). */
     install?: string;
+    /** True only when the install target came from an author/community manifest. */
+    installVerified?: boolean;
+    /** Human-readable provenance for the install target. */
+    installSource?: 'author' | 'community' | 'bundled';
     /** Search keywords (zh + en). */
     tags: string[];
     /** Author / organization credit. */
@@ -88,6 +92,10 @@ export interface InstalledItem {
     spec?: string;
     /** Human-readable reason for an inactive dependency. */
     issue?: string;
+    /** How the package is activated in this profile. */
+    activation?: 'bundle' | 'manual' | 'skill' | 'none';
+    /** Manual patch row was created by Plugin Panel and may be removed safely. */
+    panelManaged?: boolean;
 }
 /** Embedding (semantic search) configuration (v6). */
 export interface EmbeddingConfig {
@@ -132,6 +140,8 @@ export interface LifecycleResult {
     packageName?: string;
     /** True when an update completed but the lockfile did not change. */
     alreadyLatest?: boolean;
+    /** Activation mechanism verified after the command. */
+    activation?: 'bundle' | 'manual';
 }
 /** One in-flight / finished operation shown in the drawer. */
 export interface OperationView {

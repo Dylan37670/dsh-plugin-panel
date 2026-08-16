@@ -13,6 +13,25 @@
  */
 import type { CatalogEntry, CatalogLens, CatalogSnapshot } from './types.ts';
 export declare const DEFAULT_FULL_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json";
+interface CommunityRegistryEntry {
+    name?: string;
+    owner?: string;
+    url?: string;
+    category?: string;
+    description?: {
+        en?: string;
+        zh?: string;
+    };
+    npm?: string | null;
+    install?: string;
+    stars?: number;
+}
+/** Accept only the official dsh-plugin command shape; never execute arbitrary registry text. */
+export declare function installSpecFromCommand(command: string | undefined): string | undefined;
+/** Convert the community-maintained install registry into panel entries. */
+export declare function parseCommunityRegistry(file: {
+    plugins?: CommunityRegistryEntry[];
+}): CatalogEntry[];
 /** Parse the awesome-dsh-plugin README bullet list into entries. */
 export declare function parseAwesomeMarkdown(markdown: string): CatalogEntry[];
 /** Merge fetched entries with the curated seed (seed wins for curated fields). */

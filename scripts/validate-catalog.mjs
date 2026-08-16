@@ -16,7 +16,12 @@ if (manifest.gaps !== 0) fail(`gaps must be 0 (got ${manifest.gaps})`);
 const ids = entries.map((entry) => entry?.id);
 if (ids.some((id) => typeof id !== 'string' || !id)) fail('entry has an invalid id');
 if (new Set(ids).size !== ids.length) fail('entry ids are not unique');
+const invalidInstall = entries.find((entry) => entry?.installVerified === true
+  && (typeof entry.install !== 'string' || entry.install.length === 0 || /[\r\n;&|<>]/.test(entry.install)));
+if (invalidInstall) fail(`verified install target is invalid: ${invalidInstall.id}`);
 if (manifest.count !== entries.length) fail(`manifest count ${manifest.count} != ${entries.length}`);
+const verifiedCount = entries.filter((entry) => entry?.installVerified === true).length;
+if (Number(manifest.installVerifiedCount ?? verifiedCount) !== verifiedCount) fail(`manifest installVerifiedCount does not match ${verifiedCount}`);
 const totalHits = Number(manifest.totalHits ?? 0);
 const fetchedCount = Number(manifest.fetchedCount ?? 0);
 const coverage = totalHits > 0 ? (fetchedCount / totalHits) * 100 : 100;
@@ -34,4 +39,4 @@ if (previousFile) {
   }
 }
 
-console.log(`[validate-catalog] ok: ${entries.length} entries, ${totalHits} topic hits, ${coverage.toFixed(3)}% coverage`);
+console.log(`[validate-catalog] ok: ${entries.length} entries, ${verifiedCount} verified installs, ${totalHits} topic hits, ${coverage.toFixed(3)}% coverage`);

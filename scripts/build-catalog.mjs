@@ -18,13 +18,15 @@
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory } from '../lib/catalog.js';
+import { githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory, parseCommunityRegistry } from '../lib/catalog.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CATALOG_DIR = join(ROOT, 'catalog');
 const STATE_FILE = join(CATALOG_DIR, '.build-state.json');
 const OUT_FILE = join(CATALOG_DIR, 'catalog.json');
 const TOPIC = 'dsh-plugin';
+const INSTALL_REGISTRY = process.env.INSTALL_REGISTRY_URL
+  ?? 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
 
 const args = process.argv.slice(2);
 const reset = args.includes('--reset');
@@ -204,6 +206,43 @@ async function main() {
 
   if (queue.length === 0) {
     const entries = Object.values(seen).sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+    // Topic search discovers repositories, but cannot tell whether the root
+    // is installable. Overlay exact author/community install targets (npm or
+    // GitHub subpath) and leave every other candidate explicitly unverified.
+    let installEntries = [];
+    try {
+      const response = await fetch(INSTALL_REGISTRY, { headers: { 'User-Agent': 'dsh-plugin-panel-catalog' } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      installEntries = parseCommunityRegistry(await response.json());
+    } catch (error) {
+      throw new Error(`install registry unavailable (${INSTALL_REGISTRY}): ${error instanceof Error ? error.message : String(error)}`);
+    }
+    const byRoot = new Map();
+    for (const candidate of installEntries) {
+      const match = candidate.repo?.match(/^https:\/\/github\.com\/([^/]+\/[^/#]+)/i);
+      if (!match || !candidate.installVerified) continue;
+      const root = match[1].toLowerCase();
+      const repoName = root.split('/')[1];
+      const score = (candidate.repo?.toLowerCase() === `https://github.com/${root}` ? 100 : 0)
+        + (candidate.npm ? 50 : 0)
+        + (candidate.title.toLowerCase() === repoName ? 30 : 0)
+        + (candidate.title.toLowerCase().endsWith('-all') ? 25 : 0);
+      const previous = byRoot.get(root);
+      if (!previous || score > previous.score) byRoot.set(root, { score, candidate });
+    }
+    for (const item of entries) {
+      const exact = byRoot.get(item.id.toLowerCase())?.candidate;
+      if (!exact) {
+        delete item.installVerified;
+        delete item.installSource;
+        continue;
+      }
+      item.install = exact.install;
+      item.installVerified = true;
+      item.installSource = 'community';
+      if (exact.npm) item.npm = exact.npm;
+      if (exact.descriptionZh) item.descriptionZh = exact.descriptionZh;
+    }
     const merged = mergeWithSeed(entries);
     const manifest = {
       generatedAt: new Date().toISOString(),
@@ -214,6 +253,8 @@ async function main() {
       gaps: gaps.length,
       source: `github topic:${TOPIC}`,
       schema: 'plugin-panel-catalog@1',
+      installVerifiedCount: merged.filter((entry) => entry.installVerified).length,
+      installRegistry: INSTALL_REGISTRY,
     };
     await mkdir(CATALOG_DIR, { recursive: true });
     const tmp = `${OUT_FILE}.tmp`;

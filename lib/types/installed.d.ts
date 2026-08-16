@@ -3,6 +3,12 @@
  * the user skill root to decide what is already installed per profile.
  */
 import type { InstalledItem } from './types.ts';
+export interface ManualRegistration {
+    name: string;
+    panelManaged: boolean;
+}
+/** Read package names inserted by the profile's user patch layer. */
+export declare function readManualRegistrations(dshHome: string, profile: string): Promise<Map<string, ManualRegistration>>;
 interface ProfilePackageJson {
     dependencies?: Record<string, string>;
     dsh?: {

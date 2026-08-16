@@ -30,9 +30,10 @@ interface RemoteCatalogFile {
     gaps?: number;
   };
   entries?: CatalogEntry[];
+  plugins?: CommunityRegistryEntry[];
 }
 
-const DEFAULT_AWESOME_URL = 'https://raw.githubusercontent.com/awesome-dsh-plugin/awesome-dsh-plugin/main/README.md';
+const DEFAULT_INSTALL_REGISTRY_URL = 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
 export const DEFAULT_FULL_CATALOG_URL = 'https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json';
 
 /** Normalize a repo URL to its base (strip #fragment). */
@@ -44,9 +45,54 @@ function baseRepo(url: string): string {
 function categoryFromSection(section: string): CatalogEntry['category'] {
   const s = section.toLowerCase();
   if (s.includes('skill')) return 'skill';
-  if (s.includes('theme') || s.includes('ui enhance')) return 'client';
+  if (s === 'ui' || s.includes('theme') || s.includes('appearance') || s.includes('ui enhance')) return 'client';
   if (s.includes('market') || s.includes('manager') || s.includes('badge')) return 'dev-resource';
   return 'plugin';
+}
+
+interface CommunityRegistryEntry {
+  name?: string;
+  owner?: string;
+  url?: string;
+  category?: string;
+  description?: { en?: string; zh?: string };
+  npm?: string | null;
+  install?: string;
+  stars?: number;
+}
+
+/** Accept only the official dsh-plugin command shape; never execute arbitrary registry text. */
+export function installSpecFromCommand(command: string | undefined): string | undefined {
+  if (!command) return undefined;
+  const match = /^dsh\s+plugin\s+--profile\s+[A-Za-z0-9._-]+\s+add\s+(.+?)\s*$/.exec(command.trim());
+  if (!match) return undefined;
+  let spec = match[1].trim();
+  if ((spec.startsWith('"') && spec.endsWith('"')) || (spec.startsWith("'") && spec.endsWith("'"))) spec = spec.slice(1, -1);
+  return spec && !/[\r\n;&|<>]/.test(spec) ? spec : undefined;
+}
+
+/** Convert the community-maintained install registry into panel entries. */
+export function parseCommunityRegistry(file: { plugins?: CommunityRegistryEntry[] }): CatalogEntry[] {
+  const entries: CatalogEntry[] = [];
+  for (const plugin of file.plugins ?? []) {
+    if (!plugin.url?.startsWith('https://github.com/') || !plugin.name) continue;
+    const install = installSpecFromCommand(plugin.install);
+    const category = categoryFromSection(plugin.category ?? 'plugin');
+    entries.push({
+      id: plugin.url.replace(/^https:\/\/github\.com\//, '').replace(/\/tree\/[^/]+\//, '--'),
+      title: plugin.name,
+      description: plugin.description?.en ?? plugin.description?.zh ?? '(no description)',
+      ...(plugin.description?.zh ? { descriptionZh: plugin.description.zh } : {}),
+      category,
+      repo: plugin.url,
+      ...(plugin.npm ? { npm: plugin.npm } : {}),
+      ...(install ? { install, installVerified: true, installSource: 'community' as const } : {}),
+      tags: [plugin.category ?? 'plugin', 'dsh-plugin'],
+      ...(plugin.owner ? { author: plugin.owner } : {}),
+      ...(typeof plugin.stars === 'number' ? { stars: plugin.stars } : {}),
+    });
+  }
+  return entries;
 }
 
 /** Parse the awesome-dsh-plugin README bullet list into entries. */
@@ -99,9 +145,14 @@ export function mergeWithSeed(fetched: CatalogEntry[]): CatalogEntry[] {
       merged.set(key, fetchedEntry);
       continue;
     }
+    const installOwner = existing.installVerified ? existing : fetchedEntry.installVerified ? fetchedEntry : existing;
     merged.set(key, {
       ...fetchedEntry,
       ...existing,
+      ...(installOwner.install ? { install: installOwner.install } : {}),
+      installVerified: installOwner.installVerified ?? false,
+      ...(installOwner.installSource ? { installSource: installOwner.installSource } : {}),
+      ...(installOwner.npm ? { npm: installOwner.npm } : {}),
       tags: [...new Set([...(existing.tags ?? []), ...(fetchedEntry.tags ?? [])])],
     });
   }
@@ -423,6 +474,10 @@ export class CatalogService {
       const raw = await readFile(this.cacheFile(lens), 'utf8');
       const parsed = JSON.parse(raw) as CatalogSnapshot;
       if (Array.isArray(parsed.entries)) {
+        // v6.9 and earlier treated every topic repository root as installable.
+        // Ignore that cache so stale unsafe install buttons cannot survive an
+        // upgrade to the verified-target model.
+        if (!parsed.entries.some((entry) => entry.installVerified === true)) return undefined;
         const snapshot = { ...parsed, lens, source: 'cache' as const };
         this.cached.set(lens, snapshot);
         return snapshot;
@@ -474,7 +529,7 @@ export class CatalogService {
 
   /** Fetch the curated remote source (default awesome README). */
   async fetchCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot> {
-    const url = remoteUrl.trim() || DEFAULT_AWESOME_URL;
+    const url = remoteUrl.trim() || DEFAULT_INSTALL_REGISTRY_URL;
     const response = await fetch(url, { signal, headers: { 'User-Agent': 'dsh-plugin-panel' } });
     if (!response.ok) throw new Error(`catalog fetch failed: HTTP ${response.status} from ${url}`);
     const text = await response.text();
@@ -482,7 +537,7 @@ export class CatalogService {
     const isJson = url.endsWith('.json') || text.trimStart().startsWith('{');
     if (isJson) {
       const file = JSON.parse(text) as RemoteCatalogFile;
-      fetched = file.entries ?? [];
+      fetched = file.entries ?? parseCommunityRegistry(file);
     } else {
       fetched = parseAwesomeMarkdown(text);
     }
@@ -518,6 +573,9 @@ export class CatalogService {
     if (parsed.manifest?.schema !== 'plugin-panel-catalog@1') throw new Error('远程目录 schema 不受支持');
     const ids = new Set(parsed.entries.map((entry) => entry.id));
     if (ids.size !== parsed.entries.length || parsed.entries.some((entry) => !entry.id || !entry.title)) throw new Error('远程目录包含重复或无效条目');
+    if (parsed.entries.some((entry) => entry.installVerified && (!entry.install || /[\r\n;&|<>]/.test(entry.install)))) {
+      throw new Error('远程目录包含无效的已验证安装目标');
+    }
     const totalHits = parsed.manifest.totalHits ?? parsed.entries.length;
     const fetchedCount = parsed.manifest.fetchedCount ?? parsed.entries.length;
     const coveragePct = totalHits > 0 ? (fetchedCount / totalHits) * 100 : 100;

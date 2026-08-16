@@ -48,7 +48,7 @@ describe('v6.8 persistence', () => {
     }));
     const items = await detectInstalled(dir, ['web']);
     expect(items.find((item) => item.name === 'good')).toMatchObject({ kind: 'bundle', enabled: true, packageName: 'good' });
-    expect(items.find((item) => item.name === 'dsh-memory-evolve')).toMatchObject({ kind: 'dependency', enabled: false, issue: '未启用：缺少 dsh.bundle' });
+    expect(items.find((item) => item.name === 'dsh-memory-evolve')).toMatchObject({ kind: 'dependency', enabled: false, issue: '仅下载，未加入 Profile' });
   });
 });
 
@@ -99,7 +99,7 @@ describe('v6.8 lifecycle verification', () => {
     const result = await installPlugin({ dshHome: dir, profile: 'web', dshBin: bin }, 'github:owner/plain', 'Plain');
     expect(result.ok).toBe(false);
     expect(result.rolledBack).toBe(true);
-    expect(result.message).toContain('缺少 dsh.bundle');
+    expect(result.message).toContain('找不到已安装包');
     const profile = JSON.parse(await readFile(join(dir, 'profiles', 'web', 'package.json'), 'utf8'));
     expect(profile.dependencies).toEqual({});
   });
