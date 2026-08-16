@@ -73,10 +73,8 @@ export function createPanelHandler(routes: PanelRoutes) {
     return state.get().settings.embedding ?? DEFAULT_EMBEDDING;
   }
 
-  /** Catalog entries used for embedding (the full bundled index). */
+  /** Catalog entries used for embedding: newest validated cache, bundled fallback. */
   async function embeddableEntries(): Promise<CatalogEntry[]> {
-    const bundled = await catalog.readBundledAll();
-    if (bundled) return bundled.entries;
     const snap = await catalog.snapshot('all');
     return snap.entries;
   }
@@ -140,6 +138,7 @@ export function createPanelHandler(routes: PanelRoutes) {
           builtAt: index?.builtAt ?? null,
           enabled: config.enabled === true,
           keySet: !!config.apiKey,
+          building: embeddingBuildInFlight,
         });
         return;
       }

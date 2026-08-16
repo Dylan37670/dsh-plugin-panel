@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { cosine, embeddingEndpoint, entrySearchText, indexCompatibilityIssue, VectorStore } from '../src/embeddings.ts';
+import { catalogHash, cosine, embeddingEndpoint, entrySearchText, indexCompatibilityIssue, VectorStore } from '../src/embeddings.ts';
 import type { CatalogEntry } from '../src/types.ts';
 
 describe('cosine', () => {
@@ -79,5 +79,17 @@ describe('indexCompatibilityIssue', () => {
     const legacy = { model: 'm', provider: 'p', builtAt: '', dim: 2, vectors: [{ id: 'a', v: [1, 2] }] };
     expect(indexCompatibilityIssue(legacy, config, [entry])).toMatch(/格式/);
     expect(indexCompatibilityIssue({ ...legacy, version: 2, endpoint: 'https://example.test/v1/embeddings', catalogHash: 'x', model: 'other' }, config, [entry])).toMatch(/模型/);
+  });
+
+  it('marks an otherwise valid index stale when the cloud catalog changes', () => {
+    const valid = {
+      version: 2 as const,
+      model: 'm', provider: 'p', builtAt: '', dim: 2,
+      endpoint: 'https://example.test/v1/embeddings',
+      catalogHash: catalogHash([entry]),
+      vectors: [{ id: 'a', v: [1, 2] }],
+    };
+    expect(indexCompatibilityIssue(valid, config, [entry])).toBeUndefined();
+    expect(indexCompatibilityIssue(valid, config, [entry, { ...entry, id: 'new/repo' }])).toMatch(/目录已变化/);
   });
 });

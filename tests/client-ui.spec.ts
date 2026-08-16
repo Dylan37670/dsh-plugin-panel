@@ -176,4 +176,18 @@ describe('catalog refresh regression', () => {
     expect(source).toContain('onClick: clearOperations');
     expect(source).toContain('setOpsExpanded(!opsExpanded)');
   });
+
+  it('keeps the vector rebuild button visible and blocks duplicate builds', () => {
+    const source = readFileSync(join(process.cwd(), 'src/client/client.js'), 'utf8');
+    expect(source).toContain('"sem.rebuild": "重新建立索引"');
+    expect(source).toContain('disabled: !keyConfigured || buildingIndex || embStatus.building');
+    expect(source).toContain('if (buildingIndex || embStatus.building) return');
+  });
+
+  it('uses the newest validated all-catalog snapshot for vectors', () => {
+    const source = readFileSync(join(process.cwd(), 'src/http.ts'), 'utf8');
+    const helper = source.slice(source.indexOf('async function embeddableEntries'), source.indexOf('/** Lifecycle context'));
+    expect(helper).toContain("catalog.snapshot('all')");
+    expect(helper).not.toContain('readBundledAll');
+  });
 });
