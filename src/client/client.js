@@ -111,7 +111,12 @@ window.__ModuleLoader__.load({
       ".pp-footbtn:hover{background:var(--dsw-alias-interactive-bg-hover-solid,#e6e9ee)}",
       ".pp-footbtn[data-on]{background:var(--dsw-alias-interactive-bg-hover,#eef0f4)}",
       ".pp-label{flex:1;min-width:0;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}",
-      ".pp-count{font-size:12px;color:var(--dsw-alias-label-tertiary,#8a919b);flex:none;font-variant-numeric:tabular-nums}"
+      ".pp-count{font-size:12px;color:var(--dsw-alias-label-tertiary,#8a919b);flex:none;font-variant-numeric:tabular-nums}",
+      ".pp-selfrow{font-size:11px;color:var(--dsw-alias-label-tertiary,#8a919b)}",
+      ".pp-selfver{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}",
+      ".pp-selfver[data-new]{color:var(--dsw-alias-state-business-primary,#4d6bfe)}",
+      ".pp-selfver[data-done]{color:var(--dsw-alias-state-success-primary,#1a7f37)}",
+      ".pp-save[data-armed]{outline:2px solid var(--dsw-alias-state-error-primary,#d03050);outline-offset:1px}"
     ].join("");
     var cssId = "@dsh-community/plugin-panel/panel.css";
     if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(cssId) + "]") === null) {
@@ -218,7 +223,17 @@ window.__ModuleLoader__.load({
       "empty.noCatalog": "目录为空，点右上角刷新",
       "loading": "读取中…",
       "error.load": "读取失败：{message}",
-      "restart.hint": "安装/卸载后需重启 GUI 生效。"
+      "restart.hint": "安装/卸载后需重启 GUI 生效。",
+      "self.current": "面板 v{current}",
+      "self.latest": "最新 v{latest}",
+      "self.upToDate": "已是最新",
+      "self.updateAvailable": "发现新版本",
+      "self.checkFailed": "检查更新失败",
+      "self.checking": "正在检查面板更新…",
+      "self.update": "更新面板",
+      "self.confirmUpdate": "确认更新面板？",
+      "self.updating": "正在更新面板…",
+      "self.updated": "面板已更新到 v{version} · 重启 GUI 后生效"
     };
     var en = {
       "panel.title": "Plugin Panel",
@@ -314,7 +329,17 @@ window.__ModuleLoader__.load({
       "empty.noCatalog": "Catalog is empty — refresh from the header",
       "loading": "Loading…",
       "error.load": "Load failed: {message}",
-      "restart.hint": "Installs/uninstalls take effect after a GUI restart."
+      "restart.hint": "Installs/uninstalls take effect after a GUI restart.",
+      "self.current": "Panel v{current}",
+      "self.latest": "latest v{latest}",
+      "self.upToDate": "up to date",
+      "self.updateAvailable": "new version available",
+      "self.checkFailed": "update check failed",
+      "self.checking": "Checking for panel updates…",
+      "self.update": "Update panel",
+      "self.confirmUpdate": "Confirm panel update?",
+      "self.updating": "Updating panel…",
+      "self.updated": "Panel updated to v{version} · takes effect after a GUI restart"
     };
 
     // ── tiny helpers ──────────────────────────────────────────────────────
@@ -592,6 +617,17 @@ window.__ModuleLoader__.load({
       var saveError = saveErrorState[0];
       var setSaveError = saveErrorState[1];
 
+      // v6.11: panel self-update (version pair + update button + restart note).
+      var selfInfoState = useState(null); // null = not checked yet
+      var selfInfo = selfInfoState[0];
+      var setSelfInfo = selfInfoState[1];
+      var selfBusyState = useState(false);
+      var selfBusy = selfBusyState[0];
+      var setSelfBusy = selfBusyState[1];
+      var selfUpdatedState = useState(""); // version after a successful update
+      var selfUpdated = selfUpdatedState[0];
+      var setSelfUpdated = selfUpdatedState[1];
+
       // v5: on-demand Chinese translations for the all-repos lens.
       var translationsState = useState({});
       var translations = translationsState[0];
@@ -602,6 +638,18 @@ window.__ModuleLoader__.load({
         mounted.current = true;
         return function () { mounted.current = false; };
       }, []);
+
+      // v6.11: check the panel's own current/latest version on drawer open.
+      useEffect(function () {
+        if (!open || selfUpdated) return;
+        api("/self-version").then(function (res) {
+          if (!mounted.current) return;
+          if (res.ok) setSelfInfo(res);
+          else setSelfInfo({ checkError: res.message || "unknown error" });
+        }).catch(function (e) {
+          if (mounted.current) setSelfInfo({ checkError: String(e) });
+        });
+      }, [open, selfUpdated]);
 
       var pushOp = useCallback(function (label) {
         var op = { id: String(Date.now()) + Math.random().toString(36).slice(2, 6), label: label, state: "running", startedAt: Date.now() };
@@ -1067,7 +1115,46 @@ window.__ModuleLoader__.load({
         }).catch(function (e) { finishOp(opId, "error", String(e)); });
       }
 
+      // v6.11: two-step confirmed self-update through the guarded lifecycle.
+      function runSelfUpdate() {
+        if (confirm && confirm.action === "selfUpdate" && confirm.id === "__panel_self__") {
+          if (confirmTimer.current) clearTimeout(confirmTimer.current);
+          confirmTimer.current = null;
+          setConfirm(null);
+        } else {
+          armConfirm("selfUpdate", "__panel_self__");
+          return;
+        }
+        var targetVersion = (selfInfo && selfInfo.latest) || "";
+        var opId = pushOp(t("self.update"));
+        setSelfBusy(true);
+        api("/self-update", "POST", {}).then(function (res) {
+          finishOp(opId, res.ok ? "ok" : "error", res.message || "");
+          if (res.ok) {
+            if (res.restartRequired) setSelfUpdated(targetVersion);
+            setSelfInfo(function (prev) { return prev ? { ...prev, updateAvailable: false } : prev; });
+          }
+        }).catch(function (e) {
+          finishOp(opId, "error", String(e));
+        }).then(function () {
+          setSelfBusy(false);
+        });
+      }
+
       var refreshBusy = fetching !== null;
+
+      // v6.11: self-update row text/state (current · latest · availability).
+      var selfArmed = confirm !== null && confirm.action === "selfUpdate" && confirm.id === "__panel_self__";
+      var selfRowText;
+      if (selfUpdated !== "") selfRowText = t("self.updated", { version: selfUpdated });
+      else if (selfInfo === null) selfRowText = t("self.checking");
+      else if (selfInfo.checkError) selfRowText = t("self.current", { current: selfInfo.current || "?" }) + " · " + t("self.checkFailed");
+      else {
+        selfRowText = t("self.current", { current: selfInfo.current });
+        if (selfInfo.latest) selfRowText += " · " + t("self.latest", { latest: selfInfo.latest });
+        selfRowText += " · " + (selfInfo.updateAvailable ? t("self.updateAvailable") : t("self.upToDate"));
+      }
+      var showSelfButton = selfUpdated === "" && selfInfo !== null && selfInfo.updateAvailable === true && !selfInfo.checkError;
 
       // Drawer content
       var drawer = null;
@@ -1295,6 +1382,22 @@ window.__ModuleLoader__.load({
                 }),
                 el("button", { type: "button", className: "pp-save", onClick: saveEmbConfig },
                   savedFlash ? t("settings.saved") : t("settings.saveEmb"))
+              ),
+              el("div", { className: "pp-settings-row pp-selfrow" },
+                el("span", {
+                  className: "pp-selfver",
+                  "data-new": (selfUpdated === "" && selfInfo !== null && selfInfo.updateAvailable === true) || undefined,
+                  "data-done": selfUpdated !== "" || undefined
+                }, selfRowText),
+                showSelfButton
+                  ? el("button", {
+                      type: "button",
+                      className: "pp-save",
+                      "data-armed": selfArmed || undefined,
+                      disabled: selfBusy,
+                      onClick: runSelfUpdate
+                    }, selfBusy ? t("self.updating") : (selfArmed ? t("self.confirmUpdate") : t("self.update")))
+                  : null
               ),
               el("div", { className: "pp-settings-row", style: { color: "var(--dsw-alias-label-tertiary,#8a919b)" } },
                 saveError ? t("settings.saveFailed", { message: saveError }) : t("restart.hint"))

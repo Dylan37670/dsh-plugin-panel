@@ -18,6 +18,7 @@ import {
   type LifecycleContext,
 } from './lifecycle.ts';
 import { detectInstalled } from './installed.ts';
+import { selfStatus, selfUpdate } from './self-update.ts';
 import { translateBatch, type TranslationRoute } from './translate.ts';
 import type { TranslationStore } from './translate.ts';
 import { buildIndex, indexCompatibilityIssue, semanticRank, type VectorStore } from './embeddings.ts';
@@ -107,6 +108,12 @@ export function createPanelHandler(routes: PanelRoutes) {
         const profiles = [...new Set([targetProfile, ...routes.profiles])];
         const installed = await detectInstalled(lifecycle.dshHome, profiles);
         sendJson(res, 200, { ok: true, installed, profiles });
+        return;
+      }
+      case '/self-version': {
+        // v6.11: the panel reports its own current/latest version pair.
+        const status = await selfStatus(currentLifecycle(), AbortSignal.timeout(20_000));
+        sendJson(res, 200, { ok: true, ...status });
         return;
       }
       case '/env': {
@@ -253,6 +260,12 @@ export function createPanelHandler(routes: PanelRoutes) {
       }
       case '/fix-pnpm': {
         const result = await setupPnpm();
+        sendJson(res, result.ok ? 200 : 500, result);
+        return;
+      }
+      case '/self-update': {
+        // v6.11: update the panel itself through the same guarded lifecycle.
+        const result = await selfUpdate(currentLifecycle());
         sendJson(res, result.ok ? 200 : 500, result);
         return;
       }
