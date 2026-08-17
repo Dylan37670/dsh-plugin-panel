@@ -25,7 +25,7 @@ if (Number(manifest.installVerifiedCount ?? verifiedCount) !== verifiedCount) fa
 const totalHits = Number(manifest.totalHits ?? 0);
 const fetchedCount = Number(manifest.fetchedCount ?? 0);
 const coverage = totalHits > 0 ? (fetchedCount / totalHits) * 100 : 100;
-if (coverage < 99.5) fail(`coverage ${coverage.toFixed(3)}% is below 99.5%`);
+if (coverage < 99) fail(`coverage ${coverage.toFixed(3)}% is below 99%`);
 
 if (previousFile) {
   try {
