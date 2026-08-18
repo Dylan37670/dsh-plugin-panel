@@ -2,7 +2,10 @@ name: Update full catalog
 
 on:
   schedule:
-    - cron: '17 * * * *'
+    # Backup only: Hermes hourly task (17 * * * *, +08:00) is the primary
+    # trigger. This low-frequency cron keeps the catalog fresh when Hermes
+    # is offline (PC off / agent not running). 03:17/15:17 UTC = 11:17/23:17 +08:00.
+    - cron: '17 3,15 * * *'
   workflow_dispatch:
 
 permissions:
