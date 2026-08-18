@@ -135,6 +135,12 @@ export declare class CatalogService {
      *  3. any remaining cache, then the seed.
      */
     snapshot(lens?: CatalogLens): Promise<CatalogSnapshot>;
+    /**
+     * Persist the bundled curated index to the disk cache (v6.13): after a
+     * no-URL refresh the bundled snapshot becomes the cache, so a later
+     * /catalog read returns the same up-to-date list instead of a stale one.
+     */
+    cacheBundledCurated(): Promise<void>;
     /** Fetch the curated remote source (default awesome README). */
     fetchCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot>;
     /**

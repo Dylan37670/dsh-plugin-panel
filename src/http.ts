@@ -177,10 +177,14 @@ export function createPanelHandler(routes: PanelRoutes) {
           }
           const bundled = await catalog.readBundledCurated();
           if (bundled) {
+            // v6.13: persist the bundled index as the cache so a later
+            // /catalog read returns the same up-to-date list (and a stale
+            // smaller cache can never shadow it again).
+            await catalog.cacheBundledCurated();
             sendJson(res, 200, {
               ok: true,
               ...bundled,
-              note: '内置预构建精选索引（构建于 ' + (bundled.fetchedAt ?? '未知') + '），无需联网刷新；如需在线更新，请在设置中填写远程目录 URL。',
+              note: '内置预构建精选索引（构建于 ' + (bundled.fetchedAt ?? '未知') + '），已更新本地缓存；如需在线更新，请在设置中填写远程目录 URL。',
             });
             return;
           }
