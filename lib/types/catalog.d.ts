@@ -107,6 +107,7 @@ export declare class CatalogService {
     private readonly cacheFile;
     private cached;
     private bundledAll;
+    private bundledCurated;
     private starsMap;
     constructor(dshHome: string);
     /** repo base URL → stars, built from the bundled full index (v5.4). */
@@ -115,6 +116,10 @@ export declare class CatalogService {
     enrichStars(entries: CatalogEntry[]): Promise<CatalogEntry[]>;
     /** Path of the prebuilt full-repo index shipped with the package. */
     bundledAllPath(): string;
+    /** Path of the prebuilt curated index shipped with the package (v6.12). */
+    bundledCuratedPath(): string;
+    /** Load the prebuilt curated index bundled with the plugin (v6.12). */
+    readBundledCurated(): Promise<CatalogSnapshot | undefined>;
     /** Load the prebuilt full-repo index bundled with the plugin. */
     readBundledAll(): Promise<CatalogSnapshot | undefined>;
     private readCache;
@@ -137,6 +142,11 @@ export declare class CatalogService {
      * path: one fast single-file download instead of crawling GitHub pages).
      */
     fetchPrebuiltAll(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot>;
+    /**
+     * Download a prebuilt curated index (catalog/curated.json) from a remote URL
+     * (v6.12 refresh path — one fast single-file download).
+     */
+    fetchPrebuiltCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot>;
     /** Invalidate one lens's in-memory cache (used after a failed refresh). */
     invalidate(lens: CatalogLens): void;
 }

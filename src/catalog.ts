@@ -400,6 +400,7 @@ export class CatalogService {
   private readonly cacheFile: (lens: CatalogLens) => string;
   private cached = new Map<CatalogLens, CatalogSnapshot>();
   private bundledAll: CatalogSnapshot | undefined;
+  private bundledCurated: CatalogSnapshot | undefined;
   private starsMap: Map<string, number> | undefined;
 
   constructor(dshHome: string) {
@@ -439,6 +440,37 @@ export class CatalogService {
     return fileURLToPath(new URL('../catalog/catalog.json', import.meta.url));
   }
 
+  /** Path of the prebuilt curated index shipped with the package (v6.12). */
+  bundledCuratedPath(): string {
+    return fileURLToPath(new URL('../catalog/curated.json', import.meta.url));
+  }
+
+  /** Load the prebuilt curated index bundled with the plugin (v6.12). */
+  async readBundledCurated(): Promise<CatalogSnapshot | undefined> {
+    if (this.bundledCurated) return this.bundledCurated;
+    try {
+      const raw = await readFile(this.bundledCuratedPath(), 'utf8');
+      const parsed = JSON.parse(raw) as RemoteCatalogFile;
+      if (Array.isArray(parsed.entries) && parsed.entries.length > 0) {
+        const snapshot: CatalogSnapshot = {
+          entries: parsed.entries,
+          fetchedAt: parsed.manifest?.generatedAt,
+          source: 'remote',
+          lens: 'curated',
+          totalHits: parsed.entries.length,
+          generatedAt: parsed.manifest?.generatedAt,
+          fetchedCount: parsed.manifest?.fetchedCount,
+          partial: false,
+        };
+        this.bundledCurated = snapshot;
+        return snapshot;
+      }
+    } catch {
+      /* bundled curated index absent */
+    }
+    return undefined;
+  }
+
   /** Load the prebuilt full-repo index bundled with the plugin. */
   async readBundledAll(): Promise<CatalogSnapshot | undefined> {
     if (this.bundledAll) return this.bundledAll;
@@ -475,9 +507,10 @@ export class CatalogService {
       const parsed = JSON.parse(raw) as CatalogSnapshot;
       if (Array.isArray(parsed.entries)) {
         // v6.9 and earlier treated every topic repository root as installable.
-        // Ignore that cache so stale unsafe install buttons cannot survive an
-        // upgrade to the verified-target model.
-        if (!parsed.entries.some((entry) => entry.installVerified === true)) return undefined;
+        // Ignore that ALL-lens cache so stale unsafe install buttons cannot
+        // survive an upgrade to the verified-target model. The curated cache
+        // (awesome list / registry) has no installVerified and stays valid.
+        if (lens === 'all' && !parsed.entries.some((entry) => entry.installVerified === true)) return undefined;
         const snapshot = { ...parsed, lens, source: 'cache' as const };
         this.cached.set(lens, snapshot);
         return snapshot;
@@ -523,7 +556,12 @@ export class CatalogService {
       if (cache) return cache;
       return { entries: SEED_ENTRIES, source: 'seed', lens };
     }
+    // v6.12: curated priority = refreshed cache → bundled curated index
+    // → seed. Cache-first so a manual refresh result is never shadowed by the
+    // bundled copy (Codex fix for the refresh-not-showing regression).
     if (cache) return { ...cache, entries: await this.enrichStars(cache.entries) };
+    const bundled = await this.readBundledCurated();
+    if (bundled) return { ...bundled, entries: await this.enrichStars(bundled.entries) };
     return { entries: await this.enrichStars(SEED_ENTRIES), source: 'seed', lens };
   }
 
@@ -579,8 +617,15 @@ export class CatalogService {
     const totalHits = parsed.manifest.totalHits ?? parsed.entries.length;
     const fetchedCount = parsed.manifest.fetchedCount ?? parsed.entries.length;
     const coveragePct = totalHits > 0 ? (fetchedCount / totalHits) * 100 : 100;
-    if ((parsed.manifest.gaps ?? 0) !== 0 || coveragePct < 99.5) throw new Error(`远程目录覆盖率不足（${coveragePct.toFixed(2)}%）`);
-    if (previous && parsed.entries.length < previous.entries.length * 0.95) throw new Error('远程目录条目异常缩水，已保留本地旧目录');
+    // GitHub Search's total_count is not a stable snapshot.  A long partitioned
+    // crawl can legitimately finish with a lower percentage when repositories
+    // are created/deleted during it.  `gaps` plus shrink protection are the
+    // actual integrity gates; coveragePct remains an informational metric.
+    if ((parsed.manifest.gaps ?? 0) !== 0) throw new Error('远程目录分桶存在缺口，已保留本地旧目录');
+    const previousFetched = previous?.fetchedCount ?? previous?.entries.length ?? 0;
+    if (previousFetched > 0 && fetchedCount < previousFetched * 0.95) {
+      throw new Error('远程目录抓取数量异常缩水，已保留本地旧目录');
+    }
     const merged = mergeWithSeed(parsed.entries);
     const snapshot: CatalogSnapshot = {
       entries: merged,
@@ -598,6 +643,37 @@ export class CatalogService {
     };
     await this.writeCache(snapshot);
     this.cached.set('all', { ...snapshot, source: 'cache' });
+    return snapshot;
+  }
+
+  /**
+   * Download a prebuilt curated index (catalog/curated.json) from a remote URL
+   * (v6.12 refresh path — one fast single-file download).
+   */
+  async fetchPrebuiltCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot> {
+    const url = remoteUrl.trim();
+    if (!url) throw new Error('未配置远程目录 URL');
+    const response = await fetch(url, { signal, headers: { 'User-Agent': 'dsh-plugin-panel' } });
+    if (!response.ok) throw new Error(`catalog download failed: HTTP ${response.status} from ${url}`);
+    const parsed = JSON.parse(await response.text()) as RemoteCatalogFile;
+    if (!Array.isArray(parsed.entries) || parsed.entries.length === 0) throw new Error('远程目录文件没有 entries');
+    if (parsed.manifest?.schema && parsed.manifest.schema !== 'plugin-panel-curated@1') throw new Error('远程目录 schema 不受支持');
+    const ids = new Set(parsed.entries.map((entry) => entry.id));
+    if (ids.size !== parsed.entries.length || parsed.entries.some((entry) => !entry.id || !entry.title)) throw new Error('远程目录包含重复或无效条目');
+    const merged = mergeWithSeed(parsed.entries);
+    const entries = await this.enrichStars(merged);
+    const snapshot: CatalogSnapshot = {
+      entries,
+      fetchedAt: parsed.manifest?.generatedAt ?? new Date().toISOString(),
+      source: 'remote',
+      lens: 'curated',
+      totalHits: entries.length,
+      generatedAt: parsed.manifest?.generatedAt,
+      fetchedCount: parsed.manifest?.fetchedCount,
+      partial: false,
+    };
+    await this.writeCache(snapshot);
+    this.cached.set('curated', { ...snapshot, source: 'cache' });
     return snapshot;
   }
 

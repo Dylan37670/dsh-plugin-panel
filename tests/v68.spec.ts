@@ -134,7 +134,7 @@ describe('v6.8 prebuilt catalog safety', () => {
     } finally { globalThis.fetch = oldFetch; }
   });
 
-  it('rejects corrupt/low-coverage data without replacing the good cache', async () => {
+  it('accepts a complete catalogue when GitHub reported total changes during the crawl', async () => {
     const oldFetch = globalThis.fetch;
     let payload: unknown = valid;
     globalThis.fetch = (async () => new Response(JSON.stringify(payload), { status: 200 })) as typeof fetch;
@@ -142,8 +142,21 @@ describe('v6.8 prebuilt catalog safety', () => {
       const svc = serviceWithoutBundled();
       await svc.fetchPrebuiltAll('https://example.test/catalog.json');
       payload = { ...valid, manifest: { ...valid.manifest, totalHits: 1000, fetchedCount: 10 } };
-      await expect(svc.fetchPrebuiltAll('https://example.test/catalog.json')).rejects.toThrow('覆盖率不足');
+      await expect(svc.fetchPrebuiltAll('https://example.test/catalog.json')).resolves.toMatchObject({ source: 'remote' });
       expect((await svc.snapshot('all')).entries.some((x) => x.id === 'a/b')).toBe(true);
+    } finally { globalThis.fetch = oldFetch; }
+  });
+
+  it('rejects a large fetched-count shrink without replacing the good cache', async () => {
+    const oldFetch = globalThis.fetch;
+    let payload: unknown = { ...valid, manifest: { ...valid.manifest, totalHits: 100, fetchedCount: 100 } };
+    globalThis.fetch = (async () => new Response(JSON.stringify(payload), { status: 200 })) as typeof fetch;
+    try {
+      const svc = serviceWithoutBundled();
+      await svc.fetchPrebuiltAll('https://example.test/catalog.json');
+      payload = { ...valid, manifest: { ...valid.manifest, totalHits: 100, fetchedCount: 10 } };
+      await expect(svc.fetchPrebuiltAll('https://example.test/catalog.json')).rejects.toThrow('抓取数量异常缩水');
+      expect((await svc.snapshot('all')).fetchedCount).toBe(100);
     } finally { globalThis.fetch = oldFetch; }
   });
 });

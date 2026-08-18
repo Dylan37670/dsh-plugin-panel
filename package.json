@@ -1,81 +1,82 @@
 {
-    "name": "@dsh-community/plugin-panel",
-    "description": "Plugin Panel v6.11 — panel self-update: version check, update button and restart reminder.",
-    "version": "0.6.11",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Dylan37670/dsh-plugin-panel.git"
-    },
-    "homepage": "https://github.com/Dylan37670/dsh-plugin-panel#readme",
-    "bugs": {
-        "url": "https://github.com/Dylan37670/dsh-plugin-panel/issues"
-    },
-    "keywords": [
-        "deepseek-harness",
-        "dsh",
-        "dsh-plugin",
-        "plugin-marketplace",
-        "typescript"
-    ],
-    "type": "module",
-    "main": "lib/index.js",
-    "types": "lib/types/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./lib/types/index.d.ts",
-            "default": "./lib/index.js"
-        },
-        "./client": {
-            "default": "./lib/client.js"
-        },
-        "./cordis.patch.yml": "./cordis.patch.yml",
-        "./package.json": "./package.json"
-    },
-    "files": [
-        "lib",
-        "src",
-        "catalog",
-        "cordis.patch.yml",
-        "README.md",
-        "LICENSE"
-    ],
-    "scripts": {
-        "build": "tsc -p tsconfig.json && node scripts/copy-client.mjs",
-        "prepack": "npm run build",
-        "typecheck": "tsc -p tsconfig.json --noEmit",
-        "test": "vitest run",
-        "sync:catalog": "node scripts/build-catalog.mjs",
-        "validate:catalog": "node scripts/validate-catalog.mjs catalog/catalog.json"
-    },
-    "dsh": {
-        "client": {
-            "inject": [
-                "@deepseek-ai/dsh-client-runtime",
-                "@deepseek-ai/dsh-client-locale",
-                "@deepseek-ai/dsh-client-ui-sidebar"
-            ],
-            "platform": "web"
-        },
-        "bundle": {
-            "patch": "./cordis.patch.yml"
-        }
-    },
-    "peerDependencies": {
-        "@deepseek-ai/cordis": "^4.0.1"
-    },
-    "devDependencies": {
-        "@deepseek-ai/cordis": "^4.0.1",
-        "@types/node": "^22.10.0",
-        "@types/react": "~18.3.0",
-        "@types/react-dom": "~18.3.0",
-        "jsdom": "^24.0.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "typescript": "^5.6.0",
-        "vitest": "^2.1.0"
-    },
-    "license": "MIT",
-    "allowScripts": {
-        "esbuild@0.21.5": true
-    }
+    "name":  "@dsh-community/plugin-panel",
+    "description":  "Plugin Panel v6.11 鈥?panel self-update: version check, update button and restart reminder.",
+    "version":  "0.6.12",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/Dylan37670/dsh-plugin-panel.git"
+                   },
+    "homepage":  "https://github.com/Dylan37670/dsh-plugin-panel#readme",
+    "bugs":  {
+                 "url":  "https://github.com/Dylan37670/dsh-plugin-panel/issues"
+             },
+    "keywords":  [
+                     "deepseek-harness",
+                     "dsh",
+                     "dsh-plugin",
+                     "plugin-marketplace",
+                     "typescript"
+                 ],
+    "type":  "module",
+    "main":  "lib/index.js",
+    "types":  "lib/types/index.d.ts",
+    "exports":  {
+                    ".":  {
+                              "types":  "./lib/types/index.d.ts",
+                              "default":  "./lib/index.js"
+                          },
+                    "./client":  {
+                                     "default":  "./lib/client.js"
+                                 },
+                    "./cordis.patch.yml":  "./cordis.patch.yml",
+                    "./package.json":  "./package.json"
+                },
+    "files":  [
+                  "lib",
+                  "src",
+                  "catalog",
+                  "cordis.patch.yml",
+                  "README.md",
+                  "LICENSE"
+              ],
+    "scripts":  {
+                    "build":  "tsc -p tsconfig.json \u0026\u0026 node scripts/copy-client.mjs",
+                    "prepack":  "npm run build",
+                    "typecheck":  "tsc -p tsconfig.json --noEmit",
+                    "test":  "vitest run",
+                    "sync:catalog":  "node scripts/build-catalog.mjs",
+                    "sync:curated":  "node scripts/build-catalog.mjs --curated-only",
+                    "validate:catalog":  "node scripts/validate-catalog.mjs catalog/catalog.json"
+                },
+    "dsh":  {
+                "client":  {
+                               "inject":  [
+                                              "@deepseek-ai/dsh-client-runtime",
+                                              "@deepseek-ai/dsh-client-locale",
+                                              "@deepseek-ai/dsh-client-ui-sidebar"
+                                          ],
+                               "platform":  "web"
+                           },
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           }
+            },
+    "peerDependencies":  {
+                             "@deepseek-ai/cordis":  "^4.0.1"
+                         },
+    "devDependencies":  {
+                            "@deepseek-ai/cordis":  "^4.0.1",
+                            "@types/node":  "^22.10.0",
+                            "@types/react":  "~18.3.0",
+                            "@types/react-dom":  "~18.3.0",
+                            "jsdom":  "^24.0.0",
+                            "react":  "^18.2.0",
+                            "react-dom":  "^18.2.0",
+                            "typescript":  "^5.6.0",
+                            "vitest":  "^2.1.0"
+                        },
+    "license":  "MIT",
+    "allowScripts":  {
+                         "esbuild@0.21.5":  true
+                     }
 }

@@ -25,7 +25,7 @@ if (Number(manifest.installVerifiedCount ?? verifiedCount) !== verifiedCount) fa
 const totalHits = Number(manifest.totalHits ?? 0);
 const fetchedCount = Number(manifest.fetchedCount ?? 0);
 const coverage = totalHits > 0 ? (fetchedCount / totalHits) * 100 : 100;
-if (coverage < 99) fail(`coverage ${coverage.toFixed(3)}% is below 99%`);
+if (!Number.isFinite(fetchedCount) || fetchedCount <= 0) fail('fetchedCount must be a positive number');
 
 if (previousFile) {
   try {
@@ -34,9 +34,16 @@ if (previousFile) {
     if (previousCount > 0 && entries.length < previousCount * 0.95) {
       fail(`entry count ${entries.length} fell below 95% of previous ${previousCount}`);
     }
+    const previousFetched = Number(previous.manifest?.fetchedCount ?? previousCount);
+    if (previousFetched > 0 && fetchedCount < previousFetched * 0.95) {
+      fail(`fetched count ${fetchedCount} fell below 95% of previous ${previousFetched}`);
+    }
   } catch (error) {
     if (error?.code !== 'ENOENT') throw error;
   }
 }
 
-console.log(`[validate-catalog] ok: ${entries.length} entries, ${verifiedCount} verified installs, ${totalHits} topic hits, ${coverage.toFixed(3)}% coverage`);
+// GitHub Search's total_count is a moving estimate: the number can change while
+// the date/star/size partitions are being crawled.  It is useful to display,
+// but must not reject a gap-free, non-shrunken catalogue and create mail spam.
+console.log(`[validate-catalog] ok: ${entries.length} entries, ${verifiedCount} verified installs, ${totalHits} reported topic hits, ${fetchedCount} partitioned (${coverage.toFixed(3)}% advisory)`);

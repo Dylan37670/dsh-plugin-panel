@@ -1,11 +1,9 @@
 name: Update full catalog
 
 on:
+  # Hermes is the hourly primary scheduler.  This is only an independent
+  # twice-daily fallback, so it cannot double the normal crawl volume.
   schedule:
-    # Backup only: Hermes hourly task (17 * * * *, +08:00) is the primary
-    # trigger. This low-frequency cron keeps the catalog fresh when Hermes
-    # is offline (PC off / agent not running). 00:47/12:47 UTC = 08:47/20:47 +08:00
-    # (morning and evening), offset from Hermes' :17 trigger.
     - cron: '47 0,12 * * *'
   workflow_dispatch:
 

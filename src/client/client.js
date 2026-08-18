@@ -1235,7 +1235,7 @@ window.__ModuleLoader__.load({
                       ? t("src.totalAll", { total: String(catalog.totalHits ?? catalog.entries.length), shown: String(catalog.entries.length) })
                       : t("src.totalCurated", { n: String(catalog.entries.length) }))),
               lens === "all" && catalog.coveragePct != null
-                ? el("span", { className: "pp-srccount" }, " · " + Number(catalog.coveragePct).toFixed(2) + "% · " + fmtTime(catalog.generatedAt))
+                ? el("span", { className: "pp-srccount" }, " · GitHub 报数参考 " + Number(catalog.coveragePct).toFixed(2) + "% · " + fmtTime(catalog.generatedAt))
                 : null
             ),
             el("div", { className: "pp-sortrow" },

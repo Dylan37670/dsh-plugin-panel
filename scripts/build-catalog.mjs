@@ -18,21 +18,52 @@
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory, parseCommunityRegistry } from '../lib/catalog.js';
+import { githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory, parseCommunityRegistry, parseAwesomeMarkdown } from '../lib/catalog.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CATALOG_DIR = join(ROOT, 'catalog');
 const STATE_FILE = join(CATALOG_DIR, '.build-state.json');
 const OUT_FILE = join(CATALOG_DIR, 'catalog.json');
+const CURATED_OUT = join(CATALOG_DIR, 'curated.json');
 const TOPIC = 'dsh-plugin';
+const CURATED_SOURCE = 'https://raw.githubusercontent.com/awesome-dsh-plugin/awesome-dsh-plugin/main/README.md';
 const INSTALL_REGISTRY = process.env.INSTALL_REGISTRY_URL
   ?? 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
 
 const args = process.argv.slice(2);
 const reset = args.includes('--reset');
+const curatedOnly = args.includes('--curated-only');
 const maxQueries = Number(args.find((a) => a.startsWith('--max-queries='))?.split('=')[1] ?? 18);
 const paceMs = Number(args.find((a) => a.startsWith('--pace-ms='))?.split('=')[1] ?? (process.env.GITHUB_TOKEN || process.env.GH_TOKEN ? 2_000 : 7_000));
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Build the curated prebuilt index (v6.12): parse the awesome-dsh-plugin
+ * README, merge with the curated seed, write catalog/curated.json.
+ * Fast (one fetch) — safe to run periodically.
+ */
+async function buildCurated() {
+  const response = await fetch(CURATED_SOURCE, { headers: { 'User-Agent': 'dsh-plugin-panel-catalog' } });
+  if (!response.ok) throw new Error(`curated source unavailable (${CURATED_SOURCE}): HTTP ${response.status}`);
+  const fetched = parseAwesomeMarkdown(await response.text());
+  if (fetched.length === 0) throw new Error('curated parse returned no entries');
+  const entries = mergeWithSeed(fetched);
+  const manifest = {
+    generatedAt: new Date().toISOString(),
+    fetchedCount: fetched.length,
+    count: entries.length,
+    source: 'awesome-dsh-plugin',
+    schema: 'plugin-panel-curated@1',
+  };
+  await mkdir(CATALOG_DIR, { recursive: true });
+  const tmp = `${CURATED_OUT}.tmp`;
+  await writeFile(tmp, JSON.stringify({ manifest, entries }, null, 2), 'utf8');
+  await rm(CURATED_OUT, { force: true }).catch(() => {});
+  const { rename } = await import('node:fs/promises');
+  await rename(tmp, CURATED_OUT);
+  console.log(`[build-catalog] curated done: ${entries.length} entries (fetched ${fetched.length})`);
+  return entries;
+}
 
 /** Sub-partition ranges for saturated one-day buckets. */
 const STAR_RANGES = ['0..0', '1..2', '3..5', '6..10', '11..25', '26..50', '51..100', '101..500', '501..100000'];
@@ -134,6 +165,11 @@ async function saveState(state) {
 }
 
 async function main() {
+  // v6.12: the curated index is always (re)built — fast, and the default
+  // periodic refresh. The full topic crawl only runs unless --curated-only.
+  await buildCurated();
+  if (curatedOnly) return;
+
   if (reset) {
     await rm(STATE_FILE, { force: true }).catch(() => {});
     await rm(OUT_FILE, { force: true }).catch(() => {});

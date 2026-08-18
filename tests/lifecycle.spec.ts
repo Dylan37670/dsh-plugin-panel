@@ -21,10 +21,10 @@ describe('CatalogService cache', () => {
     await rm(dir, { recursive: true, force: true });
   });
 
-  it('starts from the seed without a cache', async () => {
+  it('starts from the bundled curated directory without a cache', async () => {
     const svc = new CatalogService(dir);
     const snap = await svc.snapshot();
-    expect(snap.source).toBe('seed');
+    expect(snap.source).toBe('remote');
     expect(snap.entries.length).toBeGreaterThan(20);
   });
 

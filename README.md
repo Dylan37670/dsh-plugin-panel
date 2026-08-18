@@ -21,9 +21,9 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 
 ## 功能
 
-> **版本 v0.4.0**：独立目录 `v4/`（v1/v2/v3 原样保留）。
-> **v4 新增：排序选项** —— 抽屉内「排序」下拉：默认 / 星标最多 / 星标最少 / 名称 A-Z / 名称 Z-A / 最新创建 / 最早创建；排序作用于筛选后的结果并持久化到设置。
-> **v3 架构（预构建离线索引）**：`scripts/build-catalog.mjs` 构建脚本（可续传、可配 token）服务端抓全 `dsh-plugin` topic 生成 **`catalog/catalog.json`** 随插件发布，面板“全部”目录秒级加载；刷新 = 下载一个文件。
+> **版本 v0.6.12**：独立目录 `v6.12/`（旧版本保留）。
+> **v6.12 新增：精选目录也改为预构建索引** —— `scripts/build-catalog.mjs --curated-only`（快速、供定时任务）从官方 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 解析精选列表，生成 **`catalog/curated.json`** 随插件发布；面板“精选”目录秒级加载预构建索引（当前 **1180 条**），刷新 = 下载一个文件（未配置 URL 时用内置索引，不再每次解析网络列表）。
+> **v3 架构（预构建离线索引）**：`scripts/build-catalog.mjs`（可续传、可配 token）服务端抓全 `dsh-plugin` topic 生成 **`catalog/catalog.json`** 随插件发布，面板“全部”目录秒级加载；刷新 = 下载一个文件。
 >
 > **覆盖完整性**：构建脚本对超过 1000 条的查询自动细分 —— 日期区间 → 单日按 `stars:` 区间 → 单星标值按 `size:` 区间，无法细分记入 `gaps` 并在 manifest 暴露覆盖率。
 
@@ -32,7 +32,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **入口**：侧边栏底部（设置上方）的 “插件面板” 按钮；窄栏（rail）态显示为图标。
 - **右侧抽屉**：点击按钮打开固定右侧抽屉，点遮罩或关闭按钮收起。
 - **双目录源**：搜索框下方「精选 / 全部」切换按钮，**鼠标悬停显示两者区别**：
-  - **精选**：社区人工维护的安装注册表（来源于 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)，由 [dsh-market](https://github.com/dsh-market/dsh-market) 生成 JSON），质量优先；缓存 `catalog.cache.json`。
+  - **精选**：**预构建索引** `catalog/curated.json`（官方 awesome-dsh-plugin 精选列表，当前 1180 条），质量优先；缓存 `catalog.cache.json`。
   - **全部**：启动先显示随包目录或本地缓存，再从 [`catalog-data`](https://github.com/Dylan37670/dsh-plugin-panel/tree/catalog-data) 数据分支下载一个 `catalog.json`；GitHub Actions 每小时更新，用户电脑不再运行全量爬虫。
 - **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
 - **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
