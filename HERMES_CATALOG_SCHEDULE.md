@@ -4,7 +4,7 @@
 
 ## 目标
 
-每小时更新一次 `catalog-data` 数据分支中的 `catalog.json`，供插件面板的“全部”目录下载。不要改动插件的 `main` 分支代码或版本号。
+每小时更新一次 `catalog-data` 数据分支中的 `catalog.json`（全部）和 `curated.json`（精选），供插件面板下载。不要改动插件的 `main` 分支代码或版本号。
 
 ## 调度时间
 
@@ -38,7 +38,7 @@ gh workflow run update-catalog.yml --repo Dylan37670/dsh-plugin-panel --ref main
 
 - 不要把 GitHub Search API 的 `total_count` / 覆盖率百分比改成发布条件。
 - 不要把 `99.5%`、`99%` 或任何类似固定百分比作为失败阈值。
-- 不要直接编辑或覆盖 `catalog-data/catalog.json`；只能由 `Update full catalog` 工作流发布。
+- 不要直接编辑或覆盖 `catalog-data/catalog.json` 或 `catalog-data/curated.json`；只能由 `Update full catalog` 工作流发布。
 - 不要取消正在运行的目录任务，不要修改 Release，不要修改插件包版本。
 
 ## 说明

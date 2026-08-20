@@ -13,6 +13,8 @@
  */
 import type { CatalogEntry, CatalogLens, CatalogSnapshot } from './types.ts';
 export declare const DEFAULT_FULL_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json";
+/** Published alongside the full catalogue; used by the selected/curated lens. */
+export declare const DEFAULT_CURATED_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/curated.json";
 interface CommunityRegistryEntry {
     name?: string;
     owner?: string;

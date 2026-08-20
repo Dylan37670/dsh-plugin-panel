@@ -6,7 +6,7 @@ import { OperationStore } from '../src/operations.ts';
 import { StateStore } from '../src/state.ts';
 import { detectInstalled } from '../src/installed.ts';
 import { installPlugin, uninstallPlugin, updateTarget } from '../src/lifecycle.ts';
-import { CatalogService } from '../src/catalog.ts';
+import { CatalogService, DEFAULT_CURATED_CATALOG_URL } from '../src/catalog.ts';
 
 describe('v6.8 persistence', () => {
   let dir: string;
@@ -131,6 +131,21 @@ describe('v6.8 prebuilt catalog safety', () => {
       const first = await svc.fetchPrebuiltAll('https://example.test/catalog.json');
       const second = await svc.fetchPrebuiltAll('https://example.test/catalog.json');
       expect(second.entries).toEqual(first.entries);
+    } finally { globalThis.fetch = oldFetch; }
+  });
+
+  it('downloads the maintained curated JSON when no custom URL is configured', async () => {
+    const oldFetch = globalThis.fetch;
+    let requested = '';
+    const curated = { manifest: { schema: 'plugin-panel-curated@1', generatedAt: new Date().toISOString() }, entries: [entry] };
+    globalThis.fetch = (async (url) => {
+      requested = String(url);
+      return new Response(JSON.stringify(curated), { status: 200 });
+    }) as typeof fetch;
+    try {
+      const snapshot = await serviceWithoutBundled().fetchPrebuiltCurated('');
+      expect(requested).toBe(DEFAULT_CURATED_CATALOG_URL);
+      expect(snapshot.entries.some((item) => item.id === 'a/b')).toBe(true);
     } finally { globalThis.fetch = oldFetch; }
   });
 

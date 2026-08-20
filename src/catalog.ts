@@ -35,6 +35,8 @@ interface RemoteCatalogFile {
 
 const DEFAULT_INSTALL_REGISTRY_URL = 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
 export const DEFAULT_FULL_CATALOG_URL = 'https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json';
+/** Published alongside the full catalogue; used by the selected/curated lens. */
+export const DEFAULT_CURATED_CATALOG_URL = 'https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/curated.json';
 
 /** Normalize a repo URL to its base (strip #fragment). */
 function baseRepo(url: string): string {
@@ -673,8 +675,9 @@ export class CatalogService {
    * (v6.12 refresh path — one fast single-file download).
    */
   async fetchPrebuiltCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot> {
-    const url = remoteUrl.trim();
-    if (!url) throw new Error('未配置远程目录 URL');
+    // A blank setting means "use our maintained selected catalogue", not
+    // "re-save the copy shipped with this plugin version".
+    const url = remoteUrl.trim() || DEFAULT_CURATED_CATALOG_URL;
     const response = await fetch(url, { signal, headers: { 'User-Agent': 'dsh-plugin-panel' } });
     if (!response.ok) throw new Error(`catalog download failed: HTTP ${response.status} from ${url}`);
     const parsed = JSON.parse(await response.text()) as RemoteCatalogFile;

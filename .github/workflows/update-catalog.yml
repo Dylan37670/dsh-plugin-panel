@@ -42,7 +42,7 @@ jobs:
       - name: Validate before publishing
         run: node scripts/validate-catalog.mjs catalog/catalog.json /tmp/previous-catalog.json
 
-      - name: Publish changed JSON to catalog-data
+      - name: Publish changed directory JSON to catalog-data
         env:
           REPOSITORY_URL: ${{ github.server_url }}/${{ github.repository }}.git
           GH_TOKEN: ${{ github.token }}
@@ -58,12 +58,13 @@ jobs:
             git checkout --orphan catalog-data
           fi
           cp "$GITHUB_WORKSPACE/catalog/catalog.json" catalog.json
-          git add catalog.json
+          cp "$GITHUB_WORKSPACE/catalog/curated.json" curated.json
+          git add catalog.json curated.json
           if git diff --cached --quiet; then
             echo "Catalog content is unchanged."
             exit 0
           fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git commit -m "data: refresh full catalog"
+          git commit -m "data: refresh catalog directories"
           git push origin HEAD:catalog-data
