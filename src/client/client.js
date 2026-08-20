@@ -103,6 +103,9 @@ window.__ModuleLoader__.load({
       ".pp-settings-row{display:flex;gap:6px;align-items:center}",
       ".pp-settings-row input{flex:1;min-width:0;box-sizing:border-box;height:28px;border-radius:8px;border:1px solid var(--dsw-alias-border-l1,#e5e7eb);padding:0 8px;font-size:12px;background:var(--dsw-alias-bg-base,#fff);color:inherit}",
       ".pp-settings-row select{height:28px;border-radius:8px;border:1px solid var(--dsw-alias-border-l1,#e5e7eb);background:var(--dsw-alias-bg-base,#fff);font-size:12px;color:inherit}",
+      ".pp-author-links{font-size:11px;color:var(--dsw-alias-label-tertiary,#8a919b);gap:7px}",
+      ".pp-author-links a{color:var(--dsw-alias-state-business-primary,#4d6bfe);text-decoration:none}",
+      ".pp-author-links a:hover{text-decoration:underline}",
       ".pp-save{border:1px solid var(--dsw-alias-border-l1,#e5e7eb);border-radius:8px;background:var(--dsw-alias-bg-base,#fff);padding:2px 10px;font-size:12px;cursor:pointer}",
       ".pp-railbtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:none;background:transparent;cursor:pointer;color:var(--dsw-alias-label-primary,#1f2328)}",
       ".pp-railbtn:hover{background:var(--dsw-alias-interactive-bg-hover,#f0f2f5)}",
@@ -219,6 +222,9 @@ window.__ModuleLoader__.load({
       "settings.save": "保存",
       "settings.saved": "已保存",
       "settings.saveFailed": "保存失败：{message}",
+      "settings.authorLinks": "作者 / 教程 / 反馈：",
+      "settings.douyin": "抖音",
+      "settings.bilibili": "B站",
       "empty.noResult": "没有匹配的条目",
       "empty.noCatalog": "目录为空，点右上角刷新",
       "loading": "读取中…",
@@ -325,6 +331,9 @@ window.__ModuleLoader__.load({
       "settings.save": "Save",
       "settings.saved": "Saved",
       "settings.saveFailed": "Save failed: {message}",
+      "settings.authorLinks": "Author / tutorials / feedback:",
+      "settings.douyin": "Douyin",
+      "settings.bilibili": "Bilibili",
       "empty.noResult": "No matching entries",
       "empty.noCatalog": "Catalog is empty — refresh from the header",
       "loading": "Loading…",
@@ -1402,7 +1411,20 @@ window.__ModuleLoader__.load({
                   : null
               ),
               el("div", { className: "pp-settings-row", style: { color: "var(--dsw-alias-label-tertiary,#8a919b)" } },
-                saveError ? t("settings.saveFailed", { message: saveError }) : t("restart.hint"))
+                saveError ? t("settings.saveFailed", { message: saveError }) : t("restart.hint")),
+              el("div", { className: "pp-settings-row pp-author-links" },
+                el("span", null, t("settings.authorLinks")),
+                el("a", {
+                  href: "https://www.douyin.com/user/MS4wLjABAAAAyjtwSVzqumIDxuELwcA9B2B8A5aGBSwY_OF3CHmb3ru8_zDcINALi6-sDowwWMgc",
+                  target: "_blank",
+                  rel: "noreferrer"
+                }, t("settings.douyin")),
+                el("a", {
+                  href: "https://space.bilibili.com/1161891017",
+                  target: "_blank",
+                  rel: "noreferrer"
+                }, t("settings.bilibili"))
+              )
             )
           )
         );
