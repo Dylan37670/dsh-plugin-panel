@@ -63,7 +63,7 @@ node scripts/validate-catalog.mjs catalog/catalog.json
 # 产物：catalog/catalog.json（manifest 含覆盖率）
 ```
 
-`.github/workflows/update-catalog.yml` 由 Hermes 在每小时第 17 分钟触发，并在每天 08:47 / 20:47（中国时间）备用运行，也可手动触发。发布前必须满足 schema 正确、ID 唯一、`gaps=0`，且抓取数相对上一版不异常低于 95%；GitHub Search 的瞬时 `total_count` 仅供展示，不作为失败门槛。成功后只更新独立 `catalog-data` 分支中的两份 JSON。
+`.github/workflows/update-catalog.yml` 由 Hermes 在每天 00:17 / 06:17 / 12:17 / 18:17（中国时间）触发，并在每天 08:47 / 20:47 备用运行，也可手动触发。发布前必须满足 schema 正确、ID 唯一、`gaps=0`，且抓取数相对上一版不异常低于 95%；GitHub Search 的瞬时 `total_count` 仅供展示，不作为失败门槛。成功后只更新独立 `catalog-data` 分支中的两份 JSON。
 
 > 安装/卸载后需要**重启 GUI** 才加载/卸载插件本体（DSH 的 bundle 机制如此）；面板自身在重启前仍可继续浏览。
 
