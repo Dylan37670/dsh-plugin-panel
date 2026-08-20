@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { OperationStore } from '../src/operations.ts';
 import { StateStore } from '../src/state.ts';
 import { detectInstalled } from '../src/installed.ts';
-import { installPlugin, uninstallPlugin, updateTarget } from '../src/lifecycle.ts';
+import { installPlugin, uninstallPlugin, updateFailureHint, updateTarget } from '../src/lifecycle.ts';
 import { CatalogService, DEFAULT_CURATED_CATALOG_URL } from '../src/catalog.ts';
 
 describe('v6.8 persistence', () => {
@@ -85,6 +85,12 @@ describe('v6.8 lifecycle verification', () => {
     expect(updateTarget('pkg', 'github:a/b')).toBe('github:a/b');
     expect(updateTarget('@scope/pkg', '@scope/pkg')).toBe('@scope/pkg@latest');
     expect(updateTarget('pkg', 'pkg@1.2.0')).toBe('pkg@latest');
+  });
+
+  it('keeps update diagnostics useful without recording raw pnpm output', () => {
+    expect(updateFailureHint('request failed: ETIMEDOUT', true)).toContain('自动重试一次后仍未成功');
+    expect(updateFailureHint('ERR_PNPM_GIT_DEP_PREPARE_NOT_ALLOWED')).toContain('安全策略');
+    expect(updateFailureHint('unexpected failure')).toBe('更新命令失败；已回滚。');
   });
 
   it('accepts a real bundle, removes by its exact package name, and verifies removal', async () => {

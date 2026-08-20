@@ -58,6 +58,10 @@ export declare function verifyBundle(ctx: LifecycleContext, packageName: string)
 export declare function backupProfile(ctx: LifecycleContext): Promise<BackupRef>;
 /** Restore a backup's files back into the profile directory. */
 export declare function restoreBackup(ctx: LifecycleContext, backup: BackupRef): Promise<void>;
+/** Only retry failures that are plausibly transient transport failures. */
+export declare function isTransientUpdateFailure(output: string): boolean;
+/** A useful but deliberately non-sensitive summary for the operation log. */
+export declare function updateFailureHint(output: string, retried?: boolean): string;
 /** Run `dsh plugin --profile <p> <args...>`. */
 export declare function runDshPlugin(ctx: LifecycleContext, args: string[], timeoutMs?: number): Promise<SpawnResult>;
 /** Verify a legacy/user-layer Cordis host plugin before registering it. */
