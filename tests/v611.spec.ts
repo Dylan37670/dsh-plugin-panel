@@ -20,9 +20,9 @@ describe('v6.11 version compare', () => {
   });
 });
 
-describe('v6.13 current version', () => {
+describe('v6.14 current version', () => {
   it('reads the running package version from its own package.json', async () => {
-    expect(await readCurrentVersion()).toBe('0.6.13');
+    expect(await readCurrentVersion()).toBe('0.6.14');
   });
 });
 

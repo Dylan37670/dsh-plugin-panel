@@ -168,28 +168,23 @@ export function createPanelHandler(routes: PanelRoutes) {
             sendJson(res, 200, { ok: true, ...snapshot });
             return;
           }
-          // v6.12: curated refresh = one fast prebuilt download when a URL is
-          // configured; otherwise the bundled curated index is authoritative.
-          if (url.trim()) {
+          // v6.14: curated refresh checks the maintained data-branch JSON.
+          // The bundled index is an offline fallback only.
+          try {
             const snapshot = await catalog.fetchPrebuiltCurated(url, AbortSignal.timeout(90_000));
             sendJson(res, 200, { ok: true, ...snapshot });
             return;
-          }
-          const bundled = await catalog.readBundledCurated();
-          if (bundled) {
-            // v6.13: persist the bundled index as the cache so a later
-            // /catalog read returns the same up-to-date list (and a stale
-            // smaller cache can never shadow it again).
+          } catch (onlineError) {
+            const bundled = await catalog.readBundledCurated();
+            if (!bundled) throw onlineError;
             await catalog.cacheBundledCurated();
             sendJson(res, 200, {
               ok: true,
               ...bundled,
-              note: '内置预构建精选索引（构建于 ' + (bundled.fetchedAt ?? '未知') + '），已更新本地缓存；如需在线更新，请在设置中填写远程目录 URL。',
+              note: '在线精选目录暂不可用，已保留内置目录（构建于 ' + (bundled.fetchedAt ?? '未知') + '）。',
             });
             return;
           }
-          const snapshot = await catalog.fetchCurated(url, AbortSignal.timeout(60_000));
-          sendJson(res, 200, { ok: true, ...snapshot });
         } catch (error) {
           catalog.invalidate(lens);
           sendError(res, 502, `目录刷新失败：${error instanceof Error ? error.message : String(error)}`);

@@ -1,7 +1,11 @@
-# Plugin Panel v6.11（插件面板）
+# Plugin Panel v6.14（插件面板）
 
 DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
 
+> **版本 v0.6.14**：修复精选目录的真实在线刷新。GitHub 的 `catalog-data` 数据分支现在同时发布 `catalog.json`（全部）和 `curated.json`（精选）；右上角刷新会下载当前源的在线 JSON，网络不可用才保留随包内置目录。精选标题会显示其生成时间，便于确认刷新是否真的取得新数据。
+>
+> **版本 v0.6.13**：修复旧的精选缓存遮住新版内置索引的问题；旧的小型缓存不会再覆盖当前精选目录。
+>
 > **版本 v0.6.11**：面板自更新。抽屉底部设置区新增「面板版本」小字行——显示**当前版本 / 最新版本 / 是否需要更新**（打开抽屉时自动检查上游 GitHub 仓库的 package.json，结果缓存 10 分钟）；发现新版本时旁边出现**「更新面板」按钮**（两段式确认），走与其他插件完全相同的受保护生命周期（备份 → `dsh plugin add` → 校验 → 失败回滚）；更新成功后该行变为「已更新到 vX · **重启 GUI 后生效**」的重启提醒。
 >
 > **版本 v0.6.10**：重构插件生命周期。完整 GitHub topic 目录只负责“发现”，只有作者/社区登记过准确 npm 包、GitHub 子目录或包源的条目才显示安装按钮；例如 `dsh-web-ui` 会安装作者指定的 `@linxin666/dsh-web-ui-all`，不再错误安装仓库工作区根目录。安装后分别校验 Profile Bundle 或兼容的 Cordis 用户层注册，现有手动注册插件会显示“已启用（用户配置）”。用户自己的 patch 不会被面板自动删除。
@@ -22,7 +26,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 ## 功能
 
 > **版本 v0.6.12**：独立目录 `v6.12/`（旧版本保留）。
-> **v6.12 新增：精选目录也改为预构建索引** —— `scripts/build-catalog.mjs --curated-only`（快速、供定时任务）从官方 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 解析精选列表，生成 **`catalog/curated.json`** 随插件发布；面板“精选”目录秒级加载预构建索引（当前 **1180 条**），刷新 = 下载一个文件（未配置 URL 时用内置索引，不再每次解析网络列表）。
+> **v6.12–v6.14：精选目录采用预构建索引** —— `scripts/build-catalog.mjs --curated-only` 从官方 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 解析精选列表，生成 **`catalog/curated.json`**。该文件随插件发布，且由目录工作流同步到 `catalog-data`；面板“精选”目录秒级加载，手动刷新下载在线 JSON（当前随上游列表变化，不能把固定条目数当作刷新成功与否的依据）。
 > **v3 架构（预构建离线索引）**：`scripts/build-catalog.mjs`（可续传、可配 token）服务端抓全 `dsh-plugin` topic 生成 **`catalog/catalog.json`** 随插件发布，面板“全部”目录秒级加载；刷新 = 下载一个文件。
 >
 > **覆盖完整性**：构建脚本对超过 1000 条的查询自动细分 —— 日期区间 → 单日按 `stars:` 区间 → 单星标值按 `size:` 区间，无法细分记入 `gaps` 并在 manifest 暴露覆盖率。
@@ -32,7 +36,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
 - **入口**：侧边栏底部（设置上方）的 “插件面板” 按钮；窄栏（rail）态显示为图标。
 - **右侧抽屉**：点击按钮打开固定右侧抽屉，点遮罩或关闭按钮收起。
 - **双目录源**：搜索框下方「精选 / 全部」切换按钮，**鼠标悬停显示两者区别**：
-  - **精选**：**预构建索引** `catalog/curated.json`（官方 awesome-dsh-plugin 精选列表，当前 1180 条），质量优先；缓存 `catalog.cache.json`。
+  - **精选**：**预构建索引** `catalog/curated.json`（官方 awesome-dsh-plugin 精选列表），质量优先；启动使用内置/缓存，手动刷新从 `catalog-data/curated.json` 下载。
   - **全部**：启动先显示随包目录或本地缓存，再从 [`catalog-data`](https://github.com/Dylan37670/dsh-plugin-panel/tree/catalog-data) 数据分支下载一个 `catalog.json`；GitHub Actions 每小时更新，用户电脑不再运行全量爬虫。
 - **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
 - **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
@@ -59,7 +63,7 @@ node scripts/validate-catalog.mjs catalog/catalog.json
 # 产物：catalog/catalog.json（manifest 含覆盖率）
 ```
 
-`.github/workflows/update-catalog.yml` 每小时第 17 分钟运行，也可手动触发。发布前必须满足 schema 正确、ID 唯一、`gaps=0`、覆盖率至少 99.5%，且条目数不低于上一版的 95%；成功后只更新独立 `catalog-data` 分支。
+`.github/workflows/update-catalog.yml` 由 Hermes 在每小时第 17 分钟触发，并在每天 08:47 / 20:47（中国时间）备用运行，也可手动触发。发布前必须满足 schema 正确、ID 唯一、`gaps=0`，且抓取数相对上一版不异常低于 95%；GitHub Search 的瞬时 `total_count` 仅供展示，不作为失败门槛。成功后只更新独立 `catalog-data` 分支中的两份 JSON。
 
 > 安装/卸载后需要**重启 GUI** 才加载/卸载插件本体（DSH 的 bundle 机制如此）；面板自身在重启前仍可继续浏览。
 
