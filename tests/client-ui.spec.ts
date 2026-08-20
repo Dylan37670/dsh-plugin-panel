@@ -101,6 +101,10 @@ describe('built client bundle UI', () => {
     expect(container.querySelector('.pp-searchrow input[type=search]')).not.toBeNull();
     expect(container.querySelectorAll('.pp-tab').length).toBe(5);
     expect(container.querySelector('.pp-settings')).not.toBeNull();
+    const authorLinks = container.querySelectorAll('.pp-author-links a');
+    expect(authorLinks).toHaveLength(2);
+    expect(authorLinks[0].getAttribute('href')).toContain('douyin.com/user/');
+    expect(authorLinks[1].getAttribute('href')).toBe('https://space.bilibili.com/1161891017');
     expect(container.querySelector('.pp-env')).not.toBeNull();
     expect(container.querySelector('.pp-ops')).not.toBeNull();
     // v6: semantic-search toggle next to the search box.

@@ -1,7 +1,9 @@
-# Plugin Panel v6.14（插件面板）
+# Plugin Panel v6.15（插件面板）
 
 DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
 
+> **版本 v0.6.15**：设置区新增「作者 / 教程 / 反馈」入口，提供抖音与 B站主页；用于查看教程及反馈插件问题。
+>
 > **版本 v0.6.14**：修复精选目录的真实在线刷新。GitHub 的 `catalog-data` 数据分支现在同时发布 `catalog.json`（全部）和 `curated.json`（精选）；右上角刷新会下载当前源的在线 JSON，网络不可用才保留随包内置目录。精选标题会显示其生成时间，便于确认刷新是否真的取得新数据。
 >
 > **版本 v0.6.13**：修复旧的精选缓存遮住新版内置索引的问题；旧的小型缓存不会再覆盖当前精选目录。
@@ -39,6 +41,7 @@ v6.5 改进按需翻译：仅翻译进入视口的卡片；Harness LLM 使用小
   - **精选**：**预构建索引** `catalog/curated.json`（官方 awesome-dsh-plugin 精选列表），质量优先；启动使用内置/缓存，手动刷新从 `catalog-data/curated.json` 下载。
   - **全部**：启动先显示随包目录或本地缓存，再从 [`catalog-data`](https://github.com/Dylan37670/dsh-plugin-panel/tree/catalog-data) 数据分支下载一个 `catalog.json`；GitHub Actions 每小时更新，用户电脑不再运行全量爬虫。
 - **目录缓存 + 手动刷新**：右上角刷新按钮按当前源拉取并写盘。
+- **作者 / 教程 / 反馈**：设置区底部提供 [抖音主页](https://www.douyin.com/user/MS4wLjABAAAAyjtwSVzqumIDxuELwcA9B2B8A5aGBSwY_OF3CHmb3ru8_zDcINALi6-sDowwWMgc) 和 [B站主页](https://space.bilibili.com/1161891017) 链接。
 - **分类**：插件 / Skill / 客户端 / 开发资源（含计数）。
 - **中英文关键词搜索**：标题、描述（中英）、标签、作者、仓库、npm 名均参与匹配。
 - **排序（v4）**：默认 / 星标最多 / 星标最少 / 名称 A-Z / 名称 Z-A / 最新创建 / 最早创建，持久化到设置。
