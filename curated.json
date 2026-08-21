@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-21T02:12:28.068Z",
-    "fetchedCount": 1726,
-    "count": 1738,
+    "generatedAt": "2026-08-21T04:17:37.074Z",
+    "fetchedCount": 1743,
+    "count": 1755,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2679,6 +2679,17 @@
       ]
     },
     {
+      "id": "CH4ACKO3/dsh-turn-fold",
+      "title": "CH4ACKO3/dsh-turn-fold",
+      "description": "Codex-style turn folding for the DSH Web UI: keeps final answers visible, groups consecutive reasoning and tool activity, and shows configurable live duration, tool-call, and token metrics with multilingual summaries.",
+      "category": "client",
+      "repo": "https://github.com/CH4ACKO3/dsh-turn-fold",
+      "install": "github:CH4ACKO3/dsh-turn-fold",
+      "tags": [
+        "ch4acko3/dsh-turn-fold"
+      ]
+    },
+    {
       "id": "Chael-Chael/dsh-reference-anything",
       "title": "Chael-Chael/dsh-reference-anything",
       "description": "Reference workspace files, DSH sessions, and historical ChatGPT, Claude, Gemini, DeepSeek, Grok, and Kimi conversations from the unified DSH @ menu.",
@@ -2929,6 +2940,17 @@
       "install": "github:ChongCyrus/Vibe-Mathematics",
       "tags": [
         "chongcyrus/vibe-mathematics"
+      ]
+    },
+    {
+      "id": "chongfengdy-dev/dsh-message-outline",
+      "title": "chongfengdy-dev/dsh-message-outline",
+      "description": "Current-session message outline rail for the DSH web UI — your messages show as slim bars on the left edge; hover to expand the full outline (line number + text), click to jump instantly to that message. Pure frontend, zero external service dependencies, sessions-snapshot driven with zero polling.",
+      "category": "client",
+      "repo": "https://github.com/chongfengdy-dev/dsh-message-outline",
+      "install": "github:chongfengdy-dev/dsh-message-outline",
+      "tags": [
+        "chongfengdy-dev/dsh-message-outline"
       ]
     },
     {
@@ -7293,6 +7315,17 @@
       ]
     },
     {
+      "id": "i1j/context-assembler-DSH",
+      "title": "i1j/context-assembler-DSH",
+      "description": "Context Assembler plugin for DeepSeek Harness: topic-block context assembly, water-pressure topic splitting, tool trace/rewrite, reality recall injection and handoff planning.",
+      "category": "plugin",
+      "repo": "https://github.com/i1j/context-assembler-DSH",
+      "install": "github:i1j/context-assembler-DSH",
+      "tags": [
+        "i1j/context-assembler-dsh"
+      ]
+    },
+    {
       "id": "iamfromchangsha/dsh-go-balance",
       "title": "iamfromchangsha/dsh-go-balance",
       "description": "OpenCode Go balance pill at the right end of the composer tool row: rolling/weekly/monthly quota remaining straight from the Zen usage endpoint, with hover detail and warn/danger coloring.",
@@ -11625,6 +11658,17 @@
       ]
     },
     {
+      "id": "mrzhangkris/dsh-session-pruner",
+      "title": "mrzhangkris/dsh-session-pruner",
+      "description": "Full-type session lifecycle management: one-shot subagents archived on completion, idle continuable subagents / main sessions archived (recoverable), a capacity cap, projection-cache cleanup, and a hot-reload settings panel.",
+      "category": "plugin",
+      "repo": "https://github.com/mrzhangkris/dsh-session-pruner",
+      "install": "github:mrzhangkris/dsh-session-pruner",
+      "tags": [
+        "mrzhangkris/dsh-session-pruner"
+      ]
+    },
+    {
       "id": "mtty-ai/mmx-quota-tool",
       "title": "mtty-ai/mmx-quota-tool",
       "description": "MiniMax token-plan quota dock for the Web UI: a drop-shape 5h-usage % chip in the conversation input area, click for a detail panel listing every model's 5h & weekly usage and reset countdown, auto-hidden when the active default model is not a MiniMax model.",
@@ -11831,6 +11875,17 @@
       "install": "github:nexsjournal/dsh-vision-plugin",
       "tags": [
         "nexsjournal/dsh-vision-plugin"
+      ]
+    },
+    {
+      "id": "nickhelion/dsh-serverchan-notify",
+      "title": "nickhelion/dsh-serverchan-notify",
+      "description": "ServerChan3 (Server酱) push notifications when a turn finishes — title, model, project directory, git branch, status and a reply excerpt, with subagent filtering and fire-and-forget delivery.",
+      "category": "plugin",
+      "repo": "https://github.com/nickhelion/dsh-serverchan-notify",
+      "install": "github:nickhelion/dsh-serverchan-notify",
+      "tags": [
+        "nickhelion/dsh-serverchan-notify"
       ]
     },
     {
@@ -12766,6 +12821,17 @@
       "install": "github:ParticleLight/dsh-all-usage",
       "tags": [
         "particlelight/dsh-all-usage"
+      ]
+    },
+    {
+      "id": "passingby000/dsh-nl-model-switch",
+      "title": "passingby000/dsh-nl-model-switch",
+      "description": "Switch the current DSH session's model with a natural-language sentence, on web, TUI, or IM bridges (WeChat, Feishu), without touching the panel.",
+      "category": "plugin",
+      "repo": "https://github.com/passingby000/dsh-nl-model-switch",
+      "install": "github:passingby000/dsh-nl-model-switch",
+      "tags": [
+        "passingby000/dsh-nl-model-switch"
       ]
     },
     {
@@ -17253,6 +17319,28 @@
       ]
     },
     {
+      "id": "WODE25500/dsh-codex",
+      "title": "WODE25500/dsh-codex",
+      "description": "OpenAI Codex CLI wrapper: one-shot exec, repo review and session resume with a default read-only sandbox.",
+      "category": "plugin",
+      "repo": "https://github.com/WODE25500/dsh-codex",
+      "install": "github:WODE25500/dsh-codex",
+      "tags": [
+        "wode25500/dsh-codex"
+      ]
+    },
+    {
+      "id": "WODE25500/dsh-winget",
+      "title": "WODE25500/dsh-winget",
+      "description": "Windows Package Manager: search, install, upgrade, uninstall, import/export and pin software through native tools.",
+      "category": "plugin",
+      "repo": "https://github.com/WODE25500/dsh-winget",
+      "install": "github:WODE25500/dsh-winget",
+      "tags": [
+        "wode25500/dsh-winget"
+      ]
+    },
+    {
       "id": "wodongx123/dsh-desktop-tray",
       "title": "wodongx123/dsh-desktop-tray",
       "description": "Adds a system tray icon to DSH Desktop, with settings to hide the main window to the tray on minimize or close and self-healing after app updates.",
@@ -17803,6 +17891,17 @@
       ]
     },
     {
+      "id": "xiaozhe7772222/dsh-opencode-zen",
+      "title": "xiaozhe7772222/dsh-opencode-zen",
+      "description": "Zero-cost access to 6 free large models. No registration, no recharge, 6 free models built-in, multi-key rotation and rate-limit backoff.",
+      "category": "plugin",
+      "repo": "https://github.com/xiaozhe7772222/dsh-opencode-zen",
+      "install": "github:xiaozhe7772222/dsh-opencode-zen",
+      "tags": [
+        "xiaozhe7772222/dsh-opencode-zen"
+      ]
+    },
+    {
       "id": "xiaweiliang060035/dsh-opencode-go-usage",
       "title": "xiaweiliang060035/dsh-opencode-go-usage",
       "description": "Floating widget showing real-time OpenCode Go subscription usage (rolling/weekly/monthly) for every API key, with rate-limit alerts and automatic key-pool discovery.",
@@ -17822,6 +17921,17 @@
       "install": "github:xiaxingtianxia2-glitch/dsh-auto-exit",
       "tags": [
         "xiaxingtianxia2-glitch/dsh-auto-exit"
+      ]
+    },
+    {
+      "id": "xiaxingtianxia2-glitch/dsh-chime",
+      "title": "xiaxingtianxia2-glitch/dsh-chime",
+      "description": "Task-completion chime for DeepSeek Harness, playing the original opencode sounds for done, question, plan-review and error events with zero external dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/xiaxingtianxia2-glitch/dsh-chime",
+      "install": "github:xiaxingtianxia2-glitch/dsh-chime",
+      "tags": [
+        "xiaxingtianxia2-glitch/dsh-chime"
       ]
     },
     {
@@ -18163,6 +18273,17 @@
       "install": "github:yabolee-kkk/dsh-streaming-mcp-bridge",
       "tags": [
         "yabolee-kkk/dsh-streaming-mcp-bridge"
+      ]
+    },
+    {
+      "id": "Yang-wudi/dsh-kun-like-pet/tree/main/packages/kunpet-dsh",
+      "title": "Yang-wudi/dsh-kun-like-pet#kunpet-dsh",
+      "description": "A Kun-Like desktop pet living in the corner of the DSH web UI; switches animations with agent state and plays a voice line on task completion.",
+      "category": "plugin",
+      "repo": "https://github.com/Yang-wudi/dsh-kun-like-pet/tree/main/packages/kunpet-dsh",
+      "install": "github:Yang-wudi/dsh-kun-like-pet/tree/main/packages/kunpet-dsh",
+      "tags": [
+        "yang-wudi/dsh-kun-like-pet#kunpet-dsh"
       ]
     },
     {
@@ -18969,6 +19090,17 @@
       ]
     },
     {
+      "id": "zhao1012/dsh-fix-duplicate-loader-id",
+      "title": "zhao1012/dsh-fix-duplicate-loader-id",
+      "description": "Diagnoses and fixes \"duplicate loader entry id\" boot crashes - finds duplicate loader rows across profile bundles and converts them into id-targeted patches via a zero-dependency CLI (detect / preview / fix / verify).",
+      "category": "skill",
+      "repo": "https://github.com/zhao1012/dsh-fix-duplicate-loader-id",
+      "install": "github:zhao1012/dsh-fix-duplicate-loader-id",
+      "tags": [
+        "zhao1012/dsh-fix-duplicate-loader-id"
+      ]
+    },
+    {
       "id": "zhaoolee/notes/tree/main/dsh-plugin",
       "title": "zhaoolee/notes#dsh-plugin",
       "description": "Export DSH conversations as Smartisan Notes-style PNGs, or create and update Markdown notes in a configured account-scoped workspace.",
@@ -19376,6 +19508,28 @@
       ]
     },
     {
+      "id": "zoahdev/dsh-dep-audit",
+      "title": "zoahdev/dsh-dep-audit",
+      "description": "Dependency supply-chain hygiene audit for dsh projects and profiles: peer-range resolvability, broken dist-tag detection (#2763 class), stale / missing-license / non-registry dependencies, and installed-vs-declared drift — CLI plus an agent-callable dep_audit tool.",
+      "category": "plugin",
+      "repo": "https://github.com/zoahdev/dsh-dep-audit",
+      "install": "github:zoahdev/dsh-dep-audit",
+      "tags": [
+        "zoahdev/dsh-dep-audit"
+      ]
+    },
+    {
+      "id": "zoahdev/dsh-discussions-radar",
+      "title": "zoahdev/dsh-discussions-radar",
+      "description": "Official GitHub Discussions radar for DeepSeek Harness: list, filter and search the official boards (Ideas / Q&A / Show Your Plugins! / General / Announcements / Polls) — CLI plus an agent-callable discussions_radar tool, dsh-discussions-radar/v1 reports, zero runtime deps, read-only public API.",
+      "category": "plugin",
+      "repo": "https://github.com/zoahdev/dsh-discussions-radar",
+      "install": "github:zoahdev/dsh-discussions-radar",
+      "tags": [
+        "zoahdev/dsh-discussions-radar"
+      ]
+    },
+    {
       "id": "zoahdev/dsh-disk-audit",
       "title": "zoahdev/dsh-disk-audit",
       "description": "Disk-usage audit for dsh data directories: total size, per-directory breakdown, largest files, oversized-file warnings (session logs can hit hundreds of MB) and cleanup suggestions — CLI plus an agent-callable disk_audit tool, dsh-disk-audit/v1 reports, zero runtime deps, read-only.",
@@ -19453,6 +19607,28 @@
       ]
     },
     {
+      "id": "zoahdev/dsh-quality-score",
+      "title": "zoahdev/dsh-quality-score",
+      "description": "Plugin quality scorecard for DeepSeek Harness: 0-100 with grade, 6 components, fix suggestions per deduction, batch leaderboard - CLI plus an agent-callable quality_score tool.",
+      "category": "plugin",
+      "repo": "https://github.com/zoahdev/dsh-quality-score",
+      "install": "github:zoahdev/dsh-quality-score",
+      "tags": [
+        "zoahdev/dsh-quality-score"
+      ]
+    },
+    {
+      "id": "zoahdev/dsh-readme-forge",
+      "title": "zoahdev/dsh-readme-forge",
+      "description": "Generate README.md for dsh plugin repositories from package.json + cordis.patch.yml + source layout — install/CLI/tools/dev/license sections, deterministic, zero runtime deps, read-only by default. CLI plus an agent-callable readme_forge tool.",
+      "category": "plugin",
+      "repo": "https://github.com/zoahdev/dsh-readme-forge",
+      "install": "github:zoahdev/dsh-readme-forge",
+      "tags": [
+        "zoahdev/dsh-readme-forge"
+      ]
+    },
+    {
       "id": "zoahdev/dsh-rule-evolve/tree/main/plugin",
       "title": "zoahdev/dsh-rule-evolve",
       "description": "Verification-driven self-evolution loop: failure logs become verified AGENTS.md rules; in-session plugin (evolve_learn / evolve_apply / evolve_touch / evolve_recall), tool-verify gate, rule lifecycle, local recall.",
@@ -19483,6 +19659,17 @@
       "install": "github:zoahdev/dsh-subscribe/tree/main/plugin",
       "tags": [
         "zoahdev/dsh-subscribe#plugin"
+      ]
+    },
+    {
+      "id": "zoahdev/dsh-timesheet",
+      "title": "zoahdev/dsh-timesheet",
+      "description": "Turn-based time tracking from dsh session logs: totals, per-day/project/provider/source rollups, tool-call counts, failure rates, and time-to-first-token — CLI plus an agent-callable timesheet tool, dsh-timesheet/v1 reports, zero runtime deps.",
+      "category": "plugin",
+      "repo": "https://github.com/zoahdev/dsh-timesheet",
+      "install": "github:zoahdev/dsh-timesheet",
+      "tags": [
+        "zoahdev/dsh-timesheet"
       ]
     },
     {
