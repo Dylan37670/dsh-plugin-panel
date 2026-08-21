@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-20T22:17:59.849Z",
-    "fetchedCount": 1725,
-    "count": 1737,
+    "generatedAt": "2026-08-21T02:12:28.068Z",
+    "fetchedCount": 1726,
+    "count": 1738,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -7400,6 +7400,17 @@
       "install": "github:ilharp/dsh-tool-approval",
       "tags": [
         "ilharp/dsh-tool-approval"
+      ]
+    },
+    {
+      "id": "ilps2/dsh-video-understand",
+      "title": "ilps2/dsh-video-understand",
+      "description": "Low-cost video understanding tool: a video_understand tool turns a Bilibili link / BV / local video into an AVIS info layer (ASR + scene structure + object tracks + YOLO labels) and returns summary + Q&A. Question-driven dynamic routing across layers (L0 ASR / L1 object tracks / L2 key-frame VLM), semantic-layer reuse for repeat questions, per-question budget cap. Self-contained engine, no external dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/ilps2/dsh-video-understand",
+      "install": "github:ilps2/dsh-video-understand",
+      "tags": [
+        "ilps2/dsh-video-understand"
       ]
     },
     {
