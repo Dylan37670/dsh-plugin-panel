@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-22T16:17:34.913Z",
-    "fetchedCount": 1873,
-    "count": 1885,
+    "generatedAt": "2026-08-22T22:17:37.047Z",
+    "fetchedCount": 1884,
+    "count": 1896,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1094,6 +1094,61 @@
       "install": "github:AKS1st/dock",
       "tags": [
         "aks1st/dock"
+      ]
+    },
+    {
+      "id": "AKS1st/dock-editor",
+      "title": "AKS1st/dock-editor",
+      "description": "Text viewer and editor for the dock workbench: undo/redo, Ctrl+S save, unsaved-change confirmation and binary detection, registered as the default file viewer.",
+      "category": "client",
+      "repo": "https://github.com/AKS1st/dock-editor",
+      "install": "github:AKS1st/dock-editor",
+      "tags": [
+        "aks1st/dock-editor"
+      ]
+    },
+    {
+      "id": "AKS1st/dock-files",
+      "title": "AKS1st/dock-files",
+      "description": "File explorer for the dock workbench: tree browsing of the session workspace with create/rename/copy-paste/delete, drag-and-drop import and paste of local files and clipboard images.",
+      "category": "client",
+      "repo": "https://github.com/AKS1st/dock-files",
+      "install": "github:AKS1st/dock-files",
+      "tags": [
+        "aks1st/dock-files"
+      ]
+    },
+    {
+      "id": "AKS1st/dock-git",
+      "title": "AKS1st/dock-git",
+      "description": "Git history visualization for the dock workbench: swimlane commit graph, branch and tag management, stage/commit/push and remote operations.",
+      "category": "client",
+      "repo": "https://github.com/AKS1st/dock-git",
+      "install": "github:AKS1st/dock-git",
+      "tags": [
+        "aks1st/dock-git"
+      ]
+    },
+    {
+      "id": "AKS1st/dock-images",
+      "title": "AKS1st/dock-images",
+      "description": "Image viewer for the dock workbench: PNG, JPEG, GIF, WebP, BMP, SVG, ICO and AVIF, with SVG rendered as image data only.",
+      "category": "client",
+      "repo": "https://github.com/AKS1st/dock-images",
+      "install": "github:AKS1st/dock-images",
+      "tags": [
+        "aks1st/dock-images"
+      ]
+    },
+    {
+      "id": "AKS1st/dock-markdown",
+      "title": "AKS1st/dock-markdown",
+      "description": "Markdown viewer for the dock workbench: GFM rendering with DOMPurify sanitization, document outline and relative-path image/link resolution, with one-click switch to editing.",
+      "category": "client",
+      "repo": "https://github.com/AKS1st/dock-markdown",
+      "install": "github:AKS1st/dock-markdown",
+      "tags": [
+        "aks1st/dock-markdown"
       ]
     },
     {
@@ -4307,13 +4362,13 @@
     },
     {
       "id": "diqierjia/StrataGate-AgentMemory/tree/main/integrations/deepseek-harness",
-      "title": "diqierjia/StrataGate-AgentMemory#deepseek-harness",
-      "description": "Automatic, local-first cross-session memory for DeepSeek Harness: remembers user preferences, project decisions, conversations, and tool results; verifies recalled information against original messages before answering.",
+      "title": "diqierjia/StrataGate-AgentMemory",
+      "description": "StrataGate gives DeepSeek Harness an evolving, local-first long-term memory: it carries user preferences, project decisions, conversations, and tool results across sessions, condenses history through layered time decay, strengthens memories through real answer use, and keeps recalled evidence traceable to its original messages.",
       "category": "plugin",
       "repo": "https://github.com/diqierjia/StrataGate-AgentMemory/tree/main/integrations/deepseek-harness",
       "install": "github:diqierjia/StrataGate-AgentMemory/tree/main/integrations/deepseek-harness",
       "tags": [
-        "diqierjia/stratagate-agentmemory#deepseek-harness"
+        "diqierjia/stratagate-agentmemory"
       ]
     },
     {
@@ -6001,6 +6056,17 @@
       "install": "github:feiertu/dsh-input-rewriter",
       "tags": [
         "feiertu/dsh-input-rewriter"
+      ]
+    },
+    {
+      "id": "FeiZhuNiU-INFJA/dsh-stock-ticker",
+      "title": "FeiZhuNiU-INFJA/dsh-stock-ticker",
+      "description": "A floating, semi-transparent market ticker for DeepSeek Harness showing real-time level and change percentage for the Shanghai Composite, ChiNext, STAR 50 and Hang Seng Tech indices.",
+      "category": "client",
+      "repo": "https://github.com/FeiZhuNiU-INFJA/dsh-stock-ticker",
+      "install": "github:FeiZhuNiU-INFJA/dsh-stock-ticker",
+      "tags": [
+        "feizhuniu-infja/dsh-stock-ticker"
       ]
     },
     {
@@ -8371,6 +8437,17 @@
       ]
     },
     {
+      "id": "jiangwangyang/dsh-theme-blackhole",
+      "title": "jiangwangyang/dsh-theme-blackhole",
+      "description": "A black hole theme plugin for the DeepSeek Harness (dsh) Web UI.",
+      "category": "client",
+      "repo": "https://github.com/jiangwangyang/dsh-theme-blackhole",
+      "install": "github:jiangwangyang/dsh-theme-blackhole",
+      "tags": [
+        "jiangwangyang/dsh-theme-blackhole"
+      ]
+    },
+    {
       "id": "jiangzhenguo/dsh-codegraph",
       "title": "jiangzhenguo/dsh-codegraph",
       "description": "DSH bundle that registers 13 native codegraph_* tools wrapping the codegraph CLI, so agents bootstrap, maintain, and query a pre-indexed code knowledge graph (symbol query, explore, node trail, callers/callees, impact, affected tests) instead of grepping files.",
@@ -9369,6 +9446,17 @@
       "install": "github:kendu76/dsh-music-player",
       "tags": [
         "kendu76/dsh-music-player"
+      ]
+    },
+    {
+      "id": "Kenerlee/dsh-moments-aieo",
+      "title": "Kenerlee/dsh-moments-aieo",
+      "description": "AIEO (GEO/AEO) delivery method as one isolated skill provider: AI-visibility diagnosis on a 0-9 score, positioning, search-term mining restricted to whitelisted platform exports, periodic monitoring and an HTML monitoring dashboard, chained by one shared question library, plus a landing-page cloner.",
+      "category": "skill",
+      "repo": "https://github.com/Kenerlee/dsh-moments-aieo",
+      "install": "github:Kenerlee/dsh-moments-aieo",
+      "tags": [
+        "kenerlee/dsh-moments-aieo"
       ]
     },
     {
@@ -18496,6 +18584,17 @@
       ]
     },
     {
+      "id": "wmengxiang/dsh-any-skills",
+      "title": "wmengxiang/dsh-any-skills",
+      "description": "Import, install and invoke Agent Skills in DeepSeek Harness from Codex, Claude Code, OpenCode, GitHub or npm — composer-side ⚡ picker inserts /skill-name into the draft, and a Skill 管理 settings page offers per-source/per-skill import, expandable source paths with skill counts, uninstall and one-click restore from .trash.",
+      "category": "skill",
+      "repo": "https://github.com/wmengxiang/dsh-any-skills",
+      "install": "github:wmengxiang/dsh-any-skills",
+      "tags": [
+        "wmengxiang/dsh-any-skills"
+      ]
+    },
+    {
       "id": "wmengxiang/dsh-prompt-optimizer",
       "title": "wmengxiang/dsh-prompt-optimizer",
       "description": "Adds an icon button to the composer that optimizes the current draft prompt through the active model.",
@@ -18669,6 +18768,17 @@
       "install": "github:wqx-txdsyl/dsh-ds-attach",
       "tags": [
         "wqx-txdsyl/dsh-ds-attach"
+      ]
+    },
+    {
+      "id": "wqy8593521/dsh-model-pro",
+      "title": "wqy8593521/dsh-model-pro",
+      "description": "Lifecycle management UI for the llm-pi-ai model provider: create, edit, delete, enable and disable providers with custom headers and AES-GCM-encrypted API keys; uninstall-safe restore of parked providers, remote model discovery with batch write, smart routing with five strategies, union/intersection composites, per-model connectivity tests, and request observability.",
+      "category": "plugin",
+      "repo": "https://github.com/wqy8593521/dsh-model-pro",
+      "install": "github:wqy8593521/dsh-model-pro",
+      "tags": [
+        "wqy8593521/dsh-model-pro"
       ]
     },
     {
@@ -21155,6 +21265,17 @@
       "install": "github:ZSeven-W/dsh-crew",
       "tags": [
         "zseven-w/dsh-crew"
+      ]
+    },
+    {
+      "id": "ZSeven-W/dsh-ios",
+      "title": "ZSeven-W/dsh-ios",
+      "description": "A live iOS Simulator — and a USB-connected iPhone — inside a DSH conversation: 21 agent tools to boot devices, build and run Xcode projects, drive the UI by accessibility identity, OCR text or list rows, read unified logs and inspect processes, backtraces and leaks, with a streaming sidebar panel you can tap, drag and rotate on.",
+      "category": "plugin",
+      "repo": "https://github.com/ZSeven-W/dsh-ios",
+      "install": "github:ZSeven-W/dsh-ios",
+      "tags": [
+        "zseven-w/dsh-ios"
       ]
     },
     {
