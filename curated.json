@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-24T04:17:39.855Z",
-    "fetchedCount": 2051,
-    "count": 2063,
+    "generatedAt": "2026-08-24T10:18:09.438Z",
+    "fetchedCount": 2062,
+    "count": 2074,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -269,6 +269,17 @@
       "install": "github:23swccp/dsh-undo/tree/master/packages/bundle-rollback",
       "tags": [
         "23swccp/dsh-undo#bundle-rollback"
+      ]
+    },
+    {
+      "id": "240xu/dsh-websearch",
+      "title": "240xu/dsh-websearch",
+      "description": "Aggregated web search provider that fans one query out to 11 engines (Exa, Parallel, DuckDuckGo, SearXNG, Brave, Tavily, Serper, Mojeek, DeepSeek, Anthropic, OpenAI) concurrently, URL-dedupes and merges the results. Ships a settings card for toggling backends, storing API keys in the credential store, and tuning concurrency and timeouts.",
+      "category": "plugin",
+      "repo": "https://github.com/240xu/dsh-websearch",
+      "install": "github:240xu/dsh-websearch",
+      "tags": [
+        "240xu/dsh-websearch"
       ]
     },
     {
@@ -3028,6 +3039,17 @@
       "install": "github:CeilCelia/dsh-eli-mode/tree/main/packages/eli-mode",
       "tags": [
         "ceilcelia/dsh-eli-mode#packages/eli-mode"
+      ]
+    },
+    {
+      "id": "Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-worktree",
+      "title": "Cerbur/clutch-dsh#clutch-dsh-worktree",
+      "description": "Adds a Worktree view to DSH Web UI that groups Sessions by Git worktree while keeping DSH as the source of truth.",
+      "category": "plugin",
+      "repo": "https://github.com/Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-worktree",
+      "install": "github:Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-worktree",
+      "tags": [
+        "cerbur/clutch-dsh#clutch-dsh-worktree"
       ]
     },
     {
@@ -6543,6 +6565,17 @@
       ]
     },
     {
+      "id": "fengb3/dsh-session-icons",
+      "title": "fengb3/dsh-session-icons",
+      "description": "Sidebar session-title icons: an auxiliary model call on the same route as title generation draws a 24x24 monochrome SVG metaphor shown before each session row title, with disk caching.",
+      "category": "client",
+      "repo": "https://github.com/fengb3/dsh-session-icons",
+      "install": "github:fengb3/dsh-session-icons",
+      "tags": [
+        "fengb3/dsh-session-icons"
+      ]
+    },
+    {
       "id": "FengHuoLinShan/dsh-plugin-llm-balance",
       "title": "FengHuoLinShan/dsh-plugin-llm-balance",
       "description": "DSH balance and quota card showing up to 3 recently used providers. Supports DeepSeek, Moonshot, Kimi For Coding, OpenAI Codex, and OpenCode Go, with auto-discovery, quota windows, reset times, color-coded status, dragging, and automatic refresh.",
@@ -6760,6 +6793,17 @@
       "install": "github:fno2010/dsh-web-search-ext",
       "tags": [
         "fno2010/dsh-web-search-ext"
+      ]
+    },
+    {
+      "id": "foooold/dsh-message-nav",
+      "title": "foooold/dsh-message-nav",
+      "description": "Adds a Codex-style message navigation rail for quickly locating earlier prompts in long DeepSeek Harness Web UI conversations.",
+      "category": "client",
+      "repo": "https://github.com/foooold/dsh-message-nav",
+      "install": "github:foooold/dsh-message-nav",
+      "tags": [
+        "foooold/dsh-message-nav"
       ]
     },
     {
@@ -7824,6 +7868,17 @@
       ]
     },
     {
+      "id": "heiheiha798/dsh-plugin-subagent-delete",
+      "title": "heiheiha798/dsh-plugin-subagent-delete",
+      "description": "Ownership-checked tools and HTTP routes to list, release and permanently delete subagent sessions, with automatic web UI refresh after deletion.",
+      "category": "plugin",
+      "repo": "https://github.com/heiheiha798/dsh-plugin-subagent-delete",
+      "install": "github:heiheiha798/dsh-plugin-subagent-delete",
+      "tags": [
+        "heiheiha798/dsh-plugin-subagent-delete"
+      ]
+    },
+    {
       "id": "hellodigua/dsh-emoji",
       "title": "hellodigua/dsh-emoji",
       "description": "Automatically add emojis to AI replies.",
@@ -8324,6 +8379,17 @@
       "install": "github:Hyp6666/dsh-open-eyes",
       "tags": [
         "hyp6666/dsh-open-eyes"
+      ]
+    },
+    {
+      "id": "hyrinx/dsh-plugin-open-with",
+      "title": "hyrinx/dsh-plugin-open-with",
+      "description": "Adds a capsule split-button to the conversation header: launch VS Code, terminal, or File Explorer at the current workspace directory in one click.",
+      "category": "client",
+      "repo": "https://github.com/hyrinx/dsh-plugin-open-with",
+      "install": "github:hyrinx/dsh-plugin-open-with",
+      "tags": [
+        "hyrinx/dsh-plugin-open-with"
       ]
     },
     {
@@ -10791,6 +10857,17 @@
       ]
     },
     {
+      "id": "lanbaolu/dsh-fail-soft",
+      "title": "lanbaolu/dsh-fail-soft",
+      "description": "Automatically disables a failing plugin so the rest of DSH keeps booting — by patching DSH’s own installed kernel (mount-time quarantine + self-healing), not preflight smoke-tests. Includes status tools and a one-click restore panel.",
+      "category": "plugin",
+      "repo": "https://github.com/lanbaolu/dsh-fail-soft",
+      "install": "github:lanbaolu/dsh-fail-soft",
+      "tags": [
+        "lanbaolu/dsh-fail-soft"
+      ]
+    },
+    {
       "id": "lanbaolu/dsh-wechat-bridge",
       "title": "lanbaolu/dsh-wechat-bridge",
       "description": "Two-way WeChat bridge for DeepSeek Harness via the iLink protocol: bind your personal WeChat with a QR scan and chat with a local DSH agent from the chat box (text, images, voice-to-text, files); a web settings panel handles binding/start/stop/status, project-session binding continues the conversation on desktop, proactive wechat_notify pushes include throttling, and the pure-Node daemon runs on Windows/macOS/Linux.",
@@ -12439,6 +12516,17 @@
       ]
     },
     {
+      "id": "m1khal3v/dsh-llm-key-rotation",
+      "title": "m1khal3v/dsh-llm-key-rotation",
+      "description": "Rotates configured LLM API keys after quota, rate-limit, or authentication failures.",
+      "category": "plugin",
+      "repo": "https://github.com/m1khal3v/dsh-llm-key-rotation",
+      "install": "github:m1khal3v/dsh-llm-key-rotation",
+      "tags": [
+        "m1khal3v/dsh-llm-key-rotation"
+      ]
+    },
+    {
       "id": "madage/dsh-self-improved",
       "title": "madage/dsh-self-improved",
       "description": "Long-term memory & self-evolving plugin for DSH: L0 capture → L1 memory extraction → L2 scene grouping → L3 user persona, auto recall injection, skill synthesis, fully local (SQLite FTS5 + jieba, optional vector recall).",
@@ -13195,6 +13283,17 @@
       "install": "github:MitterMeierGithub/dsh-darksoft-theme",
       "tags": [
         "mittermeiergithub/dsh-darksoft-theme"
+      ]
+    },
+    {
+      "id": "miuzel/dsh-graph/tree/main/dsh-graph-host",
+      "title": "miuzel/dsh-graph#dsh-graph-host",
+      "description": "Goal lifecycle management for dsh with an interactive kanban board: goals, criteria, attempts and reviews live in the workspace, driven by graph_* tools, with a two-lane board rendered in the conversation view.",
+      "category": "plugin",
+      "repo": "https://github.com/miuzel/dsh-graph/tree/main/dsh-graph-host",
+      "install": "github:miuzel/dsh-graph/tree/main/dsh-graph-host",
+      "tags": [
+        "miuzel/dsh-graph#dsh-graph-host"
       ]
     },
     {
@@ -18342,6 +18441,17 @@
       ]
     },
     {
+      "id": "Thedeergod666/dsh-musage",
+      "title": "Thedeergod666/dsh-musage",
+      "description": "Shows coding-plan usage and balance for 5 AI providers (MiniMax, DeepSeek, Kimi, OpenRouter, Zhipu) beside the composer input, switching with the selected model and reusing API keys configured in DSH model settings.",
+      "category": "plugin",
+      "repo": "https://github.com/Thedeergod666/dsh-musage",
+      "install": "github:Thedeergod666/dsh-musage",
+      "tags": [
+        "thedeergod666/dsh-musage"
+      ]
+    },
+    {
       "id": "THEWOLFWALKER/dsh-coyote",
       "title": "THEWOLFWALKER/dsh-coyote",
       "description": "Agent- and GUI-controlled DG-LAB Coyote e-stim plugin: eight `coyote_*` tools plus a DSH web panel behind one safety envelope (soft limits, asymmetric rate limiter, session cooldown, playback caps, disconnect fail-safe); optional auto-stim layer maps agent events (tool calls, errors, turn end) to bounded pulses; official V3 socket protocol with QR pairing, programmable waveforms. Adults only.",
@@ -18955,6 +19065,17 @@
       "install": "github:TZHR-invest/dsh-plugins/tree/main/packages/dsh-web-search-metaso",
       "tags": [
         "tzhr-invest/dsh-plugins#dsh-web-search-metaso"
+      ]
+    },
+    {
+      "id": "uckkk/dsh-pace-calc",
+      "title": "uckkk/dsh-pace-calc",
+      "description": "Running pace calculator: converts distance and time to min/km pace and km/h speed.",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-pace-calc",
+      "install": "github:uckkk/dsh-pace-calc",
+      "tags": [
+        "uckkk/dsh-pace-calc"
       ]
     },
     {
