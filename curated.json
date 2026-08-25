@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-25T02:08:12.158Z",
-    "fetchedCount": 2135,
-    "count": 2147,
+    "generatedAt": "2026-08-25T04:18:18.770Z",
+    "fetchedCount": 2143,
+    "count": 2155,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2346,6 +2346,17 @@
       "install": "github:beijingwahw/dsh-companion",
       "tags": [
         "beijingwahw/dsh-companion"
+      ]
+    },
+    {
+      "id": "beijingwahw/dsh-nuke-plugin",
+      "title": "beijingwahw/dsh-nuke-plugin",
+      "description": "Transactional uninstall engine: every destructive action runs validate/preview/execute/undo with Saga rollback, WAL crash recovery, hash-chain audit, hardlink dedup, and a Bayesian oracle that predicts success probability before you commit.",
+      "category": "plugin",
+      "repo": "https://github.com/beijingwahw/dsh-nuke-plugin",
+      "install": "github:beijingwahw/dsh-nuke-plugin",
+      "tags": [
+        "beijingwahw/dsh-nuke-plugin"
       ]
     },
     {
@@ -8459,6 +8470,17 @@
       ]
     },
     {
+      "id": "huajuan2024/dsh-session-manager",
+      "title": "huajuan2024/dsh-session-manager",
+      "description": "Session manager panel under Settings → Plugins: list all sessions with title, cwd, agent preset, updated time, turns and steps, expand a row to view message history, delete non-running sessions, and export a session as JSON or Markdown via a browser Blob URL.",
+      "category": "plugin",
+      "repo": "https://github.com/huajuan2024/dsh-session-manager",
+      "install": "github:huajuan2024/dsh-session-manager",
+      "tags": [
+        "huajuan2024/dsh-session-manager"
+      ]
+    },
+    {
       "id": "Huang-zhishi/dsh-plugin-call-trace",
       "title": "Huang-zhishi/dsh-plugin-call-trace",
       "description": "Persistent model tool-call trace recorder: every tool call is durably written to a JSONL file that survives restarts, queryable via a structured call_trace tool and a callTraceHistory service, with size rotation and an optional floating canvas UI add-on.",
@@ -9867,6 +9889,17 @@
       ]
     },
     {
+      "id": "jmxsxwyzjdwl/dsh-mmroute",
+      "title": "jmxsxwyzjdwl/dsh-mmroute",
+      "description": "Transparent multimodal routing for text-only models: every image in every model call is fully transcribed (verbatim OCR, data, uncertainty zones, injection-hardened) by your own multimodal understander, with focused re-look via vision_relook and automatic retry on image-related failures. No bundled endpoints, no borrowed logins.",
+      "category": "plugin",
+      "repo": "https://github.com/jmxsxwyzjdwl/dsh-mmroute",
+      "install": "github:jmxsxwyzjdwl/dsh-mmroute",
+      "tags": [
+        "jmxsxwyzjdwl/dsh-mmroute"
+      ]
+    },
+    {
       "id": "JoFe2/kaleidosphere-dsh-plugin",
       "title": "JoFe2/kaleidosphere-dsh-plugin",
       "description": "Registers six native DeepSeek Harness tools for deterministic fixture-based or read-only Microsoft SQL Server and Oracle database analysis, planning, preview, and readback.",
@@ -11151,6 +11184,17 @@
       "install": "github:KyoMio/dsh-zen-remote",
       "tags": [
         "kyomio/dsh-zen-remote"
+      ]
+    },
+    {
+      "id": "L3n3L/dsh-resume",
+      "title": "L3n3L/dsh-resume",
+      "description": "AI can write resume text, but templates may still look wrong, pages may overflow, whitespace may remain, and small edits can destabilize the layout. dsh-resume provides an end-to-end DSH workflow for truthful content refinement, template selection, A4 layout tuning, visual review, and tailored resume versions for different job-search scenarios.",
+      "category": "plugin",
+      "repo": "https://github.com/L3n3L/dsh-resume",
+      "install": "github:L3n3L/dsh-resume",
+      "tags": [
+        "l3n3l/dsh-resume"
       ]
     },
     {
@@ -15211,6 +15255,17 @@
       ]
     },
     {
+      "id": "OPaimon/dsh-model-gate",
+      "title": "OPaimon/dsh-model-gate",
+      "description": "Single-model disable gate: hides denied models from DSH catalogs, blocks direct dispatch with an in-protocol error chunk, and exposes a settings UI for the denylist.",
+      "category": "plugin",
+      "repo": "https://github.com/OPaimon/dsh-model-gate",
+      "install": "github:OPaimon/dsh-model-gate",
+      "tags": [
+        "opaimon/dsh-model-gate"
+      ]
+    },
+    {
       "id": "openAGFS/dsh-agfs",
       "title": "openAGFS/dsh-agfs",
       "description": "File-browser web app for DSH: React frontend and REST API served by the host webserver, a /dsh-agfs command that opens at the current session workspace, and a browse_files model tool.",
@@ -16088,6 +16143,17 @@
       "install": "github:polaris-smart/dph-fleet",
       "tags": [
         "polaris-smart/dph-fleet"
+      ]
+    },
+    {
+      "id": "PolinniZhong/dsh-personal-center",
+      "title": "PolinniZhong/dsh-personal-center",
+      "description": "Personal center for DeepSeek Harness: cross-session usage statistics, per-model cost estimation, global custom instructions, a data-driven desktop pet, and a conversation status overview, all local and offline.",
+      "category": "plugin",
+      "repo": "https://github.com/PolinniZhong/dsh-personal-center",
+      "install": "github:PolinniZhong/dsh-personal-center",
+      "tags": [
+        "polinnizhong/dsh-personal-center"
       ]
     },
     {
@@ -17554,6 +17620,17 @@
       ]
     },
     {
+      "id": "shyuan-hub/dsh-compact-button",
+      "title": "shyuan-hub/dsh-compact-button",
+      "description": "Adds a Compact context button and a New session button to the context meter panel; compact submits /compact through the same command channel, and new session starts a fresh session in the same workspace.",
+      "category": "client",
+      "repo": "https://github.com/shyuan-hub/dsh-compact-button",
+      "install": "github:shyuan-hub/dsh-compact-button",
+      "tags": [
+        "shyuan-hub/dsh-compact-button"
+      ]
+    },
+    {
       "id": "siberiah2o/dsh-plugin-remote",
       "title": "siberiah2o/dsh-plugin-remote",
       "description": "Remote access gateway for the DSH Web GUI: login auth plus an HTTP/WebSocket reverse proxy to the loopback server, no --trusted-host needed.",
@@ -17606,6 +17683,17 @@
       "install": "github:Sim-xia/dsh-vscode-theme",
       "tags": [
         "sim-xia/dsh-vscode-theme"
+      ]
+    },
+    {
+      "id": "SIMON-WORLD/dsh-journal-monitor",
+      "title": "SIMON-WORLD/dsh-journal-monitor",
+      "description": "Economics-first journal/working-paper monitor for DeepSeek Harness: NBER RSS + arXiv econ (4 categories) + Chinese econ journals (Shi Jie Jing Ji via Magtech, Zhong Guo Nong Cun Guan Cha, Cai Mao Jing Ji, Zhong Guo Ren Kou Ke Xue, Jing Ji Guan Li via ajcass) fetch, keyword filter, dry-run/Webhook push, dedup persistence, and schedule_create-compatible briefing.",
+      "category": "plugin",
+      "repo": "https://github.com/SIMON-WORLD/dsh-journal-monitor",
+      "install": "github:SIMON-WORLD/dsh-journal-monitor",
+      "tags": [
+        "simon-world/dsh-journal-monitor"
       ]
     },
     {
