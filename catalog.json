@@ -1,14 +1,14 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-28T12:25:21.554Z",
-    "totalHits": 12330,
-    "fetchedCount": 12307,
-    "count": 12316,
-    "coveragePct": 99.813,
+    "generatedAt": "2026-08-28T16:29:21.670Z",
+    "totalHits": 12372,
+    "fetchedCount": 12372,
+    "count": 12381,
+    "coveragePct": 100,
     "gaps": 0,
     "source": "github topic:dsh-plugin",
     "schema": "plugin-panel-catalog@1",
-    "installVerifiedCount": 2252,
+    "installVerifiedCount": 2250,
     "installRegistry": "https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json"
   },
   "entries": [
@@ -300,7 +300,7 @@
         "dsh-plugin"
       ],
       "author": "GanyuanRan",
-      "stars": 1140,
+      "stars": 1141,
       "createdAt": "2026-04-30T17:40:49Z",
       "installVerified": true,
       "installSource": "community",
@@ -616,6 +616,21 @@
       "descriptionZh": "为模型原生交易提供目录检索、交易方联络、合同签名、结算协调、人工任务交接和签名评价回执工具。"
     },
     {
+      "id": "agent-plaza/agent-plaza",
+      "title": "agent-plaza",
+      "description": "Zero-signup public commons for AI agents — HTTP API + Agent Skill (Codex, Cursor, Hermes)",
+      "category": "skill",
+      "repo": "https://github.com/agent-plaza/agent-plaza",
+      "install": "github:agent-plaza/agent-plaza",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "agent-plaza",
+      "stars": 3,
+      "createdAt": "2026-08-12T02:10:14Z"
+    },
+    {
       "id": "Urbanrook/agent-project-manager",
       "title": "agent-project-manager",
       "description": "A DeepSeek Harness plugin providing project workspace isolation: each project (task) maps to its own workspace and conversation, preventing rules, memory, and context from leaking across projects — so multiple projects can progress in parallel.",
@@ -642,7 +657,7 @@
         "dsh-plugin"
       ],
       "author": "vostride",
-      "stars": 883,
+      "stars": 889,
       "createdAt": "2026-05-07T20:17:57Z"
     },
     {
@@ -702,7 +717,7 @@
         "dsh-plugin"
       ],
       "author": "limuyang2",
-      "stars": 24,
+      "stars": 23,
       "createdAt": "2026-08-17T01:19:23Z",
       "installVerified": true,
       "installSource": "community",
@@ -835,7 +850,7 @@
         "dsh-plugin"
       ],
       "author": "chainbase-labs",
-      "stars": 606,
+      "stars": 607,
       "createdAt": "2026-04-23T05:51:09Z"
     },
     {
@@ -850,7 +865,7 @@
         "dsh-plugin"
       ],
       "author": "MerlinShieh",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-25T15:21:32Z"
     },
     {
@@ -880,7 +895,7 @@
         "dsh-plugin"
       ],
       "author": "agentrq",
-      "stars": 1092,
+      "stars": 1093,
       "createdAt": "2026-03-24T08:35:45Z"
     },
     {
@@ -1037,7 +1052,7 @@
         "dsh-plugin"
       ],
       "author": "yyyy231209",
-      "stars": 6,
+      "stars": 5,
       "createdAt": "2026-08-18T12:34:40Z",
       "installVerified": true,
       "installSource": "community",
@@ -1623,7 +1638,7 @@
         "dsh-plugin"
       ],
       "author": "anysearch-team",
-      "stars": 323,
+      "stars": 324,
       "createdAt": "2026-08-13T15:10:10Z",
       "installVerified": true,
       "installSource": "community",
@@ -1671,7 +1686,7 @@
         "dsh-plugin"
       ],
       "author": "toby-bridges",
-      "stars": 814,
+      "stars": 815,
       "createdAt": "2026-03-30T04:20:54Z",
       "installVerified": true,
       "installSource": "community",
@@ -1774,7 +1789,7 @@
         "dsh-plugin"
       ],
       "author": "tt-a1i",
-      "stars": 25454,
+      "stars": 26320,
       "createdAt": "2026-04-15T05:27:37Z",
       "installVerified": true,
       "installSource": "community",
@@ -1808,7 +1823,7 @@
         "dsh-plugin"
       ],
       "author": "taxueseek",
-      "stars": 112,
+      "stars": 113,
       "createdAt": "2026-07-18T15:06:11Z",
       "installVerified": true,
       "installSource": "community",
@@ -2035,6 +2050,21 @@
       "descriptionZh": "面向 Codex、DeepSeek Harness 和 MCP 客户端的 Windows 桌面 UI 上下文取景器：选择窗口、UI 元素或屏幕区域，使用悬停高亮、UI Automation、截图和本机 OCR，并在输出前确认 Markdown/JSON 上下文。"
     },
     {
+      "id": "BHXiang/auto-pwa",
+      "title": "auto-pwa",
+      "description": "AI驱动的分波分析自动化。",
+      "category": "plugin",
+      "repo": "https://github.com/BHXiang/auto-pwa",
+      "install": "github:BHXiang/auto-pwa",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "BHXiang",
+      "stars": 1,
+      "createdAt": "2026-08-19T08:29:24Z"
+    },
+    {
       "id": "h-k-c/auto-vision",
       "title": "auto-vision",
       "description": "DeepSeek Harness 图片插件：贴图不会让对话报错，模型自动判断是否需要看图（支持智谱/魔搭免费视觉模型，图片在聊天窗口正常显示）",
@@ -2136,7 +2166,7 @@
         "dsh-plugin"
       ],
       "author": "0xsline",
-      "stars": 928,
+      "stars": 930,
       "createdAt": "2026-08-11T13:14:49Z"
     },
     {
@@ -2151,7 +2181,7 @@
         "dsh-plugin"
       ],
       "author": "libukai",
-      "stars": 217,
+      "stars": 218,
       "createdAt": "2026-08-13T13:47:48Z"
     },
     {
@@ -2226,7 +2256,7 @@
         "dsh-plugin"
       ],
       "author": "imsai-sh",
-      "stars": 198,
+      "stars": 199,
       "createdAt": "2026-08-14T05:53:47Z"
     },
     {
@@ -2271,7 +2301,7 @@
         "dsh-plugin"
       ],
       "author": "Zhiyuan-Fan",
-      "stars": 397,
+      "stars": 402,
       "createdAt": "2026-08-13T13:52:04Z"
     },
     {
@@ -2406,7 +2436,7 @@
         "dsh-plugin"
       ],
       "author": "awesome-dsh-plugin",
-      "stars": 13329,
+      "stars": 13365,
       "createdAt": "2026-08-13T13:55:31Z",
       "titleZh": "DSH 插件精选列表",
       "descriptionZh": "DeepSeek Harness 插件精选列表：12 个分类共 500+ 可安装社区插件。",
@@ -2679,7 +2709,7 @@
         "dsh-plugin"
       ],
       "author": "freestylefly",
-      "stars": 23960,
+      "stars": 24097,
       "createdAt": "2026-04-25T09:19:13Z"
     },
     {
@@ -3119,7 +3149,7 @@
         "dsh-plugin"
       ],
       "author": "morlay",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-17T08:21:42Z"
     },
     {
@@ -3405,7 +3435,7 @@
         "dsh-plugin"
       ],
       "author": "GCWing",
-      "stars": 1839,
+      "stars": 1849,
       "createdAt": "2026-02-02T09:52:10Z"
     },
     {
@@ -3644,7 +3674,7 @@
         "dsh-plugin"
       ],
       "author": "Tencent",
-      "stars": 1458,
+      "stars": 1478,
       "createdAt": "2026-06-22T07:24:40Z",
       "installVerified": true,
       "installSource": "community",
@@ -4255,7 +4285,7 @@
         "dsh-plugin"
       ],
       "author": "534119219",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-16T07:51:31Z",
       "installVerified": true,
       "installSource": "community",
@@ -4290,6 +4320,21 @@
       "author": "MoonShadow1976",
       "stars": 3,
       "createdAt": "2026-08-14T02:57:34Z"
+    },
+    {
+      "id": "avdergh/chroma-cut",
+      "title": "chroma-cut",
+      "description": "Preserve anti-aliased outlines while cutting chroma-backed game assets. CLI + MCP + Codex plugin.",
+      "category": "plugin",
+      "repo": "https://github.com/avdergh/chroma-cut",
+      "install": "github:avdergh/chroma-cut",
+      "tags": [
+        "Python",
+        "dsh-plugin"
+      ],
+      "author": "avdergh",
+      "stars": 0,
+      "createdAt": "2026-08-28T06:52:44Z"
     },
     {
       "id": "bpc-oss/chrome-faithful",
@@ -4963,7 +5008,7 @@
         "dsh-plugin"
       ],
       "author": "Akimiya-z",
-      "stars": 77,
+      "stars": 79,
       "createdAt": "2026-08-20T16:28:08Z"
     },
     {
@@ -5075,7 +5120,7 @@
         "dsh-plugin"
       ],
       "author": "xyTom",
-      "stars": 930,
+      "stars": 931,
       "createdAt": "2026-05-21T05:59:42Z"
     },
     {
@@ -5638,7 +5683,7 @@
         "dsh-plugin"
       ],
       "author": "cosyncing",
-      "stars": 33,
+      "stars": 34,
       "createdAt": "2026-08-07T20:17:12Z"
     },
     {
@@ -5997,7 +6042,7 @@
         "dsh-plugin"
       ],
       "author": "chuspeeism",
-      "stars": 2716,
+      "stars": 2723,
       "createdAt": "2026-07-24T14:14:07Z",
       "installVerified": true,
       "installSource": "community",
@@ -6572,7 +6617,7 @@
         "dsh-plugin"
       ],
       "author": "MeteorNOX",
-      "stars": 1224,
+      "stars": 1240,
       "createdAt": "2026-08-18T03:13:51Z",
       "installVerified": true,
       "installSource": "community",
@@ -6702,7 +6747,7 @@
         "dsh-plugin"
       ],
       "author": "Devin-AXIS",
-      "stars": 597,
+      "stars": 605,
       "createdAt": "2026-08-15T13:08:53Z",
       "installVerified": true,
       "installSource": "community",
@@ -6875,7 +6920,7 @@
         "dsh-plugin"
       ],
       "author": "deepseek-ai",
-      "stars": 201446,
+      "stars": 201757,
       "createdAt": "2026-08-13T11:56:32Z",
       "titleZh": "DeepSeek Harness 官方仓库",
       "descriptionZh": "DeepSeek Harness 官方仓库：本面板所运行的插件化代理框架。",
@@ -6962,7 +7007,7 @@
         "dsh-plugin"
       ],
       "author": "Lixiaoyiao",
-      "stars": 14,
+      "stars": 15,
       "createdAt": "2026-08-14T00:04:51Z"
     },
     {
@@ -6992,7 +7037,7 @@
         "dsh-plugin"
       ],
       "author": "Jensen-Yao",
-      "stars": 14,
+      "stars": 13,
       "createdAt": "2026-08-15T19:29:08Z"
     },
     {
@@ -7288,6 +7333,21 @@
       "createdAt": "2026-08-21T04:04:31Z"
     },
     {
+      "id": "mapan0424/deepseek-harness-channels",
+      "title": "deepseek-harness-channels",
+      "description": "Community channel plugins for DeepSeek Harness: core, visual config, and Feishu channel.",
+      "category": "plugin",
+      "repo": "https://github.com/mapan0424/deepseek-harness-channels",
+      "install": "github:mapan0424/deepseek-harness-channels",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "mapan0424",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:08:38Z"
+    },
+    {
       "id": "rayadesune/DeepSeek-Harness-chat-billing",
       "title": "DeepSeek-Harness-chat-billing",
       "description": "类原生计费插件",
@@ -7437,7 +7497,7 @@
         "dsh-plugin"
       ],
       "author": "feibi-mochi",
-      "stars": 65,
+      "stars": 66,
       "createdAt": "2026-08-14T10:43:58Z",
       "installVerified": true,
       "installSource": "community",
@@ -7471,7 +7531,7 @@
         "dsh-plugin"
       ],
       "author": "dsh-tauri-desk",
-      "stars": 1322,
+      "stars": 1335,
       "createdAt": "2026-08-14T02:36:29Z"
     },
     {
@@ -7486,7 +7546,7 @@
         "dsh-plugin"
       ],
       "author": "ningbainb",
-      "stars": 226,
+      "stars": 227,
       "createdAt": "2026-08-13T19:50:01Z"
     },
     {
@@ -7531,7 +7591,7 @@
         "dsh-plugin"
       ],
       "author": "baihejiangnan",
-      "stars": 27,
+      "stars": 28,
       "createdAt": "2026-08-21T15:43:29Z"
     },
     {
@@ -7715,6 +7775,21 @@
       "createdAt": "2026-08-14T09:52:36Z"
     },
     {
+      "id": "cnskycn/deepseek-harness-desktop",
+      "title": "deepseek-harness-desktop",
+      "description": "Desktop app wrapper for DeepSeek Harness (dsh) Web UI - one-click Windows installer",
+      "category": "client",
+      "repo": "https://github.com/cnskycn/deepseek-harness-desktop",
+      "install": "github:cnskycn/deepseek-harness-desktop",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "cnskycn",
+      "stars": 1,
+      "createdAt": "2026-08-14T01:38:08Z"
+    },
+    {
       "id": "diamondfsd/deepseek-harness-desktop",
       "title": "deepseek-harness-desktop",
       "description": "Deepseek harness desktop package. all origin, not modify",
@@ -7743,21 +7818,6 @@
       "author": "xiuxxx0",
       "stars": 1,
       "createdAt": "2026-08-14T17:20:14Z"
-    },
-    {
-      "id": "cnskycn/deepseek-harness-desktop",
-      "title": "deepseek-harness-desktop",
-      "description": "Desktop app wrapper for DeepSeek Harness (dsh) Web UI - one-click Windows installer",
-      "category": "client",
-      "repo": "https://github.com/cnskycn/deepseek-harness-desktop",
-      "install": "github:cnskycn/deepseek-harness-desktop",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "cnskycn",
-      "stars": 1,
-      "createdAt": "2026-08-14T01:38:08Z"
     },
     {
       "id": "hialuoy/deepseek-harness-desktop",
@@ -8026,7 +8086,7 @@
         "dsh-plugin"
       ],
       "author": "ChisaAlter",
-      "stars": 142,
+      "stars": 144,
       "createdAt": "2026-08-13T13:21:50Z"
     },
     {
@@ -8198,6 +8258,21 @@
       "createdAt": "2026-08-17T23:38:15Z"
     },
     {
+      "id": "Easyhoov/deepseek-harness-desktop-windows",
+      "title": "deepseek-harness-desktop-windows",
+      "description": "把 DeepSeek Harness 装进 Windows 桌面的应用：不用装 Node.js、不用敲命令，双击启动即用。进程内集成官方 DSH、零端口 IPC 传输；内置侧边栏工作台（文件 / 终端 / Git / 浏览器）与社区插件商店，托盘常驻、一键更新。非官方，仅供开源 DSH 封装。",
+      "category": "plugin",
+      "repo": "https://github.com/Easyhoov/deepseek-harness-desktop-windows",
+      "install": "github:Easyhoov/deepseek-harness-desktop-windows",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "Easyhoov",
+      "stars": 4,
+      "createdAt": "2026-08-13T17:24:11Z"
+    },
+    {
       "id": "sliverp/DeepSeek-harness-dingtalk",
       "title": "DeepSeek-harness-dingtalk",
       "description": "DingTalk Stream text and image channel plugin for DeepSeek Harness",
@@ -8224,7 +8299,7 @@
         "dsh-plugin"
       ],
       "author": "runzhliu",
-      "stars": 44,
+      "stars": 45,
       "createdAt": "2026-08-13T15:41:41Z"
     },
     {
@@ -8239,7 +8314,7 @@
         "dsh-plugin"
       ],
       "author": "AlliotTech",
-      "stars": 15,
+      "stars": 16,
       "createdAt": "2026-08-13T17:01:34Z"
     },
     {
@@ -8467,7 +8542,7 @@
         "dsh-plugin"
       ],
       "author": "skymecode",
-      "stars": 87,
+      "stars": 90,
       "createdAt": "2026-08-13T18:35:49Z"
     },
     {
@@ -8549,7 +8624,7 @@
         "dsh-plugin"
       ],
       "author": "Ramenne",
-      "stars": 4,
+      "stars": 6,
       "createdAt": "2026-08-28T02:13:33Z"
     },
     {
@@ -9717,7 +9792,7 @@
         "dsh-plugin"
       ],
       "author": "liguobao",
-      "stars": 117,
+      "stars": 121,
       "createdAt": "2026-08-14T15:33:53Z",
       "installVerified": true,
       "installSource": "community",
@@ -10021,7 +10096,7 @@
         "dsh-plugin"
       ],
       "author": "fufankeji",
-      "stars": 548,
+      "stars": 551,
       "createdAt": "2026-08-15T03:00:06Z"
     },
     {
@@ -10879,7 +10954,7 @@
         "dsh-plugin"
       ],
       "author": "Ericwong5021",
-      "stars": 25,
+      "stars": 26,
       "createdAt": "2026-08-13T18:22:39Z"
     },
     {
@@ -10924,7 +10999,7 @@
         "dsh-plugin"
       ],
       "author": "esengine",
-      "stars": 35235,
+      "stars": 35239,
       "createdAt": "2026-04-21T08:27:02Z"
     },
     {
@@ -11089,7 +11164,7 @@
         "dsh-plugin"
       ],
       "author": "Tiger3807861189",
-      "stars": 1034,
+      "stars": 1033,
       "createdAt": "2026-08-16T11:38:42Z"
     },
     {
@@ -11874,7 +11949,7 @@
         "dsh-plugin"
       ],
       "author": "titanwings",
-      "stars": 24077,
+      "stars": 24081,
       "createdAt": "2026-03-30T05:22:23Z"
     },
     {
@@ -12262,21 +12337,6 @@
       "createdAt": "2026-08-19T22:25:32Z"
     },
     {
-      "id": "hawkongz/doubao-vision-dsh",
-      "title": "doubao-vision-dsh",
-      "description": "让纯文本模型通过桌面豆包看见聊天图片的 DeepSeek Harness 宿主插件(CDP 桥接,全预设生效,识别可取消)",
-      "category": "plugin",
-      "repo": "https://github.com/hawkongz/doubao-vision-dsh",
-      "install": "github:hawkongz/doubao-vision-dsh",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "hawkongz",
-      "stars": 1,
-      "createdAt": "2026-08-13T22:13:54Z"
-    },
-    {
       "id": "chu557/douyin-plugin-dsh-plugin",
       "title": "douyin-plugin-dsh-plugin",
       "description": "在使用dsh等待的过程中刷抖音",
@@ -12577,7 +12637,7 @@
     {
       "id": "lisongxuan/ds-hentai",
       "title": "ds-hentai",
-      "description": "ExHentai-inspired UI for DeepSeek Harness. ExHentai风格DeepSeek Harness皮肤。",
+      "description": "ExHentai-inspired UI for DeepSeek Harness. ExHentai风格DeepSeek Harness皮肤。 ds hentai / deepseek hentai",
       "category": "client",
       "repo": "https://github.com/lisongxuan/ds-hentai",
       "install": "github:lisongxuan/ds-hentai",
@@ -13061,7 +13121,7 @@
         "dsh-plugin"
       ],
       "author": "FTShare-Lab",
-      "stars": 24,
+      "stars": 25,
       "createdAt": "2026-08-14T08:22:25Z"
     },
     {
@@ -13226,7 +13286,7 @@
         "dsh-plugin"
       ],
       "author": "Zouu-X",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-21T08:05:20Z"
     },
     {
@@ -13320,7 +13380,7 @@
         "dsh-plugin"
       ],
       "author": "10086ggqq",
-      "stars": 28,
+      "stars": 27,
       "createdAt": "2026-08-22T13:33:25Z"
     },
     {
@@ -13544,7 +13604,7 @@
         "dsh-plugin"
       ],
       "author": "imsai-sh",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-24T15:48:01Z"
     },
     {
@@ -14840,7 +14900,7 @@
         "dsh-plugin"
       ],
       "author": "Nagi-ovo",
-      "stars": 582,
+      "stars": 581,
       "createdAt": "2026-08-09T19:06:36Z",
       "installVerified": true,
       "installSource": "community",
@@ -15137,7 +15197,7 @@
         "dsh-plugin"
       ],
       "author": "MichengAI",
-      "stars": 24,
+      "stars": 25,
       "createdAt": "2026-08-15T08:59:02Z",
       "installVerified": true,
       "installSource": "community",
@@ -16375,7 +16435,7 @@
         "dsh-plugin"
       ],
       "author": "toolclub",
-      "stars": 151,
+      "stars": 153,
       "createdAt": "2026-08-15T03:40:19Z",
       "installVerified": true,
       "installSource": "community",
@@ -16411,7 +16471,7 @@
         "dsh-plugin"
       ],
       "author": "NanmiCoder",
-      "stars": 1147,
+      "stars": 1149,
       "createdAt": "2026-08-12T13:41:50Z",
       "installVerified": true,
       "installSource": "community",
@@ -17948,7 +18008,7 @@
         "dsh-plugin"
       ],
       "author": "xiaobright",
-      "stars": 3783,
+      "stars": 3786,
       "createdAt": "2026-08-14T14:06:39Z"
     },
     {
@@ -20236,7 +20296,7 @@
         "dsh-plugin"
       ],
       "author": "Li-canghai",
-      "stars": 1,
+      "stars": 2,
       "createdAt": "2026-08-19T10:27:33Z"
     },
     {
@@ -22033,7 +22093,7 @@
         "dsh-plugin"
       ],
       "author": "xbzbing",
-      "stars": 8,
+      "stars": 9,
       "createdAt": "2026-08-14T19:39:20Z",
       "installVerified": true,
       "installSource": "community",
@@ -22145,7 +22205,7 @@
         "dsh-plugin"
       ],
       "author": "Stormycry-cryp",
-      "stars": 97,
+      "stars": 101,
       "createdAt": "2026-08-14T02:42:09Z",
       "installVerified": true,
       "installSource": "community",
@@ -22420,7 +22480,7 @@
         "dsh-plugin"
       ],
       "author": "a179-sanae",
-      "stars": 51,
+      "stars": 52,
       "createdAt": "2026-08-14T17:37:54Z",
       "installVerified": true,
       "installSource": "community",
@@ -22861,7 +22921,7 @@
         "dsh-plugin"
       ],
       "author": "PerryLink",
-      "stars": 113,
+      "stars": 114,
       "createdAt": "2026-08-13T19:44:34Z",
       "installVerified": true,
       "installSource": "community",
@@ -23685,7 +23745,7 @@
         "dsh-plugin"
       ],
       "author": "xiaoyuyu6420",
-      "stars": 12,
+      "stars": 13,
       "createdAt": "2026-08-14T08:26:08Z",
       "installVerified": true,
       "installSource": "community",
@@ -26337,7 +26397,7 @@
         "dsh-plugin"
       ],
       "author": "omdsh-dev",
-      "stars": 3056,
+      "stars": 3064,
       "createdAt": "2026-08-07T16:04:00Z",
       "installVerified": true,
       "installSource": "community",
@@ -27159,6 +27219,21 @@
       "createdAt": "2026-08-20T18:56:29Z"
     },
     {
+      "id": "uckkk/dsh-bird-diet",
+      "title": "dsh-bird-diet",
+      "description": "鸟食搭配",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-bird-diet",
+      "install": "github:uckkk/dsh-bird-diet",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:58:59Z"
+    },
+    {
       "id": "uckkk/dsh-bird-health",
       "title": "dsh-bird-health",
       "description": "健康观察",
@@ -27560,7 +27635,7 @@
         "dsh-plugin"
       ],
       "author": "webkubor",
-      "stars": 14,
+      "stars": 15,
       "createdAt": "2026-08-18T05:25:21Z",
       "installVerified": true,
       "installSource": "community",
@@ -28103,7 +28178,7 @@
         "dsh-plugin"
       ],
       "author": "songoao25",
-      "stars": 21,
+      "stars": 24,
       "createdAt": "2026-08-15T00:39:20Z",
       "installVerified": true,
       "installSource": "community",
@@ -28212,7 +28287,7 @@
         "dsh-plugin"
       ],
       "author": "Lsc-91-69",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-28T01:05:05Z"
     },
     {
@@ -28425,7 +28500,7 @@
         "dsh-plugin"
       ],
       "author": "wenbin-wb",
-      "stars": 75,
+      "stars": 80,
       "createdAt": "2026-08-18T03:29:50Z",
       "installVerified": true,
       "installSource": "community",
@@ -28555,7 +28630,7 @@
         "dsh-plugin"
       ],
       "author": "Lum1104",
-      "stars": 499,
+      "stars": 501,
       "createdAt": "2026-08-06T09:05:10Z",
       "installVerified": true,
       "installSource": "community",
@@ -28573,7 +28648,7 @@
         "dsh-plugin"
       ],
       "author": "wqty123",
-      "stars": 34,
+      "stars": 35,
       "createdAt": "2026-08-14T17:01:52Z",
       "installVerified": true,
       "installSource": "community",
@@ -28824,7 +28899,7 @@
         "dsh-plugin"
       ],
       "author": "kyo615",
-      "stars": 7,
+      "stars": 8,
       "createdAt": "2026-08-15T06:15:36Z",
       "installVerified": true,
       "installSource": "community",
@@ -30639,7 +30714,7 @@
         "dsh-plugin"
       ],
       "author": "PKUfudawei",
-      "stars": 51,
+      "stars": 52,
       "createdAt": "2026-08-19T06:30:08Z"
     },
     {
@@ -31110,6 +31185,21 @@
       "createdAt": "2026-08-16T10:56:57Z"
     },
     {
+      "id": "jianxx/dsh-cc",
+      "title": "dsh-cc",
+      "description": "Bring the Claude Code workflow to DeepSeek Harness - TUI, permissions, hooks, memory, skills, subagents, MCP, worktrees, and more.",
+      "category": "skill",
+      "repo": "https://github.com/jianxx/dsh-cc",
+      "install": "github:jianxx/dsh-cc",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "jianxx",
+      "stars": 1,
+      "createdAt": "2026-08-15T08:33:17Z"
+    },
+    {
       "id": "whiteguo233/dsh-cc-connect",
       "title": "dsh-cc-connect",
       "description": "通过cc connect远程使用dsh",
@@ -31189,21 +31279,6 @@
       "author": "Mreate",
       "stars": 4,
       "createdAt": "2026-08-14T22:52:30Z"
-    },
-    {
-      "id": "jianxx/dsh-cc-plugins",
-      "title": "dsh-cc-plugins",
-      "description": "Claude Code feature-parity plugins for the DeepSeek Harness (dsh) — settings cascade, permission rules, hooks, memory, skills, subagents, and a CC Mode agent preset, installable into any dsh profile.",
-      "category": "skill",
-      "repo": "https://github.com/jianxx/dsh-cc-plugins",
-      "install": "github:jianxx/dsh-cc-plugins",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "jianxx",
-      "stars": 1,
-      "createdAt": "2026-08-15T08:33:17Z"
     },
     {
       "id": "xia-sc/dsh-cc-studio",
@@ -31390,6 +31465,21 @@
       "installVerified": true,
       "installSource": "community",
       "descriptionZh": "通过 CDP 连接已运行的 Chrome/Edge：为 DSH 提供截图、像素断言、DOM/CSS 检查与页面 JS 执行，全程 HTTP + WebSocket、零子进程、零 npm 依赖、无需逐次授权。"
+    },
+    {
+      "id": "helibeiqi/dsh-cdp-metadata",
+      "title": "dsh-cdp-metadata",
+      "description": "Capability Description Protocol (CDP) v0.1 — read-only AI-readable capability metadata layer for DSH Cordis plugins.",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-cdp-metadata",
+      "install": "github:helibeiqi/dsh-cdp-metadata",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-23T02:01:55Z"
     },
     {
       "id": "uckkk/dsh-cerium",
@@ -32084,7 +32174,7 @@
         "dsh-plugin"
       ],
       "author": "Nwflower",
-      "stars": 119,
+      "stars": 120,
       "createdAt": "2026-08-13T14:21:58Z",
       "installVerified": true,
       "installSource": "community",
@@ -32681,6 +32771,21 @@
       "author": "sudipnext",
       "stars": 2,
       "createdAt": "2026-08-16T17:14:05Z"
+    },
+    {
+      "id": "alaxrpg/dsh-chatgpt-pip",
+      "title": "dsh-chatgpt-pip",
+      "description": "DSH 插件：ChatGPT 画中画小窗 + 把 ChatGPT 定稿计划回流到新 DSH 对话执行",
+      "category": "plugin",
+      "repo": "https://github.com/alaxrpg/dsh-chatgpt-pip",
+      "install": "github:alaxrpg/dsh-chatgpt-pip",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "alaxrpg",
+      "stars": 0,
+      "createdAt": "2026-08-28T03:00:31Z"
     },
     {
       "id": "Aa728848/dsh-chatgpt-subscription",
@@ -33399,7 +33504,7 @@
         "dsh-plugin"
       ],
       "author": "stuarthu",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-15T11:33:09Z",
       "installVerified": true,
       "installSource": "community",
@@ -33773,7 +33878,7 @@
         "dsh-plugin"
       ],
       "author": "Norman-else",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-15T09:17:32Z",
       "installVerified": true,
       "installSource": "community",
@@ -36150,6 +36255,36 @@
       "descriptionZh": "dsh 国内网络引导：探测 npm/npmmirror/GitHub/HuggingFace/Gitee 与本地代理，读取注册表配置，推荐镜像/代理并生成 PowerShell + bash 引导脚本。默认只读，apply 显式。含 CLI 与 agent 可调用 cn_boot 工具。"
     },
     {
+      "id": "helibeiqi/dsh-cn-disclosure",
+      "title": "dsh-cn-disclosure",
+      "description": "零依赖本地优先的 A股 公告/年报 结构化抽取 MCP server (dsh-plugin)",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-cn-disclosure",
+      "install": "github:helibeiqi/dsh-cn-disclosure",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:26:48Z"
+    },
+    {
+      "id": "helibeiqi/dsh-cn-fixedincome-mcp",
+      "title": "dsh-cn-fixedincome-mcp",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-cn-fixedincome-mcp",
+      "install": "github:helibeiqi/dsh-cn-fixedincome-mcp",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:54:33Z"
+    },
+    {
       "id": "SuiBbinggan/dsh-cn-plugin-center",
       "title": "dsh-cn-plugin-center",
       "description": "China-friendly plugin center for DeepSeek Harness with curated and verified community plugins.",
@@ -37199,7 +37334,7 @@
         "dsh-plugin"
       ],
       "author": "franksong2702",
-      "stars": 60,
+      "stars": 61,
       "createdAt": "2026-08-14T00:28:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -37425,7 +37560,7 @@
         "dsh-plugin"
       ],
       "author": "polarskicpl",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-15T12:11:18Z"
     },
     {
@@ -37871,7 +38006,7 @@
         "dsh-plugin"
       ],
       "author": "MichengAI",
-      "stars": 40,
+      "stars": 41,
       "createdAt": "2026-08-14T15:58:13Z",
       "installVerified": true,
       "installSource": "community",
@@ -38094,6 +38229,21 @@
       "author": "uckkk",
       "stars": 0,
       "createdAt": "2026-08-20T00:20:30Z"
+    },
+    {
+      "id": "uckkk/dsh-coffee-temp",
+      "title": "dsh-coffee-temp",
+      "description": "咖啡水温",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-coffee-temp",
+      "install": "github:uckkk/dsh-coffee-temp",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T00:23:01Z"
     },
     {
       "id": "ljlj7149-cloud/dsh-cognitio",
@@ -38500,7 +38650,7 @@
         "dsh-plugin"
       ],
       "author": "fandc520",
-      "stars": 29,
+      "stars": 30,
       "createdAt": "2026-08-20T16:40:07Z"
     },
     {
@@ -38728,7 +38878,7 @@
         "dsh-plugin"
       ],
       "author": "jiesou",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-14T15:05:03Z"
     },
     {
@@ -40222,7 +40372,7 @@
         "dsh-plugin"
       ],
       "author": "xiajiajun516",
-      "stars": 36,
+      "stars": 37,
       "createdAt": "2026-08-14T17:42:12Z",
       "installVerified": true,
       "installSource": "community",
@@ -40595,12 +40745,27 @@
         "dsh-plugin"
       ],
       "author": "bowenliang123",
-      "stars": 1129,
+      "stars": 1132,
       "createdAt": "2026-08-14T08:23:28Z",
       "installVerified": true,
       "installSource": "community",
       "npm": "dsh-context",
       "descriptionZh": "DSH 上下文洞察面板：Context 仪表盘 + /context命令 + Context 浏览器，查看 Context的分类组成、内容详情、演进趋势、压缩/注入事件、统计等一站式 Context 全生命周期管理。"
+    },
+    {
+      "id": "helibeiqi/dsh-context-aware-search",
+      "title": "dsh-context-aware-search",
+      "description": "Context-aware web search plugin for DeepSeek Harness (dsh): rewrites queries with session context, reranks + credibility-tags results, one-click source summarization across multiple backends. Fully decoupled from @deepseek-ai private packages for public CI.",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-context-aware-search",
+      "install": "github:helibeiqi/dsh-context-aware-search",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-19T15:47:30Z"
     },
     {
       "id": "LeslieWylie/dsh-context-badge",
@@ -41623,6 +41788,21 @@
       "createdAt": "2026-08-17T18:51:41Z"
     },
     {
+      "id": "shimingming520/dsh-conversation-process-collapse",
+      "title": "dsh-conversation-process-collapse",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/shimingming520/dsh-conversation-process-collapse",
+      "install": "github:shimingming520/dsh-conversation-process-collapse",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "shimingming520",
+      "stars": 0,
+      "createdAt": "2026-08-27T13:28:33Z"
+    },
+    {
       "id": "xjwwjx/dsh-conversation-quote",
       "title": "dsh-conversation-quote",
       "description": "Quote-to-composer UI plugin for DeepSeek Harness Web: select conversation text in the chat and send it together with your next question",
@@ -42461,7 +42641,7 @@
         "dsh-plugin"
       ],
       "author": "Han-1413141",
-      "stars": 212,
+      "stars": 215,
       "createdAt": "2026-08-13T14:57:55Z",
       "installVerified": true,
       "installSource": "community",
@@ -43127,7 +43307,7 @@
         "dsh-plugin"
       ],
       "author": "Jackywxsz",
-      "stars": 6,
+      "stars": 20,
       "createdAt": "2026-08-25T03:51:55Z",
       "installVerified": true,
       "installSource": "community",
@@ -43799,6 +43979,21 @@
       "createdAt": "2026-08-23T09:57:10Z"
     },
     {
+      "id": "jetecho/dsh-csv-and-image-preview",
+      "title": "dsh-csv-and-image-preview",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/jetecho/dsh-csv-and-image-preview",
+      "install": "github:jetecho/dsh-csv-and-image-preview",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "jetecho",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:00:19Z"
+    },
+    {
       "id": "uckkk/dsh-csv-parse",
       "title": "dsh-csv-parse",
       "description": "健壮 CSV 解析器",
@@ -44350,6 +44545,21 @@
       "createdAt": "2026-08-20T09:58:42Z"
     },
     {
+      "id": "uckkk/dsh-curtain-calc",
+      "title": "dsh-curtain-calc",
+      "description": "窗帘用量计算",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-curtain-calc",
+      "install": "github:uckkk/dsh-curtain-calc",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T23:32:12Z"
+    },
+    {
       "id": "uckkk/dsh-curtain-pick",
       "title": "dsh-curtain-pick",
       "description": "窗帘选择",
@@ -44668,7 +44878,7 @@
         "dsh-plugin"
       ],
       "author": "SLin-code",
-      "stars": 41,
+      "stars": 42,
       "createdAt": "2026-08-24T09:55:50Z",
       "installVerified": true,
       "installSource": "community",
@@ -45126,7 +45336,7 @@
         "dsh-plugin"
       ],
       "author": "QCYTSN",
-      "stars": 271,
+      "stars": 272,
       "createdAt": "2026-08-14T03:35:04Z"
     },
     {
@@ -45881,6 +46091,21 @@
       "createdAt": "2026-08-17T14:31:39Z"
     },
     {
+      "id": "helibeiqi/dsh-dcs-engine",
+      "title": "dsh-dcs-engine",
+      "description": "Dynamic Capability Synthesis Engine — DSH protocol stack credit engine",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-dcs-engine",
+      "install": "github:helibeiqi/dsh-dcs-engine",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-24T02:25:54Z"
+    },
+    {
       "id": "ZhijiangTang/dsh-dead-links",
       "title": "dsh-dead-links",
       "description": "DSH plugin: scan Markdown docs for dead links (HEAD with GET fallback, bounded concurrency)",
@@ -46110,6 +46335,21 @@
       "createdAt": "2026-08-20T15:48:52Z"
     },
     {
+      "id": "uckkk/dsh-deep-clean",
+      "title": "dsh-deep-clean",
+      "description": "开荒保洁",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-deep-clean",
+      "install": "github:uckkk/dsh-deep-clean",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T17:54:45Z"
+    },
+    {
       "id": "uckkk/dsh-deep-clone",
       "title": "dsh-deep-clone",
       "description": "深拷贝",
@@ -46216,7 +46456,7 @@
         "dsh-plugin"
       ],
       "author": "Small-tailqwq",
-      "stars": 1785,
+      "stars": 1787,
       "createdAt": "2026-08-13T13:02:14Z",
       "installVerified": true,
       "installSource": "community",
@@ -46270,6 +46510,21 @@
       "author": "Small-tailqwq",
       "stars": 15,
       "createdAt": "2026-08-13T13:02:02Z"
+    },
+    {
+      "id": "Jensen-Yao/dsh-deepexcel",
+      "title": "dsh-deepexcel",
+      "description": "Deepcel 工作簿 · DeepSeek Harness (dsh) 皮肤中心 v2 皮肤：Excel 风格工作簿，单元格化消息、工作表网格、工作簿标签。Small-tailqwq/dsh-deepcel 的 v2 完整移植。",
+      "category": "plugin",
+      "repo": "https://github.com/Jensen-Yao/dsh-deepexcel",
+      "install": "github:Jensen-Yao/dsh-deepexcel",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "Jensen-Yao",
+      "stars": 0,
+      "createdAt": "2026-08-27T10:15:33Z"
     },
     {
       "id": "grasir-ctrl/dsh-deepeye-setup",
@@ -46730,7 +46985,7 @@
         "dsh-plugin"
       ],
       "author": "kanghelyu",
-      "stars": 55,
+      "stars": 57,
       "createdAt": "2026-08-14T18:15:15Z"
     },
     {
@@ -48039,7 +48294,7 @@
         "dsh-plugin"
       ],
       "author": "anywhere-labs",
-      "stars": 21425,
+      "stars": 21495,
       "createdAt": "2026-08-13T16:30:50Z"
     },
     {
@@ -48391,24 +48646,6 @@
       "createdAt": "2026-08-13T18:46:00Z"
     },
     {
-      "id": "s3yf1337/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "Desktop profile for the DeepSeek Harness: a native Tauri window over the harness web surface — tray, single-instance, OS notifications, suggest-only updater, native dialogs, drag & drop, and an in-app settings tab.",
-      "category": "plugin",
-      "repo": "https://github.com/s3yf1337/dsh-desktop",
-      "install": "github:s3yf1337/dsh-desktop#path:/bundle",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "s3yf1337",
-      "stars": 2,
-      "createdAt": "2026-08-14T04:09:44Z",
-      "installVerified": true,
-      "installSource": "community",
-      "descriptionZh": "dsh 桌面配置：原生 Tauri 窗口承载 harness Web 界面，支持托盘、原生通知、文件管理器面板与一键更新。"
-    },
-    {
       "id": "zhenghaoyang24/dsh-desktop",
       "title": "dsh-desktop",
       "description": "DeepSeek Harness desktop.DeepSeek Harness 桌面端。",
@@ -48452,6 +48689,24 @@
       "author": "flee42",
       "stars": 2,
       "createdAt": "2026-08-14T03:59:48Z"
+    },
+    {
+      "id": "s3yf1337/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "Desktop profile for the DeepSeek Harness: a native Tauri window over the harness web surface — tray, single-instance, OS notifications, suggest-only updater, native dialogs, drag & drop, and an in-app settings tab.",
+      "category": "plugin",
+      "repo": "https://github.com/s3yf1337/dsh-desktop",
+      "install": "github:s3yf1337/dsh-desktop#path:/bundle",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "s3yf1337",
+      "stars": 2,
+      "createdAt": "2026-08-14T04:09:44Z",
+      "installVerified": true,
+      "installSource": "community",
+      "descriptionZh": "dsh 桌面配置：原生 Tauri 窗口承载 harness Web 界面，支持托盘、原生通知、文件管理器面板与一键更新。"
     },
     {
       "id": "ouyangyipeng/dsh-desktop",
@@ -48559,21 +48814,6 @@
       "createdAt": "2026-08-13T20:34:02Z"
     },
     {
-      "id": "sunkeycn/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "Native macOS desktop wrapper for DeepSeek Harness with plugin management and FRP remote access",
-      "category": "plugin",
-      "repo": "https://github.com/sunkeycn/dsh-desktop",
-      "install": "github:sunkeycn/dsh-desktop",
-      "tags": [
-        "Swift",
-        "dsh-plugin"
-      ],
-      "author": "sunkeycn",
-      "stars": 1,
-      "createdAt": "2026-08-25T02:38:12Z"
-    },
-    {
       "id": "lansi-ai/dsh-desktop",
       "title": "dsh-desktop",
       "description": "把 DeepSeek Harness 做成一个真正的桌面应用：Electron 主进程内嵌 Cordis Host（与官方 Web 版同内核、零移植）， 渲染进程加载官方 Web UI 发行物（file:///自定义协议 + IPC 桥接，不开放 HTTP 端口）， 所有桌面原生能力（托盘、全局热键、系统通知、剪贴板、开机自启、协议唤起、多窗口）以 host 插件 形态注入运行时， 与官方「一切皆插件」的架构同构——不是给网页套壳，而是把桌面能力变成可装配、可卸载、可审查的插件树。  AI 驱动开发声明",
@@ -48587,6 +48827,21 @@
       "author": "lansi-ai",
       "stars": 1,
       "createdAt": "2026-08-25T08:58:36Z"
+    },
+    {
+      "id": "sunkeycn/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "Native macOS desktop wrapper for DeepSeek Harness with plugin management and FRP remote access",
+      "category": "plugin",
+      "repo": "https://github.com/sunkeycn/dsh-desktop",
+      "install": "github:sunkeycn/dsh-desktop",
+      "tags": [
+        "Swift",
+        "dsh-plugin"
+      ],
+      "author": "sunkeycn",
+      "stars": 1,
+      "createdAt": "2026-08-25T02:38:12Z"
     },
     {
       "id": "Ary66101/dsh-desktop",
@@ -48617,6 +48872,21 @@
       "author": "apexingai",
       "stars": 1,
       "createdAt": "2026-08-21T03:52:35Z"
+    },
+    {
+      "id": "DuckLing-IO/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "An unofficial Windows desktop client for DeepSeek Harness.",
+      "category": "plugin",
+      "repo": "https://github.com/DuckLing-IO/dsh-desktop",
+      "install": "github:DuckLing-IO/dsh-desktop",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "DuckLing-IO",
+      "stars": 1,
+      "createdAt": "2026-08-14T15:33:05Z"
     },
     {
       "id": "tuterx/dsh-desktop",
@@ -48666,21 +48936,6 @@
       "author": "o-Sakurajimamai-o",
       "stars": 1,
       "createdAt": "2026-08-14T07:43:05Z"
-    },
-    {
-      "id": "DuckLing-IO/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "An unofficial Windows desktop client for DeepSeek Harness.",
-      "category": "plugin",
-      "repo": "https://github.com/DuckLing-IO/dsh-desktop",
-      "install": "github:DuckLing-IO/dsh-desktop",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "DuckLing-IO",
-      "stars": 1,
-      "createdAt": "2026-08-14T15:33:05Z"
     },
     {
       "id": "oxygenaaaaa/dsh-desktop",
@@ -48773,21 +49028,6 @@
       "createdAt": "2026-08-15T21:44:32Z"
     },
     {
-      "id": "thuang3316/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "DeepSeek desktop for windows. Same UI, just a desktop version.",
-      "category": "client",
-      "repo": "https://github.com/thuang3316/dsh-desktop",
-      "install": "github:thuang3316/dsh-desktop",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "thuang3316",
-      "stars": 1,
-      "createdAt": "2026-08-15T14:59:33Z"
-    },
-    {
       "id": "ylw-a/dsh-desktop",
       "title": "dsh-desktop",
       "description": "使用Electron把dsh包裹起来，打包为桌面端的项目，编译后开箱即用",
@@ -48831,6 +49071,21 @@
       "author": "wuyuzi-luo",
       "stars": 1,
       "createdAt": "2026-08-15T14:45:45Z"
+    },
+    {
+      "id": "thuang3316/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "DeepSeek desktop for windows. Same UI, just a desktop version.",
+      "category": "client",
+      "repo": "https://github.com/thuang3316/dsh-desktop",
+      "install": "github:thuang3316/dsh-desktop",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "thuang3316",
+      "stars": 1,
+      "createdAt": "2026-08-15T14:59:33Z"
     },
     {
       "id": "Ackerman0/dsh-desktop",
@@ -49013,21 +49268,6 @@
       "createdAt": "2026-08-22T00:18:30Z"
     },
     {
-      "id": "danbao/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/danbao/dsh-desktop",
-      "install": "github:danbao/dsh-desktop",
-      "tags": [
-        "Rust",
-        "dsh-plugin"
-      ],
-      "author": "danbao",
-      "stars": 0,
-      "createdAt": "2026-08-22T17:12:06Z"
-    },
-    {
       "id": "sidleo/dsh-desktop",
       "title": "dsh-desktop",
       "description": "DeepSeek Harness 桌面壳：打开应用=启动 dsh web 服务并加载界面，关闭应用=自动停止服务。Electron desktop shell for DeepSeek Harness (DSH)",
@@ -49041,6 +49281,21 @@
       "author": "sidleo",
       "stars": 0,
       "createdAt": "2026-08-22T11:29:41Z"
+    },
+    {
+      "id": "danbao/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/danbao/dsh-desktop",
+      "install": "github:danbao/dsh-desktop",
+      "tags": [
+        "Rust",
+        "dsh-plugin"
+      ],
+      "author": "danbao",
+      "stars": 0,
+      "createdAt": "2026-08-22T17:12:06Z"
     },
     {
       "id": "Hanmingh/dsh-desktop",
@@ -49103,21 +49358,6 @@
       "createdAt": "2026-08-14T11:28:15Z"
     },
     {
-      "id": "nihaozyj7/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "Go + Wails desktop shell for DeepSeek Harness: native window, engine supervision, self-update, and preview source builds",
-      "category": "plugin",
-      "repo": "https://github.com/nihaozyj7/dsh-desktop",
-      "install": "github:nihaozyj7/dsh-desktop",
-      "tags": [
-        "Go",
-        "dsh-plugin"
-      ],
-      "author": "nihaozyj7",
-      "stars": 0,
-      "createdAt": "2026-08-14T20:19:54Z"
-    },
-    {
       "id": "Zhanggp98/dsh-desktop",
       "title": "dsh-desktop",
       "description": "DeepSeek Harness 桌面客户端：Electron 套壳，内置 Node 与 dsh（零下载零依赖），自绘标题栏、左侧导航栏、托盘常驻、插件/MCP/Skills 图形化管理",
@@ -49131,6 +49371,21 @@
       "author": "Zhanggp98",
       "stars": 0,
       "createdAt": "2026-08-14T13:35:50Z"
+    },
+    {
+      "id": "nihaozyj7/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "Go + Wails desktop shell for DeepSeek Harness: native window, engine supervision, self-update, and preview source builds",
+      "category": "plugin",
+      "repo": "https://github.com/nihaozyj7/dsh-desktop",
+      "install": "github:nihaozyj7/dsh-desktop",
+      "tags": [
+        "Go",
+        "dsh-plugin"
+      ],
+      "author": "nihaozyj7",
+      "stars": 0,
+      "createdAt": "2026-08-14T20:19:54Z"
     },
     {
       "id": "hjq1219/dsh-desktop",
@@ -49163,21 +49418,6 @@
       "createdAt": "2026-08-14T18:28:43Z"
     },
     {
-      "id": "Zomcxj/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "Native desktop wrapper for the DeepSeek Harness — launches dsh web in a system tray window",
-      "category": "plugin",
-      "repo": "https://github.com/Zomcxj/dsh-desktop",
-      "install": "github:Zomcxj/dsh-desktop",
-      "tags": [
-        "Rust",
-        "dsh-plugin"
-      ],
-      "author": "Zomcxj",
-      "stars": 0,
-      "createdAt": "2026-08-14T09:02:37Z"
-    },
-    {
       "id": "sjscy05/dsh-desktop",
       "title": "dsh-desktop",
       "description": "(no description)",
@@ -49193,19 +49433,19 @@
       "createdAt": "2026-08-14T05:41:51Z"
     },
     {
-      "id": "Corundum-Ling/dsh-desktop",
+      "id": "Zomcxj/dsh-desktop",
       "title": "dsh-desktop",
-      "description": "基于 Electron 的 DeepSeek Harness 桌面应用，内置运行环境，支持插件管理、社区插件市场与 Profile 管理。",
+      "description": "Native desktop wrapper for the DeepSeek Harness — launches dsh web in a system tray window",
       "category": "plugin",
-      "repo": "https://github.com/Corundum-Ling/dsh-desktop",
-      "install": "github:Corundum-Ling/dsh-desktop",
+      "repo": "https://github.com/Zomcxj/dsh-desktop",
+      "install": "github:Zomcxj/dsh-desktop",
       "tags": [
-        "JavaScript",
+        "Rust",
         "dsh-plugin"
       ],
-      "author": "Corundum-Ling",
+      "author": "Zomcxj",
       "stars": 0,
-      "createdAt": "2026-08-14T12:25:50Z"
+      "createdAt": "2026-08-14T09:02:37Z"
     },
     {
       "id": "yujianjian1013/dsh-desktop",
@@ -49221,6 +49461,21 @@
       "author": "yujianjian1013",
       "stars": 0,
       "createdAt": "2026-08-14T10:21:04Z"
+    },
+    {
+      "id": "Corundum-Ling/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "基于 Electron 的 DeepSeek Harness 桌面应用，内置运行环境，支持插件管理、社区插件市场与 Profile 管理。",
+      "category": "plugin",
+      "repo": "https://github.com/Corundum-Ling/dsh-desktop",
+      "install": "github:Corundum-Ling/dsh-desktop",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "Corundum-Ling",
+      "stars": 0,
+      "createdAt": "2026-08-14T12:25:50Z"
     },
     {
       "id": "ddll8023/dsh-desktop",
@@ -49358,6 +49613,21 @@
       "createdAt": "2026-08-16T19:59:42Z"
     },
     {
+      "id": "cheramvb/dsh-desktop",
+      "title": "dsh-desktop",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/cheramvb/dsh-desktop",
+      "install": "github:cheramvb/dsh-desktop",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "cheramvb",
+      "stars": 0,
+      "createdAt": "2026-08-16T15:22:25Z"
+    },
+    {
       "id": "keke-shy/dsh-desktop",
       "title": "dsh-desktop",
       "description": "Minimal Electron desktop shell embedding the official DeepSeek Harness web profile",
@@ -49386,21 +49656,6 @@
       "author": "SuperPaiGu",
       "stars": 0,
       "createdAt": "2026-08-16T02:58:22Z"
-    },
-    {
-      "id": "cheramvb/dsh-desktop",
-      "title": "dsh-desktop",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/cheramvb/dsh-desktop",
-      "install": "github:cheramvb/dsh-desktop",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "cheramvb",
-      "stars": 0,
-      "createdAt": "2026-08-16T15:22:25Z"
     },
     {
       "id": "baikangwang/dsh-desktop",
@@ -49962,21 +50217,6 @@
       "createdAt": "2026-08-16T05:38:08Z"
     },
     {
-      "id": "wjk-dot/dsh-desktop-pet",
-      "title": "dsh-desktop-pet",
-      "description": "A cross-platform desktop pet companion for DeepSeek Harness with shared Agent sessions, task status, workspace history, and optional Qwen-MM-Plugins screenshot analysis.",
-      "category": "plugin",
-      "repo": "https://github.com/wjk-dot/dsh-desktop-pet",
-      "install": "github:wjk-dot/dsh-desktop-pet",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "wjk-dot",
-      "stars": 0,
-      "createdAt": "2026-08-16T15:29:39Z"
-    },
-    {
       "id": "ryjgb13500-a11y/dsh-desktop-pet",
       "title": "dsh-desktop-pet",
       "description": "DSH 的具象化卡通形象——桌面宠物（Electron 动画桌宠，AI 协作完成）。项目还很粗糙，欢迎完善和开发！",
@@ -49990,6 +50230,21 @@
       "author": "ryjgb13500-a11y",
       "stars": 0,
       "createdAt": "2026-08-16T04:33:53Z"
+    },
+    {
+      "id": "wjk-dot/dsh-desktop-pet",
+      "title": "dsh-desktop-pet",
+      "description": "A cross-platform desktop pet companion for DeepSeek Harness with shared Agent sessions, task status, workspace history, and optional Qwen-MM-Plugins screenshot analysis.",
+      "category": "plugin",
+      "repo": "https://github.com/wjk-dot/dsh-desktop-pet",
+      "install": "github:wjk-dot/dsh-desktop-pet",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "wjk-dot",
+      "stars": 0,
+      "createdAt": "2026-08-16T15:29:39Z"
     },
     {
       "id": "beex-labs/dsh-desktop-plugin",
@@ -50951,7 +51206,7 @@
         "dsh-plugin"
       ],
       "author": "lehhair",
-      "stars": 25,
+      "stars": 26,
       "createdAt": "2026-08-12T11:25:05Z",
       "installVerified": true,
       "installSource": "community",
@@ -52048,7 +52303,7 @@
         "dsh-plugin"
       ],
       "author": "mlosun",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-16T11:10:08Z"
     },
     {
@@ -52078,7 +52333,7 @@
         "dsh-plugin"
       ],
       "author": "astra3294",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-14T18:08:53Z"
     },
     {
@@ -52256,6 +52511,21 @@
       "author": "yabo083",
       "stars": 2,
       "createdAt": "2026-08-14T19:09:22Z"
+    },
+    {
+      "id": "helibeiqi/dsh-docx-mcp",
+      "title": "dsh-docx-mcp",
+      "description": "Zero-dependency MCP stdio server that generates real .docx files from a JSON spec — Chinese office-automation vertical for DeepSeek Harness.",
+      "category": "dev-resource",
+      "repo": "https://github.com/helibeiqi/dsh-docx-mcp",
+      "install": "github:helibeiqi/dsh-docx-mcp",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:01:38Z"
     },
     {
       "id": "uckkk/dsh-dog-age",
@@ -52830,7 +53100,7 @@
         "dsh-plugin"
       ],
       "author": "aa2246740",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-24T05:01:26Z"
     },
     {
@@ -53286,7 +53556,7 @@
         "dsh-plugin"
       ],
       "author": "Cmjingahaha",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-27T19:23:52Z"
     },
     {
@@ -54432,7 +54702,7 @@
         "dsh-plugin"
       ],
       "author": "vritser",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-23T08:15:47Z"
     },
     {
@@ -55318,6 +55588,21 @@
       "createdAt": "2026-08-20T16:09:09Z"
     },
     {
+      "id": "uckkk/dsh-espresso",
+      "title": "dsh-espresso",
+      "description": "意式萃取",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-espresso",
+      "install": "github:uckkk/dsh-espresso",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:45:12Z"
+    },
+    {
       "id": "omdsh-dev/dsh-essential",
       "title": "dsh-essential",
       "description": "为 DeepSeek Harness 提供可恢复的对话删除能力，支持菜单集成、即时隐藏与重启安全归档",
@@ -55810,7 +56095,7 @@
         "dsh-plugin"
       ],
       "author": "GraySilver",
-      "stars": 152,
+      "stars": 157,
       "createdAt": "2026-08-16T11:49:17Z"
     },
     {
@@ -57487,7 +57772,7 @@
         "dsh-plugin"
       ],
       "author": "KeqingMoe",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-17T10:14:26Z"
     },
     {
@@ -58309,7 +58594,7 @@
         "dsh-plugin"
       ],
       "author": "acefun29",
-      "stars": 14,
+      "stars": 15,
       "createdAt": "2026-08-14T06:10:26Z"
     },
     {
@@ -58873,7 +59158,7 @@
         "dsh-plugin"
       ],
       "author": "extracurricular-ai",
-      "stars": 4,
+      "stars": 6,
       "createdAt": "2026-08-27T02:28:07Z"
     },
     {
@@ -59824,7 +60109,7 @@
         "dsh-plugin"
       ],
       "author": "dingyi222666",
-      "stars": 21,
+      "stars": 22,
       "createdAt": "2026-08-10T19:40:36Z",
       "installVerified": true,
       "installSource": "community",
@@ -60500,7 +60785,7 @@
         "dsh-plugin"
       ],
       "author": "yu-wenchao",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-26T06:07:13Z",
       "installVerified": true,
       "installSource": "community",
@@ -60518,7 +60803,7 @@
         "dsh-plugin"
       ],
       "author": "DDDMUC",
-      "stars": 77,
+      "stars": 78,
       "createdAt": "2026-08-14T16:42:17Z",
       "installVerified": true,
       "installSource": "community",
@@ -60751,7 +61036,7 @@
         "dsh-plugin"
       ],
       "author": "dongwenxiu83-web",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-18T13:13:00Z"
     },
     {
@@ -60986,7 +61271,7 @@
         "dsh-plugin"
       ],
       "author": "JUANWANG-BUAA",
-      "stars": 27,
+      "stars": 28,
       "createdAt": "2026-08-15T01:39:51Z",
       "installVerified": true,
       "installSource": "community",
@@ -62323,7 +62608,7 @@
         "dsh-plugin"
       ],
       "author": "omdsh-dev",
-      "stars": 360,
+      "stars": 362,
       "createdAt": "2026-08-13T13:07:52Z",
       "installVerified": true,
       "installSource": "community",
@@ -62696,21 +62981,6 @@
       "createdAt": "2026-08-20T15:49:39Z"
     },
     {
-      "id": "taontech/dsh-git",
-      "title": "dsh-git",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/taontech/dsh-git",
-      "install": "github:taontech/dsh-git",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "taontech",
-      "stars": 1,
-      "createdAt": "2026-08-14T13:40:22Z"
-    },
-    {
       "id": "ZicanC/dsh-git",
       "title": "dsh-git",
       "description": "dsh-git lets you manage conversations with an agent the way you use Git.",
@@ -62724,6 +62994,21 @@
       "author": "ZicanC",
       "stars": 1,
       "createdAt": "2026-08-14T00:08:54Z"
+    },
+    {
+      "id": "taontech/dsh-git",
+      "title": "dsh-git",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/taontech/dsh-git",
+      "install": "github:taontech/dsh-git",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "taontech",
+      "stars": 1,
+      "createdAt": "2026-08-14T13:40:22Z"
     },
     {
       "id": "mojiexuan/dsh-git",
@@ -63547,7 +63832,7 @@
         "dsh-plugin"
       ],
       "author": "PivotStackIntelligence",
-      "stars": 54,
+      "stars": 56,
       "createdAt": "2026-08-13T17:31:00Z"
     },
     {
@@ -65160,7 +65445,7 @@
         "dsh-plugin"
       ],
       "author": "dclichang2022",
-      "stars": 87,
+      "stars": 88,
       "createdAt": "2026-08-14T07:22:45Z"
     },
     {
@@ -66178,7 +66463,7 @@
         "dsh-plugin"
       ],
       "author": "Saktawdi",
-      "stars": 9,
+      "stars": 7,
       "createdAt": "2026-08-14T10:29:54Z",
       "installVerified": true,
       "installSource": "community",
@@ -66396,6 +66681,21 @@
       "createdAt": "2026-08-20T14:51:43Z"
     },
     {
+      "id": "uckkk/dsh-hair-wash-care",
+      "title": "dsh-hair-wash-care",
+      "description": "洗发护发",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-hair-wash-care",
+      "install": "github:uckkk/dsh-hair-wash-care",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T19:00:24Z"
+    },
+    {
       "id": "uckkk/dsh-haiti",
       "title": "dsh-haiti",
       "description": "海地国家",
@@ -66471,6 +66771,21 @@
       "createdAt": "2026-08-20T18:53:56Z"
     },
     {
+      "id": "zhoupengyun572-cell/dsh-hana-research",
+      "title": "dsh-hana-research",
+      "description": "A local literature review, PDF annotation, evidence synthesis, and research notes workbench for DeepSeek Harness.",
+      "category": "plugin",
+      "repo": "https://github.com/zhoupengyun572-cell/dsh-hana-research",
+      "install": "github:zhoupengyun572-cell/dsh-hana-research",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "zhoupengyun572-cell",
+      "stars": 1,
+      "createdAt": "2026-08-28T14:39:32Z"
+    },
+    {
       "id": "Nyasers/dsh-hanako",
       "title": "dsh-hanako",
       "description": "DSH for Hanako",
@@ -66501,6 +66816,21 @@
       "createdAt": "2026-08-15T07:16:49Z"
     },
     {
+      "id": "uckkk/dsh-hand-care",
+      "title": "dsh-hand-care",
+      "description": "手部护理",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-hand-care",
+      "install": "github:uckkk/dsh-hand-care",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T19:01:47Z"
+    },
+    {
       "id": "Electricitysheep/dsh-handbook",
       "title": "dsh-handbook",
       "description": "DeepSeek Harness (dsh) 从 0 到 1 深度手册：安装/插件开发/性能调优/实测案例/同模型多 Agent 实测对比（中文 + 英文 PDF）",
@@ -66512,7 +66842,7 @@
         "dsh-plugin"
       ],
       "author": "Electricitysheep",
-      "stars": 699,
+      "stars": 700,
       "createdAt": "2026-08-13T15:22:29Z"
     },
     {
@@ -69474,7 +69804,7 @@
         "dsh-plugin"
       ],
       "author": "DEEP-IOS",
-      "stars": 7,
+      "stars": 8,
       "createdAt": "2026-08-14T11:04:56Z"
     },
     {
@@ -70038,7 +70368,7 @@
         "dsh-plugin"
       ],
       "author": "xmanrui",
-      "stars": 937,
+      "stars": 947,
       "createdAt": "2026-08-14T20:40:06Z",
       "installVerified": true,
       "installSource": "community",
@@ -70438,7 +70768,7 @@
         "dsh-plugin"
       ],
       "author": "shanliuling",
-      "stars": 262,
+      "stars": 266,
       "createdAt": "2026-08-17T10:16:37Z",
       "installVerified": true,
       "installSource": "community",
@@ -71507,6 +71837,21 @@
       "createdAt": "2026-08-21T12:49:05Z"
     },
     {
+      "id": "helibeiqi/dsh-industry-graph-mcp",
+      "title": "dsh-industry-graph-mcp",
+      "description": "零依赖本地优先的 A股 产业链/申万行业/概念板块 知识图谱 MCP server (dsh-plugin)",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-industry-graph-mcp",
+      "install": "github:helibeiqi/dsh-industry-graph-mcp",
+      "tags": [
+        "Python",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:21:07Z"
+    },
+    {
       "id": "PerryLink/dsh-industry-research",
       "title": "dsh-industry-research",
       "description": "Industry and company research domain pack for DeepSeek Harness: methodology skills, industry chain mapping, public-source policy/news tracking, company research cards, and auditable research reports. Research only - not investment advice.",
@@ -71533,7 +71878,7 @@
         "dsh-plugin"
       ],
       "author": "Minglink",
-      "stars": 574,
+      "stars": 583,
       "createdAt": "2026-08-15T15:47:15Z"
     },
     {
@@ -72067,7 +72412,7 @@
         "dsh-plugin"
       ],
       "author": "gwsbhqt",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-25T06:10:56Z",
       "installVerified": true,
       "installSource": "community",
@@ -79271,7 +79616,7 @@
         "dsh-plugin"
       ],
       "author": "zhuchengde0214-ctrl",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-18T05:37:22Z"
     },
     {
@@ -79575,7 +79920,7 @@
         "dsh-plugin"
       ],
       "author": "QiE2035",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-16T00:36:45Z"
     },
     {
@@ -80641,7 +80986,7 @@
     {
       "id": "Lbunc/dsh-local-llm-controller",
       "title": "dsh-local-llm-controller",
-      "description": "为DSH接入本地大模型能力：在「设置→插件」页一键启停本地 llama.cpp 大模型（35B/9B，视觉×文本×快速/长上下文），卡片内配置、一条命令安装、自动注册，装完即用。 | start/stop a local llama.cpp llama-server right from Settings → Plugins, with Qwen3.6-35B / Qwen3.5-9B (vision × text, fast × long-context) as session models — card config, one-command install, auto-registered.",
+      "description": "为DSH接入本地大模型能力：在「设置→插件」页一键启停本地 llama.cpp 大模型（双槽x双模态x双预设），卡片内配置、一条命令安装、自动注册，装完即用。 | Enable local large model capabilities for DSH: One-click start/stop for local llama.cpp models (dual‑slot × dual‑modal × dual‑preset) right in Settings → Plugins; configure within the card, install with a single command, automatically register, and ready to use ",
       "category": "plugin",
       "repo": "https://github.com/Lbunc/dsh-local-llm-controller",
       "install": "github:Lbunc/dsh-local-llm-controller",
@@ -80650,7 +80995,7 @@
         "dsh-plugin"
       ],
       "author": "Lbunc",
-      "stars": 1,
+      "stars": 2,
       "createdAt": "2026-08-21T05:27:13Z"
     },
     {
@@ -81021,7 +81366,7 @@
         "dsh-plugin"
       ],
       "author": "islibaodong",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-17T08:08:53Z"
     },
     {
@@ -82514,7 +82859,7 @@
         "dsh-plugin"
       ],
       "author": "dsh-market",
-      "stars": 2663,
+      "stars": 2689,
       "createdAt": "2026-08-14T04:58:15Z",
       "installVerified": true,
       "installSource": "bundled",
@@ -82534,7 +82879,7 @@
         "dsh-plugin"
       ],
       "author": "2BingLing",
-      "stars": 83,
+      "stars": 84,
       "createdAt": "2026-08-13T16:26:50Z"
     },
     {
@@ -83040,6 +83385,21 @@
       "createdAt": "2026-08-14T23:13:06Z"
     },
     {
+      "id": "auggie246/dsh-mattpocock-skills",
+      "title": "dsh-mattpocock-skills",
+      "description": "Deepseek Harness plugin to install Mattpocock skills.",
+      "category": "skill",
+      "repo": "https://github.com/auggie246/dsh-mattpocock-skills",
+      "install": "github:auggie246/dsh-mattpocock-skills",
+      "tags": [
+        "Shell",
+        "dsh-plugin"
+      ],
+      "author": "auggie246",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:58:54Z"
+    },
+    {
       "id": "FeatherHunter/dsh-mattpocock-skills-deck",
       "title": "dsh-mattpocock-skills-deck",
       "description": "拨开战争迷雾看见终点，剩下的交给 MattSkillsDeck。让 mattpocock/skills 在 DSH 里化作一块看得见、派得动的任务板。 Part the fog of war, see the end — MattSkillsDeck handles the rest. A playable task board for mattpocock/skills in DeepSeek Harness.",
@@ -83051,7 +83411,7 @@
         "dsh-plugin"
       ],
       "author": "FeatherHunter",
-      "stars": 27,
+      "stars": 28,
       "createdAt": "2026-08-17T00:23:57Z",
       "installVerified": true,
       "installSource": "community",
@@ -83630,21 +83990,6 @@
       "createdAt": "2026-08-18T08:29:22Z"
     },
     {
-      "id": "zsvd/dsh-mcp-manager",
-      "title": "dsh-mcp-manager",
-      "description": "用于DSH的MCP管理器",
-      "category": "plugin",
-      "repo": "https://github.com/zsvd/dsh-mcp-manager",
-      "install": "github:zsvd/dsh-mcp-manager",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "zsvd",
-      "stars": 0,
-      "createdAt": "2026-08-17T07:55:40Z"
-    },
-    {
       "id": "haode01/dsh-mcp-manager",
       "title": "dsh-mcp-manager",
       "description": "dsh plugin,用来管理mcp的",
@@ -83658,6 +84003,21 @@
       "author": "haode01",
       "stars": 0,
       "createdAt": "2026-08-17T08:15:07Z"
+    },
+    {
+      "id": "zsvd/dsh-mcp-manager",
+      "title": "dsh-mcp-manager",
+      "description": "用于DSH的MCP管理器",
+      "category": "plugin",
+      "repo": "https://github.com/zsvd/dsh-mcp-manager",
+      "install": "github:zsvd/dsh-mcp-manager",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "zsvd",
+      "stars": 0,
+      "createdAt": "2026-08-17T07:55:40Z"
     },
     {
       "id": "penglai-doll/dsh-mcp-manager",
@@ -84294,6 +84654,21 @@
       "createdAt": "2026-08-18T15:23:37Z"
     },
     {
+      "id": "awol2005ex3/dsh-md-table-export",
+      "title": "dsh-md-table-export",
+      "description": "DeepSeek Harness（`dsh`）插件：把对话内容里的 **Markdown 表格** 一键导出为 **Excel（`.xlsx`）**。",
+      "category": "plugin",
+      "repo": "https://github.com/awol2005ex3/dsh-md-table-export",
+      "install": "github:awol2005ex3/dsh-md-table-export",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "awol2005ex3",
+      "stars": 0,
+      "createdAt": "2026-08-28T00:48:27Z"
+    },
+    {
       "id": "Hyna-hla/dsh-md-table-formatter",
       "title": "dsh-md-table-formatter",
       "description": "(no description)",
@@ -84787,7 +85162,7 @@
         "dsh-plugin"
       ],
       "author": "the-beating-light-of-the-nail",
-      "stars": 31,
+      "stars": 32,
       "createdAt": "2026-08-14T02:28:07Z"
     },
     {
@@ -85422,7 +85797,7 @@
         "dsh-plugin"
       ],
       "author": "EternalNight996",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-08-21T12:36:00Z"
     },
     {
@@ -85796,6 +86171,21 @@
       "descriptionZh": "把你在 Claude / ChatGPT 里已有的历史搬进 DSH：Claude 导出包里的 memories.json 零 token 瞬时入库，本机 Claude Code 记录免导出直读，历史对话用你在 DSH 里已配好的模型提纯。每条记忆都带由代码回原文核对的逐字证据——转述会被丢弃并计数，只在 AI 回复里找到的证据一律转人工确认而非直接入库。"
     },
     {
+      "id": "helibeiqi/dsh-memory-projection",
+      "title": "dsh-memory-projection",
+      "description": "Hot-pluggable memory-projection scheduling framework for DeepSeek Harness (dsh): pure-function projection strategies + a runtime invariant guard, built on the cordis plugin kernel.",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-memory-projection",
+      "install": "github:helibeiqi/dsh-memory-projection",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-20T14:23:27Z"
+    },
+    {
       "id": "baaai123/dsh-memory-protocol",
       "title": "dsh-memory-protocol",
       "description": "Memory enforcement plugin for DeepSeek Harness — bridges opencode-memory MCP server with a hard protocol gate",
@@ -86141,7 +86531,7 @@
         "dsh-plugin"
       ],
       "author": "Phant0Meow",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-22T16:59:56Z",
       "installVerified": true,
       "installSource": "community",
@@ -86174,7 +86564,7 @@
         "dsh-plugin"
       ],
       "author": "Phant0Meow",
-      "stars": 56,
+      "stars": 57,
       "createdAt": "2026-08-14T08:54:33Z",
       "installVerified": true,
       "installSource": "community",
@@ -86208,7 +86598,7 @@
         "dsh-plugin"
       ],
       "author": "Phant0Meow",
-      "stars": 24,
+      "stars": 25,
       "createdAt": "2026-08-19T18:40:50Z",
       "installVerified": true,
       "installSource": "community",
@@ -87099,7 +87489,7 @@
         "dsh-plugin"
       ],
       "author": "SnowCrescenter-tech",
-      "stars": 22,
+      "stars": 23,
       "createdAt": "2026-08-13T17:04:46Z",
       "installVerified": true,
       "installSource": "community",
@@ -87181,7 +87571,7 @@
         "dsh-plugin"
       ],
       "author": "1692775560",
-      "stars": 106,
+      "stars": 107,
       "createdAt": "2026-08-20T13:46:05Z"
     },
     {
@@ -88215,7 +88605,7 @@
         "dsh-plugin"
       ],
       "author": "welsione",
-      "stars": 10,
+      "stars": 9,
       "createdAt": "2026-08-14T08:52:31Z",
       "installVerified": true,
       "installSource": "community",
@@ -88253,7 +88643,7 @@
         "dsh-plugin"
       ],
       "author": "modusensus",
-      "stars": 61,
+      "stars": 62,
       "createdAt": "2026-08-13T15:18:08Z",
       "installVerified": true,
       "installSource": "community",
@@ -88278,7 +88668,7 @@
         "dsh-plugin"
       ],
       "author": "omdsh-dev",
-      "stars": 270,
+      "stars": 274,
       "createdAt": "2026-08-10T04:38:03Z",
       "installVerified": true,
       "installSource": "community",
@@ -88376,7 +88766,7 @@
         "dsh-plugin"
       ],
       "author": "saya-ch",
-      "stars": 168,
+      "stars": 170,
       "createdAt": "2026-08-15T05:28:38Z",
       "installVerified": true,
       "installSource": "community",
@@ -88395,7 +88785,7 @@
         "dsh-plugin"
       ],
       "author": "Clarklevis1995",
-      "stars": 36,
+      "stars": 39,
       "createdAt": "2026-08-17T15:52:40Z"
     },
     {
@@ -88663,7 +89053,7 @@
         "dsh-plugin"
       ],
       "author": "kelai141",
-      "stars": 262,
+      "stars": 263,
       "createdAt": "2026-08-13T23:55:34Z"
     },
     {
@@ -88844,7 +89234,7 @@
         "dsh-plugin"
       ],
       "author": "april-jk",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-16T14:30:23Z"
     },
     {
@@ -89300,6 +89690,21 @@
       "createdAt": "2026-08-17T07:38:15Z"
     },
     {
+      "id": "SHUJILAI/dsh-model-auto-hot-switch",
+      "title": "dsh-model-auto-hot-switch",
+      "description": "Automatic per-task model hot-switching for DeepSeek Harness (dsh): image-aware tasks route to the vision model automatically, every other task keeps your default model. Zero extra tokens, no context disturbance.",
+      "category": "plugin",
+      "repo": "https://github.com/SHUJILAI/dsh-model-auto-hot-switch",
+      "install": "github:SHUJILAI/dsh-model-auto-hot-switch",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "SHUJILAI",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:35:43Z"
+    },
+    {
       "id": "nabin-qq273274877/dsh-model-balance",
       "title": "dsh-model-balance",
       "description": "为 DeepSeek Harness Web GUI 提供多供应商真实账户余额显示",
@@ -89689,7 +90094,7 @@
         "dsh-plugin"
       ],
       "author": "Jensen-Yao",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-26T10:36:34Z"
     },
     {
@@ -89816,7 +90221,7 @@
         "dsh-plugin"
       ],
       "author": "wqy8593521",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-18T15:09:28Z",
       "installVerified": true,
       "installSource": "community",
@@ -91350,21 +91755,6 @@
       "createdAt": "2026-08-15T09:39:44Z"
     },
     {
-      "id": "chou109/dsh-msgrail",
-      "title": "dsh-msgrail",
-      "description": "MsgRail（消息轨道） —— DeepSeek Harness 的窄消息轨道插件：在对话左侧，为每条你发送的消息显示一根细横线。悬停看预览、点击即跳转，更早消息自动加载；全量历史、实时更新、中英双语。  MsgRail is a narrow message rail for DeepSeek Harness: one thin bar on the left of the chat for each message you sent. Hover to preview, click to jump — older messages load automatically. Full history, live, bilingual.",
-      "category": "plugin",
-      "repo": "https://github.com/chou109/dsh-msgrail",
-      "install": "github:chou109/dsh-msgrail",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "chou109",
-      "stars": 1,
-      "createdAt": "2026-08-15T10:01:45Z"
-    },
-    {
       "id": "futongxu9-maker/dsh-msgrail",
       "title": "dsh-msgrail",
       "description": "MsgRail 消息轨道：DeepSeek Harness 对话右缘消息索引插件（悬停预览/点击跳转/自动加载历史），纯插件零宿主侵入，皮肤全适配",
@@ -91378,6 +91768,21 @@
       "author": "futongxu9-maker",
       "stars": 1,
       "createdAt": "2026-08-15T17:20:45Z"
+    },
+    {
+      "id": "chou109/dsh-msgrail",
+      "title": "dsh-msgrail",
+      "description": "MsgRail（消息轨道） —— DeepSeek Harness 的窄消息轨道插件：在对话左侧，为每条你发送的消息显示一根细横线。悬停看预览、点击即跳转，更早消息自动加载；全量历史、实时更新、中英双语。  MsgRail is a narrow message rail for DeepSeek Harness: one thin bar on the left of the chat for each message you sent. Hover to preview, click to jump — older messages load automatically. Full history, live, bilingual.",
+      "category": "plugin",
+      "repo": "https://github.com/chou109/dsh-msgrail",
+      "install": "github:chou109/dsh-msgrail",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "chou109",
+      "stars": 1,
+      "createdAt": "2026-08-15T10:01:45Z"
     },
     {
       "id": "3223698962/dsh-msys2-bash-executor",
@@ -91844,7 +92249,7 @@
         "dsh-plugin"
       ],
       "author": "WilliamShi666",
-      "stars": 13,
+      "stars": 14,
       "createdAt": "2026-08-18T14:41:21Z"
     },
     {
@@ -93069,7 +93474,7 @@
         "dsh-plugin"
       ],
       "author": "kriskite",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-19T01:50:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -93087,7 +93492,7 @@
         "dsh-plugin"
       ],
       "author": "kanneiren",
-      "stars": 55,
+      "stars": 56,
       "createdAt": "2026-08-17T14:55:41Z",
       "installVerified": true,
       "installSource": "community",
@@ -94049,27 +94454,12 @@
         "dsh-plugin"
       ],
       "author": "THEWOLFWALKER",
-      "stars": 79,
+      "stars": 80,
       "createdAt": "2026-08-14T23:41:50Z",
       "installVerified": true,
       "installSource": "community",
       "npm": "dsh-notifier",
       "descriptionZh": "DSH 多渠道通知与手机控制插件：一个 `notify()` API 接入 27 个渠道，支持事件推送、手机审批与提问、六条入站控制通道、本机 Web 管理台、多 agent 路由和零运行时依赖。"
-    },
-    {
-      "id": "nanami-0713/dsh-notifier",
-      "title": "dsh-notifier",
-      "description": "DSH 插件：任务结束 / 需要用户决策时弹窗提醒（web toast + 桌面通知），类似 Codex / Claude Code 体验",
-      "category": "plugin",
-      "repo": "https://github.com/nanami-0713/dsh-notifier",
-      "install": "github:nanami-0713/dsh-notifier",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "nanami-0713",
-      "stars": 2,
-      "createdAt": "2026-08-15T21:54:40Z"
     },
     {
       "id": "YZz-S/dsh-notifier",
@@ -94088,6 +94478,21 @@
       "installVerified": true,
       "installSource": "community",
       "descriptionZh": "任务完成或需要确认/输入时发送操作系统原生通知：Windows toast、macOS osascript、Linux notify-send。"
+    },
+    {
+      "id": "nanami-0713/dsh-notifier",
+      "title": "dsh-notifier",
+      "description": "DSH 插件：任务结束 / 需要用户决策时弹窗提醒（web toast + 桌面通知），类似 Codex / Claude Code 体验",
+      "category": "plugin",
+      "repo": "https://github.com/nanami-0713/dsh-notifier",
+      "install": "github:nanami-0713/dsh-notifier",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "nanami-0713",
+      "stars": 2,
+      "createdAt": "2026-08-15T21:54:40Z"
     },
     {
       "id": "jypjypjypjyp/dsh-notifier",
@@ -94696,7 +95101,7 @@
         "dsh-plugin"
       ],
       "author": "akira399",
-      "stars": 26,
+      "stars": 27,
       "createdAt": "2026-08-17T10:59:46Z"
     },
     {
@@ -94711,7 +95116,7 @@
         "dsh-plugin"
       ],
       "author": "siweina",
-      "stars": 10,
+      "stars": 11,
       "createdAt": "2026-08-16T11:16:49Z"
     },
     {
@@ -95085,21 +95490,6 @@
       "createdAt": "2026-08-20T16:48:51Z"
     },
     {
-      "id": "jeremy9682/dsh-observability",
-      "title": "dsh-observability",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/jeremy9682/dsh-observability",
-      "install": "github:jeremy9682/dsh-observability",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "jeremy9682",
-      "stars": 2,
-      "createdAt": "2026-08-14T18:07:53Z"
-    },
-    {
       "id": "CodePrometheus/dsh-observability",
       "title": "dsh-observability",
       "description": "Observability for DeepSeek Harness (dsh), use the OpenTelemetry Protocol",
@@ -95113,6 +95503,21 @@
       "author": "CodePrometheus",
       "stars": 2,
       "createdAt": "2026-08-14T06:36:41Z"
+    },
+    {
+      "id": "jeremy9682/dsh-observability",
+      "title": "dsh-observability",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/jeremy9682/dsh-observability",
+      "install": "github:jeremy9682/dsh-observability",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "jeremy9682",
+      "stars": 2,
+      "createdAt": "2026-08-14T18:07:53Z"
     },
     {
       "id": "xingyingyuzhui/dsh-observability",
@@ -96391,6 +96796,21 @@
       "author": "AndrasSama",
       "stars": 2,
       "createdAt": "2026-08-24T17:15:24Z"
+    },
+    {
+      "id": "KeynoWu/dsh-omp-tools",
+      "title": "dsh-omp-tools",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/KeynoWu/dsh-omp-tools",
+      "install": "github:KeynoWu/dsh-omp-tools",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "KeynoWu",
+      "stars": 0,
+      "createdAt": "2026-08-20T09:51:57Z"
     },
     {
       "id": "bx33661/dsh-omv",
@@ -98290,6 +98710,21 @@
       "createdAt": "2026-08-15T09:22:12Z"
     },
     {
+      "id": "dat-lequoc/dsh-opinionated-subagent",
+      "title": "dsh-opinionated-subagent",
+      "description": "A minimal, opinionated subagent for DeepSeek Harness: you choose which models a child may run on and at which reasoning effort, and a correction reaches a working child at its next step",
+      "category": "plugin",
+      "repo": "https://github.com/dat-lequoc/dsh-opinionated-subagent",
+      "install": "github:dat-lequoc/dsh-opinionated-subagent",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "dat-lequoc",
+      "stars": 1,
+      "createdAt": "2026-08-27T21:45:29Z"
+    },
+    {
       "id": "DonnieTangzhili/dsh-ops-console",
       "title": "dsh-ops-console",
       "description": "因为官方的web版想重启比较麻烦，这个插件实现了一种懒人的方式",
@@ -98525,6 +98960,21 @@
       "createdAt": "2026-08-15T01:06:27Z"
     },
     {
+      "id": "uckkk/dsh-origami",
+      "title": "dsh-origami",
+      "description": "折纸教程",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-origami",
+      "install": "github:uckkk/dsh-origami",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T19:36:00Z"
+    },
+    {
       "id": "Fantasality/dsh-origin-plugin",
       "title": "dsh-origin-plugin",
       "description": "DSH Origin Plugin: drive Origin scientific plotting from DeepSeek Harness AI chat via MCP. Write data, plot line/scatter/column, export PNG/SVG DeepSeek Harness  Origin ",
@@ -98675,6 +99125,21 @@
       "descriptionZh": "运行时切换模型输出风格（对标 Claude Code outputStyles），另加 output.render.* 呈现协议：/style 命令、按会话持久化、systemPrompt 注入、六个内置风格、Web 选择器，以及带按会话/按工具规则与 /export 的渲染器注册表。"
     },
     {
+      "id": "auggie246/dsh-output-styles",
+      "title": "dsh-output-styles",
+      "description": "Enable output styles in Deepseek Harness settings!",
+      "category": "plugin",
+      "repo": "https://github.com/auggie246/dsh-output-styles",
+      "install": "github:auggie246/dsh-output-styles",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "auggie246",
+      "stars": 0,
+      "createdAt": "2026-08-28T09:23:59Z"
+    },
+    {
       "id": "uckkk/dsh-oven-convert",
       "title": "dsh-oven-convert",
       "description": "烤箱温度换算",
@@ -98750,7 +99215,7 @@
         "dsh-plugin"
       ],
       "author": "fly233338",
-      "stars": 9,
+      "stars": 10,
       "createdAt": "2026-08-14T09:08:11Z",
       "installVerified": true,
       "installSource": "community",
@@ -99550,7 +100015,7 @@
         "dsh-plugin"
       ],
       "author": "slywalker2006",
-      "stars": 33,
+      "stars": 34,
       "createdAt": "2026-08-14T06:35:16Z",
       "installVerified": true,
       "installSource": "community",
@@ -99785,6 +100250,21 @@
       "author": "yzhangjy",
       "stars": 0,
       "createdAt": "2026-08-23T17:19:45Z"
+    },
+    {
+      "id": "uckkk/dsh-payback",
+      "title": "dsh-payback",
+      "description": "回本周期测算",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-payback",
+      "install": "github:uckkk/dsh-payback",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:43:47Z"
     },
     {
       "id": "Moeblack/dsh-payload-capture",
@@ -100397,7 +100877,7 @@
         "dsh-plugin"
       ],
       "author": "howmp",
-      "stars": 307,
+      "stars": 311,
       "createdAt": "2026-08-15T14:30:35Z",
       "installVerified": true,
       "installSource": "community",
@@ -100611,7 +101091,7 @@
         "dsh-plugin"
       ],
       "author": "PerryLink",
-      "stars": 59,
+      "stars": 62,
       "createdAt": "2026-08-13T20:31:02Z",
       "installVerified": true,
       "installSource": "community",
@@ -100835,7 +101315,7 @@
         "dsh-plugin"
       ],
       "author": "PC2005-cloud",
-      "stars": 460,
+      "stars": 462,
       "createdAt": "2026-08-14T00:38:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -104147,7 +104627,7 @@
         "dsh-plugin"
       ],
       "author": "Totoro-qaq",
-      "stars": 155,
+      "stars": 157,
       "createdAt": "2026-08-17T07:52:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -104364,7 +104844,7 @@
         "dsh-plugin"
       ],
       "author": "qinyre",
-      "stars": 9,
+      "stars": 10,
       "createdAt": "2026-08-16T17:45:00Z",
       "installVerified": true,
       "installSource": "community",
@@ -107179,7 +107659,7 @@
         "dsh-plugin"
       ],
       "author": "lxzy-7",
-      "stars": 34,
+      "stars": 35,
       "createdAt": "2026-08-16T09:55:20Z"
     },
     {
@@ -108675,21 +109155,6 @@
       "createdAt": "2026-08-15T00:22:09Z"
     },
     {
-      "id": "huahai0202/dsh-plugin-manager",
-      "title": "dsh-plugin-manager",
-      "description": "Manage user-installed DeepSeek Harness plugins from the DSH Web settings page",
-      "category": "plugin",
-      "repo": "https://github.com/huahai0202/dsh-plugin-manager",
-      "install": "github:huahai0202/dsh-plugin-manager",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "huahai0202",
-      "stars": 1,
-      "createdAt": "2026-08-15T13:35:36Z"
-    },
-    {
       "id": "Zaogaogwc/dsh-plugin-manager",
       "title": "dsh-plugin-manager",
       "description": "Mod-style plugin management for DeepSeek Harness: provenance, preview-first hot toggles, presets, AI filtering, diagnostics, and updates.",
@@ -108703,6 +109168,21 @@
       "author": "Zaogaogwc",
       "stars": 1,
       "createdAt": "2026-08-15T17:05:22Z"
+    },
+    {
+      "id": "huahai0202/dsh-plugin-manager",
+      "title": "dsh-plugin-manager",
+      "description": "Manage user-installed DeepSeek Harness plugins from the DSH Web settings page",
+      "category": "plugin",
+      "repo": "https://github.com/huahai0202/dsh-plugin-manager",
+      "install": "github:huahai0202/dsh-plugin-manager",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "huahai0202",
+      "stars": 1,
+      "createdAt": "2026-08-15T13:35:36Z"
     },
     {
       "id": "CHF-hub99/dsh-plugin-manager",
@@ -109728,6 +110208,21 @@
       "author": "syncable-dev",
       "stars": 1,
       "createdAt": "2026-08-17T06:25:32Z"
+    },
+    {
+      "id": "tumi-huakai/dsh-plugin-meow-speech",
+      "title": "dsh-plugin-meow-speech",
+      "description": "喵语定制：DSH 消息正文显示层文本替换插件（仅界面显示，不改动真实对话内容）",
+      "category": "plugin",
+      "repo": "https://github.com/tumi-huakai/dsh-plugin-meow-speech",
+      "install": "github:tumi-huakai/dsh-plugin-meow-speech",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "tumi-huakai",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:20:12Z"
     },
     {
       "id": "HuanLinOTO/dsh-plugin-merge-tool-calls",
@@ -112932,7 +113427,7 @@
     {
       "id": "Drhushi/dsh-plugin-tav2",
       "title": "dsh-plugin-tav2",
-      "description": "(no description)",
+      "description": "DeepSeek Harness 插件 —— 对话式游戏本地化：跟 AI 助手说说话，完成游戏翻译全流程。引擎适配器架构，首发支持 Ren'Py。",
       "category": "plugin",
       "repo": "https://github.com/Drhushi/dsh-plugin-tav2",
       "install": "github:Drhushi/dsh-plugin-tav2",
@@ -113004,7 +113499,7 @@
         "dsh-plugin"
       ],
       "author": "bugmaker2",
-      "stars": 48,
+      "stars": 49,
       "createdAt": "2026-08-13T17:30:29Z"
     },
     {
@@ -113197,6 +113692,21 @@
       "installSource": "community",
       "npm": "dsh-plugin-thinking-api",
       "descriptionZh": "一键接入 OpenAI 兼容 API（CodeBuddy、vLLM、各类代理）并开启思考模式，绕开第三方端点以 content_filter 拒绝 developer 角色的问题。"
+    },
+    {
+      "id": "focksor/dsh-plugin-thinking-size",
+      "title": "dsh-plugin-thinking-size",
+      "description": "A live reasoning-token badge for DSH web. It appends a compact Think(128) / Think(5.2K) marker to the title of every \"Think\" disclosure row in the conversation — ticking in real time while the model is still thinking, and staying put on history messages afterwards.",
+      "category": "plugin",
+      "repo": "https://github.com/focksor/dsh-plugin-thinking-size",
+      "install": "github:focksor/dsh-plugin-thinking-size",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "focksor",
+      "stars": 0,
+      "createdAt": "2026-08-28T12:54:54Z"
     },
     {
       "id": "zhaoyuntao-wl/dsh-plugin-thread",
@@ -114675,7 +115185,7 @@
         "dsh-plugin"
       ],
       "author": "xmutfyh",
-      "stars": 26,
+      "stars": 27,
       "createdAt": "2026-08-15T03:41:44Z",
       "installVerified": true,
       "installSource": "community",
@@ -115205,6 +115715,25 @@
       "descriptionZh": "秘塔AI搜索 providers for ctx.web：web_search 返回网页摘要，web_fetch 读取网页全文 markdown，多范围搜索（网页/文库/论文/图片/视频/播客）。"
     },
     {
+      "id": "luokai-demo/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/luokai-demo/dsh-plugins",
+      "install": "dsh-balance-plugin",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "luokai-demo",
+      "stars": 2,
+      "createdAt": "2026-08-14T16:35:53Z",
+      "installVerified": true,
+      "installSource": "community",
+      "npm": "dsh-balance-plugin",
+      "descriptionZh": "侧边栏底部的 DeepSeek 钱包余额：信用卡图标配余额数字，按剩余额度着色（≥ ¥2 绿色、¥0–2 黄色、≤ ¥0 红色），挂载时、每轮对话结束和点击时刷新；余额变动时带符号差额上飘淡出。"
+    },
+    {
       "id": "JunWan666/dsh-plugins",
       "title": "dsh-plugins",
       "description": "给deepseek-harness开发的一些插件.",
@@ -115233,25 +115762,6 @@
       "author": "Bernardxu123",
       "stars": 2,
       "createdAt": "2026-08-14T08:21:09Z"
-    },
-    {
-      "id": "luokai-demo/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/luokai-demo/dsh-plugins",
-      "install": "dsh-balance-plugin",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "luokai-demo",
-      "stars": 2,
-      "createdAt": "2026-08-14T16:35:53Z",
-      "installVerified": true,
-      "installSource": "community",
-      "npm": "dsh-balance-plugin",
-      "descriptionZh": "侧边栏底部的 DeepSeek 钱包余额：信用卡图标配余额数字，按剩余额度着色（≥ ¥2 绿色、¥0–2 黄色、≤ ¥0 红色），挂载时、每轮对话结束和点击时刷新；余额变动时带符号差额上飘淡出。"
     },
     {
       "id": "linqunxun/dsh-plugins",
@@ -115429,21 +115939,6 @@
       "createdAt": "2026-08-24T04:42:29Z"
     },
     {
-      "id": "Mingbing-get/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "deepseek harness 的插件",
-      "category": "plugin",
-      "repo": "https://github.com/Mingbing-get/dsh-plugins",
-      "install": "github:Mingbing-get/dsh-plugins",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "Mingbing-get",
-      "stars": 1,
-      "createdAt": "2026-08-18T09:17:08Z"
-    },
-    {
       "id": "bitterSmilezzz/dsh-plugins",
       "title": "dsh-plugins",
       "description": "DSH 插件伞仓库（DSH Plugin Umbrella）— 所有新增插件的共同遵循仓库：承载插件契约（Pi / DSH 官方 / DSH-Store 准入 / dsh-std 协议）+ 按契约自动校验自有插件（GitHub Actions），经验档案按主题归档。",
@@ -115457,6 +115952,21 @@
       "author": "bitterSmilezzz",
       "stars": 1,
       "createdAt": "2026-08-18T16:25:35Z"
+    },
+    {
+      "id": "Mingbing-get/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "deepseek harness 的插件",
+      "category": "plugin",
+      "repo": "https://github.com/Mingbing-get/dsh-plugins",
+      "install": "github:Mingbing-get/dsh-plugins",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "Mingbing-get",
+      "stars": 1,
+      "createdAt": "2026-08-18T09:17:08Z"
     },
     {
       "id": "messiahyl/dsh-plugins",
@@ -115489,21 +115999,6 @@
       "createdAt": "2026-08-21T01:30:00Z"
     },
     {
-      "id": "ZenMux/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "zenmux for deepseek harness",
-      "category": "plugin",
-      "repo": "https://github.com/ZenMux/dsh-plugins",
-      "install": "github:ZenMux/dsh-plugins",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "ZenMux",
-      "stars": 1,
-      "createdAt": "2026-08-14T01:54:38Z"
-    },
-    {
       "id": "NinjaSln-labs/dsh-plugins",
       "title": "dsh-plugins",
       "description": "DeepSeek Harness 个人自研插件集：上下文罗盘 / 跨会话知识 / 子代理模型路由 / AI 生图（Personally developed plugins for DeepSeek Harness）",
@@ -115517,6 +116012,21 @@
       "author": "NinjaSln-labs",
       "stars": 1,
       "createdAt": "2026-08-14T03:43:03Z"
+    },
+    {
+      "id": "ZenMux/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "zenmux for deepseek harness",
+      "category": "plugin",
+      "repo": "https://github.com/ZenMux/dsh-plugins",
+      "install": "github:ZenMux/dsh-plugins",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "ZenMux",
+      "stars": 1,
+      "createdAt": "2026-08-14T01:54:38Z"
     },
     {
       "id": "kazecreator/dsh-plugins",
@@ -115564,21 +116074,6 @@
       "createdAt": "2026-08-14T03:33:21Z"
     },
     {
-      "id": "pirate-608/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/pirate-608/dsh-plugins",
-      "install": "github:pirate-608/dsh-plugins",
-      "tags": [
-        "Python",
-        "dsh-plugin"
-      ],
-      "author": "pirate-608",
-      "stars": 1,
-      "createdAt": "2026-08-14T14:51:17Z"
-    },
-    {
       "id": "An0range/dsh-plugins",
       "title": "dsh-plugins",
       "description": "个人维护的 DeepSeek Harness（DSH）动态 Cordis 插件集合：选段批示与追问（anno）、布局命名检查器（linsp）。",
@@ -115592,6 +116087,21 @@
       "author": "An0range",
       "stars": 1,
       "createdAt": "2026-08-14T19:09:34Z"
+    },
+    {
+      "id": "pirate-608/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/pirate-608/dsh-plugins",
+      "install": "github:pirate-608/dsh-plugins",
+      "tags": [
+        "Python",
+        "dsh-plugin"
+      ],
+      "author": "pirate-608",
+      "stars": 1,
+      "createdAt": "2026-08-14T14:51:17Z"
     },
     {
       "id": "freespace8/dsh-plugins",
@@ -115639,21 +116149,6 @@
       "createdAt": "2026-08-15T17:17:05Z"
     },
     {
-      "id": "winliyou/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "deepseek harness plugin set",
-      "category": "plugin",
-      "repo": "https://github.com/winliyou/dsh-plugins",
-      "install": "github:winliyou/dsh-plugins",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "winliyou",
-      "stars": 1,
-      "createdAt": "2026-08-15T10:52:25Z"
-    },
-    {
       "id": "RossBool/dsh-plugins",
       "title": "dsh-plugins",
       "description": "DeepSeek Harness (DSH) 插件合集：协作编排、跨会话、团队模式、计划引擎、话题时间轴、语音、MCP 管理、提示词增强",
@@ -115667,6 +116162,21 @@
       "author": "RossBool",
       "stars": 1,
       "createdAt": "2026-08-15T21:23:30Z"
+    },
+    {
+      "id": "winliyou/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "deepseek harness plugin set",
+      "category": "plugin",
+      "repo": "https://github.com/winliyou/dsh-plugins",
+      "install": "github:winliyou/dsh-plugins",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "winliyou",
+      "stars": 1,
+      "createdAt": "2026-08-15T10:52:25Z"
     },
     {
       "id": "guobinmengxiang-rgb/dsh-plugins",
@@ -115686,8 +116196,8 @@
     {
       "id": "KhalilHsu/dsh-plugins",
       "title": "dsh-plugins",
-      "description": "(no description)",
-      "category": "plugin",
+      "description": "Enhance DeepSeek Harness Web GUI with smart per-turn reasoning/tool folding and query navigation.",
+      "category": "client",
       "repo": "https://github.com/KhalilHsu/dsh-plugins",
       "install": "github:KhalilHsu/dsh-plugins",
       "tags": [
@@ -115864,21 +116374,6 @@
       "createdAt": "2026-08-28T03:35:12Z"
     },
     {
-      "id": "dennisrongo/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "Dennis Rongo's plugin collection for DeepSeek Harness (dsh) ",
-      "category": "dev-resource",
-      "repo": "https://github.com/dennisrongo/dsh-plugins",
-      "install": "github:dennisrongo/dsh-plugins",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "dennisrongo",
-      "stars": 0,
-      "createdAt": "2026-08-23T02:06:53Z"
-    },
-    {
       "id": "leonardoxr/dsh-plugins",
       "title": "dsh-plugins",
       "description": "(no description)",
@@ -115892,6 +116387,21 @@
       "author": "leonardoxr",
       "stars": 0,
       "createdAt": "2026-08-22T16:29:51Z"
+    },
+    {
+      "id": "dennisrongo/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "Dennis Rongo's plugin collection for DeepSeek Harness (dsh) ",
+      "category": "dev-resource",
+      "repo": "https://github.com/dennisrongo/dsh-plugins",
+      "install": "github:dennisrongo/dsh-plugins",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "dennisrongo",
+      "stars": 0,
+      "createdAt": "2026-08-23T02:06:53Z"
     },
     {
       "id": "GanymedeNil/dsh-plugins",
@@ -116074,21 +116584,6 @@
       "createdAt": "2026-08-15T11:25:38Z"
     },
     {
-      "id": "JochenYang/dsh-plugins",
-      "title": "dsh-plugins",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/JochenYang/dsh-plugins",
-      "install": "github:JochenYang/dsh-plugins",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "JochenYang",
-      "stars": 0,
-      "createdAt": "2026-08-17T03:55:47Z"
-    },
-    {
       "id": "wryyyds7/dsh-plugins",
       "title": "dsh-plugins",
       "description": "Community plugins for DeepSeek Harness (dsh)",
@@ -116102,6 +116597,21 @@
       "author": "wryyyds7",
       "stars": 0,
       "createdAt": "2026-08-17T02:52:39Z"
+    },
+    {
+      "id": "JochenYang/dsh-plugins",
+      "title": "dsh-plugins",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/JochenYang/dsh-plugins",
+      "install": "github:JochenYang/dsh-plugins",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "JochenYang",
+      "stars": 0,
+      "createdAt": "2026-08-17T03:55:47Z"
     },
     {
       "id": "ryanyujazz-dev/dsh-plugins",
@@ -116235,7 +116745,7 @@
         "dsh-plugin"
       ],
       "author": "gityuanbao",
-      "stars": 45,
+      "stars": 46,
       "createdAt": "2026-08-15T11:51:39Z"
     },
     {
@@ -116325,7 +116835,7 @@
         "dsh-plugin"
       ],
       "author": "bradeGithub",
-      "stars": 149,
+      "stars": 150,
       "createdAt": "2026-08-13T16:01:59Z",
       "installVerified": true,
       "installSource": "community",
@@ -116572,7 +117082,7 @@
         "dsh-plugin"
       ],
       "author": "shaobeichen",
-      "stars": 751,
+      "stars": 766,
       "createdAt": "2026-08-15T09:36:29Z",
       "installVerified": true,
       "installSource": "community",
@@ -116988,7 +117498,7 @@
         "dsh-plugin"
       ],
       "author": "e2mcc",
-      "stars": 133,
+      "stars": 137,
       "createdAt": "2026-08-15T12:21:46Z",
       "installVerified": true,
       "installSource": "community",
@@ -117082,7 +117592,7 @@
         "dsh-plugin"
       ],
       "author": "15828148",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-13T16:37:45Z"
     },
     {
@@ -117884,7 +118394,7 @@
         "dsh-plugin"
       ],
       "author": "Rain-kl",
-      "stars": 42,
+      "stars": 50,
       "createdAt": "2026-08-24T01:58:21Z"
     },
     {
@@ -118346,6 +118856,21 @@
       "installVerified": true,
       "installSource": "community",
       "descriptionZh": "主动式多模型协同调度插件：多源信号接入（去重与紧急度排序），execute/defer/dismiss/ask-user 四级决策引擎，DAG 计划生成与多模型并行执行，质量反思自动重试与切换模型，任务模式与经验教训长期记忆，以及遗传算法策略进化（沙盒评估、金丝雀发布）。"
+    },
+    {
+      "id": "uckkk/dsh-probation-period",
+      "title": "dsh-probation-period",
+      "description": "试用期上限",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-probation-period",
+      "install": "github:uckkk/dsh-probation-period",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T00:19:56Z"
     },
     {
       "id": "uckkk/dsh-problem-skin",
@@ -120255,6 +120780,21 @@
       "descriptionZh": "按供应商与模型粒度限速 LLM 请求，预约式令牌桶支持排队或拒绝两种模式，附带网关身份规则（改写 User-Agent、注入自定义请求头）。"
     },
     {
+      "id": "zuojinxin/dsh-provider-switch",
+      "title": "dsh-provider-switch",
+      "description": "Provider on/off switches, model search, and inline provider renaming for DeepSeek Harness.",
+      "category": "plugin",
+      "repo": "https://github.com/zuojinxin/dsh-provider-switch",
+      "install": "github:zuojinxin/dsh-provider-switch",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "zuojinxin",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:01:36Z"
+    },
+    {
       "id": "lizhouai/dsh-provider-usage",
       "title": "dsh-provider-usage",
       "description": "Live balance & quota panel for all your LLM providers, right in the DeepSeek Harness sidebar.",
@@ -121434,7 +121974,7 @@
         "dsh-plugin"
       ],
       "author": "pengpengyi92",
-      "stars": 25,
+      "stars": 26,
       "createdAt": "2026-08-16T07:40:10Z",
       "installVerified": true,
       "installSource": "community",
@@ -121454,6 +121994,21 @@
       "author": "helibeiqi",
       "stars": 2,
       "createdAt": "2026-08-16T13:00:07Z"
+    },
+    {
+      "id": "helibeiqi/dsh-quant-factor-pipeline",
+      "title": "dsh-quant-factor-pipeline",
+      "description": "Quant factor research pipeline as a dsh user-layer MCP server (CGO disposal-effect factor, RankIC, Newey-West t, regime-aware)",
+      "category": "plugin",
+      "repo": "https://github.com/helibeiqi/dsh-quant-factor-pipeline",
+      "install": "github:helibeiqi/dsh-quant-factor-pipeline",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "helibeiqi",
+      "stars": 0,
+      "createdAt": "2026-08-28T02:43:05Z"
     },
     {
       "id": "pengpengyi92/dsh-quant-ui",
@@ -123328,6 +123883,21 @@
       "createdAt": "2026-08-16T09:59:05Z"
     },
     {
+      "id": "Mongfayi/dsh-recall",
+      "title": "dsh-recall",
+      "description": "Message recall (撤回) plugin for the DSH Web UI: one undo button on each user message that removes the turn and everything after it, durably, without reverting code changes.",
+      "category": "client",
+      "repo": "https://github.com/Mongfayi/dsh-recall",
+      "install": "github:Mongfayi/dsh-recall",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "Mongfayi",
+      "stars": 3,
+      "createdAt": "2026-08-13T16:34:34Z"
+    },
+    {
       "id": "Relistencode/dsh-recall",
       "title": "dsh-recall",
       "description": "Conversation history recall for DeepSeek Harness (DSH) — literal/fuzzy/semantic retrieval of every past conversation, fully local & offline. AI never forgets what you told it.",
@@ -123377,7 +123947,7 @@
         "dsh-plugin"
       ],
       "author": "hg1048596-pixel",
-      "stars": 88,
+      "stars": 90,
       "createdAt": "2026-08-17T07:41:14Z",
       "installVerified": true,
       "installSource": "community",
@@ -123662,7 +124232,7 @@
         "dsh-plugin"
       ],
       "author": "SeaOf0",
-      "stars": 99,
+      "stars": 101,
       "createdAt": "2026-08-17T08:01:04Z",
       "installVerified": true,
       "installSource": "community",
@@ -123710,7 +124280,7 @@
         "dsh-plugin"
       ],
       "author": "Chael-Chael",
-      "stars": 10,
+      "stars": 11,
       "createdAt": "2026-08-16T13:13:28Z",
       "installVerified": true,
       "installSource": "community",
@@ -124587,7 +125157,7 @@
         "dsh-plugin"
       ],
       "author": "ZhangFengshun",
-      "stars": 7,
+      "stars": 8,
       "createdAt": "2026-08-18T11:00:59Z"
     },
     {
@@ -125516,12 +126086,27 @@
         "dsh-plugin"
       ],
       "author": "PerryLink",
-      "stars": 13,
+      "stars": 14,
       "createdAt": "2026-08-19T14:06:05Z",
       "installVerified": true,
       "installSource": "community",
       "npm": "dsh-research-report",
       "descriptionZh": "DeepSeek Harness 的可核查研究报告引擎：通过内容寻址的证据台账和版本化封存报告使每条结论携带核查结论，由 manifest 哈希封存目录，检索编排复用 ctx.web 与 ctx.jobs 接口。"
+    },
+    {
+      "id": "raktim-mondol/dsh-researchcraft",
+      "title": "dsh-researchcraft",
+      "description": "ResearchCraft as a DeepSeek Harness (DSH) profile plugin: research persona, scientific skills catalogue, living lab notebook, and specialist subagents.",
+      "category": "skill",
+      "repo": "https://github.com/raktim-mondol/dsh-researchcraft",
+      "install": "github:raktim-mondol/dsh-researchcraft",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "raktim-mondol",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:52:52Z"
     },
     {
       "id": "TLNing260310/dsh-researcher",
@@ -125663,21 +126248,6 @@
       "createdAt": "2026-08-15T16:23:20Z"
     },
     {
-      "id": "zhouchengke2046/dsh-restart",
-      "title": "dsh-restart",
-      "description": "Independent one-click restart for DeepSeek Harness web (Settings page). · 独立的 DSH Web 一键重启插件。",
-      "category": "plugin",
-      "repo": "https://github.com/zhouchengke2046/dsh-restart",
-      "install": "github:zhouchengke2046/dsh-restart",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "zhouchengke2046",
-      "stars": 0,
-      "createdAt": "2026-08-19T06:49:19Z"
-    },
-    {
       "id": "xingyingyuzhui/dsh-restart",
       "title": "dsh-restart",
       "description": "Restart the DeepSeek Harness Web host from Settings.",
@@ -125691,6 +126261,21 @@
       "author": "xingyingyuzhui",
       "stars": 0,
       "createdAt": "2026-08-19T06:36:16Z"
+    },
+    {
+      "id": "zhouchengke2046/dsh-restart",
+      "title": "dsh-restart",
+      "description": "Independent one-click restart for DeepSeek Harness web (Settings page). · 独立的 DSH Web 一键重启插件。",
+      "category": "plugin",
+      "repo": "https://github.com/zhouchengke2046/dsh-restart",
+      "install": "github:zhouchengke2046/dsh-restart",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "zhouchengke2046",
+      "stars": 0,
+      "createdAt": "2026-08-19T06:49:19Z"
     },
     {
       "id": "Towzai/dsh-restart",
@@ -125986,6 +126571,21 @@
       "author": "EvieHe",
       "stars": 0,
       "createdAt": "2026-08-24T04:02:51Z"
+    },
+    {
+      "id": "nickkkkkk123123/dsh-resume-on-restart",
+      "title": "dsh-resume-on-restart",
+      "description": "DSH 插件：重启后自动唤醒 agent 并投递信息性消息，agent 自主决定是否恢复工作",
+      "category": "plugin",
+      "repo": "https://github.com/nickkkkkk123123/dsh-resume-on-restart",
+      "install": "github:nickkkkkk123123/dsh-resume-on-restart",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "nickkkkkk123123",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:27:22Z"
     },
     {
       "id": "Demogorgon314/dsh-resume-plugin",
@@ -126356,7 +126956,7 @@
         "dsh-plugin"
       ],
       "author": "SiriLee",
-      "stars": 20,
+      "stars": 21,
       "createdAt": "2026-08-17T04:42:48Z",
       "installVerified": true,
       "installSource": "community",
@@ -127299,6 +127899,21 @@
       "createdAt": "2026-08-18T16:40:26Z"
     },
     {
+      "id": "CARVIN94/dsh-router",
+      "title": "dsh-router",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/CARVIN94/dsh-router",
+      "install": "github:CARVIN94/dsh-router",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "CARVIN94",
+      "stars": 0,
+      "createdAt": "2026-08-28T12:13:34Z"
+    },
+    {
       "id": "CARVIN94/dsh-router-codebuddy",
       "title": "dsh-router-codebuddy",
       "description": "(no description)",
@@ -127325,7 +127940,7 @@
         "dsh-plugin"
       ],
       "author": "xiaoxianyu-office",
-      "stars": 14,
+      "stars": 13,
       "createdAt": "2026-08-15T09:56:16Z"
     },
     {
@@ -127340,7 +127955,7 @@
         "dsh-plugin"
       ],
       "author": "yjh051108",
-      "stars": 368,
+      "stars": 367,
       "createdAt": "2026-08-14T18:14:16Z"
     },
     {
@@ -127409,7 +128024,7 @@
         "dsh-plugin"
       ],
       "author": "yjh051108",
-      "stars": 6922,
+      "stars": 6924,
       "createdAt": "2026-08-14T21:20:55Z"
     },
     {
@@ -127509,6 +128124,21 @@
       "author": "ShadowBruceMeaningLau",
       "stars": 1,
       "createdAt": "2026-08-18T12:30:38Z"
+    },
+    {
+      "id": "hgl011091/dsh-rss-monitor",
+      "title": "dsh-rss-monitor",
+      "description": "DeepSeek Harness 原生 RSS 订阅监控插件：多源订阅、关键词过滤、定时检查去重、新条目邮件通知（缩略图 HTML 模板），SMTP 密码走凭据库永不落盘，原生设置页四页签体验。",
+      "category": "plugin",
+      "repo": "https://github.com/hgl011091/dsh-rss-monitor",
+      "install": "github:hgl011091/dsh-rss-monitor",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "hgl011091",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:35:43Z"
     },
     {
       "id": "rocklau/dsh-rss-reader",
@@ -128449,7 +129079,7 @@
         "dsh-plugin"
       ],
       "author": "JUSTMONIKA2022",
-      "stars": 28,
+      "stars": 29,
       "createdAt": "2026-08-16T09:22:58Z"
     },
     {
@@ -129197,6 +129827,21 @@
       "descriptionZh": "DeepSeek Harness Web GUI 临时对话工作区自动化管理插件。"
     },
     {
+      "id": "joao-paulo-santos/dsh-scratchpad",
+      "title": "dsh-scratchpad",
+      "description": "Scratch pad: one shared floating text surface in the middle of the screen, opened by other plugins through the client service scratchpad.",
+      "category": "plugin",
+      "repo": "https://github.com/joao-paulo-santos/dsh-scratchpad",
+      "install": "github:joao-paulo-santos/dsh-scratchpad",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "joao-paulo-santos",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:49:25Z"
+    },
+    {
       "id": "lak321/dsh-screen-agent",
       "title": "dsh-screen-agent",
       "description": "DSH screen automation: capture, OCR, mouse/keyboard control + Paint drawing capability",
@@ -129753,7 +130398,7 @@
         "dsh-plugin"
       ],
       "author": "PensiveFei",
-      "stars": 49,
+      "stars": 51,
       "createdAt": "2026-08-19T07:37:17Z",
       "installVerified": true,
       "installSource": "community",
@@ -130642,7 +131287,7 @@
     {
       "id": "gehennawu/dsh-service",
       "title": "dsh-service",
-      "description": "面向自托管 DSH Web 的一站式运维面板：安全重启与升级、健康诊断、模型用量与额度查询、会话管理、备份与权限维护、任务通知、技能与子代理模型路由。｜All-in-one operations panel for self-hosted DSH Web: safe restart & upgrade, health diagnostics, model usage & quota lookup, session management, backup & permission maintenance, task notifications, skills & subagent model routing.",
+      "description": "DSH Web 一站式运维面板：安全重启与升级、健康诊断、模型用量与额度查询、会话管理、备份与权限维护、任务通知、技能与子代理模型路由。｜All-in-one operations panel for DSH Web: safe restart & upgrade, health diagnostics, model usage & quota lookup, session management, backup & permission maintenance, task notifications, skills & subagent model routing.",
       "category": "skill",
       "repo": "https://github.com/gehennawu/dsh-service",
       "install": "github:gehennawu/dsh-service",
@@ -130890,6 +131535,21 @@
       "createdAt": "2026-08-25T05:38:30Z"
     },
     {
+      "id": "my-dsh/dsh-session-attention",
+      "title": "dsh-session-attention",
+      "description": "Session attention overlay plugin for DeepSeek Harness: character dance animation while any session awaits user action",
+      "category": "plugin",
+      "repo": "https://github.com/my-dsh/dsh-session-attention",
+      "install": "github:my-dsh/dsh-session-attention",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "my-dsh",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:58:01Z"
+    },
+    {
       "id": "bwndlct/dsh-session-audit",
       "title": "dsh-session-audit",
       "description": "Session execution analytics and audit reports for DeepSeek Harness — see how your agent actually worked",
@@ -130998,7 +131658,7 @@
         "dsh-plugin"
       ],
       "author": "fountunt",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-14T03:08:01Z"
     },
     {
@@ -131761,7 +132421,7 @@
         "dsh-plugin"
       ],
       "author": "WeiYe6",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-16T13:45:18Z"
     },
     {
@@ -132169,7 +132829,7 @@
         "dsh-plugin"
       ],
       "author": "PwnKY",
-      "stars": 5,
+      "stars": 6,
       "createdAt": "2026-08-14T16:41:39Z",
       "installVerified": true,
       "installSource": "community",
@@ -132233,7 +132893,7 @@
         "dsh-plugin"
       ],
       "author": "dream12347",
-      "stars": 53,
+      "stars": 54,
       "createdAt": "2026-08-14T14:29:25Z",
       "installVerified": true,
       "installSource": "community",
@@ -134442,6 +135102,36 @@
       "createdAt": "2026-08-25T14:51:02Z"
     },
     {
+      "id": "Albertlsy588/dsh-shipgate",
+      "title": "dsh-shipgate",
+      "description": "Local-first DSH pre-merge delivery receipt generator",
+      "category": "plugin",
+      "repo": "https://github.com/Albertlsy588/dsh-shipgate",
+      "install": "github:Albertlsy588/dsh-shipgate",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "Albertlsy588",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:18:57Z"
+    },
+    {
+      "id": "uckkk/dsh-shipping-fee",
+      "title": "dsh-shipping-fee",
+      "description": "运费计算",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-shipping-fee",
+      "install": "github:uckkk/dsh-shipping-fee",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T00:27:52Z"
+    },
+    {
       "id": "uckkk/dsh-shoe-rack",
       "title": "dsh-shoe-rack",
       "description": "鞋柜规划",
@@ -135179,6 +135869,21 @@
       "createdAt": "2026-08-19T17:49:56Z"
     },
     {
+      "id": "auggie246/dsh-sidebar",
+      "title": "dsh-sidebar",
+      "description": "Sidebar and panels for full developer interaction!",
+      "category": "client",
+      "repo": "https://github.com/auggie246/dsh-sidebar",
+      "install": "github:auggie246/dsh-sidebar",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "auggie246",
+      "stars": 0,
+      "createdAt": "2026-08-27T08:51:21Z"
+    },
+    {
       "id": "Skylarking/dsh-sidebar",
       "title": "dsh-sidebar",
       "description": "DeepSeek Harness plugin: workspace console",
@@ -135504,21 +136209,6 @@
       "createdAt": "2026-08-17T06:01:33Z"
     },
     {
-      "id": "g-yixuan/dsh-sidechat",
-      "title": "dsh-sidechat",
-      "description": "Codex-style side chat & selection annotations for DeepSeek Harness (DSH) web — fork the session into a persistent side panel; quote selections into context. Thin consumer of dsh-better-sidebar.",
-      "category": "client",
-      "repo": "https://github.com/g-yixuan/dsh-sidechat",
-      "install": "github:g-yixuan/dsh-sidechat",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "g-yixuan",
-      "stars": 1,
-      "createdAt": "2026-08-19T08:19:42Z"
-    },
-    {
       "id": "Mintcolour/dsh-sidechat",
       "title": "dsh-sidechat",
       "description": "A DeepSeek Harness Web plugin that adds a Codex-style split-screen side chat with model switching and compact history navigation.",
@@ -135562,6 +136252,21 @@
       "author": "realpkuasule",
       "stars": 0,
       "createdAt": "2026-08-17T05:48:08Z"
+    },
+    {
+      "id": "g-yixuan/dsh-sidenote",
+      "title": "dsh-sidenote",
+      "description": "Codex-style side chat & selection annotations for DeepSeek Harness (DSH) web — fork the session into a persistent side panel; quote selections into context. Thin consumer of dsh-better-sidebar.",
+      "category": "client",
+      "repo": "https://github.com/g-yixuan/dsh-sidenote",
+      "install": "github:g-yixuan/dsh-sidenote",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "g-yixuan",
+      "stars": 1,
+      "createdAt": "2026-08-19T08:19:42Z"
     },
     {
       "id": "uckkk/dsh-sierra-leone",
@@ -137511,7 +138216,7 @@
         "dsh-plugin"
       ],
       "author": "MichengAI",
-      "stars": 23,
+      "stars": 24,
       "createdAt": "2026-08-15T05:54:34Z",
       "installVerified": true,
       "installSource": "community",
@@ -137626,6 +138331,21 @@
       "installSource": "community",
       "npm": "dsh-skills-marketplace",
       "descriptionZh": "类 Codex 插件市场的 DSH 技能管理器。"
+    },
+    {
+      "id": "SeverusZh/dsh-skills-mcp-group-manager",
+      "title": "dsh-skills-mcp-group-manager",
+      "description": "DeepSeek Harness Skills & MCPs 分组管理器 — 分组管理 Skills、过滤模型技能目录、独立开关 MCP 服务器、左侧面板一键管理 / Group skills, filter the model skill catalog, toggle MCP servers, left panel UI",
+      "category": "skill",
+      "repo": "https://github.com/SeverusZh/dsh-skills-mcp-group-manager",
+      "install": "github:SeverusZh/dsh-skills-mcp-group-manager",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "SeverusZh",
+      "stars": 2,
+      "createdAt": "2026-08-28T09:08:34Z"
     },
     {
       "id": "zebbkira/dsh-skills-mcp-manager",
@@ -138067,7 +138787,7 @@
         "dsh-plugin"
       ],
       "author": "kingOfSoySauce",
-      "stars": 104,
+      "stars": 105,
       "createdAt": "2026-08-16T12:31:32Z",
       "installVerified": true,
       "installSource": "community",
@@ -138834,7 +139554,7 @@
         "dsh-plugin"
       ],
       "author": "Laplace-bit",
-      "stars": 59,
+      "stars": 60,
       "createdAt": "2026-08-15T05:19:33Z",
       "installVerified": true,
       "installSource": "community",
@@ -139854,7 +140574,7 @@
         "dsh-plugin"
       ],
       "author": "nonewind",
-      "stars": 10,
+      "stars": 8,
       "createdAt": "2026-08-14T03:53:44Z",
       "installVerified": true,
       "installSource": "community",
@@ -140546,6 +141266,21 @@
       "author": "akira399",
       "stars": 3,
       "createdAt": "2026-08-14T17:31:03Z"
+    },
+    {
+      "id": "uckkk/dsh-stall-site",
+      "title": "dsh-stall-site",
+      "description": "摆摊选址",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-stall-site",
+      "install": "github:uckkk/dsh-stall-site",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:37:11Z"
     },
     {
       "id": "ZoeHao2026/dsh-standalone-chat",
@@ -141581,7 +142316,7 @@
         "dsh-plugin"
       ],
       "author": "jsdvjx",
-      "stars": 43,
+      "stars": 44,
       "createdAt": "2026-08-18T16:08:05Z",
       "installVerified": true,
       "installSource": "community",
@@ -142250,21 +142985,6 @@
       "createdAt": "2026-08-14T12:47:59Z"
     },
     {
-      "id": "dat-lequoc/dsh-subagent-model",
-      "title": "dsh-subagent-model",
-      "description": "Force DeepSeek Harness subagents onto a chosen model route and reasoning effort instead of inheriting the parent agent's model",
-      "category": "plugin",
-      "repo": "https://github.com/dat-lequoc/dsh-subagent-model",
-      "install": "github:dat-lequoc/dsh-subagent-model",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "dat-lequoc",
-      "stars": 1,
-      "createdAt": "2026-08-27T21:45:29Z"
-    },
-    {
       "id": "shenzhantu/dsh-subagent-model",
       "title": "dsh-subagent-model",
       "description": "通过模型插件用来修改subagent所使用的模型和Agent预设/Use model plugins to modify the model used by the subagent and the agent presets.",
@@ -142357,7 +143077,7 @@
         "dsh-plugin"
       ],
       "author": "Mombrane",
-      "stars": 22,
+      "stars": 23,
       "createdAt": "2026-08-14T10:18:43Z",
       "installVerified": true,
       "installSource": "community",
@@ -143657,6 +144377,21 @@
       "createdAt": "2026-08-25T07:38:02Z"
     },
     {
+      "id": "auggie246/dsh-synthetic-web-search",
+      "title": "dsh-synthetic-web-search",
+      "description": "Deepseek Harness plugin to use synthetic.new web search instead of built-in Deepseek web search",
+      "category": "plugin",
+      "repo": "https://github.com/auggie246/dsh-synthetic-web-search",
+      "install": "github:auggie246/dsh-synthetic-web-search",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "auggie246",
+      "stars": 0,
+      "createdAt": "2026-08-28T10:49:21Z"
+    },
+    {
       "id": "XKLMY-hi/dsh-synthv-bridge",
       "title": "dsh-synthv-bridge",
       "description": "(no description)",
@@ -144044,7 +144779,7 @@
         "dsh-plugin"
       ],
       "author": "Tasihi89",
-      "stars": 57,
+      "stars": 59,
       "createdAt": "2026-08-18T04:00:58Z"
     },
     {
@@ -144844,7 +145579,7 @@
         "dsh-plugin"
       ],
       "author": "shengsheng90",
-      "stars": 182,
+      "stars": 183,
       "createdAt": "2026-08-14T02:58:37Z",
       "installVerified": true,
       "installSource": "community",
@@ -145052,7 +145787,7 @@
         "dsh-plugin"
       ],
       "author": "chen731215-dev",
-      "stars": 1,
+      "stars": 3,
       "createdAt": "2026-08-27T04:31:42Z"
     },
     {
@@ -145301,6 +146036,21 @@
       "author": "uckkk",
       "stars": 0,
       "createdAt": "2026-08-20T18:37:18Z"
+    },
+    {
+      "id": "uckkk/dsh-tea-set",
+      "title": "dsh-tea-set",
+      "description": "茶具搭配",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-tea-set",
+      "install": "github:uckkk/dsh-tea-set",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:39:29Z"
     },
     {
       "id": "uckkk/dsh-tea-store",
@@ -146210,7 +146960,7 @@
         "dsh-plugin"
       ],
       "author": "zexadev",
-      "stars": 26,
+      "stars": 27,
       "createdAt": "2026-08-19T18:09:51Z"
     },
     {
@@ -146665,7 +147415,7 @@
         "dsh-plugin"
       ],
       "author": "ymh0000123",
-      "stars": 55,
+      "stars": 57,
       "createdAt": "2026-08-15T11:41:43Z",
       "installVerified": true,
       "installSource": "community",
@@ -147716,7 +148466,7 @@
         "dsh-plugin"
       ],
       "author": "huiliyi37",
-      "stars": 245,
+      "stars": 246,
       "createdAt": "2026-08-13T04:20:37Z",
       "installVerified": true,
       "installSource": "community",
@@ -147899,7 +148649,7 @@
         "dsh-plugin"
       ],
       "author": "houyanchao",
-      "stars": 24,
+      "stars": 25,
       "createdAt": "2026-08-17T07:22:07Z",
       "installVerified": true,
       "installSource": "community",
@@ -149528,6 +150278,21 @@
       "createdAt": "2026-08-15T13:47:58Z"
     },
     {
+      "id": "my-dsh/dsh-token-usage-dashboard",
+      "title": "dsh-token-usage-dashboard",
+      "description": "Cross-session token usage dashboard plugin for DeepSeek Harness: SQLite-backed capture + browser dashboard panel",
+      "category": "plugin",
+      "repo": "https://github.com/my-dsh/dsh-token-usage-dashboard",
+      "install": "github:my-dsh/dsh-token-usage-dashboard",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "my-dsh",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:57:29Z"
+    },
+    {
       "id": "xie-tj/dsh-token-usage-ledger",
       "title": "dsh-token-usage-ledger",
       "description": "DeepSeek Harness 的持久化用量账本与 Web 用量仪表盘插件",
@@ -150687,6 +151452,21 @@
       "createdAt": "2026-08-28T06:07:05Z"
     },
     {
+      "id": "LJH-snow/dsh-tool-monitoring",
+      "title": "dsh-tool-monitoring",
+      "description": "Prometheus and Alertmanager tool plugin for DeepSeek Harness",
+      "category": "plugin",
+      "repo": "https://github.com/LJH-snow/dsh-tool-monitoring",
+      "install": "github:LJH-snow/dsh-tool-monitoring",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "LJH-snow",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:39:39Z"
+    },
+    {
       "id": "rizkirmdhnnn/dsh-tool-notify",
       "title": "dsh-tool-notify",
       "description": "DSH plugin: model-facing notify tool for DeepSeek Harness — send notifications to ntfy or generic webhooks when an agent task finishes.",
@@ -150760,6 +151540,21 @@
       "author": "Jeffine322",
       "stars": 1,
       "createdAt": "2026-08-16T16:19:47Z"
+    },
+    {
+      "id": "HuanyuTan777/dsh-tool-pdf",
+      "title": "dsh-tool-pdf",
+      "description": "DSH PDF reader plugin (pdf_info / pdf_extract / pdf_render)",
+      "category": "plugin",
+      "repo": "https://github.com/HuanyuTan777/dsh-tool-pdf",
+      "install": "github:HuanyuTan777/dsh-tool-pdf",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "HuanyuTan777",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:31:17Z"
     },
     {
       "id": "cheng-nan01/dsh-tool-playwright",
@@ -151464,7 +152259,7 @@
         "dsh-plugin"
       ],
       "author": "x2802490130-prog",
-      "stars": 9,
+      "stars": 10,
       "createdAt": "2026-08-15T02:31:08Z",
       "installVerified": true,
       "installSource": "community",
@@ -152613,21 +153408,6 @@
       "descriptionZh": "DeepSeek Harness Web 的 Windows 托盘启动器：托盘图标一键启动、停止、重启服务，打开 Web UI、查看日志，实时状态图标，并支持开机自启开关。"
     },
     {
-      "id": "Binaryinject/dsh-tray",
-      "title": "dsh-tray",
-      "description": "DeepSeek Harness 的托盘启动器（原生、无依赖）",
-      "category": "plugin",
-      "repo": "https://github.com/Binaryinject/dsh-tray",
-      "install": "github:Binaryinject/dsh-tray",
-      "tags": [
-        "C#",
-        "dsh-plugin"
-      ],
-      "author": "Binaryinject",
-      "stars": 1,
-      "createdAt": "2026-08-15T14:26:08Z"
-    },
-    {
       "id": "helays/dsh-tray",
       "title": "dsh-tray",
       "description": "🐳 dsh-tray：DeepSeek Harness 一键托盘启动器 —— 双击即启动 Web GUI 并最小化到系统托盘，单文件、自包含、免安装的 C# 托盘小程序。",
@@ -152641,6 +153421,21 @@
       "author": "helays",
       "stars": 1,
       "createdAt": "2026-08-15T04:22:47Z"
+    },
+    {
+      "id": "Binaryinject/dsh-tray",
+      "title": "dsh-tray",
+      "description": "DeepSeek Harness 的托盘启动器（原生、无依赖）",
+      "category": "plugin",
+      "repo": "https://github.com/Binaryinject/dsh-tray",
+      "install": "github:Binaryinject/dsh-tray",
+      "tags": [
+        "C#",
+        "dsh-plugin"
+      ],
+      "author": "Binaryinject",
+      "stars": 1,
+      "createdAt": "2026-08-15T14:26:08Z"
     },
     {
       "id": "GitRuozhi/dsh-tray",
@@ -152886,6 +153681,21 @@
       "descriptionZh": "生态行情面板：把 dsh-plugin topic 与 awesome 收录列表快照成本地历史，产出周报（新增插件、star 增速、类别热度、收录覆盖率），并支持关键词雷达监控新品与 star 突增。"
     },
     {
+      "id": "statem-li/dsh-triad",
+      "title": "dsh-triad",
+      "description": "DSH 三合一扩展插件：用量工作台 · 技能管理 · 长期记忆引擎。零 DSH 源码改动，一句话安装。",
+      "category": "plugin",
+      "repo": "https://github.com/statem-li/dsh-triad",
+      "install": "github:statem-li/dsh-triad",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "statem-li",
+      "stars": 2,
+      "createdAt": "2026-08-28T14:12:36Z"
+    },
+    {
       "id": "uckkk/dsh-triangle",
       "title": "dsh-triangle",
       "description": "三角形计算",
@@ -153107,7 +153917,7 @@
         "dsh-plugin"
       ],
       "author": "dsh-tui",
-      "stars": 30,
+      "stars": 31,
       "createdAt": "2026-08-13T14:56:16Z"
     },
     {
@@ -153122,7 +153932,7 @@
         "dsh-plugin"
       ],
       "author": "tomowang",
-      "stars": 11,
+      "stars": 12,
       "createdAt": "2026-08-14T12:41:56Z"
     },
     {
@@ -153219,6 +154029,21 @@
       "createdAt": "2026-08-20T17:53:48Z"
     },
     {
+      "id": "lyuwen/dsh-tui",
+      "title": "dsh-tui",
+      "description": "[WIP] TUI for DeepSeeh-Harness",
+      "category": "client",
+      "repo": "https://github.com/lyuwen/dsh-tui",
+      "install": "github:lyuwen/dsh-tui",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "lyuwen",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:36:24Z"
+    },
+    {
       "id": "ccch1mneyyy/dsh-TUI",
       "title": "dsh-TUI",
       "description": "DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。  DSH official WeChat featured TUI plugin — Claude Code style: whale bar, live status, streaming thoughts, double-Esc rollback, context bar + TPS. npm one-click.",
@@ -153230,7 +154055,7 @@
         "dsh-plugin"
       ],
       "author": "ccch1mneyyy",
-      "stars": 2652,
+      "stars": 2654,
       "createdAt": "2026-08-13T12:49:31Z",
       "installVerified": true,
       "installSource": "community",
@@ -154003,7 +154828,7 @@
         "dsh-plugin"
       ],
       "author": "Anionex",
-      "stars": 104,
+      "stars": 105,
       "createdAt": "2026-08-13T12:36:53Z",
       "installVerified": true,
       "installSource": "community",
@@ -154235,7 +155060,7 @@
         "dsh-plugin"
       ],
       "author": "BaronCyrus",
-      "stars": 2,
+      "stars": 3,
       "createdAt": "2026-08-20T11:16:35Z"
     },
     {
@@ -155082,6 +155907,21 @@
       "createdAt": "2026-08-21T00:02:18Z"
     },
     {
+      "id": "domitor-syh/dsh-ui-skin-switcher",
+      "title": "dsh-ui-skin-switcher",
+      "description": "Model & reasoning-effort switcher plugin for DeepSeek Harness (DSH): composer seat with Off/Max effort slider. DSH 插件：模型与思考力度切换器。",
+      "category": "client",
+      "repo": "https://github.com/domitor-syh/dsh-ui-skin-switcher",
+      "install": "github:domitor-syh/dsh-ui-skin-switcher",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "domitor-syh",
+      "stars": 1,
+      "createdAt": "2026-08-27T17:23:57Z"
+    },
+    {
       "id": "edwardyang0011/dsh-ui-skins",
       "title": "dsh-ui-skins",
       "description": "DeepSeek Harness Skin Plugin",
@@ -155557,7 +156397,7 @@
         "dsh-plugin"
       ],
       "author": "chouxiaohuai",
-      "stars": 17,
+      "stars": 18,
       "createdAt": "2026-08-17T16:38:25Z",
       "installVerified": true,
       "installSource": "community",
@@ -155953,7 +156793,7 @@
         "dsh-plugin"
       ],
       "author": "dream-num",
-      "stars": 184,
+      "stars": 185,
       "createdAt": "2026-08-15T16:29:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -156144,7 +156984,7 @@
         "dsh-plugin"
       ],
       "author": "Airmetro",
-      "stars": 12,
+      "stars": 13,
       "createdAt": "2026-08-15T06:06:11Z",
       "installVerified": true,
       "installSource": "community",
@@ -156634,7 +157474,7 @@
         "dsh-plugin"
       ],
       "author": "Aisland-SJL",
-      "stars": 59,
+      "stars": 60,
       "createdAt": "2026-08-16T10:22:22Z"
     },
     {
@@ -156808,7 +157648,7 @@
     {
       "id": "zhm20001/dsh-usage-board",
       "title": "dsh-usage-board",
-      "description": "(no description)",
+      "description": "dsh-usage-board 是专为 DSH (DeepSeek Harness) 设计的用量与成本可视化看板插件。  插件能实时捕获会话内的 Token 消耗、Step 耗时和异常指标，支持冷启动增量回溯历史全量会话，并按 Sub-agent DAG 调用关系进行树状归集与反向明细穿透。",
       "category": "plugin",
       "repo": "https://github.com/zhm20001/dsh-usage-board",
       "install": "github:zhm20001/dsh-usage-board",
@@ -157684,21 +158524,6 @@
       "createdAt": "2026-08-14T06:08:32Z"
     },
     {
-      "id": "hyl64/dsh-usage-stats",
-      "title": "dsh-usage-stats",
-      "description": "(no description)",
-      "category": "plugin",
-      "repo": "https://github.com/hyl64/dsh-usage-stats",
-      "install": "github:hyl64/dsh-usage-stats",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "hyl64",
-      "stars": 0,
-      "createdAt": "2026-08-15T06:10:37Z"
-    },
-    {
       "id": "healing1/dsh-usage-stats",
       "title": "dsh-usage-stats",
       "description": "(no description)",
@@ -157712,6 +158537,21 @@
       "author": "healing1",
       "stars": 0,
       "createdAt": "2026-08-15T08:37:25Z"
+    },
+    {
+      "id": "hyl64/dsh-usage-stats",
+      "title": "dsh-usage-stats",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/hyl64/dsh-usage-stats",
+      "install": "github:hyl64/dsh-usage-stats",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "hyl64",
+      "stars": 0,
+      "createdAt": "2026-08-15T06:10:37Z"
     },
     {
       "id": "xushuojie/dsh-usage-stats",
@@ -158502,6 +159342,21 @@
       "createdAt": "2026-08-20T19:01:40Z"
     },
     {
+      "id": "uckkk/dsh-veggie-pick",
+      "title": "dsh-veggie-pick",
+      "description": "阳台菜品种",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-veggie-pick",
+      "install": "github:uckkk/dsh-veggie-pick",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T18:51:18Z"
+    },
+    {
       "id": "MochiNek0/dsh-vendor-login",
       "title": "dsh-vendor-login",
       "description": "Sign in to AI coding plans that have no API key — Claude Pro/Max/Team, ChatGPT Plus/Pro, Copilot, SuperGrok — from the dsh settings UI.",
@@ -158906,7 +159761,7 @@
         "dsh-plugin"
       ],
       "author": "dundunhan",
-      "stars": 58,
+      "stars": 60,
       "createdAt": "2026-08-18T16:53:43Z"
     },
     {
@@ -159522,21 +160377,6 @@
       "createdAt": "2026-08-15T07:31:58Z"
     },
     {
-      "id": "ariesy/dsh-vision",
-      "title": "dsh-vision",
-      "description": "DeepSeek Harness (DSH) dynamic Cordis plugin: global image upload button + configurable vision-model recognition with fallback",
-      "category": "plugin",
-      "repo": "https://github.com/ariesy/dsh-vision",
-      "install": "github:ariesy/dsh-vision",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "ariesy",
-      "stars": 0,
-      "createdAt": "2026-08-16T13:13:52Z"
-    },
-    {
       "id": "HarryLi-7/dsh-vision",
       "title": "dsh-vision",
       "description": "(no description)",
@@ -159550,6 +160390,21 @@
       "author": "HarryLi-7",
       "stars": 0,
       "createdAt": "2026-08-16T04:01:25Z"
+    },
+    {
+      "id": "ariesy/dsh-vision",
+      "title": "dsh-vision",
+      "description": "DeepSeek Harness (DSH) dynamic Cordis plugin: global image upload button + configurable vision-model recognition with fallback",
+      "category": "plugin",
+      "repo": "https://github.com/ariesy/dsh-vision",
+      "install": "github:ariesy/dsh-vision",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "ariesy",
+      "stars": 0,
+      "createdAt": "2026-08-16T13:13:52Z"
     },
     {
       "id": "motongv/dsh-vision-adapter",
@@ -159864,21 +160719,6 @@
       "createdAt": "2026-08-19T11:32:59Z"
     },
     {
-      "id": "Zh-U-hB/dsh-vision-bridge",
-      "title": "dsh-vision-bridge",
-      "description": "DeepSeek Harness plugin: route image-bearing messages to a user-configured OpenAI-compatible vision endpoint when the active text model cannot see images",
-      "category": "plugin",
-      "repo": "https://github.com/Zh-U-hB/dsh-vision-bridge",
-      "install": "github:Zh-U-hB/dsh-vision-bridge",
-      "tags": [
-        "TypeScript",
-        "dsh-plugin"
-      ],
-      "author": "Zh-U-hB",
-      "stars": 0,
-      "createdAt": "2026-08-16T10:13:09Z"
-    },
-    {
       "id": "ShiraGawaAnri/dsh-vision-bridge",
       "title": "dsh-vision-bridge",
       "description": "DSH profile 插件包：当会话使用不支持图片的模型（如 DeepSeek）时，不再弹出 \"当前模型不支持图片\"之类的拦截，而是调用工具进行视觉识别",
@@ -159892,6 +160732,21 @@
       "author": "ShiraGawaAnri",
       "stars": 0,
       "createdAt": "2026-08-16T01:57:06Z"
+    },
+    {
+      "id": "Zh-U-hB/dsh-vision-bridge",
+      "title": "dsh-vision-bridge",
+      "description": "DeepSeek Harness plugin: route image-bearing messages to a user-configured OpenAI-compatible vision endpoint when the active text model cannot see images",
+      "category": "plugin",
+      "repo": "https://github.com/Zh-U-hB/dsh-vision-bridge",
+      "install": "github:Zh-U-hB/dsh-vision-bridge",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "Zh-U-hB",
+      "stars": 0,
+      "createdAt": "2026-08-16T10:13:09Z"
     },
     {
       "id": "DreamRift/dsh-vision-bridge",
@@ -160444,7 +161299,7 @@
         "dsh-plugin"
       ],
       "author": "ysr666",
-      "stars": 1012,
+      "stars": 1011,
       "createdAt": "2026-08-13T18:57:47Z",
       "installVerified": true,
       "installSource": "community",
@@ -160811,7 +161666,7 @@
         "dsh-plugin"
       ],
       "author": "Nagi-ovo",
-      "stars": 224,
+      "stars": 225,
       "createdAt": "2026-08-13T13:11:49Z",
       "installVerified": true,
       "installSource": "community",
@@ -162127,7 +162982,7 @@
         "dsh-plugin"
       ],
       "author": "wzxaaaa",
-      "stars": 17,
+      "stars": 18,
       "createdAt": "2026-08-15T01:40:41Z"
     },
     {
@@ -162674,6 +163529,21 @@
       "descriptionZh": "基于纯日期数学的周期习惯排程：下次发生日、区间排程与逾期提醒。"
     },
     {
+      "id": "uckkk/dsh-wash-machine",
+      "title": "dsh-wash-machine",
+      "description": "洗地机",
+      "category": "plugin",
+      "repo": "https://github.com/uckkk/dsh-wash-machine",
+      "install": "github:uckkk/dsh-wash-machine",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "uckkk",
+      "stars": 0,
+      "createdAt": "2026-08-20T20:24:04Z"
+    },
+    {
       "id": "uckkk/dsh-washer-buy",
       "title": "dsh-washer-buy",
       "description": "洗衣机选购",
@@ -162760,7 +163630,7 @@
         "dsh-plugin"
       ],
       "author": "aa2246740",
-      "stars": 9,
+      "stars": 10,
       "createdAt": "2026-08-20T12:08:49Z"
     },
     {
@@ -163052,7 +163922,7 @@
         "dsh-plugin"
       ],
       "author": "zhu1090093659",
-      "stars": 6357,
+      "stars": 6369,
       "createdAt": "2026-08-12T05:15:20Z",
       "installVerified": true,
       "installSource": "community",
@@ -163130,7 +164000,7 @@
         "dsh-plugin"
       ],
       "author": "renat3u",
-      "stars": 8,
+      "stars": 9,
       "createdAt": "2026-08-08T07:06:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -163447,6 +164317,21 @@
       "author": "jaco-tech",
       "stars": 0,
       "createdAt": "2026-08-19T08:07:27Z"
+    },
+    {
+      "id": "Yurzi/dsh-web-fetch-enhanced",
+      "title": "dsh-web-fetch-enhanced",
+      "description": "Configurable non-public address allowlists for DeepSeek Harness web_fetch",
+      "category": "plugin",
+      "repo": "https://github.com/Yurzi/dsh-web-fetch-enhanced",
+      "install": "github:Yurzi/dsh-web-fetch-enhanced",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "Yurzi",
+      "stars": 0,
+      "createdAt": "2026-08-28T15:05:43Z"
     },
     {
       "id": "chendefine/dsh-web-fetch-playwright",
@@ -164317,7 +165202,7 @@
         "dsh-plugin"
       ],
       "author": "CanglongCl",
-      "stars": 16,
+      "stars": 17,
       "createdAt": "2026-08-12T17:18:29Z"
     },
     {
@@ -164773,7 +165658,7 @@
     {
       "id": "MochiNek0/dsh-web-search-free",
       "title": "dsh-web-search-free",
-      "description": "面向 DeepSeek Harness 的多引擎免费 Web Search 插件，支持 Tavily / Firecrawl / Exa / Jina / Brave 自动 fallback",
+      "description": "面向 DeepSeek Harness 的免费 Web Search 插件，支持 Tavily、Exa、Brave 等八个引擎按可配置顺序自动 fallback",
       "category": "plugin",
       "repo": "https://github.com/MochiNek0/dsh-web-search-free",
       "install": "github:MochiNek0/dsh-web-search-free",
@@ -166857,7 +167742,7 @@
         "dsh-plugin"
       ],
       "author": "xuedai-mayi",
-      "stars": 53,
+      "stars": 56,
       "createdAt": "2026-08-18T19:04:53Z"
     },
     {
@@ -167192,7 +168077,7 @@
         "dsh-plugin"
       ],
       "author": "JAdpp",
-      "stars": 18,
+      "stars": 19,
       "createdAt": "2026-08-15T20:18:18Z",
       "installVerified": true,
       "installSource": "community",
@@ -167320,7 +168205,7 @@
         "dsh-plugin"
       ],
       "author": "Sutera-Diffusus",
-      "stars": 42,
+      "stars": 43,
       "createdAt": "2026-08-15T16:24:33Z",
       "installVerified": true,
       "installSource": "community",
@@ -168906,7 +169791,7 @@
         "dsh-plugin"
       ],
       "author": "corrinehu",
-      "stars": 15,
+      "stars": 16,
       "createdAt": "2026-08-17T19:02:44Z",
       "installVerified": true,
       "installSource": "community",
@@ -169668,6 +170553,21 @@
       "createdAt": "2026-08-21T20:26:29Z"
     },
     {
+      "id": "joao-paulo-santos/dsh-workspace-history",
+      "title": "dsh-workspace-history",
+      "description": "Workspace history: journals every compaction summary to the workspace and adds a History subtab to the Workspace Overview tab for reading it back.",
+      "category": "plugin",
+      "repo": "https://github.com/joao-paulo-santos/dsh-workspace-history",
+      "install": "github:joao-paulo-santos/dsh-workspace-history",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "joao-paulo-santos",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:57:37Z"
+    },
+    {
       "id": "Jadramcool/dsh-workspace-hub",
       "title": "dsh-workspace-hub",
       "description": "(no description)",
@@ -169871,6 +170771,21 @@
       "author": "TTTPOB",
       "stars": 0,
       "createdAt": "2026-08-15T03:57:03Z"
+    },
+    {
+      "id": "joao-paulo-santos/dsh-workspace-overview",
+      "title": "dsh-workspace-overview",
+      "description": "Workspace overview: a Workspace Overview tab beside Chat with a subtab facade for other plugins, and a GitHub pill in the session header when the workspace has a github.com repository.",
+      "category": "dev-resource",
+      "repo": "https://github.com/joao-paulo-santos/dsh-workspace-overview",
+      "install": "github:joao-paulo-santos/dsh-workspace-overview",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "joao-paulo-santos",
+      "stars": 0,
+      "createdAt": "2026-08-28T14:57:13Z"
     },
     {
       "id": "qwertyuiop314/dsh-workspace-picker-enhance",
@@ -170194,7 +171109,7 @@
         "dsh-plugin"
       ],
       "author": "Aisland-SJL",
-      "stars": 324,
+      "stars": 327,
       "createdAt": "2026-08-16T15:43:27Z"
     },
     {
@@ -172269,7 +173184,7 @@
         "dsh-plugin"
       ],
       "author": "whitelonng",
-      "stars": 458,
+      "stars": 464,
       "createdAt": "2026-08-13T13:23:11Z"
     },
     {
@@ -173136,7 +174051,7 @@
         "dsh-plugin"
       ],
       "author": "zhoushoujianwork",
-      "stars": 309,
+      "stars": 311,
       "createdAt": "2026-06-25T09:29:20Z"
     },
     {
@@ -173290,7 +174205,7 @@
         "dsh-plugin"
       ],
       "author": "tinqiao-oss",
-      "stars": 175,
+      "stars": 176,
       "createdAt": "2026-06-13T14:15:28Z",
       "installVerified": true,
       "installSource": "community",
@@ -173324,7 +174239,7 @@
         "dsh-plugin"
       ],
       "author": "EverMind-AI",
-      "stars": 12508,
+      "stars": 12513,
       "createdAt": "2025-10-28T15:09:32Z"
     },
     {
@@ -174502,7 +175417,7 @@
         "dsh-plugin"
       ],
       "author": "wangzhuo-coding",
-      "stars": 4,
+      "stars": 5,
       "createdAt": "2026-07-16T08:44:31Z"
     },
     {
@@ -174774,6 +175689,21 @@
       "installVerified": true,
       "installSource": "community",
       "descriptionZh": "GitHub 开发者工作台 MCP server（dsh bundle）：23 个 MCP 工具覆盖仓库、issue、PR、代码审查与搜索，零运行时依赖，支持 PAT 与 OAuth 双认证。"
+    },
+    {
+      "id": "iTrimut/Github-Road",
+      "title": "Github-Road",
+      "description": "Github-Road: 大陆稳定访问 GitHub 官网的网络路径修复技能（hosts 直连 + 动态 IP 择优 + 30 分钟自动自愈，免代理、零费用）——非 agent 专属，任意智能体可用，也可纯手动运行。A network-path fix skill (not agent-specific) for reliable github.com access from mainland China.",
+      "category": "skill",
+      "repo": "https://github.com/iTrimut/Github-Road",
+      "install": "github:iTrimut/Github-Road",
+      "tags": [
+        "PowerShell",
+        "dsh-plugin"
+      ],
+      "author": "iTrimut",
+      "stars": 0,
+      "createdAt": "2026-08-28T13:08:10Z"
     },
     {
       "id": "Guojiz/gitlearnos",
@@ -175058,7 +175988,7 @@
         "dsh-plugin"
       ],
       "author": "adoresever",
-      "stars": 578,
+      "stars": 579,
       "createdAt": "2026-03-10T22:50:21Z",
       "installVerified": true,
       "installSource": "community",
@@ -175204,7 +176134,7 @@
         "dsh-plugin"
       ],
       "author": "hancao97",
-      "stars": 104,
+      "stars": 105,
       "createdAt": "2026-08-15T00:23:35Z"
     },
     {
@@ -175917,7 +176847,7 @@
         "dsh-plugin"
       ],
       "author": "hashgraph-online",
-      "stars": 492,
+      "stars": 494,
       "createdAt": "2026-03-28T19:02:15Z"
     },
     {
@@ -176575,7 +177505,7 @@
         "dsh-plugin"
       ],
       "author": "EthanYoQ",
-      "stars": 221,
+      "stars": 231,
       "createdAt": "2026-03-02T03:40:29Z",
       "installVerified": true,
       "installSource": "community",
@@ -176624,7 +177554,7 @@
         "dsh-plugin"
       ],
       "author": "Devin-AXIS",
-      "stars": 5023,
+      "stars": 5033,
       "createdAt": "2025-08-25T03:57:40Z"
     },
     {
@@ -176722,7 +177652,7 @@
         "dsh-plugin"
       ],
       "author": "Tiger3807861189",
-      "stars": 3014,
+      "stars": 3013,
       "createdAt": "2026-07-22T00:34:24Z"
     },
     {
@@ -177476,7 +178406,7 @@
         "dsh-plugin"
       ],
       "author": "Jesseovo",
-      "stars": 1661,
+      "stars": 1663,
       "createdAt": "2026-03-31T08:13:20Z"
     },
     {
@@ -177570,7 +178500,7 @@
         "dsh-plugin"
       ],
       "author": "walkinglabs",
-      "stars": 14434,
+      "stars": 14445,
       "createdAt": "2026-03-29T12:28:19Z"
     },
     {
@@ -178856,7 +179786,7 @@
         "dsh-plugin"
       ],
       "author": "MemTensor",
-      "stars": 1175,
+      "stars": 1178,
       "createdAt": "2026-07-16T07:57:45Z"
     },
     {
@@ -178897,7 +179827,7 @@
       "repo": "https://github.com/yangfei222666-9/memory-auditor",
       "install": "github:yangfei222666-9/memory-auditor",
       "tags": [
-        "Python",
+        "JavaScript",
         "dsh-plugin"
       ],
       "author": "yangfei222666-9",
@@ -178968,7 +179898,7 @@
         "dsh-plugin"
       ],
       "author": "MemTensor",
-      "stars": 11065,
+      "stars": 11066,
       "createdAt": "2025-07-06T09:51:27Z"
     },
     {
@@ -178998,7 +179928,7 @@
         "dsh-plugin"
       ],
       "author": "zilliztech",
-      "stars": 2523,
+      "stars": 2525,
       "createdAt": "2026-02-09T02:29:16Z",
       "installVerified": true,
       "installSource": "community",
@@ -179305,7 +180235,7 @@
         "dsh-plugin"
       ],
       "author": "lencx",
-      "stars": 572,
+      "stars": 574,
       "createdAt": "2026-08-15T01:49:38Z"
     },
     {
@@ -179517,6 +180447,21 @@
       "descriptionZh": "从 OpenAI 兼容 API 主机自动发现模型列表、定价与能力，归一化后生成 dsh 可直接使用的模型配置。"
     },
     {
+      "id": "taod8205-spec/model-switcher-dsh",
+      "title": "model-switcher-dsh",
+      "description": "DeepSeek Harness 模型与推理强度一键切换插件，支持胶囊滑杆、档位吸附和极高态视觉。",
+      "category": "plugin",
+      "repo": "https://github.com/taod8205-spec/model-switcher-dsh",
+      "install": "github:taod8205-spec/model-switcher-dsh",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "taod8205-spec",
+      "stars": 0,
+      "createdAt": "2026-08-28T16:13:50Z"
+    },
+    {
       "id": "AKS1st/model-usage-plugin",
       "title": "model-usage-plugin",
       "description": "统计各模型 tokens 消耗并估算费用，显示账户余额 | Model token usage stats and cost estimation with account balance for DSH",
@@ -179546,7 +180491,7 @@
         "dsh-plugin"
       ],
       "author": "liustack",
-      "stars": 3735,
+      "stars": 3736,
       "createdAt": "2026-02-22T07:12:00Z",
       "installVerified": true,
       "installSource": "community",
@@ -179580,7 +180525,7 @@
         "dsh-plugin"
       ],
       "author": "liustack",
-      "stars": 307,
+      "stars": 309,
       "createdAt": "2026-02-22T07:12:53Z",
       "installVerified": true,
       "installSource": "community",
@@ -179904,7 +180849,7 @@
         "dsh-plugin"
       ],
       "author": "yejiming",
-      "stars": 624,
+      "stars": 625,
       "createdAt": "2026-04-03T14:09:27Z"
     },
     {
@@ -180291,7 +181236,7 @@
         "dsh-plugin"
       ],
       "author": "nocobase",
-      "stars": 23907,
+      "stars": 23909,
       "createdAt": "2020-10-24T07:27:48Z"
     },
     {
@@ -180515,7 +181460,7 @@
         "dsh-plugin"
       ],
       "author": "mrpulor-gh",
-      "stars": 269,
+      "stars": 273,
       "createdAt": "2026-08-01T08:02:34Z"
     },
     {
@@ -180813,7 +181758,7 @@
         "dsh-plugin"
       ],
       "author": "agi-fans",
-      "stars": 26,
+      "stars": 27,
       "createdAt": "2026-08-15T11:28:19Z"
     },
     {
@@ -181011,7 +181956,7 @@
         "dsh-plugin"
       ],
       "author": "zenstory-ai",
-      "stars": 208,
+      "stars": 211,
       "createdAt": "2026-08-19T15:27:01Z"
     },
     {
@@ -181438,7 +182383,7 @@
         "dsh-plugin"
       ],
       "author": "nexu-io",
-      "stars": 92260,
+      "stars": 92321,
       "createdAt": "2026-04-28T04:25:20Z"
     },
     {
@@ -181546,7 +182491,7 @@
         "dsh-plugin"
       ],
       "author": "whiteguo233",
-      "stars": 3076,
+      "stars": 3081,
       "createdAt": "2026-03-07T13:46:10Z"
     },
     {
@@ -181824,7 +182769,7 @@
         "dsh-plugin"
       ],
       "author": "ZSeven-W",
-      "stars": 5703,
+      "stars": 5706,
       "createdAt": "2026-02-17T10:51:46Z"
     },
     {
@@ -181839,7 +182784,7 @@
         "dsh-plugin"
       ],
       "author": "alvinunreal",
-      "stars": 1129,
+      "stars": 1131,
       "createdAt": "2026-05-04T19:14:46Z",
       "installVerified": true,
       "installSource": "community",
@@ -181891,7 +182836,7 @@
         "dsh-plugin"
       ],
       "author": "ZJU-LLMs",
-      "stars": 393,
+      "stars": 394,
       "createdAt": "2026-04-01T02:43:27Z"
     },
     {
@@ -181906,7 +182851,7 @@
         "dsh-plugin"
       ],
       "author": "volcengine",
-      "stars": 34049,
+      "stars": 34085,
       "createdAt": "2026-01-05T07:11:17Z",
       "installVerified": true,
       "installSource": "community",
@@ -182565,7 +183510,7 @@
         "dsh-plugin"
       ],
       "author": "ericshang98",
-      "stars": 259,
+      "stars": 260,
       "createdAt": "2026-01-06T03:29:29Z"
     },
     {
@@ -182670,7 +183615,7 @@
         "dsh-plugin"
       ],
       "author": "pulseaiclub",
-      "stars": 185,
+      "stars": 186,
       "createdAt": "2026-08-03T03:16:48Z"
     },
     {
@@ -183233,7 +184178,7 @@
         "dsh-plugin"
       ],
       "author": "sunchaokun",
-      "stars": 1035,
+      "stars": 1040,
       "createdAt": "2026-07-09T04:03:02Z"
     },
     {
@@ -183668,7 +184613,7 @@
         "dsh-plugin"
       ],
       "author": "duhu2000",
-      "stars": 3,
+      "stars": 4,
       "createdAt": "2026-08-17T02:39:45Z",
       "installVerified": true,
       "installSource": "community",
@@ -183938,7 +184883,7 @@
         "dsh-plugin"
       ],
       "author": "amruthpillai",
-      "stars": 41860,
+      "stars": 41874,
       "createdAt": "2020-03-25T14:08:22Z"
     },
     {
@@ -184249,6 +185194,21 @@
       "author": "jackuh105",
       "stars": 0,
       "createdAt": "2026-08-14T09:42:25Z"
+    },
+    {
+      "id": "shendeguize/Remote_DSH_Center",
+      "title": "Remote_DSH_Center",
+      "description": "One-page local manager and CLI for local and remote dsh web instances, with SSH tunnels for remote hosts.",
+      "category": "plugin",
+      "repo": "https://github.com/shendeguize/Remote_DSH_Center",
+      "install": "github:shendeguize/Remote_DSH_Center",
+      "tags": [
+        "JavaScript",
+        "dsh-plugin"
+      ],
+      "author": "shendeguize",
+      "stars": 0,
+      "createdAt": "2026-08-20T16:13:57Z"
     },
     {
       "id": "OneCat2015/Remote-My-DSH",
@@ -184638,7 +185598,7 @@
         "dsh-plugin"
       ],
       "author": "ruvnet",
-      "stars": 69603,
+      "stars": 69618,
       "createdAt": "2025-06-02T21:24:20Z"
     },
     {
@@ -184773,24 +185733,6 @@
       "installVerified": true,
       "installSource": "community",
       "descriptionZh": "通过 stdio MCP 将 dsh 连接到本地 SandBase Harness 运行时，用于管理代理与会话、流式执行任务、检查产物和取消工作。"
-    },
-    {
-      "id": "sandbaseai/sandbase-skills",
-      "title": "sandbase-skills",
-      "description": "88 installable open-source Agent Skills for research, social intelligence, marketing, and business workflows—compatible with Codex, Claude Code, Cursor, Gemini CLI, and DeepSeek Harness.",
-      "category": "skill",
-      "repo": "https://github.com/sandbaseai/sandbase-skills",
-      "install": "github:sandbaseai/sandbase-skills",
-      "tags": [
-        "Python",
-        "dsh-plugin"
-      ],
-      "author": "sandbaseai",
-      "stars": 72,
-      "createdAt": "2026-07-29T09:04:12Z",
-      "installVerified": true,
-      "installSource": "community",
-      "descriptionZh": "通过文件系统 Skill provider 将 88 个研究、社交情报、营销与商业 Agent Skills 挂载到 dsh。"
     },
     {
       "id": "omdsh-dev/sandbox-micro",
@@ -185104,7 +186046,7 @@
         "dsh-plugin"
       ],
       "author": "Hilbert-beinghappy",
-      "stars": 97,
+      "stars": 99,
       "createdAt": "2026-08-14T11:10:57Z"
     },
     {
@@ -185723,7 +186665,7 @@
         "dsh-plugin"
       ],
       "author": "EverMind-AI",
-      "stars": 263,
+      "stars": 272,
       "createdAt": "2026-08-11T02:48:55Z"
     },
     {
@@ -185867,7 +186809,7 @@
     {
       "id": "iasiv5/skins",
       "title": "skins",
-      "description": "(no description)",
+      "description": "DSH Web 皮肤切换器（默认皮肤：OpenBMC Harness）",
       "category": "client",
       "repo": "https://github.com/iasiv5/skins",
       "install": "github:iasiv5/skins",
@@ -185876,7 +186818,7 @@
         "dsh-plugin"
       ],
       "author": "iasiv5",
-      "stars": 0,
+      "stars": 1,
       "createdAt": "2026-08-28T08:30:53Z"
     },
     {
@@ -186459,31 +187401,12 @@
         "dsh-plugin"
       ],
       "author": "diqierjia",
-      "stars": 13,
+      "stars": 14,
       "createdAt": "2026-08-10T15:29:27Z",
       "installVerified": true,
       "installSource": "community",
       "npm": "stratagate-dsh",
       "descriptionZh": "StrataGate 为 DeepSeek Harness 自动构建持续演化、本地优先的长期记忆：跨会话承接用户偏好、项目决策、历史对话和工具结果，通过用户可调的时间衰减分层沉淀历史，按真实回答使用强化记忆，显示按工作区识别的使用计数，并让召回证据可追溯到原始消息。"
-    },
-    {
-      "id": "zhangyoufu-123/stylotrace",
-      "title": "stylotrace",
-      "description": "越写越像你：学会同事/领导/偶像的写作风格，AI 替你写但像你写的。DeepSeek Harness 写作插件：41 个 MCP 工具 + 项目自动提炼 + 去 AI 味 + 文件预览",
-      "category": "plugin",
-      "repo": "https://github.com/zhangyoufu-123/stylotrace",
-      "install": "dsh-plugin-stylotrace",
-      "tags": [
-        "JavaScript",
-        "dsh-plugin"
-      ],
-      "author": "zhangyoufu-123",
-      "stars": 6,
-      "createdAt": "2026-08-07T04:26:09Z",
-      "installVerified": true,
-      "installSource": "community",
-      "npm": "dsh-plugin-stylotrace",
-      "descriptionZh": "面向 DSH 的深度协作写作 Agent：从用户的编辑对学习个人写作风格，完整 澄清→大纲→逐节写作→红队审计→读者群像 流程，项目自动提炼成实验报告/产品介绍/综述/README，41 个 MCP 工具，Web 端选中改进与文件内嵌预览。"
     },
     {
       "id": "suanlayu666/suanlayu-dsh-plugins",
@@ -186626,7 +187549,7 @@
         "dsh-plugin"
       ],
       "author": "superdesigndev",
-      "stars": 469,
+      "stars": 470,
       "createdAt": "2026-01-21T20:26:04Z",
       "installVerified": true,
       "installSource": "community",
@@ -187398,7 +188321,7 @@
         "dsh-plugin"
       ],
       "author": "zh667",
-      "stars": 180,
+      "stars": 183,
       "createdAt": "2026-08-14T08:32:47Z",
       "installVerified": true,
       "installSource": "community",
@@ -188187,7 +189110,7 @@
         "dsh-plugin"
       ],
       "author": "foryourhealth111-pixel",
-      "stars": 3041,
+      "stars": 3044,
       "createdAt": "2026-02-22T13:51:44Z"
     },
     {
@@ -188494,7 +189417,7 @@
         "dsh-plugin"
       ],
       "author": "Alisa0808",
-      "stars": 1613,
+      "stars": 1619,
       "createdAt": "2026-07-10T15:32:05Z"
     },
     {
@@ -188509,7 +189432,7 @@
         "dsh-plugin"
       ],
       "author": "Nagi-ovo",
-      "stars": 19866,
+      "stars": 19870,
       "createdAt": "2025-10-04T23:42:35Z"
     },
     {
@@ -188704,7 +189627,7 @@
         "dsh-plugin"
       ],
       "author": "Chu-Xin-r",
-      "stars": 9,
+      "stars": 11,
       "createdAt": "2026-08-14T17:33:58Z",
       "installVerified": true,
       "installSource": "community",
@@ -188897,6 +189820,21 @@
       "createdAt": "2026-08-21T10:10:58Z"
     },
     {
+      "id": "rm-Vstar/web-search-tinyfish",
+      "title": "web-search-tinyfish",
+      "description": "A TinyFish web searching plugin for Deepseek Harness",
+      "category": "plugin",
+      "repo": "https://github.com/rm-Vstar/web-search-tinyfish",
+      "install": "github:rm-Vstar/web-search-tinyfish",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "rm-Vstar",
+      "stars": 0,
+      "createdAt": "2026-08-28T12:35:19Z"
+    },
+    {
       "id": "deng7112/web2cli",
       "title": "web2cli",
       "description": "(no description)",
@@ -189031,7 +189969,7 @@
         "dsh-plugin"
       ],
       "author": "Tencent",
-      "stars": 20842,
+      "stars": 20852,
       "createdAt": "2025-07-22T08:01:23Z",
       "installVerified": true,
       "installSource": "community",
@@ -189602,6 +190540,21 @@
       "author": "wuliLiuyue",
       "stars": 4,
       "createdAt": "2026-03-24T06:58:31Z"
+    },
+    {
+      "id": "xby-skill/xby-12306-ticket-purchase-search",
+      "title": "xby-12306-ticket-purchase-search",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/xby-skill/xby-12306-ticket-purchase-search",
+      "install": "github:xby-skill/xby-12306-ticket-purchase-search",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "xby-skill",
+      "stars": 0,
+      "createdAt": "2026-08-28T10:24:13Z"
     },
     {
       "id": "xby-skill/xby-advertising-analysis",
@@ -190637,6 +191590,21 @@
       "author": "xby-skill",
       "stars": 0,
       "createdAt": "2026-08-28T11:06:50Z"
+    },
+    {
+      "id": "xby-skill/xby-fluent",
+      "title": "xby-fluent",
+      "description": "(no description)",
+      "category": "plugin",
+      "repo": "https://github.com/xby-skill/xby-fluent",
+      "install": "github:xby-skill/xby-fluent",
+      "tags": [
+        "TypeScript",
+        "dsh-plugin"
+      ],
+      "author": "xby-skill",
+      "stars": 0,
+      "createdAt": "2026-08-28T11:07:09Z"
     },
     {
       "id": "xby-skill/xby-french-tax",
@@ -192412,7 +193380,7 @@
         "dsh-plugin"
       ],
       "author": "YaoApp",
-      "stars": 7827,
+      "stars": 7828,
       "createdAt": "2021-09-06T09:20:27Z"
     },
     {
