@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-08-30T05:49:19.001Z",
-    "fetchedCount": 2662,
-    "count": 2675,
+    "generatedAt": "2026-08-30T10:18:55.274Z",
+    "fetchedCount": 2663,
+    "count": 2676,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -286,7 +286,7 @@
       "id": "173787247/dsh-wsl-open",
       "title": "173787247/dsh-wsl-open",
       "description": "Opens WSL Linux paths from DeepSeek Harness chat in the Windows default app or Explorer.",
-      "category": "client",
+      "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-open",
       "install": "github:173787247/dsh-wsl-open",
       "tags": [
@@ -3856,6 +3856,17 @@
       ]
     },
     {
+      "id": "Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-fireworks",
+      "title": "Cerbur/clutch-dsh#clutch-dsh-fireworks",
+      "description": "Adds a celebratory fireworks overlay to the DSH Web UI through a happy_fireworks agent tool.",
+      "category": "plugin",
+      "repo": "https://github.com/Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-fireworks",
+      "install": "github:Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-fireworks",
+      "tags": [
+        "cerbur/clutch-dsh#clutch-dsh-fireworks"
+      ]
+    },
+    {
       "id": "Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-worktree",
       "title": "Cerbur/clutch-dsh#clutch-dsh-worktree",
       "description": "Adds a Worktree view to DSH Web UI that groups Sessions by Git worktree while keeping DSH as the source of truth.",
@@ -5327,17 +5338,6 @@
       ]
     },
     {
-      "id": "DamonKoy/dsh-web-ui/tree/main/packages/dsh-skins",
-      "title": "DamonKoy/dsh-web-ui#dsh-skins",
-      "description": "Skin family aggregator: one install gives the skin center plus all skin assets (qq98, ths, xp, blue-fantasy, dragon-heir, minecraft, miku, trading).",
-      "category": "client",
-      "repo": "https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-skins",
-      "install": "github:DamonKoy/dsh-web-ui/tree/main/packages/dsh-skins",
-      "tags": [
-        "damonkoy/dsh-web-ui#dsh-skins"
-      ]
-    },
-    {
       "id": "DamonKoy/dsh-web-ui/tree/main/packages/dsh-ssh",
       "title": "DamonKoy/dsh-web-ui#dsh-ssh",
       "description": "Remote SSH operations for the dsh web GUI: host config store and persisted sessions.",
@@ -5368,17 +5368,6 @@
       "install": "github:DamonKoy/dsh-web-ui/tree/main/packages/dsh-tool-describe-image",
       "tags": [
         "damonkoy/dsh-web-ui#dsh-tool-describe-image"
-      ]
-    },
-    {
-      "id": "DamonKoy/dsh-web-ui/tree/main/packages/dsh-web-ui-all",
-      "title": "DamonKoy/dsh-web-ui#dsh-web-ui-all",
-      "description": "DSH Web UI family aggregator: one-click install of all feature plugins (task-board, git-graph, pet, remote-web-ui, live-stats, web-ui-settings).",
-      "category": "client",
-      "repo": "https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-web-ui-all",
-      "install": "github:DamonKoy/dsh-web-ui/tree/main/packages/dsh-web-ui-all",
-      "tags": [
-        "damonkoy/dsh-web-ui#dsh-web-ui-all"
       ]
     },
     {
@@ -15213,17 +15202,6 @@
       ]
     },
     {
-      "id": "ljsysfurryACE/dsh-agentframe-suite",
-      "title": "ljsysfurryACE/dsh-agentframe-suite",
-      "description": "One-command bundle of the three AgentFrame plugins: memory-director, compaction, and aura-scheduler together.",
-      "category": "plugin",
-      "repo": "https://github.com/ljsysfurryACE/dsh-agentframe-suite",
-      "install": "github:ljsysfurryACE/dsh-agentframe-suite",
-      "tags": [
-        "ljsysfurryace/dsh-agentframe-suite"
-      ]
-    },
-    {
       "id": "ljsysfurryACE/dsh-aura-scheduler",
       "title": "ljsysfurryACE/dsh-aura-scheduler",
       "description": "Proactive scheduling: an adaptive heartbeat plus a value network (urgency, relevance, interruption cost) decides when the agent should speak unprompted.",
@@ -21734,6 +21712,17 @@
       ]
     },
     {
+      "id": "SeverusZh/dsh-skills-mcp-group-manager",
+      "title": "SeverusZh/dsh-skills-mcp-group-manager",
+      "description": "Group installed skills and manage MCP servers from a left-panel UI: filter the model skill catalog by enabled groups (union-deduped) and toggle MCP servers independently.",
+      "category": "client",
+      "repo": "https://github.com/SeverusZh/dsh-skills-mcp-group-manager",
+      "install": "github:SeverusZh/dsh-skills-mcp-group-manager",
+      "tags": [
+        "severuszh/dsh-skills-mcp-group-manager"
+      ]
+    },
+    {
       "id": "SeverusZh/dsh-yolo-mode",
       "title": "SeverusZh/dsh-yolo-mode",
       "description": "LLM auto-approval for sandbox escalation requests, with presets and a fail-closed fallback.",
@@ -25726,7 +25715,7 @@
       "id": "WilliamShi666/dsh-wsl-workspace-picker",
       "title": "WilliamShi666/dsh-wsl-workspace-picker",
       "description": "Enhanced workspace directory browser for the web UI: one-click access to /mnt Windows drives under WSL, full breadcrumb ancestry and an always-visible path input.",
-      "category": "client",
+      "category": "plugin",
       "repo": "https://github.com/WilliamShi666/dsh-wsl-workspace-picker",
       "install": "github:WilliamShi666/dsh-wsl-workspace-picker",
       "tags": [
@@ -27582,6 +27571,17 @@
       ]
     },
     {
+      "id": "yamingmou/dsh-retrace",
+      "title": "yamingmou/dsh-retrace",
+      "description": "Recall, edit-and-resend and regenerate, plus in-conversation versioning: a timeline of every rewind, artifact rollback (git-first, snapshot fallback), a fork map of explored paths, session lineage, and a real-time watchdog that snapshots the log at the first sign of concurrent writes. Edits auto-stop the running agent (official cancel/whenIdle) so rewinds never corrupt the durable log or break /compact.",
+      "category": "plugin",
+      "repo": "https://github.com/yamingmou/dsh-retrace",
+      "install": "github:yamingmou/dsh-retrace",
+      "tags": [
+        "yamingmou/dsh-retrace"
+      ]
+    },
+    {
       "id": "Yang-wudi/dsh-kun-like-pet/tree/main/packages/kunpet-dsh",
       "title": "Yang-wudi/dsh-kun-like-pet#kunpet-dsh",
       "description": "A Kun-Like desktop pet living in the corner of the DSH web UI; switches animations with agent state and plays a voice line on task completion.",
@@ -28090,7 +28090,7 @@
     {
       "id": "yoza10635/dsh-argp",
       "title": "yoza10635/dsh-argp",
-      "description": "Deterministic context compaction: prunes conversation atoms in reference-graph topological order with no LLM calls during compaction, and keeps pruned atoms recallable by marker.",
+      "description": "Guarded context compaction for DeepSeek Harness (dsh): the LLM proposes, deterministic guards dispose — eager per-atom shrink (extract/summary/false under verbatim guards) + lazy reference-graph eviction (0-LLM) + byte-exact recall from an append-only log.",
       "category": "plugin",
       "repo": "https://github.com/yoza10635/dsh-argp",
       "install": "github:yoza10635/dsh-argp",
@@ -28349,6 +28349,17 @@
       "install": "github:Yuuz12/dsh-webui-auth",
       "tags": [
         "yuuz12/dsh-webui-auth"
+      ]
+    },
+    {
+      "id": "yuyolin/dsh-decision-log",
+      "title": "yuyolin/dsh-decision-log",
+      "description": "Decision log for DeepSeek Harness: record key decisions (chosen option + why) into a versionable DECISIONS.md via decision_log / decision_list / decision_audit tools, and auto-inject the summary into future sessions so decisions stay traceable and are never re-litigated.",
+      "category": "plugin",
+      "repo": "https://github.com/yuyolin/dsh-decision-log",
+      "install": "github:yuyolin/dsh-decision-log",
+      "tags": [
+        "yuyolin/dsh-decision-log"
       ]
     },
     {
