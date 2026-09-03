@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-03T10:18:06.990Z",
-    "fetchedCount": 3014,
-    "count": 3027,
+    "generatedAt": "2026-09-03T16:18:32.047Z",
+    "fetchedCount": 3019,
+    "count": 3032,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1625,6 +1625,17 @@
       ]
     },
     {
+      "id": "a23842/dsh-waste-market",
+      "title": "a23842/dsh-waste-market",
+      "description": "A-share market dashboard for DeepSeek Harness: realtime market indices, stock screener with 13 technical signals and multi-strategy intersection, 7×24 multi-source news aggregation, watchlist with group management, market sentiment thermometer (limit-up ladder, breadth), K-line charts with MA/EXPMA/BOLL overlays, and sector/limit-up/longhu rankings.",
+      "category": "plugin",
+      "repo": "https://github.com/a23842/dsh-waste-market",
+      "install": "github:a23842/dsh-waste-market",
+      "tags": [
+        "a23842/dsh-waste-market"
+      ]
+    },
+    {
       "id": "A3Boy/dsh-web-tools",
       "title": "A3Boy/dsh-web-tools",
       "description": "Unified multi-provider web search and fetch: BYOK key pools, health monitoring, and deterministic fallback.",
@@ -1996,6 +2007,17 @@
       "install": "github:Aik358/dsh-auto-memory",
       "tags": [
         "aik358/dsh-auto-memory"
+      ]
+    },
+    {
+      "id": "Aik358/dsh-cua-pre",
+      "title": "Aik358/dsh-cua-pre",
+      "description": "Windows desktop automation for DeepSeek Harness: accessibility-first observe/act loop with 30 standard tools (element/coordinate targets, auto/a11y/event strategy routing), superseded-observations and no-replay safety semantics, persistent kill switch, RuntimeId/rect-drift stale protection, chat cards and a floating panel (live ops, frame wall, env auto-detect settings), tiled vision describe for low-res models, JSONL audit trail and a pid allowlist. Requires Windows 10+ and Python 3.9+ with uiautomation and pillow (installable from the settings page).",
+      "category": "plugin",
+      "repo": "https://github.com/Aik358/dsh-cua-pre",
+      "install": "github:Aik358/dsh-cua-pre",
+      "tags": [
+        "aik358/dsh-cua-pre"
       ]
     },
     {
@@ -3589,6 +3611,17 @@
       "install": "github:baosfeng/my-dsh-plugins/tree/main/plugins/dsh-think-zh-expand",
       "tags": [
         "baosfeng/my-dsh-plugins#dsh-think-zh-expand"
+      ]
+    },
+    {
+      "id": "bbqisbbq/dsh-tiddlywiki",
+      "title": "bbqisbbq/dsh-tiddlywiki",
+      "description": "Runs TiddlyWiki 5 as the DSH persistent knowledge base: ten tiddlywiki_* agent tools (filtered search, read/write/batch/rename/delete, recent, tags, plus git sync with conflict resolve), a full TiddlyWiki editor embedded in the GUI center column, and a quick-note widget with draft auto-save — all backed by an auto-committing git repository.",
+      "category": "plugin",
+      "repo": "https://github.com/bbqisbbq/dsh-tiddlywiki",
+      "install": "github:bbqisbbq/dsh-tiddlywiki",
+      "tags": [
+        "bbqisbbq/dsh-tiddlywiki"
       ]
     },
     {
@@ -11497,7 +11530,7 @@
     {
       "id": "hkkz9522/dsh-session-manager",
       "title": "hkkz9522/dsh-session-manager",
-      "description": "Delete, archive, move conversations across workspaces, and migrate a session's Agent preset — with confirmation dialogs — in the DeepSeek Harness web UI.",
+      "description": "Conversation manager for the DeepSeek Harness Web UI: delete conversations, archive conversations, move conversations across workspaces, and migrate a conversation’s Agent preset. Suggestions are welcome on GitHub.",
       "category": "plugin",
       "repo": "https://github.com/hkkz9522/dsh-session-manager",
       "install": "github:hkkz9522/dsh-session-manager",
@@ -14753,7 +14786,7 @@
     {
       "id": "kendu76/dsh-music-player",
       "title": "kendu76/dsh-music-player",
-      "description": "Play your own local music in the DSH web UI: the host scans a local folder (default ~/Music) and streams it over HTTP, with a now-playing bar (prev/play/stop, loop modes, volume, live spectrum) and a draggable playlist panel, plus a model-invokable `music_play` tool.",
+      "description": "Music, audiobook, radio and news player for DeepSeek Harness: streams your local music folder over HTTP, reads local .txt/.epub novels aloud with AI voices, plays online QQ/Kugou/Netease music and internet radio (HLS supported), and broadcasts daily news digests — all driven from the UI or by telling the agent through the music_play model tool.",
       "category": "plugin",
       "repo": "https://github.com/kendu76/dsh-music-player",
       "install": "github:kendu76/dsh-music-player",
@@ -20282,6 +20315,17 @@
       ]
     },
     {
+      "id": "nicecx/insta360-ai-content-studio",
+      "title": "nicecx/insta360-ai-content-studio",
+      "description": "Automated daily content pipeline for Insta360 GO 3S: BLE/WiFi remote capture of aquarium footage, wireless import, ffmpeg quality evaluation with decision log, Auto editing (segment selection, TTS narration, music, subtitles), and Bilibili upload via biliup (dry-run by default).",
+      "category": "plugin",
+      "repo": "https://github.com/nicecx/insta360-ai-content-studio",
+      "install": "github:nicecx/insta360-ai-content-studio",
+      "tags": [
+        "nicecx/insta360-ai-content-studio"
+      ]
+    },
+    {
       "id": "nickhelion/dsh-plugins/tree/main/packages/qwen-token-plan-cn-responses",
       "title": "nickhelion/dsh-plugins#qwen-token-plan-cn-responses",
       "description": "Qwen Token Plan CN Responses provider for DeepSeek Harness via the OpenAI Responses API, with Qwen server-side tools, DSH local function tools, text/reasoning/tool-call multi-turn history, persisted image attachments, and a per-release official model catalog snapshot.",
@@ -21503,6 +21547,17 @@
       ]
     },
     {
+      "id": "Ox0400/dsh-vault",
+      "title": "Ox0400/dsh-vault",
+      "description": "Encrypted local credentials vault for the Harness: a web settings page and vault_* tools to store, search and copy passwords, API keys, TOTP secrets and card data, with health audits, expiry rotation, imports/exports and read-only/ask access modes.",
+      "category": "plugin",
+      "repo": "https://github.com/Ox0400/dsh-vault",
+      "install": "github:Ox0400/dsh-vault",
+      "tags": [
+        "ox0400/dsh-vault"
+      ]
+    },
+    {
       "id": "oxlyn/dsh-flyout-sidebar",
       "title": "oxlyn/dsh-flyout-sidebar",
       "description": "Flyout sidebar with a file tree, uncommitted-changes list and multi-tab file/diff previews; pops out into a standalone browser tab.",
@@ -22297,7 +22352,7 @@
     {
       "id": "pgmi-builds/better-dsh/tree/main/dashr",
       "title": "pgmi-builds/better-dsh#dashr",
-      "description": "Make your dsh ready for serious coding tasks. (Tools x Schemas)^REPL. `skill://`, `ctx://`, `agent://`, `dvc://`, `dsh://`, IPython REPL, Context as Variables, cross compactions recallable, full context revive. `hash-edit`, `dvc://browser`, subagent as function, workflow as function.",
+      "description": "Make your dsh ready for serious coding. (Tools x Schemas)^REPL. `skill://`, `ctx://`, `agent://`, `dvc://`, `dsh://`, IPython REPL, Context as Variables, cross compactions recallable, full context revive. `hash-edit`, `dvc://browser`, subagent as function, workflow as function.",
       "category": "plugin",
       "repo": "https://github.com/pgmi-builds/better-dsh/tree/main/dashr",
       "install": "github:pgmi-builds/better-dsh/tree/main/dashr",
