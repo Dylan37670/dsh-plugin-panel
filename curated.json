@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-04T16:35:58.311Z",
-    "fetchedCount": 3106,
-    "count": 3119,
+    "generatedAt": "2026-09-04T22:18:24.714Z",
+    "fetchedCount": 3117,
+    "count": 3130,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -6803,6 +6803,94 @@
       ]
     },
     {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-git",
+      "title": "dennisrongo/dsh-plugins#dsh-git",
+      "description": "Git Changes tab for the DSH web GUI: staging, diffing, AI-drafted commit messages, branch/merge/stash/worktree operations and sync, with live updates via fs.watch plus a changeToken poll.",
+      "category": "plugin",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-git",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-git",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-git"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-headless-plus",
+      "title": "dennisrongo/dsh-plugins#dsh-headless-plus",
+      "description": "Replaces the headless startup to add --model provider/model, --resume <id|latest>, --continue and --session-info flags to dsh headless runs.",
+      "category": "plugin",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-headless-plus",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-headless-plus",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-headless-plus"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-memory",
+      "title": "dennisrongo/dsh-plugins#dsh-memory",
+      "description": "A /remember command that writes facts into the AGENTS.md instruction hierarchy dsh already loads, plus a Memory tab showing which instructions the loader kept within its byte budget.",
+      "category": "plugin",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-memory",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-memory",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-memory"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-plan-board",
+      "title": "dennisrongo/dsh-plugins#dsh-plan-board",
+      "description": "Captures every plan the agent presents through exit_plan_mode as markdown under <workspace>/.dsh/plans, opens a review window, and keeps a Plans history tab recording the outcome of each plan.",
+      "category": "plugin",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-plan-board",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-plan-board",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-plan-board"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-skills",
+      "title": "dennisrongo/dsh-plugins#dsh-skills",
+      "description": "Skill provider that installs the whole @dennisrongo/skills catalog as one npm dependency, so skills install and update without cloning or linking directories.",
+      "category": "skill",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-skills",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-skills",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-skills"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-superpowers",
+      "title": "dennisrongo/dsh-plugins#dsh-superpowers",
+      "description": "Serves the obra/superpowers skill catalog to the harness and injects its using-superpowers bootstrap as a persistent, compaction-safe system-prompt section.",
+      "category": "skill",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-superpowers",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-superpowers",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-superpowers"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-theme",
+      "title": "dennisrongo/dsh-plugins#dsh-theme",
+      "description": "Twelve curated palettes, eight accent colours, a contrast slider and font/scale overrides for the DSH web UI, with an inlined first-paint script that prevents theme flash.",
+      "category": "client",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-theme",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-theme",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-theme"
+      ]
+    },
+    {
+      "id": "dennisrongo/dsh-plugins/tree/main/plugins/dsh-weather",
+      "title": "dennisrongo/dsh-plugins#dsh-weather",
+      "description": "Draggable weather bar in the shell overlay with forecast and geocoding from Open-Meteo; the position persists across sessions.",
+      "category": "client",
+      "repo": "https://github.com/dennisrongo/dsh-plugins/tree/main/plugins/dsh-weather",
+      "install": "github:dennisrongo/dsh-plugins/tree/main/plugins/dsh-weather",
+      "tags": [
+        "dennisrongo/dsh-plugins#dsh-weather"
+      ]
+    },
+    {
       "id": "detongz/dsh-client-ui-obsidian-memory",
       "title": "detongz/dsh-client-ui-obsidian-memory",
       "description": "Persistent AI memory backed by a local Obsidian/Codex vault: five obsidian_memory_* read/write/search tools plus a sidebar vault browser.",
@@ -9356,6 +9444,17 @@
       "install": "github:fb0sh/dsh-pentester",
       "tags": [
         "fb0sh/dsh-pentester"
+      ]
+    },
+    {
+      "id": "FeatherHunter/dsh-im-companion",
+      "title": "FeatherHunter/dsh-im-companion",
+      "description": "IM Companion for dsh-im: groups Feishu/WeChat/QQ bots by Agent in DSH workspaces, with left badges, one-click filter, fleet overview and drag-to-move. Clean uninstall.",
+      "category": "client",
+      "repo": "https://github.com/FeatherHunter/dsh-im-companion",
+      "install": "github:FeatherHunter/dsh-im-companion",
+      "tags": [
+        "featherhunter/dsh-im-companion"
       ]
     },
     {
@@ -19591,7 +19690,7 @@
     {
       "id": "mhxy13867806343/my-dsh-desktop-extra",
       "title": "mhxy13867806343/my-dsh-desktop-extra",
-      "description": "DSH Desktop enhancement: one-click update check, theme switching, account info, and a searchable anime wallpaper library.",
+      "description": "DSH Desktop enhancement: one-click update checker, DeepSeek balance & API key viewer, and import other AI tools.",
       "category": "client",
       "repo": "https://github.com/mhxy13867806343/my-dsh-desktop-extra",
       "install": "github:mhxy13867806343/my-dsh-desktop-extra",
@@ -25097,6 +25196,28 @@
       "install": "github:SeaOf0/dsh-redteam-model",
       "tags": [
         "seaof0/dsh-redteam-model"
+      ]
+    },
+    {
+      "id": "seeingrain/dsh-media-inline-preview",
+      "title": "seeingrain/dsh-media-inline-preview",
+      "description": "All-in-one inline media previewer for img/video/audio fences with streaming playback, ffmpeg transcoding fallback, lightbox, and trust-fenced LAN/mobile access.",
+      "category": "client",
+      "repo": "https://github.com/seeingrain/dsh-media-inline-preview",
+      "install": "github:seeingrain/dsh-media-inline-preview",
+      "tags": [
+        "seeingrain/dsh-media-inline-preview"
+      ]
+    },
+    {
+      "id": "seeingrain/dsh-session-todos",
+      "title": "seeingrain/dsh-session-todos",
+      "description": "Floating todo panel for DSH sessions with server-side cross-device persistence and pending-task badges in the session list.",
+      "category": "plugin",
+      "repo": "https://github.com/seeingrain/dsh-session-todos",
+      "install": "github:seeingrain/dsh-session-todos",
+      "tags": [
+        "seeingrain/dsh-session-todos"
       ]
     },
     {
