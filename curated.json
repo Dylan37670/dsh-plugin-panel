@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-04T22:18:24.714Z",
-    "fetchedCount": 3117,
-    "count": 3130,
+    "generatedAt": "2026-09-05T04:17:35.827Z",
+    "fetchedCount": 3133,
+    "count": 3146,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2626,6 +2626,17 @@
       ]
     },
     {
+      "id": "Andor-Z/dsh-turn-outline",
+      "title": "Andor-Z/dsh-turn-outline",
+      "description": "Adds a sidebar tab that folds a session into user turns (input, tool steps, output) with one-click jump back into the conversation.",
+      "category": "client",
+      "repo": "https://github.com/Andor-Z/dsh-turn-outline",
+      "install": "github:Andor-Z/dsh-turn-outline",
+      "tags": [
+        "andor-z/dsh-turn-outline"
+      ]
+    },
+    {
       "id": "Andrew111888/dsh-plugin-balance",
       "title": "Andrew111888/dsh-plugin-balance",
       "description": "A floating credit/quota widget for the DeepSeek Harness Web: shows DeepSeek / OpenCode Go balances and usage, and tracks DSH session token usage and estimated cost by day, month, and model.",
@@ -3988,6 +3999,17 @@
       ]
     },
     {
+      "id": "bill277048-hash/DSH-model-router",
+      "title": "bill277048-hash/DSH-model-router",
+      "description": "Rule-based multi-provider model routing for DeepSeek Harness with pre-first-token failover, cooldown circuit-breaking, usage accounting, and a status API.",
+      "category": "plugin",
+      "repo": "https://github.com/bill277048-hash/DSH-model-router",
+      "install": "github:bill277048-hash/DSH-model-router",
+      "tags": [
+        "bill277048-hash/dsh-model-router"
+      ]
+    },
+    {
       "id": "bill9109/dsh-101",
       "title": "bill9109/dsh-101",
       "description": "Document reading mode for DSH.",
@@ -4760,7 +4782,7 @@
     {
       "id": "cayan0x/Lume",
       "title": "cayan0x/Lume",
-      "description": "DSH Desktop enhancement plugin: thinking-logic engine (P0-P3) and persona system (named characters, memory, distillation, switching).",
+      "description": "DSH Desktop enhancement plugin: adaptive Codex-style task protocol (compact for chat, full for tasks, model-aware branching, self-healing on repeated failures, cross-session review loop) plus a persona system — distill named characters from WeChat/QQ chat logs with tone, catchphrases and reply length anchored to real conversation stats; long-term memory, automatic style-correction capture, approved-reply corpus pinning, memory star map, and persona card export/import.",
       "category": "plugin",
       "repo": "https://github.com/cayan0x/Lume",
       "install": "github:cayan0x/Lume",
@@ -6372,17 +6394,6 @@
       ]
     },
     {
-      "id": "DamonKoy/dsh-projection-guard",
-      "title": "DamonKoy/dsh-projection-guard",
-      "description": "Guards the persisted session-projection cache: per-row JSON degradation so one misbehaving projection unit (e.g. a third-party plugin storing a Map) can never stall session titles or the whole cache again, plus a startup self-heal that backfills missing titles.",
-      "category": "plugin",
-      "repo": "https://github.com/DamonKoy/dsh-projection-guard",
-      "install": "github:DamonKoy/dsh-projection-guard",
-      "tags": [
-        "damonkoy/dsh-projection-guard"
-      ]
-    },
-    {
       "id": "DamonKoy/dsh-web-ui/tree/main/packages/dsh-aionui-panel",
       "title": "DamonKoy/dsh-web-ui#dsh-aionui-panel",
       "description": "Right-panel system for the dsh web GUI: a pixel-faithful AionUi Explorer + Preview (file tree, diff view, preview).",
@@ -7097,6 +7108,17 @@
       "install": "github:dingminhua/dsh-connect-workbuddy",
       "tags": [
         "dingminhua/dsh-connect-workbuddy"
+      ]
+    },
+    {
+      "id": "dingminhua/dsh-sub-cli/tree/main/plugin",
+      "title": "dingminhua/dsh-sub-cli#plugin",
+      "description": "Install and call external Agent CLIs (Codex, Claude Code) from DSH without touching the system install. Each CLI gets its own Provider, model, reasoning effort and permission preset, callable directly or as a native subagent.",
+      "category": "plugin",
+      "repo": "https://github.com/dingminhua/dsh-sub-cli/tree/main/plugin",
+      "install": "github:dingminhua/dsh-sub-cli/tree/main/plugin",
+      "tags": [
+        "dingminhua/dsh-sub-cli#plugin"
       ]
     },
     {
@@ -8622,6 +8644,17 @@
       ]
     },
     {
+      "id": "du-u-uck/DSH-Transparent-UI-Plugin",
+      "title": "du-u-uck/DSH-Transparent-UI-Plugin",
+      "description": "Aqua glassmorphism theme for the DeepSeek Harness web UI: mica and compatibility modes with adjustable blur and frost, fluid or wallpaper backdrop, background brightness, particle-whale accent, and a master switch that restores the stock UI.",
+      "category": "client",
+      "repo": "https://github.com/du-u-uck/DSH-Transparent-UI-Plugin",
+      "install": "github:du-u-uck/DSH-Transparent-UI-Plugin",
+      "tags": [
+        "du-u-uck/dsh-transparent-ui-plugin"
+      ]
+    },
+    {
       "id": "duhu2000/dsh-data-cleaning-agent",
       "title": "duhu2000/dsh-data-cleaning-agent",
       "description": "Clean, complete, profile, and deduplicate CSV/XLSX/JSON enterprise lists in DeepSeek Harness, with optional Qichacha MCP enrichment.",
@@ -9587,6 +9620,17 @@
       "install": "github:fengb3/dsh-session-icons",
       "tags": [
         "fengb3/dsh-session-icons"
+      ]
+    },
+    {
+      "id": "fengb3/dsh-theme-macintosh",
+      "title": "fengb3/dsh-theme-macintosh",
+      "description": "Classic Macintosh (System 7) pixel theme: desktop pattern canvas, Finder sidebar, monochrome buttons and dialogs, light/dark support.",
+      "category": "client",
+      "repo": "https://github.com/fengb3/dsh-theme-macintosh",
+      "install": "github:fengb3/dsh-theme-macintosh",
+      "tags": [
+        "fengb3/dsh-theme-macintosh"
       ]
     },
     {
@@ -11121,28 +11165,6 @@
       "install": "github:H2O-MERO/dsh-git-sidebar",
       "tags": [
         "h2o-mero/dsh-git-sidebar"
-      ]
-    },
-    {
-      "id": "hackerFish/awesome-dsh-skills",
-      "title": "hackerFish/awesome-dsh-skills",
-      "description": "12 tested engineering skills (git commit, code review, test-first, plugin dev, debugging, changelog, PR review, task breakdown, and more): every SKILL.md passes a format validator aligned with the official skill rules plus an isolated load smoke test.",
-      "category": "skill",
-      "repo": "https://github.com/hackerFish/awesome-dsh-skills",
-      "install": "github:hackerFish/awesome-dsh-skills",
-      "tags": [
-        "hackerfish/awesome-dsh-skills"
-      ]
-    },
-    {
-      "id": "hackerFish/dsh-lab",
-      "title": "hackerFish/dsh-lab",
-      "description": "Tested-curation lab for DSH plugins: every entry passes real install/static-scan gates in an isolated environment, with full logs and reproduction commands (Chinese-first).",
-      "category": "plugin",
-      "repo": "https://github.com/hackerFish/dsh-lab",
-      "install": "github:hackerFish/dsh-lab",
-      "tags": [
-        "hackerfish/dsh-lab"
       ]
     },
     {
@@ -15336,7 +15358,7 @@
     {
       "id": "kenny2077/dsh-web-search-zai",
       "title": "kenny2077/dsh-web-search-zai",
-      "description": "Single-key web search for the DeepSeek Harness: swaps the built-in web_search backend to the Z.ai (GLM) standalone Web Search API and reuses your existing ZAI_API_KEY for both chat and search.",
+      "description": "Web search for DeepSeek Harness through Z.ai or Zhipu, with Coding Plan MCP quota and REST API billing modes, a native bilingual settings card, and support for reusing an existing ZAI_API_KEY.",
       "category": "plugin",
       "repo": "https://github.com/kenny2077/dsh-web-search-zai",
       "install": "github:kenny2077/dsh-web-search-zai",
@@ -15397,6 +15419,50 @@
       "install": "github:Kevin-McIsaac/dsh-workspace-git-badge/tree/main/dsh-git-badge",
       "tags": [
         "kevin-mcisaac/dsh-workspace-git-badge#dsh-git-badge"
+      ]
+    },
+    {
+      "id": "kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-actuary",
+      "title": "kevinchu1981/dsh-insurance-experts#insurance-actuary",
+      "description": "Insurance actuary — runs real actuarial calculations (life & P&C reserve valuation under C-ROSS II BEL+RM, profit testing NBV/VNB/IRR, embedded value EV, pricing & loss-triangle reserving), not just explanations.",
+      "category": "plugin",
+      "repo": "https://github.com/kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-actuary",
+      "install": "github:kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-actuary",
+      "tags": [
+        "kevinchu1981/dsh-insurance-experts#insurance-actuary"
+      ]
+    },
+    {
+      "id": "kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-company-analyst",
+      "title": "kevinchu1981/dsh-insurance-experts#insurance-company-analyst",
+      "description": "Insurance company financial & operating analyst — solvency, financials, investment, distribution channels and peer comparison with real calculations.",
+      "category": "plugin",
+      "repo": "https://github.com/kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-company-analyst",
+      "install": "github:kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-company-analyst",
+      "tags": [
+        "kevinchu1981/dsh-insurance-experts#insurance-company-analyst"
+      ]
+    },
+    {
+      "id": "kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-ops-analyst",
+      "title": "kevinchu1981/dsh-insurance-experts#insurance-ops-analyst",
+      "description": "Insurance company operations analyst — runs real solvency, profitability, embedded value (EV), investment risk and regulatory compliance calculations, not just text explanations.",
+      "category": "plugin",
+      "repo": "https://github.com/kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-ops-analyst",
+      "install": "github:kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-ops-analyst",
+      "tags": [
+        "kevinchu1981/dsh-insurance-experts#insurance-ops-analyst"
+      ]
+    },
+    {
+      "id": "kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-product-analyst",
+      "title": "kevinchu1981/dsh-insurance-experts#insurance-product-analyst",
+      "description": "Insurance product comparison & proposal expert — clause analysis, cost-effectiveness, coverage planning, generates verifiable client-facing PDF proposals.",
+      "category": "plugin",
+      "repo": "https://github.com/kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-product-analyst",
+      "install": "github:kevinchu1981/dsh-insurance-experts/tree/main/packages/insurance-product-analyst",
+      "tags": [
+        "kevinchu1981/dsh-insurance-experts#insurance-product-analyst"
       ]
     },
     {
@@ -18775,6 +18841,17 @@
       ]
     },
     {
+      "id": "Lzz2133/dsh-manutd-fixtures",
+      "title": "Lzz2133/dsh-manutd-fixtures",
+      "description": "Manchester United 2026/27 fixtures in the sidebar with kickoff times in your local timezone, finished matches with W/L/D results.",
+      "category": "client",
+      "repo": "https://github.com/Lzz2133/dsh-manutd-fixtures",
+      "install": "github:Lzz2133/dsh-manutd-fixtures",
+      "tags": [
+        "lzz2133/dsh-manutd-fixtures"
+      ]
+    },
+    {
       "id": "m1452700576/dsh-app-updater",
       "title": "m1452700576/dsh-app-updater",
       "description": "Sidebar button that checks for DSH updates on startup, shows red dot for new versions, supports ignoring specific versions, and displays changelog preview with live download progress and GitHub mirror support for China.",
@@ -20766,17 +20843,6 @@
       ]
     },
     {
-      "id": "nanpaidashi/dsh-honcho-sync",
-      "title": "nanpaidashi/dsh-honcho-sync",
-      "description": "Honcho memory bridge: auto-syncs every conversation turn to a self-hosted Honcho service, with recall/search/remember/context/status tools, context injection on session start, and a visual settings panel.",
-      "category": "plugin",
-      "repo": "https://github.com/nanpaidashi/dsh-honcho-sync",
-      "install": "github:nanpaidashi/dsh-honcho-sync",
-      "tags": [
-        "nanpaidashi/dsh-honcho-sync"
-      ]
-    },
-    {
       "id": "nanshan1995/DSH-Plugin-Market",
       "title": "nanshan1995/DSH-Plugin-Market",
       "description": "Alternative plugin market for DSH: curated catalog plus live GitHub browsing, zh/en cross-language search, a fail-closed pre-install static security audit with an install-hook block, and per-plugin README viewing with garbled-encoding repair.",
@@ -22086,6 +22152,17 @@
       ]
     },
     {
+      "id": "OMSociety/kimi-ppt-skill",
+      "title": "OMSociety/kimi-ppt-skill",
+      "description": "DSH plugin bundling the kimi-ppt skill: create, edit and export presentations as a locally generated .pptx with Pillow-rendered previews. Derived from the MIT open-kimi-ppt-skill.",
+      "category": "skill",
+      "repo": "https://github.com/OMSociety/kimi-ppt-skill",
+      "install": "github:OMSociety/kimi-ppt-skill",
+      "tags": [
+        "omsociety/kimi-ppt-skill"
+      ]
+    },
+    {
       "id": "onlyqzq/dsh-riskproof",
       "title": "onlyqzq/dsh-riskproof",
       "description": "Provenance-aware execution security that tracks sensitive data across DSH tool calls and blocks risky exfiltration before execution.",
@@ -22977,6 +23054,17 @@
       ]
     },
     {
+      "id": "PerryLink/dsh-reach",
+      "title": "PerryLink/dsh-reach",
+      "description": "Pushes DSH approval and question cards to IM channels (WeChat first) and answers them from chat, with a session console, per-channel security, and an open push service.",
+      "category": "plugin",
+      "repo": "https://github.com/PerryLink/dsh-reach",
+      "install": "github:PerryLink/dsh-reach",
+      "tags": [
+        "perrylink/dsh-reach"
+      ]
+    },
+    {
       "id": "PerryLink/dsh-research-report",
       "title": "PerryLink/dsh-research-report",
       "description": "Verifiable research-report engine for DeepSeek Harness with a content-addressed evidence ledger, versioned sealed reports where every claim carries a verification verdict and the manifest hash seals the directory, and retrieval orchestration that reuses the ctx.web and ctx.jobs seams.",
@@ -23062,6 +23150,17 @@
       "install": "github:PerryLink/dsh-translate",
       "tags": [
         "perrylink/dsh-translate"
+      ]
+    },
+    {
+      "id": "PerryLink/dsh-wechat",
+      "title": "PerryLink/dsh-wechat",
+      "description": "Bridges WeChat private messages to DSH with two-way text, image, file, and media transfer, aiming to restore the native DSH experience in WeChat.",
+      "category": "plugin",
+      "repo": "https://github.com/PerryLink/dsh-wechat",
+      "install": "github:PerryLink/dsh-wechat",
+      "tags": [
+        "perrylink/dsh-wechat"
       ]
     },
     {
@@ -23414,6 +23513,17 @@
       "install": "github:pn1024/dsh-skill-hub",
       "tags": [
         "pn1024/dsh-skill-hub"
+      ]
+    },
+    {
+      "id": "po-et/dsh-http-probe",
+      "title": "po-et/dsh-http-probe",
+      "description": "Adds an http_probe tool for endpoint health checks: status code, latency and key response headers, using HEAD with GET fallback; response bodies are never downloaded.",
+      "category": "plugin",
+      "repo": "https://github.com/po-et/dsh-http-probe",
+      "install": "github:po-et/dsh-http-probe",
+      "tags": [
+        "po-et/dsh-http-probe"
       ]
     },
     {
@@ -24770,6 +24880,28 @@
       ]
     },
     {
+      "id": "runcat-tommy/dsh-chinese-poetry",
+      "title": "runcat-tommy/dsh-chinese-poetry",
+      "description": "Token-free Chinese classical poetry tab in the DSH conversation view with search, filters, 飞花令, daily poem, favorites, festival topics and a share-card image; AI explanation reuses your own DSH session.",
+      "category": "client",
+      "repo": "https://github.com/runcat-tommy/dsh-chinese-poetry",
+      "install": "github:runcat-tommy/dsh-chinese-poetry",
+      "tags": [
+        "runcat-tommy/dsh-chinese-poetry"
+      ]
+    },
+    {
+      "id": "runcat-tommy/dsh-panda-calendar",
+      "title": "runcat-tommy/dsh-panda-calendar",
+      "description": "A conversation-view tab for DeepSeek Harness Web showing solar/lunar dates, ganzhi year/month/day, Chinese zodiac, 24 solar terms, festivals, China public holidays including make-up workdays, and multi-city weather from free sources without an API key.",
+      "category": "client",
+      "repo": "https://github.com/runcat-tommy/dsh-panda-calendar",
+      "install": "github:runcat-tommy/dsh-panda-calendar",
+      "tags": [
+        "runcat-tommy/dsh-panda-calendar"
+      ]
+    },
+    {
       "id": "Rxiain/dsh-openviking",
       "title": "Rxiain/dsh-openviking",
       "description": "Semantic retrieval, resource management, auto-recall (user + agent dual spaces) and session memory for DeepSeek Harness: memsearch/memfind/memread/membrowse/memgrep/memglob over viking:// URIs, memadd/memremove resource management, memqueue observer status, memcommit session capture, and memlearn skill playbook minting.",
@@ -24822,6 +24954,17 @@
       "install": "github:ryubyte/dsh-a2a",
       "tags": [
         "ryubyte/dsh-a2a"
+      ]
+    },
+    {
+      "id": "s1lencewill/dsh-markdown-reader",
+      "title": "s1lencewill/dsh-markdown-reader",
+      "description": "Renders workspace Markdown files in a standalone full-screen reader with GFM, KaTeX, Mermaid, outline navigation, live file reload, and browser printing/PDF export.",
+      "category": "plugin",
+      "repo": "https://github.com/s1lencewill/dsh-markdown-reader",
+      "install": "github:s1lencewill/dsh-markdown-reader",
+      "tags": [
+        "s1lencewill/dsh-markdown-reader"
       ]
     },
     {
@@ -25427,6 +25570,17 @@
       "install": "github:SeverusZh/dsh-yolo-mode",
       "tags": [
         "severuszh/dsh-yolo-mode"
+      ]
+    },
+    {
+      "id": "ShaineDemo/dsh-vision-pro-bridge",
+      "title": "ShaineDemo/dsh-vision-pro-bridge",
+      "description": "Vision bridge for text-only DeepSeek models: transcribes attached images with deepseek-v4-flash-vision-exp before they reach deepseek-v4-pro, with no third-party dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/ShaineDemo/dsh-vision-pro-bridge",
+      "install": "github:ShaineDemo/dsh-vision-pro-bridge",
+      "tags": [
+        "shainedemo/dsh-vision-pro-bridge"
       ]
     },
     {
@@ -30266,6 +30420,17 @@
       ]
     },
     {
+      "id": "WLV-ZEDD/dsh-btw",
+      "title": "WLV-ZEDD/dsh-btw",
+      "description": "Interactive Side-Assistant Dock to ask quick side questions via /btw with real-time thinking status and history pagination without interrupting the active agent loop.",
+      "category": "client",
+      "repo": "https://github.com/WLV-ZEDD/dsh-btw",
+      "install": "github:WLV-ZEDD/dsh-btw",
+      "tags": [
+        "wlv-zedd/dsh-btw"
+      ]
+    },
+    {
       "id": "wly8691-jpg/dsh-office-com",
       "title": "wly8691-jpg/dsh-office-com",
       "description": "COM-driven real Microsoft Office automation for DeepSeek Harness: drives a running Excel/Word instance through OfficeMCP — VBA macros, pivot tables, live formula recalculation, and deep document layout; plus an accounting suite (double-entry journal posting with debit/credit balance check, and SUMIF general ledger).",
@@ -33717,6 +33882,17 @@
       "install": "github:zhangjunjesse/dsh-claude-driver",
       "tags": [
         "zhangjunjesse/dsh-claude-driver"
+      ]
+    },
+    {
+      "id": "zhangliang0115/ai-plugin/tree/main/dsh-plugin",
+      "title": "zhangliang0115/ai-plugin#dsh-plugin",
+      "description": "Aipx toolkit: skills plus a Hub Console that fronts every MCP server with ~4 meta tools — server pool health, per-tool enable/disable, a tool catalog, and a search playground showing exactly what mcp_search hands the model.",
+      "category": "client",
+      "repo": "https://github.com/zhangliang0115/ai-plugin/tree/main/dsh-plugin",
+      "install": "github:zhangliang0115/ai-plugin/tree/main/dsh-plugin",
+      "tags": [
+        "zhangliang0115/ai-plugin#dsh-plugin"
       ]
     },
     {
