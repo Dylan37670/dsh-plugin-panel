@@ -18,7 +18,7 @@
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory, parseCommunityRegistry, parseAwesomeMarkdown } from '../lib/catalog.js';
+import { fetchCommunityRegistry, githubSearchPage, initialDateBuckets, splitDateBucket, mergeWithSeed, guessCategory, parseAwesomeMarkdown } from '../lib/catalog.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CATALOG_DIR = join(ROOT, 'catalog');
@@ -28,7 +28,7 @@ const CURATED_OUT = join(CATALOG_DIR, 'curated.json');
 const TOPIC = 'dsh-plugin';
 const CURATED_SOURCE = 'https://raw.githubusercontent.com/awesome-dsh-plugin/awesome-dsh-plugin/main/README.md';
 const INSTALL_REGISTRY = process.env.INSTALL_REGISTRY_URL
-  ?? 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
+  ?? 'https://awesome-dsh-plugin.com/plugins.json';
 
 const args = process.argv.slice(2);
 const reset = args.includes('--reset');
@@ -170,6 +170,11 @@ async function main() {
   await buildCurated();
   if (curatedOnly) return;
 
+  // Check the small maintained registry before spending ~13 minutes crawling
+  // GitHub. The parsed result is kept and reused when the full catalog is
+  // overlaid, so this performs only one registry request per run.
+  const installEntries = await fetchCommunityRegistry(INSTALL_REGISTRY);
+
   if (reset) {
     await rm(STATE_FILE, { force: true }).catch(() => {});
     await rm(OUT_FILE, { force: true }).catch(() => {});
@@ -245,14 +250,6 @@ async function main() {
     // Topic search discovers repositories, but cannot tell whether the root
     // is installable. Overlay exact author/community install targets (npm or
     // GitHub subpath) and leave every other candidate explicitly unverified.
-    let installEntries = [];
-    try {
-      const response = await fetch(INSTALL_REGISTRY, { headers: { 'User-Agent': 'dsh-plugin-panel-catalog' } });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      installEntries = parseCommunityRegistry(await response.json());
-    } catch (error) {
-      throw new Error(`install registry unavailable (${INSTALL_REGISTRY}): ${error instanceof Error ? error.message : String(error)}`);
-    }
     const byRoot = new Map();
     for (const candidate of installEntries) {
       const match = candidate.repo?.match(/^https:\/\/github\.com\/([^/]+\/[^/#]+)/i);

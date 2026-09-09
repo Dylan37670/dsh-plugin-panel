@@ -14,3 +14,9 @@
 3. 本文件。
 
 链接不应放入插件目录卡片、搜索结果或安装按钮附近，避免干扰用户选择和插件管理。
+
+## 目录数据来源
+
+- 精选列表来自 `awesome-dsh-plugin` 社区索引。
+- 可验证安装目标来自 `https://awesome-dsh-plugin.com/plugins.json`；上游已经停止发布旧的仓库内快照。
+- 发布前必须确认注册表非空、所有安装命令均符合单条 `dsh plugin --profile ... add ...` 格式，并在完整 GitHub Topic 抓取前完成该检查。

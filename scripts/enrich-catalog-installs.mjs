@@ -2,21 +2,19 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseCommunityRegistry } from '../lib/catalog.js';
+import { fetchCommunityRegistry } from '../lib/catalog.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const file = join(ROOT, 'catalog', 'catalog.json');
 const registryUrl = process.env.INSTALL_REGISTRY_URL
-  ?? 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
+  ?? 'https://awesome-dsh-plugin.com/plugins.json';
 
 function rootSlug(url) {
   return url?.match(/^https:\/\/github\.com\/([^/]+\/[^/#]+)/i)?.[1]?.toLowerCase();
 }
 
 const catalog = JSON.parse(await readFile(file, 'utf8'));
-const response = await fetch(registryUrl, { headers: { 'User-Agent': 'dsh-plugin-panel-catalog' } });
-if (!response.ok) throw new Error(`install registry returned HTTP ${response.status}`);
-const registry = parseCommunityRegistry(await response.json());
+const registry = await fetchCommunityRegistry(registryUrl);
 const byRoot = new Map();
 for (const candidate of registry) {
   const root = rootSlug(candidate.repo);

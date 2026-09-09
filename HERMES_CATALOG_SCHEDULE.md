@@ -6,6 +6,8 @@
 
 每 6 小时更新一次 `catalog-data` 数据分支中的 `catalog.json`（全部）和 `curated.json`（精选），供插件面板下载。不要改动插件的 `main` 分支代码或版本号。
 
+准确安装目标由工作流从 `https://awesome-dsh-plugin.com/plugins.json` 获取；不要改回已经删除的旧仓库快照地址。
+
 ## 调度时间
 
 - 时区：`Asia/Shanghai`（中国标准时间）。

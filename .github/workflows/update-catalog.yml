@@ -1,7 +1,7 @@
 name: Update full catalog
 
 on:
-  # Hermes is the hourly primary scheduler.  This is only an independent
+  # Hermes is the six-hour primary scheduler. This is only an independent
   # twice-daily fallback, so it cannot double the normal crawl volume.
   schedule:
     - cron: '47 0,12 * * *'

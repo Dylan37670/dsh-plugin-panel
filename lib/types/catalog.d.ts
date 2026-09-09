@@ -3,15 +3,15 @@
  * the result to disk, and answers snapshots over the panel's HTTP routes.
  *
  * Live sources (in order of preference):
- *  1. `remoteCatalogUrl` 鈥?a JSON catalog file `{ entries: CatalogEntry[] }`
+ *  1. `remoteCatalogUrl` — a JSON catalog file `{ entries: CatalogEntry[] }`
  *     (a published catalog anyone can host).
- *  2. The awesome-dsh-plugin README (default) 鈥?parsed with a small markdown
- *     regex over its `- [name](url) - description` bullet format.
+ *  2. The maintained awesome-dsh-plugin install registry (default).
  *
  * Every fetch result is merged with the seed so curated Chinese translations,
  * categories and install specs survive even when a live source omits them.
  */
 import type { CatalogEntry, CatalogLens, CatalogSnapshot } from './types.ts';
+export declare const DEFAULT_INSTALL_REGISTRY_URL = "https://awesome-dsh-plugin.com/plugins.json";
 export declare const DEFAULT_FULL_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json";
 /** Published alongside the full catalogue; used by the selected/curated lens. */
 export declare const DEFAULT_CURATED_CATALOG_URL = "https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/curated.json";
@@ -34,6 +34,22 @@ export declare function installSpecFromCommand(command: string | undefined): str
 export declare function parseCommunityRegistry(file: {
     plugins?: CommunityRegistryEntry[];
 }): CatalogEntry[];
+export interface CommunityRegistryFetchOptions {
+    fetchImpl?: typeof fetch;
+    attempts?: number;
+    timeoutMs?: number;
+    retryDelayMs?: number;
+    signal?: AbortSignal;
+}
+/**
+ * Download and validate the maintained install registry.
+ *
+ * A registry entry is trusted for one-click installation only when every
+ * published row has a GitHub identity and a single safe `dsh plugin ... add`
+ * command.  Rejecting the complete response prevents a partially changed or
+ * damaged upstream schema from silently removing install buttons.
+ */
+export declare function fetchCommunityRegistry(url?: string, options?: CommunityRegistryFetchOptions): Promise<CatalogEntry[]>;
 /** Parse the awesome-dsh-plugin README bullet list into entries. */
 export declare function parseAwesomeMarkdown(markdown: string): CatalogEntry[];
 /** Merge fetched entries with the curated seed (seed wins for curated fields). */
@@ -143,7 +159,7 @@ export declare class CatalogService {
      * /catalog read returns the same up-to-date list instead of a stale one.
      */
     cacheBundledCurated(): Promise<void>;
-    /** Fetch the curated remote source (default awesome README). */
+    /** Fetch the curated remote source (default maintained install registry). */
     fetchCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot>;
     /**
      * Download a prebuilt full-repo catalog.json from a remote URL (v3 refresh

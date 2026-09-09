@@ -3,10 +3,9 @@
  * the result to disk, and answers snapshots over the panel's HTTP routes.
  *
  * Live sources (in order of preference):
- *  1. `remoteCatalogUrl` 鈥?a JSON catalog file `{ entries: CatalogEntry[] }`
+ *  1. `remoteCatalogUrl` — a JSON catalog file `{ entries: CatalogEntry[] }`
  *     (a published catalog anyone can host).
- *  2. The awesome-dsh-plugin README (default) 鈥?parsed with a small markdown
- *     regex over its `- [name](url) - description` bullet format.
+ *  2. The maintained awesome-dsh-plugin install registry (default).
  *
  * Every fetch result is merged with the seed so curated Chinese translations,
  * categories and install specs survive even when a live source omits them.
@@ -33,7 +32,9 @@ interface RemoteCatalogFile {
   plugins?: CommunityRegistryEntry[];
 }
 
-const DEFAULT_INSTALL_REGISTRY_URL = 'https://raw.githubusercontent.com/dsh-market/dsh-market/main/data/registry-snapshot.json';
+export const DEFAULT_INSTALL_REGISTRY_URL = 'https://awesome-dsh-plugin.com/plugins.json';
+const INSTALL_REGISTRY_TIMEOUT_MS = 20_000;
+const INSTALL_REGISTRY_ATTEMPTS = 3;
 export const DEFAULT_FULL_CATALOG_URL = 'https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/catalog.json';
 /** Published alongside the full catalogue; used by the selected/curated lens. */
 export const DEFAULT_CURATED_CATALOG_URL = 'https://raw.githubusercontent.com/Dylan37670/dsh-plugin-panel/catalog-data/curated.json';
@@ -95,6 +96,65 @@ export function parseCommunityRegistry(file: { plugins?: CommunityRegistryEntry[
     });
   }
   return entries;
+}
+
+export interface CommunityRegistryFetchOptions {
+  fetchImpl?: typeof fetch;
+  attempts?: number;
+  timeoutMs?: number;
+  retryDelayMs?: number;
+  signal?: AbortSignal;
+}
+
+/**
+ * Download and validate the maintained install registry.
+ *
+ * A registry entry is trusted for one-click installation only when every
+ * published row has a GitHub identity and a single safe `dsh plugin ... add`
+ * command.  Rejecting the complete response prevents a partially changed or
+ * damaged upstream schema from silently removing install buttons.
+ */
+export async function fetchCommunityRegistry(
+  url = DEFAULT_INSTALL_REGISTRY_URL,
+  options: CommunityRegistryFetchOptions = {},
+): Promise<CatalogEntry[]> {
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const attempts = Math.max(1, Math.floor(options.attempts ?? INSTALL_REGISTRY_ATTEMPTS));
+  const timeoutMs = Math.max(1, Math.floor(options.timeoutMs ?? INSTALL_REGISTRY_TIMEOUT_MS));
+  const retryDelayMs = Math.max(0, Math.floor(options.retryDelayMs ?? 1_500));
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetchImpl(url, {
+        signal: options.signal ?? AbortSignal.timeout(timeoutMs),
+        headers: { 'User-Agent': 'dsh-plugin-panel-catalog' },
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const file = await response.json() as RemoteCatalogFile;
+      if (!Array.isArray(file.plugins) || file.plugins.length === 0) {
+        throw new Error('registry contains no plugins');
+      }
+      const invalidCommands = file.plugins.filter((plugin) => installSpecFromCommand(plugin.install) === undefined);
+      if (invalidCommands.length > 0) {
+        throw new Error(`registry contains ${invalidCommands.length} invalid install command(s)`);
+      }
+      const entries = parseCommunityRegistry(file);
+      if (entries.length !== file.plugins.length || entries.some((entry) => entry.installVerified !== true)) {
+        throw new Error('registry contains invalid plugin identities');
+      }
+      return entries;
+    } catch (error) {
+      lastError = error;
+      if (options.signal?.aborted) throw error;
+      if (attempt < attempts && retryDelayMs > 0) {
+        await new Promise((resolve) => setTimeout(resolve, retryDelayMs * attempt));
+      }
+    }
+  }
+
+  const reason = lastError instanceof Error ? lastError.message : String(lastError);
+  throw new Error(`install registry unavailable after ${attempts} attempt(s): ${reason}`);
 }
 
 /** Parse the awesome-dsh-plugin README bullet list into entries. */
@@ -561,7 +621,7 @@ export class CatalogService {
     // v6.13: curated priority = fresh cache → bundled curated index → stale
     // cache → seed. A cache wins only when it is a full download (partial
     // === false) or newer than the bundled index; a stale legacy cache (e.g.
-    // the old 849-entry registry snapshot) must never shadow the bundled 1399.
+    // an old partial registry cache) must never shadow the bundled index.
     const bundled = await this.readBundledCurated();
     if (cache) {
       const bundledAt = bundled?.generatedAt;
@@ -589,19 +649,23 @@ export class CatalogService {
     this.cached.set('curated', snapshot);
   }
 
-  /** Fetch the curated remote source (default awesome README). */
+  /** Fetch the curated remote source (default maintained install registry). */
   async fetchCurated(remoteUrl: string, signal?: AbortSignal): Promise<CatalogSnapshot> {
-    const url = remoteUrl.trim() || DEFAULT_INSTALL_REGISTRY_URL;
-    const response = await fetch(url, { signal, headers: { 'User-Agent': 'dsh-plugin-panel' } });
-    if (!response.ok) throw new Error(`catalog fetch failed: HTTP ${response.status} from ${url}`);
-    const text = await response.text();
     let fetched: CatalogEntry[];
-    const isJson = url.endsWith('.json') || text.trimStart().startsWith('{');
-    if (isJson) {
-      const file = JSON.parse(text) as RemoteCatalogFile;
-      fetched = file.entries ?? parseCommunityRegistry(file);
+    const configuredUrl = remoteUrl.trim();
+    if (configuredUrl === '') {
+      fetched = await fetchCommunityRegistry(DEFAULT_INSTALL_REGISTRY_URL, { signal });
     } else {
-      fetched = parseAwesomeMarkdown(text);
+      const response = await fetch(configuredUrl, { signal, headers: { 'User-Agent': 'dsh-plugin-panel' } });
+      if (!response.ok) throw new Error(`catalog fetch failed: HTTP ${response.status} from ${configuredUrl}`);
+      const text = await response.text();
+      const isJson = configuredUrl.endsWith('.json') || text.trimStart().startsWith('{');
+      if (isJson) {
+        const file = JSON.parse(text) as RemoteCatalogFile;
+        fetched = file.entries ?? parseCommunityRegistry(file);
+      } else {
+        fetched = parseAwesomeMarkdown(text);
+      }
     }
     if (fetched.length === 0) throw new Error('catalog fetch returned no entries');
     const merged = mergeWithSeed(fetched);
