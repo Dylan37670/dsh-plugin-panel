@@ -1,21 +1,23 @@
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { detectInstalled, readManualRegistrations } from '../src/installed.ts';
 import { installPlugin, uninstallPlugin, updateTarget } from '../src/lifecycle.ts';
-import { installSpecFromCommand, parseCommunityRegistry } from '../src/catalog.ts';
+import { fetchCommunityRegistry, installSpecFromCommand, parseCommunityRegistry } from '../src/catalog.ts';
 
 describe('v6.10 accurate install metadata', () => {
+  const plugin = {
+    name: 'dsh-web-ui-all',
+    owner: 'zhu1090093659',
+    url: 'https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-web-ui-all',
+    npm: '@linxin666/dsh-web-ui-all',
+    install: 'dsh plugin --profile web add @linxin666/dsh-web-ui-all',
+    description: { en: 'UI collection' },
+  };
+
   it('uses the registered npm aggregate instead of a repository workspace root', () => {
-    const entries = parseCommunityRegistry({ plugins: [{
-      name: 'dsh-web-ui-all',
-      owner: 'zhu1090093659',
-      url: 'https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-web-ui-all',
-      npm: '@linxin666/dsh-web-ui-all',
-      install: 'dsh plugin --profile web add @linxin666/dsh-web-ui-all',
-      description: { en: 'UI collection' },
-    }] });
+    const entries = parseCommunityRegistry({ plugins: [plugin] });
     expect(entries[0]).toMatchObject({ install: '@linxin666/dsh-web-ui-all', installVerified: true, installSource: 'community' });
   });
 
@@ -23,6 +25,54 @@ describe('v6.10 accurate install metadata', () => {
     expect(installSpecFromCommand('dsh plugin --profile web add github:a/b')).toBe('github:a/b');
     expect(installSpecFromCommand('dsh plugin --profile web add x; echo bad')).toBeUndefined();
     expect(installSpecFromCommand('npm install something')).toBeUndefined();
+  });
+
+  it('accepts the current official plugins.json shape', async () => {
+    const fetchImpl = vi.fn(async () => new Response(JSON.stringify({ count: 1, plugins: [plugin] })));
+    const entries = await fetchCommunityRegistry('https://catalog.test/plugins.json', {
+      fetchImpl: fetchImpl as typeof fetch,
+      attempts: 1,
+    });
+    expect(entries).toHaveLength(1);
+    expect(entries[0]).toMatchObject({ installVerified: true, npm: '@linxin666/dsh-web-ui-all' });
+  });
+
+  it('retries a transient registry failure and then succeeds', async () => {
+    const fetchImpl = vi.fn(async () => {
+      if (fetchImpl.mock.calls.length < 3) throw new Error('temporary network failure');
+      return new Response(JSON.stringify({ plugins: [plugin] }));
+    });
+    const entries = await fetchCommunityRegistry('https://catalog.test/plugins.json', {
+      fetchImpl: fetchImpl as typeof fetch,
+      attempts: 3,
+      retryDelayMs: 0,
+    });
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(entries).toHaveLength(1);
+  });
+
+  it('rejects empty and damaged registry documents', async () => {
+    const empty = vi.fn(async () => new Response(JSON.stringify({ plugins: [] })));
+    await expect(fetchCommunityRegistry('https://catalog.test/plugins.json', {
+      fetchImpl: empty as typeof fetch,
+      attempts: 1,
+    })).rejects.toThrow('registry contains no plugins');
+
+    const damaged = vi.fn(async () => new Response('{'));
+    await expect(fetchCommunityRegistry('https://catalog.test/plugins.json', {
+      fetchImpl: damaged as typeof fetch,
+      attempts: 1,
+    })).rejects.toThrow('install registry unavailable');
+  });
+
+  it('rejects a registry containing an unsafe install command', async () => {
+    const fetchImpl = vi.fn(async () => new Response(JSON.stringify({
+      plugins: [{ ...plugin, install: 'dsh plugin --profile web add safe; echo bad' }],
+    })));
+    await expect(fetchCommunityRegistry('https://catalog.test/plugins.json', {
+      fetchImpl: fetchImpl as typeof fetch,
+      attempts: 1,
+    })).rejects.toThrow('invalid install command');
   });
 });
 

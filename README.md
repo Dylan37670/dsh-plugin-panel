@@ -2,7 +2,7 @@
 
 DSH 社区插件市场面板 —— 在 DeepSeek Harness Web GUI 的**侧边栏底部**提供入口，点击打开**右侧抽屉**：浏览/搜索社区插件、Skill、客户端 UI 与开发资源，支持中文翻译、收藏与已安装管理，并通过官方 `dsh plugin` 命令完成安装 / 更新 / 卸载（含确认、备份与失败回滚）。
 
-> **版本 v0.6.16**：面板自更新遇到网络/GitHub/pnpm 拉取类临时失败时自动重试一次；失败记录改为保留安全的错误类别（网络、pnpm 策略或校验），不保存原始命令输出、API Key 或令牌。
+> **版本 v0.6.17**：目录安装信息改用 `awesome-dsh-plugin.com/plugins.json` 官方公开源；下载会限时重试并严格校验，完整目录任务会在 GitHub 全量抓取前先检查数据源，避免长时间运行后才失败。
 >
 > **版本 v0.6.15**：设置区新增「作者 / 教程 / 反馈」入口，提供抖音与 B站主页；用于查看教程及反馈插件问题。
 >
@@ -183,7 +183,7 @@ v2 在隔离 DSH 实例（端口 3081）与真实 web profile 双重验证：
 
 ## 致谢 / Credits
 
-- 目录数据来源：[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（社区精选列表）、[dsh-market registry snapshot](https://github.com/dsh-market/dsh-market/blob/main/data/registry-snapshot.json)（准确安装目标）与 [omdsh-dev](https://github.com/omdsh-dev) 组织仓库的 README 描述。这里只读取并标注数据来源，不复制其他市场的实现代码。
+- 目录数据来源：[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)（社区精选列表）、[awesome-dsh-plugin.com/plugins.json](https://awesome-dsh-plugin.com/plugins.json)（准确安装目标）与 [omdsh-dev](https://github.com/omdsh-dev) 组织仓库的 README 描述。这里只读取并标注数据来源，不复制其他市场的实现代码。
 - 参考了同类项目的优秀思路（未复制代码）：[dsh-market](https://github.com/dsh-market/dsh-market)（一键安装/更新/卸载、重启提示、pnpm 自检）、[dsh-store](https://github.com/huguangyu666/dsh-store)（npm+awesome 双源目录、官方命令安装）、[dsh-plugin-workshop](https://github.com/yyyyukari/dsh-plugin-workshop)（中文关键词映射、双语描述）、[dsh-plugin-manager](https://github.com/Jesse-njx/dsh-plugin-manager)（多源搜索、doctor 审计）、[dsh-webui-market-plugin](https://github.com/Sanqi-normal/dsh-webui-market-plugin)。UI 采用侧边栏入口 + 抽屉的交互形态是原创设计。
 - DSH 平台机制参考：[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 官方仓库与 [dsh-plugin-dev](https://github.com/omdsh-dev/dsh-plugin-dev) 开发档案。
 

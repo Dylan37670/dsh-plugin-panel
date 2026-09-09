@@ -135,7 +135,7 @@ export interface PanelState {
   settings: {
     /** Target profile for install/update/uninstall commands. */
     profile: string;
-    /** Optional remote catalog JSON URL ('' = awesome-dsh-plugin README). */
+    /** Optional remote catalog JSON URL ('' = maintained community registry). */
     remoteCatalogUrl: string;
     /** Language of descriptions the client prefers ('zh' | 'en' | 'auto'). */
     descriptionLang: 'zh' | 'en' | 'auto';
