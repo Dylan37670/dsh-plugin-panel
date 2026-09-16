@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-16T16:18:12.274Z",
-    "fetchedCount": 3722,
-    "count": 3735,
+    "generatedAt": "2026-09-16T17:16:59.011Z",
+    "fetchedCount": 3727,
+    "count": 3740,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -3583,6 +3583,28 @@
       ]
     },
     {
+      "id": "apex-mochen/dsh-reasoning-only-guard",
+      "title": "apex-mochen/dsh-reasoning-only-guard",
+      "description": "Keeps one reasoning-only turn from making an entire session unusable. When a turn produces no visible text and no tool call, the assistant message is persisted empty, the gateway then rejects every later request in that session with 'content or tool_calls must be set', and the session is dead with no way back through chat. This plugin registers a single llm/stream waterfall listener and, only when the turn carried nothing visible, injects a small text block immediately before the terminal finish, so the persisted message is never empty. Ships the fixture DSH's own mock cannot express (a strictly reasoning-only SSE server, since llm-mock-server forbids an empty successText and always appends text after reasoning), plus an end-to-end reproduction that replays a real persisted session through DSH's own serializeMessages. Preventive, not a repair. Zero dependencies, one file, no process or filesystem access.",
+      "category": "plugin",
+      "repo": "https://github.com/apex-mochen/dsh-reasoning-only-guard",
+      "install": "github:apex-mochen/dsh-reasoning-only-guard",
+      "tags": [
+        "apex-mochen/dsh-reasoning-only-guard"
+      ]
+    },
+    {
+      "id": "apex-mochen/dsh-todo-continuity",
+      "title": "apex-mochen/dsh-todo-continuity",
+      "description": "Keeps an unfinished task list visible across turns. DSH clears the todos projection at the start of every turn and expects the model to rewrite the whole list, so when a turn is interrupted the plan is durably in the session log but permanently gone from the UI — and todo_write is write-only, so neither the user nor the model can read it back. This plugin registers one ordinary session/event listener, remembers the last list per session, and when a turn/start arrives whose remembered list still has unfinished work, re-appends that list so the projection stops reporting an empty plan. No fork of tool-todo and no waterfall: a plugin cannot replace the projection (the registry throws on a stateVersion mismatch), so appending the event the fold reacts to is the reachable seam. Deliberately narrow — only unfinished lists, at most one event per turn start, fails open. Verified by a controlled A/B on real sessions: identical runs differing only in whether the plugin was installed, folded through the real projection definition. Zero dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/apex-mochen/dsh-todo-continuity",
+      "install": "github:apex-mochen/dsh-todo-continuity",
+      "tags": [
+        "apex-mochen/dsh-todo-continuity"
+      ]
+    },
+    {
       "id": "apheli0os/deepseek-harness-orchestrate",
       "title": "apheli0os/deepseek-harness-orchestrate",
       "description": "Declarative task-DAG orchestration for DSH: validates dependency graphs, runs topological task layers in parallel through workflow-backed subagents, and propagates failures deterministically.",
@@ -7062,6 +7084,17 @@
       "install": "github:corrinehu/dsh-workbuddy-connect",
       "tags": [
         "corrinehu/dsh-workbuddy-connect"
+      ]
+    },
+    {
+      "id": "CosmerHomura/dsh-yoimiya-theme",
+      "title": "CosmerHomura/dsh-yoimiya-theme",
+      "description": "Genshin Impact Yoimiya theme: two hand-tuned palettes, a procedural fireworks particle layer, and a local music player that reads your own files — songs and covers are never uploaded. Warm syntax colors and a hand-drawn goldfish brand mark; apart from the wallpaper every pixel is CSS gradients and hand-written SVG.",
+      "category": "client",
+      "repo": "https://github.com/CosmerHomura/dsh-yoimiya-theme",
+      "install": "github:CosmerHomura/dsh-yoimiya-theme",
+      "tags": [
+        "cosmerhomura/dsh-yoimiya-theme"
       ]
     },
     {
@@ -41054,6 +41087,28 @@
       "install": "github:zmh2000829/dsh-web-search-multi",
       "tags": [
         "zmh2000829/dsh-web-search-multi"
+      ]
+    },
+    {
+      "id": "zmm863-commits/dsh-agnes-studio",
+      "title": "zmm863-commits/dsh-agnes-studio",
+      "description": "AI image and video studio as a floating DSH panel, so creation runs alongside the conversation instead of replacing it: text-to-image, image-to-image and multi-image composition at 1K-4K across eight aspect ratios; text-to-video and image-to-video with first-frame control at 4-12 seconds; short-drama mode that imports a script (.txt/.md/.json), breaks it into storyboard shots for preview and batch generation; and a prompt-expert workspace. Zero runtime dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/zmm863-commits/dsh-agnes-studio",
+      "install": "github:zmm863-commits/dsh-agnes-studio",
+      "tags": [
+        "zmm863-commits/dsh-agnes-studio"
+      ]
+    },
+    {
+      "id": "zmm863-commits/dsh-client-ui-paopaocat",
+      "title": "zmm863-commits/dsh-client-ui-paopaocat",
+      "description": "Fantasy glassmorphism skin for the DSH Web UI: a moonlit nether-forest scene with drifting teal clouds, red spider lilies spreading from the lower-left and a sleeping cat in the corner, drawn over a WebGL2 fluid background with its own wallpaper and video backgrounds. Ships two switchable variants (pale / saturated blue), three bundled background tracks plus uploads kept in local IndexedDB, and cat-paw, fish, bubble and starlight decorations. One switch restores the stock interface exactly.",
+      "category": "client",
+      "repo": "https://github.com/zmm863-commits/dsh-client-ui-paopaocat",
+      "install": "github:zmm863-commits/dsh-client-ui-paopaocat",
+      "tags": [
+        "zmm863-commits/dsh-client-ui-paopaocat"
       ]
     },
     {
