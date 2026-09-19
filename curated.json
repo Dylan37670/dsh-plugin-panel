@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-18T22:18:12.896Z",
-    "fetchedCount": 3931,
-    "count": 3944,
+    "generatedAt": "2026-09-19T04:18:30.910Z",
+    "fetchedCount": 3933,
+    "count": 3946,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -5057,7 +5057,7 @@
     {
       "id": "Binaryinject/dsh-review-checkout",
       "title": "Binaryinject/dsh-review-checkout",
-      "description": "Codex-style review of session file changes: one card per edit turn (click a file to jump into that turn), a review tab with switchable split/card views (persisted across restarts), sticky headers and turn-scoped syntax-highlighted diffs, a live pill/badge that follows the in-flight turn, 12 fully-wired color settings with light/dark presets that follow the DSH theme live, one-click per-turn revert via a built-in tool (works on DSH Desktop too) that fills the revert instruction into the composer, workspace-relative paths and a resilient multi-stage session-history fallback chain (cold-boot channel attach) for the current DSH session API.",
+      "description": "Codex-style review of session file changes: per-turn cards (optionally taking over the shell edited cards), a review tab with syntax-highlighted diffs, real line numbers, open-at-line and a draggable split, light/dark presets that follow the DSH theme, and one-click per-turn revert — powered by the official session channel.",
       "category": "plugin",
       "repo": "https://github.com/Binaryinject/dsh-review-checkout",
       "install": "github:Binaryinject/dsh-review-checkout",
@@ -7384,14 +7384,14 @@
       ]
     },
     {
-      "id": "Coprexist/AIsChat/tree/main/dsh-aischat",
-      "title": "Coprexist/AIsChat#dsh-aischat",
-      "description": "Embeds the AIsChat social-agent platform into the DSH web UI as a native sidebar board — contact panel, real-time chat over a same-origin HTTP/WS proxy, and Markdown/LaTeX rendering. The plugin is the front end only; it proxies to an AIsChat backend you run yourself (default http://127.0.0.1:5228, from the same repository).",
+      "id": "Coprexist/Copree/tree/main/dsh-copree",
+      "title": "Coprexist/Copree#dsh-copree",
+      "description": "Embeds Copree (formerly AIsChat) into the DSH web UI as a native sidebar board. Copree is an open-source framework for AI group chat and programmable worlds: the AIs are residents, not tools — each has its own memory, state and personality, they talk to each other on their own, and you can watch or join in. Group World goes further: every group chat can bind a living world (its own web page + world AI + code + clock) that the world AI builds and edits through DSH workspace tools. This plugin ships the native sidebar board (contacts, pinned DMs and groups), real-time chat over a same-origin HTTP/WS proxy, Markdown/LaTeX rendering, group invites and image messages, immersive full-frame pages, and one-click mirroring of your worlds into DSH workspaces (folder + DSH session + world_* tools). Front end only: it proxies to a Copree backend you run yourself (default 127.0.0.1:5228, same repository).",
       "category": "client",
-      "repo": "https://github.com/Coprexist/AIsChat/tree/main/dsh-aischat",
-      "install": "github:Coprexist/AIsChat/tree/main/dsh-aischat",
+      "repo": "https://github.com/Coprexist/Copree/tree/main/dsh-copree",
+      "install": "github:Coprexist/Copree/tree/main/dsh-copree",
       "tags": [
-        "coprexist/aischat#dsh-aischat"
+        "coprexist/copree#dsh-copree"
       ]
     },
     {
@@ -20935,7 +20935,7 @@
     {
       "id": "lemonxiny55/dsh-composition-doctor",
       "title": "lemonxiny55/dsh-composition-doctor",
-      "description": "Read-only DSH and Cordis composition diagnostics, snapshots, diffs, and upgrade preflight.",
+      "description": "Read-only DSH/Cordis composition doctor for plugin conflicts and upgrade rehearsal: scan profile manifests and patches, find duplicate rows, hook-order and UI ownership conflicts, compare redacted snapshots, diff plugin/row/hook changes, and preflight target DSH releases with explicit evidence boundaries — without mutating a real profile.",
       "category": "plugin",
       "repo": "https://github.com/lemonxiny55/dsh-composition-doctor",
       "install": "github:lemonxiny55/dsh-composition-doctor",
@@ -30303,6 +30303,17 @@
       ]
     },
     {
+      "id": "rebron1900/dsh-web-search-9router",
+      "title": "rebron1900/dsh-web-search-9router",
+      "description": "9router-backed web search + fetch providers for DeepSeek Harness (ctx.web). Wires the native web_search/web_fetch tools to 9router's /v1/search and /v1/web/fetch endpoints.",
+      "category": "plugin",
+      "repo": "https://github.com/rebron1900/dsh-web-search-9router",
+      "install": "github:rebron1900/dsh-web-search-9router",
+      "tags": [
+        "rebron1900/dsh-web-search-9router"
+      ]
+    },
+    {
       "id": "recoluan/recowork/tree/main/packages/recowork-dsh",
       "title": "recoluan/recowork#recowork-dsh",
       "description": "Creates and inspects RecoWork local-agent-project workspaces through two bounded DSH tools and a web workspace card.",
@@ -31900,7 +31911,7 @@
     {
       "id": "shengyvself/dsh-reading-pad",
       "title": "shengyvself/dsh-reading-pad",
-      "description": "Immersive read-only reading panel for DeepSeek Harness. The model delivers pre-formatted Markdown via the `reading_pad_send` tool into a better-sidebar tab: three low-blue-light themes (Paper/Sepia/Night), 30em measure typography, A-/A+ font sizing, scroll-position persistence, and read-only chapter browsing of the current writing project. Rendering is a dependency-free front-end M1 Markdown subset (GFM tables; all HTML escaped; URL scheme whitelist). Requires the DSH-better-sidebar host; the manuscript source additionally needs the writing workspace channel.",
+      "description": "Immersive read-only reading panel for DSH — the model delivers pre-formatted Markdown to a native right-sidebar tab via `reading_pad_send`, with three low-blue-light themes and 30em measure typography; also browse manuscript chapters read-only.",
       "category": "client",
       "repo": "https://github.com/shengyvself/dsh-reading-pad",
       "install": "github:shengyvself/dsh-reading-pad",
@@ -31911,7 +31922,7 @@
     {
       "id": "shengyvself/narrative-prompt-polish",
       "title": "shengyvself/narrative-prompt-polish",
-      "description": "One-click prompt polisher for the DSH composer: a ✨ button next to the message box opens a side-chat where an agent refines your rough draft over multiple turns, then you copy the result back. Replays the session prefix to hit the prompt cache, with a full → partial → none fallback for oversized or non-live sessions, per-call JSONL tracing, and a trust fence plus CAS write-back that refuses to overwrite a draft changed since the request. Requires omdsh-dev/DSH-better-sidebar (>=0.16.1); errors explicitly if it is missing rather than failing silently.",
+      "description": "✨ One-click prompt polisher for the DSH composer — an agent refines your rough draft in a side chat over multiple turns, and you copy the result back when you're happy.",
       "category": "plugin",
       "repo": "https://github.com/shengyvself/narrative-prompt-polish",
       "install": "github:shengyvself/narrative-prompt-polish",
@@ -39745,6 +39756,17 @@
       "install": "github:XINY11451/dsh-wsl",
       "tags": [
         "xiny11451/dsh-wsl"
+      ]
+    },
+    {
+      "id": "xinyang920/dsh-caps-beacon",
+      "title": "xinyang920/dsh-caps-beacon",
+      "description": "Turns the MacBook keyboard Caps Lock light into an agent status light: on while the agent works, flashing when it waits for your approval or answer, off when idle.",
+      "category": "plugin",
+      "repo": "https://github.com/xinyang920/dsh-caps-beacon",
+      "install": "github:xinyang920/dsh-caps-beacon",
+      "tags": [
+        "xinyang920/dsh-caps-beacon"
       ]
     },
     {
