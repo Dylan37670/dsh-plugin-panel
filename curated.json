@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-21T22:18:21.516Z",
-    "fetchedCount": 4110,
-    "count": 4123,
+    "generatedAt": "2026-09-22T04:18:41.058Z",
+    "fetchedCount": 4125,
+    "count": 4138,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -5627,6 +5627,61 @@
       ]
     },
     {
+      "id": "BOWLUNA/dsh-zcode-breaker",
+      "title": "BOWLUNA/dsh-zcode-breaker",
+      "description": "Rapid-refill circuit breaker for DeepSeek Harness automatic compaction. It refuses a compaction that would be futile — the context refilled within fewer than N tool turns M times in a row, which the unbounded step-pressure trigger cannot detect — and instead of burning a summarization call on every step it reports the situation with advice, usually that a single read or tool output was too large. Shows state and re-arms through /compaction-breaker, and injects one prompt section so the model relays it to the user. Covers host-plane sessions through its profile bundle; ordinary sessions need one row replaced inside an agent preset.",
+      "category": "plugin",
+      "repo": "https://github.com/BOWLUNA/dsh-zcode-breaker",
+      "install": "github:BOWLUNA/dsh-zcode-breaker",
+      "tags": [
+        "bowluna/dsh-zcode-breaker"
+      ]
+    },
+    {
+      "id": "BOWLUNA/dsh-zcode-farm",
+      "title": "BOWLUNA/dsh-zcode-farm",
+      "description": "Multi-instance ComfyUI orchestration: probes every configured ComfyUI endpoint for its GPU, free VRAM and queue depth, then dispatches a generation job to the idlest eligible instance. Ships three tools (comfyui_farm_status, comfyui_farm_pick, comfyui_farm_run). An instance is eligible only if it is reachable, has at least the requested free VRAM, and its queue is no deeper than the configured ceiling; eligible instances are ranked by free VRAM minus queue depth times a weight, so an idle shallow queue wins over a busy large one. Zero runtime dependencies. Optional retry on probe failure, because a single timeout across an SSH tunnel is not proof that an instance is down.",
+      "category": "plugin",
+      "repo": "https://github.com/BOWLUNA/dsh-zcode-farm",
+      "install": "github:BOWLUNA/dsh-zcode-farm",
+      "tags": [
+        "bowluna/dsh-zcode-farm"
+      ]
+    },
+    {
+      "id": "BOWLUNA/dsh-zcode-git",
+      "title": "BOWLUNA/dsh-zcode-git",
+      "description": "Structured git tools for DeepSeek Harness agents: status, diff, log, branch, commit and stash. Output is pinned with ten `git -c` overrides so a user pager, colour or quotepath setting cannot reshape what the agent reads; every invocation is an argv array, so no shell ever parses an argument; and the mutating actions go through the harness approval service, refusing rather than proceeding when no approval service is mounted.",
+      "category": "plugin",
+      "repo": "https://github.com/BOWLUNA/dsh-zcode-git",
+      "install": "github:BOWLUNA/dsh-zcode-git",
+      "tags": [
+        "bowluna/dsh-zcode-git"
+      ]
+    },
+    {
+      "id": "BOWLUNA/dsh-zcode-rewind",
+      "title": "BOWLUNA/dsh-zcode-rewind",
+      "description": "Workspace checkpoints per tool call: records every file mutation inside the workspace (excluding .git and node_modules by default), including changes made by shell commands rather than by write/edit, and stores the previous content of each changed path in a content-addressed store kept outside the workspace. Restores have two modes — undo one record, or return to a point in time — with a line-level diff preview, a dry run by default, and a rescue record written before every restore so the restore itself can be undone.",
+      "category": "plugin",
+      "repo": "https://github.com/BOWLUNA/dsh-zcode-rewind",
+      "install": "github:BOWLUNA/dsh-zcode-rewind",
+      "tags": [
+        "bowluna/dsh-zcode-rewind"
+      ]
+    },
+    {
+      "id": "BOWLUNA/dsh-zcode-scribe",
+      "title": "BOWLUNA/dsh-zcode-scribe",
+      "description": "Long-term memory for DeepSeek Harness, read-only as of 0.1.0: a scribe_recall tool that reads a plain-markdown memory room, path rules that refuse directory traversal, Unicode smuggling and NTFS alternate data streams, and a bounded index whose truncation is always reported rather than silent.",
+      "category": "plugin",
+      "repo": "https://github.com/BOWLUNA/dsh-zcode-scribe",
+      "install": "github:BOWLUNA/dsh-zcode-scribe",
+      "tags": [
+        "bowluna/dsh-zcode-scribe"
+      ]
+    },
+    {
       "id": "bpc-oss/chrome-faithful/tree/main/packages/dsh-plugin-chrome-faithful",
       "title": "bpc-oss/chrome-faithful#dsh-plugin-chrome-faithful",
       "description": "Exact-profile control of your real logged-in Chrome browser: an MCP server plus MV3 extension and authenticated localhost bridge for tabs, locators, file injection, media export, and durable scroll capture, with no debug profile or remote-debugging port.",
@@ -8624,6 +8679,17 @@
       "install": "github:ddbj-hub/dsh-wallpaper-skin",
       "tags": [
         "ddbj-hub/dsh-wallpaper-skin"
+      ]
+    },
+    {
+      "id": "DDDMUC/dsh-delete-turn",
+      "title": "DDDMUC/dsh-delete-turn",
+      "description": "Per-message delete for DSH: remove a user message, one reply step, or a whole assistant reply from the derived model context through the official surface-replace contract, and hide it from the visible transcript without rewriting the append-only log.",
+      "category": "plugin",
+      "repo": "https://github.com/DDDMUC/dsh-delete-turn",
+      "install": "github:DDDMUC/dsh-delete-turn",
+      "tags": [
+        "dddmuc/dsh-delete-turn"
       ]
     },
     {
@@ -14292,6 +14358,17 @@
       ]
     },
     {
+      "id": "gorban/dsh-job-stop",
+      "title": "gorban/dsh-job-stop",
+      "description": "Stop a running background job from the session-header job list, with a confirmation dialog that restates the full command.",
+      "category": "client",
+      "repo": "https://github.com/gorban/dsh-job-stop",
+      "install": "github:gorban/dsh-job-stop",
+      "tags": [
+        "gorban/dsh-job-stop"
+      ]
+    },
+    {
       "id": "GOU-GEE/deepseek-vision/tree/main/plugins/dsh-plugin-deepseek-vision",
       "title": "GOU-GEE/deepseek-vision#plugins/dsh-plugin-deepseek-vision",
       "description": "Vision MCP and DSH bundle for text-only DeepSeek: analyze_image, analyze_clipboard, compare_images and vision_status tools, a visual settings page, free GLM-4.6V-Flash by default, result caching and rate-limit tolerance; keys stay out of logs.",
@@ -15826,6 +15903,17 @@
       "install": "github:honlnk/dsh-input-assist",
       "tags": [
         "honlnk/dsh-input-assist"
+      ]
+    },
+    {
+      "id": "HorusJiang/dsh-jev-tools",
+      "title": "HorusJiang/dsh-jev-tools",
+      "description": "DeepSeek Harness plugin that turns Jev judgments into three automatic actions — pruning oversized tool output to the segments relevant to the request, screening fetched pages for instructions aimed at the model, and picking which skill fits the next step — plus the jev_ask and jev_gate tools, a judgment ledger that survives restarts, and a /jev-status report. Needs a TypeSafe API key; without one it is inert and sends nothing.",
+      "category": "plugin",
+      "repo": "https://github.com/HorusJiang/dsh-jev-tools",
+      "install": "github:HorusJiang/dsh-jev-tools",
+      "tags": [
+        "horusjiang/dsh-jev-tools"
       ]
     },
     {
@@ -26233,6 +26321,17 @@
       ]
     },
     {
+      "id": "MistyRain-field/dsh-hu-tao-skin",
+      "title": "MistyRain-field/dsh-hu-tao-skin",
+      "description": "A Genshin Impact Hu Tao (Wangsheng Funeral Parlor) skin for the dsh web GUI - a 13-token ink-black, crimson and amber palette, falling plum petals and spirit butterflies, a plum-blossom brand mark, and a floating petal toggle that tracks the sidebar.",
+      "category": "client",
+      "repo": "https://github.com/MistyRain-field/dsh-hu-tao-skin",
+      "install": "github:MistyRain-field/dsh-hu-tao-skin",
+      "tags": [
+        "mistyrain-field/dsh-hu-tao-skin"
+      ]
+    },
+    {
       "id": "MitterMeierGithub/dsh-darksoft-theme",
       "title": "MitterMeierGithub/dsh-darksoft-theme",
       "description": "Dark theme plugin for dsh web (port of Obsidian things-soft-colorful-headings): warm-gray dimmed text via --dsw-alias-label-* token overrides plus soft colorful h1-h6 headings, zero dependencies.",
@@ -28397,6 +28496,17 @@
       "install": "github:Okkay712/DSH-dseyes",
       "tags": [
         "okkay712/dsh-dseyes"
+      ]
+    },
+    {
+      "id": "olimc2016/dsh-token-meter-panel",
+      "title": "olimc2016/dsh-token-meter-panel",
+      "description": "Adds a sidebar panel to the DeepSeek Harness web UI that reports token usage and cost, with today's spend, budget progress, 7-day and 30-day trends, a cost breakdown, cache-hit savings, and a per-session breakdown.",
+      "category": "plugin",
+      "repo": "https://github.com/olimc2016/dsh-token-meter-panel",
+      "install": "github:olimc2016/dsh-token-meter-panel",
+      "tags": [
+        "olimc2016/dsh-token-meter-panel"
       ]
     },
     {
@@ -33130,6 +33240,17 @@
       ]
     },
     {
+      "id": "Shaky77/KISS_Law-DSH",
+      "title": "Shaky77/KISS_Law-DSH",
+      "description": "English edition of Weiwen's Law (KISS's Law): the first and only domain-agnostic white-box causal adjudication middleware for AI agents. Unlike domain-specific causal-inference tooling (statistics/economics/ML) or evidence-gated agent firewalls, it adjudicates *every* tool call along a deterministic structural causal chain (R->S->D->H->M) before execution - across any domain, with no training or per-domain tuning. It blocks destructive and credential-file operations, escalates repeated boundary violations, cuts faulting links until verified-fixed, and gives risk verdicts on un-auditable execution; runs fully local with zero API cost.",
+      "category": "plugin",
+      "repo": "https://github.com/Shaky77/KISS_Law-DSH",
+      "install": "github:Shaky77/KISS_Law-DSH",
+      "tags": [
+        "shaky77/kiss_law-dsh"
+      ]
+    },
+    {
       "id": "Shaky77/weiwen-law-dsh",
       "title": "Shaky77/weiwen-law-dsh",
       "description": "White-box causal guardrail for dsh: every tool call is adjudicated before execution along a deterministic causal logic chain — blocks destructive and credential-file operations, escalates repeated boundary violations, cuts faulting links until verified-fixed, and gives risk verdicts on un-auditable execution; runs fully local with zero API cost, plus 6 white-box self-check tools.",
@@ -34018,6 +34139,17 @@
       "install": "github:slow-stack/dsh-mneme/tree/main/dsh-mneme",
       "tags": [
         "slow-stack/dsh-mneme#dsh-mneme"
+      ]
+    },
+    {
+      "id": "slow-stack/euthyna",
+      "title": "slow-stack/euthyna",
+      "description": "Security-audit facts AI coding agents cannot compute, plus a verdict gate: euthyna history attributes deleted lines to commits and flags those from security fixes (--origins finds the first introducer), euthyna coverage reports which changed symbols no test ever invoked, and euthyna gate checks each finding against six gates, downgrading any without evidence to an observation.",
+      "category": "plugin",
+      "repo": "https://github.com/slow-stack/euthyna",
+      "install": "github:slow-stack/euthyna",
+      "tags": [
+        "slow-stack/euthyna"
       ]
     },
     {
@@ -36085,6 +36217,17 @@
       ]
     },
     {
+      "id": "thissensen/dsh-agent-studio",
+      "title": "thissensen/dsh-agent-studio",
+      "description": "Visually configure an agent's prompt, tools, visible skills, subagents and fallback models, and assemble several of them into a team. It never writes or edits any host preset file.",
+      "category": "plugin",
+      "repo": "https://github.com/thissensen/dsh-agent-studio",
+      "install": "github:thissensen/dsh-agent-studio",
+      "tags": [
+        "thissensen/dsh-agent-studio"
+      ]
+    },
+    {
       "id": "thomasvvugt/dsh-kanban-flow",
       "title": "thomasvvugt/dsh-kanban-flow",
       "description": "Agent-driven kanban board: one board per workspace, per-task agent sessions, and a guarded human/agent workflow (Backlog → To Do → In Progress → Review → Done).",
@@ -37515,6 +37658,17 @@
       ]
     },
     {
+      "id": "Vergil-long/dsh-email-notify",
+      "title": "Vergil-long/dsh-email-notify",
+      "description": "Email notifications for DSH with an away-mode switch: mails you when a turn ends, a tool waits for approval, or the assistant asks a question. Title and body are editable templates.",
+      "category": "plugin",
+      "repo": "https://github.com/Vergil-long/dsh-email-notify",
+      "install": "github:Vergil-long/dsh-email-notify",
+      "tags": [
+        "vergil-long/dsh-email-notify"
+      ]
+    },
+    {
       "id": "Vesna-Strivozha/DSH-LLM-wiki-plugin/tree/main/packages/dsh-llm-wiki",
       "title": "Vesna-Strivozha/DSH-LLM-wiki-plugin#dsh-llm-wiki",
       "description": "An Obsidian-style knowledge base: ingest sources, let the LLM build and maintain an interlinked wiki, and ask questions grounded in it.",
@@ -37798,6 +37952,17 @@
       "install": "github:Vncntvx/dsh-zotero",
       "tags": [
         "vncntvx/dsh-zotero"
+      ]
+    },
+    {
+      "id": "Voellin/dsh-deephub-share/tree/main/packages/dsh-deephub-share",
+      "title": "Voellin/dsh-deephub-share#dsh-deephub-share",
+      "description": "Turns a dsh session into a redacted idea and delivers it end-to-end encrypted to friends on DeepHub; received ideas land as new sessions.",
+      "category": "plugin",
+      "repo": "https://github.com/Voellin/dsh-deephub-share/tree/main/packages/dsh-deephub-share",
+      "install": "github:Voellin/dsh-deephub-share/tree/main/packages/dsh-deephub-share",
+      "tags": [
+        "voellin/dsh-deephub-share#dsh-deephub-share"
       ]
     },
     {
@@ -40938,7 +41103,7 @@
     {
       "id": "xiaoksio/dsh-solution-explorer",
       "title": "xiaoksio/dsh-solution-explorer",
-      "description": "DSH Web GUI right sidebar: VS Code-style file explorer plus source control (git status, stage/unstage/discard, commit, diff, commit graph, sync fetch/pull/push, branch management, remote management, git init, multi-repo switch, color-coded file status (untracked/modified/ignored), file-type icons, image preview) with an editable full-file diff view, a syntax-highlighted editor (15 languages), file operations (new/move/copy/delete), and save.",
+      "description": "DSH Web GUI right sidebar: VS Code-style file explorer plus source control (git status, stage/unstage/discard, commit, diff, commit graph, fetch/pull/push sync, branch and remote management, git init, multi-repo switch, color-coded file status, file-type icons), an editor view that opens every file reached from the chat, the file tree or source control (Markdown/HTML/PDF/image previews, 15-language syntax highlighting, hunk-level diff editing, Ctrl+S save), file operations (new/move/copy/delete, reveal in file explorer), a collapsible icon rail, a multi-tab bottom terminal (ConPTY), and commit messages generated from the staged diff by a host-configured model.",
       "category": "plugin",
       "repo": "https://github.com/xiaoksio/dsh-solution-explorer",
       "install": "github:xiaoksio/dsh-solution-explorer",
