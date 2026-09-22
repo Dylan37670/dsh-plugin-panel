@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-22T17:17:33.255Z",
-    "fetchedCount": 4173,
-    "count": 4186,
+    "generatedAt": "2026-09-22T22:18:32.909Z",
+    "fetchedCount": 4176,
+    "count": 4189,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -25419,6 +25419,17 @@
       ]
     },
     {
+      "id": "Martlet-Tech/dsh-approval-explain",
+      "title": "Martlet-Tech/dsh-approval-explain",
+      "description": "Adds an Explain button to the approval card: one model call returns exactly three lines reading the pending operation, covering what it does, which files or system state it reads, writes, modifies or executes, and a risky/attention/safe verdict with a one-sentence justification. It also renders the detail area for `write` and `edit` calls, which the shipped renderer leaves blank because it only reads a `command` field.",
+      "category": "plugin",
+      "repo": "https://github.com/Martlet-Tech/dsh-approval-explain",
+      "install": "github:Martlet-Tech/dsh-approval-explain",
+      "tags": [
+        "martlet-tech/dsh-approval-explain"
+      ]
+    },
+    {
       "id": "marvin9551/dynamic-schulte-dsh",
       "title": "marvin9551/dynamic-schulte-dsh",
       "description": "Dynamic Schulte grid waiting-time mini-game: click 1..N in order on a static grid or a spinning roulette wheel while the model thinks.",
@@ -37339,6 +37350,17 @@
       ]
     },
     {
+      "id": "tr1v3r/dsh-ltm",
+      "title": "tr1v3r/dsh-ltm",
+      "description": "Local SQLite long-term memory with CJK-aware search, BM25 and character n-gram cosine reranking, deduplication, and lifecycle management.",
+      "category": "plugin",
+      "repo": "https://github.com/tr1v3r/dsh-ltm",
+      "install": "github:tr1v3r/dsh-ltm",
+      "tags": [
+        "tr1v3r/dsh-ltm"
+      ]
+    },
+    {
       "id": "tr1v3r/dsh-proxy",
       "title": "tr1v3r/dsh-proxy",
       "description": "Hot-switches in-process DSH fetch traffic among direct, manual HTTP(S)/SOCKS5 proxy, and ambient system-proxy modes, with no-proxy rules and optional proxy-environment export for newly spawned child processes.",
@@ -46543,6 +46565,17 @@
       "install": "github:zzx-dear/dsh-selection-followup",
       "tags": [
         "zzx-dear/dsh-selection-followup"
+      ]
+    },
+    {
+      "id": "zzy6-a/dsh-prompt-enhance",
+      "title": "zzy6-a/dsh-prompt-enhance",
+      "description": "Adds a sparkle button left of the model selector in the composer: it rewrites the draft into a clearer, more complete task brief, replaces it in place with one-click undo, offers five rewrite styles, and greys out while the draft carries file/command chips.",
+      "category": "client",
+      "repo": "https://github.com/zzy6-a/dsh-prompt-enhance",
+      "install": "github:zzy6-a/dsh-prompt-enhance",
+      "tags": [
+        "zzy6-a/dsh-prompt-enhance"
       ]
     },
     {
