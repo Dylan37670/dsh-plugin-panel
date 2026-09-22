@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-22T16:18:09.554Z",
-    "fetchedCount": 4170,
-    "count": 4183,
+    "generatedAt": "2026-09-22T17:17:33.255Z",
+    "fetchedCount": 4173,
+    "count": 4186,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -16280,6 +16280,17 @@
       ]
     },
     {
+      "id": "hoyyang/dsh-manage-sessions",
+      "title": "hoyyang/dsh-manage-sessions",
+      "description": "Native-feeling session manager: bulk archive/restore/hard-delete, two-stage force-stop with auto-resume, and instant copy-workspace-path.",
+      "category": "plugin",
+      "repo": "https://github.com/hoyyang/dsh-manage-sessions",
+      "install": "github:hoyyang/dsh-manage-sessions",
+      "tags": [
+        "hoyyang/dsh-manage-sessions"
+      ]
+    },
+    {
       "id": "hoyyang/dsh-plan-board",
       "title": "hoyyang/dsh-plan-board",
       "description": "Mind-map project planning with blocking drift protection: plans, modules and tasks as a dependency DAG with topological execution order, an agent position marker, a human approval gate on every board edit, git cross-checks, and evidence-gated task completion.",
@@ -22178,7 +22189,7 @@
     {
       "id": "lemonxiny55/dsh-code-index",
       "title": "lemonxiny55/dsh-code-index",
-      "description": "Structural code index: tree-sitter symbol search across 8 languages (incl. C/C++), a bounded repo map ranked by import-graph PageRank that auto-updates in the system prompt, a function-level call graph via code_refs, and opt-in circular-dependency / orphan-module checks via code_health.",
+      "description": "Structural code index for DSH: Tree-sitter symbol search across 8 languages (including C/C++), a bounded repository map ranked by import-graph PageRank and injected into the system prompt, function-level call graph via code_refs, optional circular-dependency and orphan-module checks via code_health, plus working-tree change context and task-aware code context.",
       "category": "plugin",
       "repo": "https://github.com/lemonxiny55/dsh-code-index",
       "install": "github:lemonxiny55/dsh-code-index",
@@ -26411,7 +26422,7 @@
     {
       "id": "mikugui/dsh-session-eater",
       "title": "mikugui/dsh-session-eater",
-      "description": "Clean up the DSH sidebar by dragging a conversation row onto the balance widget's whale: it opens its mouth and eats the row, and the session directory is moved to a recycle bin instead of being deleted. Deletion asks for confirmation first and that prompt can be turned off in Settings; clicking the whale in the sidebar jumps straight to the plugin's Settings section. Undo from the persistent toast or the 12-entry log in Settings; blank and currently-open sessions are refused with a reason. Settings also swaps in your own avatar, calibrates the mouth position by dragging, and rewrites every UI string.",
+      "description": "Session cleanup for the DSH sidebar: drag a conversation row onto the balance widget's whale and it eats the row — the session directory goes to a recycle bin, not to rm. Deletion asks one short question first (how many tokens it burned, and that prompt can be turned off in Settings). Undo from the persistent toast or the 12-entry log in Settings. Clicking the whale jumps straight to the plugin's Settings, where you can swap the avatar, drag the mouth into place and rewrite all 17 UI strings; blank, currently-open and running sessions are refused in place with a reason.",
       "category": "plugin",
       "repo": "https://github.com/mikugui/dsh-session-eater",
       "install": "github:mikugui/dsh-session-eater",
@@ -31158,6 +31169,17 @@
       "install": "github:q862877400-ux/dsh-fuhuobi",
       "tags": [
         "q862877400-ux/dsh-fuhuobi"
+      ]
+    },
+    {
+      "id": "qcsjjjjj/dsh-hero-rightbar",
+      "title": "qcsjjjjj/dsh-hero-rightbar",
+      "description": "Adds the right sidebar's expand trigger on pages with no conversation, matching the product's own control.",
+      "category": "client",
+      "repo": "https://github.com/qcsjjjjj/dsh-hero-rightbar",
+      "install": "github:qcsjjjjj/dsh-hero-rightbar",
+      "tags": [
+        "qcsjjjjj/dsh-hero-rightbar"
       ]
     },
     {
@@ -41901,6 +41923,17 @@
       "install": "github:xiekai886/dsh-MusicPlayer",
       "tags": [
         "xiekai886/dsh-musicplayer"
+      ]
+    },
+    {
+      "id": "xienda/dsh-jev-verify",
+      "title": "xienda/dsh-jev-verify",
+      "description": "TypeSafe Jev (System One decision model) agent tools for DeepSeek Harness: jev_decision (choice/score/noul, parallel, typed answers + confidence), auto-guard (deterministic + Jev risk/loop checks), a local /jev dashboard, and an online verification benchmark (96.3% on 27 labeled questions, median ~283 ms on jev-latest, 2026-09-21). Honest by design: real API only, no mock fallback.",
+      "category": "plugin",
+      "repo": "https://github.com/xienda/dsh-jev-verify",
+      "install": "github:xienda/dsh-jev-verify",
+      "tags": [
+        "xienda/dsh-jev-verify"
       ]
     },
     {
