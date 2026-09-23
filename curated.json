@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-22T22:18:32.909Z",
-    "fetchedCount": 4176,
-    "count": 4189,
+    "generatedAt": "2026-09-23T04:17:51.706Z",
+    "fetchedCount": 4183,
+    "count": 4196,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1193,6 +1193,17 @@
       "install": "github:452926826/dsh-ssh-logs",
       "tags": [
         "452926826/dsh-ssh-logs"
+      ]
+    },
+    {
+      "id": "5101good/amoji/tree/main/adapters/dsh",
+      "title": "5101good/amoji#amoji",
+      "description": "AI-native expressions for two-way chat: people see images, while text-only models read fixed meanings; includes a picker, custom expressions, import/export, and two visual styles.",
+      "category": "client",
+      "repo": "https://github.com/5101good/amoji/tree/main/adapters/dsh",
+      "install": "github:5101good/amoji/tree/main/adapters/dsh",
+      "tags": [
+        "5101good/amoji#amoji"
       ]
     },
     {
@@ -11702,6 +11713,17 @@
       ]
     },
     {
+      "id": "elk-9527/dsh-vscode/tree/main/packages/dsh-door",
+      "title": "elk-9527/dsh-vscode#dsh-door",
+      "description": "Loopback-only ACP door for DeepSeek Harness: attach an external client (such as the DSH Panel VS Code extension) to the kernel you already have running, exposing session listing and permission presets.",
+      "category": "plugin",
+      "repo": "https://github.com/elk-9527/dsh-vscode/tree/main/packages/dsh-door",
+      "install": "github:elk-9527/dsh-vscode/tree/main/packages/dsh-door",
+      "tags": [
+        "elk-9527/dsh-vscode#dsh-door"
+      ]
+    },
+    {
       "id": "Elohia/dsh-genome",
       "title": "Elohia/dsh-genome",
       "description": "Capability transform & assembly engine (Qian Xuesen cybernetics/systems framework): static resident layer manages the skill/MCP/plugin registries, auto-absorbs skills and tool metrics, and drives a negative-feedback evolution loop (scan Sick/Weak → mutate → select promote/reject → 30s rollback); includes a Web UI panel and a GitHub dsh-plugin store bridge.",
@@ -17710,6 +17732,17 @@
       ]
     },
     {
+      "id": "itongxiaojun/dsh-openrouter-free-models",
+      "title": "itongxiaojun/dsh-openrouter-free-models",
+      "description": "Discovers OpenRouter's free models, measures their real speed and context size, and writes them into the DeepSeek Harness model list fastest-first, with speed and context in each display name, plus a Settings section to configure and run it.",
+      "category": "plugin",
+      "repo": "https://github.com/itongxiaojun/dsh-openrouter-free-models",
+      "install": "github:itongxiaojun/dsh-openrouter-free-models",
+      "tags": [
+        "itongxiaojun/dsh-openrouter-free-models"
+      ]
+    },
+    {
       "id": "itr-del/dsh-cue-bank",
       "title": "itr-del/dsh-cue-bank",
       "description": "Cross-session event-cue memory for DeepSeek Harness: auto-extracts task/conversation cues and user language habits from every turn into a persistent global cue bank, then re-injects remembered context on topic-switch detection (keyword or vector matching).",
@@ -19775,6 +19808,17 @@
       "install": "github:Jovan1666/commandcode-usage/tree/main/plugins/dsh",
       "tags": [
         "jovan1666/commandcode-usage#plugins/dsh"
+      ]
+    },
+    {
+      "id": "JRJRJPRO/dsh-chat-tree",
+      "title": "JRJRJPRO/dsh-chat-tree",
+      "description": "Draws every branch of a conversation as a clickable tree beside the chat, with favorites, custom icons and colors, branch merge and split, rewind-aware layout, and Claude Code branches that keep their memory.",
+      "category": "plugin",
+      "repo": "https://github.com/JRJRJPRO/dsh-chat-tree",
+      "install": "github:JRJRJPRO/dsh-chat-tree",
+      "tags": [
+        "jrjrjpro/dsh-chat-tree"
       ]
     },
     {
@@ -25399,7 +25443,7 @@
     {
       "id": "Marquez807/dsh-experience-memory",
       "title": "Marquez807/dsh-experience-memory",
-      "description": "Cross-session experience memory for DSH: a lesson reaches the model only with a verifiable source, the relevant ones are injected each turn, and what nobody uses is retired.",
+      "description": "Cross-session experience memory for DSH: a lesson is injected only when it cites a verifiable source and this turn is about the same thing; what nobody looks up or confirms is retired, reversibly. Five tools and seven slash commands.",
       "category": "plugin",
       "repo": "https://github.com/Marquez807/dsh-experience-memory",
       "install": "github:Marquez807/dsh-experience-memory",
@@ -26637,6 +26681,17 @@
       "install": "github:Missher12/dsh-missher-memory",
       "tags": [
         "missher12/dsh-missher-memory"
+      ]
+    },
+    {
+      "id": "Missher12/dsh-project-ops",
+      "title": "Missher12/dsh-project-ops",
+      "description": "Discover and run project tasks through Harness Jobs, inspect run receipts, and check project configuration with an Agent tool.",
+      "category": "plugin",
+      "repo": "https://github.com/Missher12/dsh-project-ops",
+      "install": "github:Missher12/dsh-project-ops",
+      "tags": [
+        "missher12/dsh-project-ops"
       ]
     },
     {
@@ -31931,6 +31986,17 @@
       ]
     },
     {
+      "id": "RaulLazaro/dsh-jev-plugin",
+      "title": "RaulLazaro/dsh-jev-plugin",
+      "description": "A `jev` tool that asks Jev (TypeSafe System One) typed yes/no, choice and score questions about one block of text and returns probabilities and confidence, with the provider and API key configured per user in Settings, a judgment ledger with its spend, and daily call and token caps.",
+      "category": "plugin",
+      "repo": "https://github.com/RaulLazaro/dsh-jev-plugin",
+      "install": "github:RaulLazaro/dsh-jev-plugin",
+      "tags": [
+        "raullazaro/dsh-jev-plugin"
+      ]
+    },
+    {
       "id": "RaulLazaro/dsh-preview-plugin",
       "title": "RaulLazaro/dsh-preview-plugin",
       "description": "Live preview tab for DSH — embed any dev server in an iframe with transparent SPA proxying.",
@@ -36243,6 +36309,17 @@
       ]
     },
     {
+      "id": "tangjx2007/dsh-audio-cue",
+      "title": "tangjx2007/dsh-audio-cue",
+      "description": "Audio cues for DeepSeek Harness: a short synthesized sound when an agent needs confirmation, finishes a turn or a background job, or fails, with five sound packs, per-event toggles and volume, and do-not-disturb rules stored in the host settings document.",
+      "category": "plugin",
+      "repo": "https://github.com/tangjx2007/dsh-audio-cue",
+      "install": "github:tangjx2007/dsh-audio-cue",
+      "tags": [
+        "tangjx2007/dsh-audio-cue"
+      ]
+    },
+    {
       "id": "tangzheng202202/dsh-sparkos",
       "title": "tangzheng202202/dsh-sparkos",
       "description": "Self-media workbench plugin: 8-tab dashboard (daily brief, narrative lines, topics, drafts, knowledge-card distill review, sources, publish, advice) with hard guards (48h window, event dedup, card/line existence, read-only advice) and a read-only intel module following the four red lines.",
@@ -38098,14 +38175,14 @@
       ]
     },
     {
-      "id": "VDERR/echocat-skill-panel-3.0",
-      "title": "VDERR/echocat-skill-panel-3.0",
+      "id": "VDERR/dsh-echocat-skill-panel",
+      "title": "VDERR/dsh-echocat-skill-panel",
       "description": "Reports which skills each turn invoked (loaded by the model, typed as /name, or none) and manages the local skill directory: install from a pasted repository, folder, SKILL.md or zip address, set a Chinese display name in the skill meta.yaml, and remove a skill while keeping a backup.",
       "category": "skill",
-      "repo": "https://github.com/VDERR/echocat-skill-panel-3.0",
-      "install": "github:VDERR/echocat-skill-panel-3.0",
+      "repo": "https://github.com/VDERR/dsh-echocat-skill-panel",
+      "install": "github:VDERR/dsh-echocat-skill-panel",
       "tags": [
-        "vderr/echocat-skill-panel-3.0"
+        "vderr/dsh-echocat-skill-panel"
       ]
     },
     {
