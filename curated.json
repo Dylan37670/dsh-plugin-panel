@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-24T04:19:17.051Z",
-    "fetchedCount": 4260,
-    "count": 4276,
+    "generatedAt": "2026-09-24T05:25:55.270Z",
+    "fetchedCount": 4262,
+    "count": 4278,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -23718,7 +23718,7 @@
     {
       "id": "LittleBlackTong/dsh-plugin-memory",
       "title": "LittleBlackTong/dsh-plugin-memory",
-      "description": "Long-term cross-session markdown memory with an LLM-Wiki structure and a SOUL.md persona, injected at session start (by default only after the first user message and only in the active session), plus remember/recall/consolidate/forget workflows, an embedded memory skill, pack/unpack migration tooling, and an idle-time first-person recall nudge that surfaces real memories in a companion voice. Also gives the store observability and upkeep it lacked: a per-file boot-block budget that keeps the index routing table from being truncated, automatic last_access stamping so salience decay actually works, a read-only memory health dashboard (size, freshness, lint-parity checks), a declarative index compiler (pages declare summary:, one command re-lines the index), and an interactive memory graph (page links plus shared tags, draggable, wheel zoom).",
+      "description": "Long-term cross-session markdown memory with an LLM-Wiki structure and a SOUL.md persona, injected at session start (by default only after the first user message and only in the active session), plus remember/recall/consolidate/forget workflows, an embedded memory skill, pack/unpack migration tooling, and an idle-time first-person recall nudge that surfaces real memories in a companion voice. Also gives the store observability and upkeep it lacked: a per-file boot-block budget that keeps the index routing table from being truncated, automatic last_access stamping so salience decay actually works, a read-only memory health dashboard (size, freshness, lint-parity checks), a declarative index compiler (pages declare summary:, one command re-lines the index), an interactive memory graph (page links plus shared tags, draggable, wheel zoom), structured queries (tag/type/salience/hot/stale filters), cross-link suggestions for pages that have no relationship yet, and a `checkup` report that ends in a prioritised action list. The boot payload was also cut by ~23% by moving operational detail into the on-demand skill.",
       "category": "plugin",
       "repo": "https://github.com/LittleBlackTong/dsh-plugin-memory",
       "install": "github:LittleBlackTong/dsh-plugin-memory",
@@ -29392,7 +29392,7 @@
     {
       "id": "olimc2016/dsh-token-meter-panel",
       "title": "olimc2016/dsh-token-meter-panel",
-      "description": "Adds a sidebar panel to the DeepSeek Harness web UI that reports token usage and cost, with today's spend, budget progress, 7-day and 30-day trends, a cost breakdown, cache-hit savings, and a per-session breakdown.",
+      "description": "Adds a sidebar panel to the DeepSeek Harness web UI that reports token usage and cost straight from DeepSeek's own usage API (today's spend, 7/30-day trends, today's hourly split, a history table, cost breakdown, peak/off-peak tier pricing), plus per-session detail from local logs. Zero-config: it reads the browser sign-in for the official figures, and falls back to local session logs with the source labelled.",
       "category": "plugin",
       "repo": "https://github.com/olimc2016/dsh-token-meter-panel",
       "install": "github:olimc2016/dsh-token-meter-panel",
@@ -43991,6 +43991,28 @@
       "install": "github:Yeelight/dsh-yeelight-smart-home",
       "tags": [
         "yeelight/dsh-yeelight-smart-home"
+      ]
+    },
+    {
+      "id": "yefengliu1/dsh-agent-grid",
+      "title": "yefengliu1/dsh-agent-grid",
+      "description": "Replaces the DSH sidebar with a fixed 2×4 board of eight standing agent seats; each seat shows its own status, latest tool call, reasoning and result, and a settings switch restores the stock sidebar at any time.",
+      "category": "client",
+      "repo": "https://github.com/yefengliu1/dsh-agent-grid",
+      "install": "github:yefengliu1/dsh-agent-grid",
+      "tags": [
+        "yefengliu1/dsh-agent-grid"
+      ]
+    },
+    {
+      "id": "yefengliu1/dsh-theme-songgrid",
+      "title": "yefengliu1/dsh-theme-songgrid",
+      "description": "Song-dynasty-inspired theme for the DSH web UI: a light \"rice paper\" and a dark \"night ink\" variant, Ru celadon carrying interactive states while kiln copper is reserved for blockquotes, plus a 4pt spacing scale and a 46-glyph mask icon set.",
+      "category": "client",
+      "repo": "https://github.com/yefengliu1/dsh-theme-songgrid",
+      "install": "github:yefengliu1/dsh-theme-songgrid",
+      "tags": [
+        "yefengliu1/dsh-theme-songgrid"
       ]
     },
     {
