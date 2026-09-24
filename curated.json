@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-23T22:17:42.573Z",
-    "fetchedCount": 4225,
-    "count": 4241,
+    "generatedAt": "2026-09-24T04:19:17.051Z",
+    "fetchedCount": 4260,
+    "count": 4276,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -492,6 +492,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-cal",
+      "title": "173787247/dsh-wsl-cal",
+      "description": "Read-only khal calendar list.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-cal",
+      "install": "github:173787247/dsh-wsl-cal",
+      "tags": [
+        "173787247/dsh-wsl-cal"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-clipboard",
       "title": "173787247/dsh-wsl-clipboard",
       "description": "Reads and writes the Windows clipboard from WSL.",
@@ -514,6 +525,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-compose",
+      "title": "173787247/dsh-wsl-compose",
+      "description": "Docker Compose ps/logs; up/down double-gated.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-compose",
+      "install": "github:173787247/dsh-wsl-compose",
+      "tags": [
+        "173787247/dsh-wsl-compose"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-cred",
       "title": "173787247/dsh-wsl-cred",
       "description": "Safe Git Credential Manager hints for WSL without exposing secrets.",
@@ -522,6 +544,17 @@
       "install": "github:173787247/dsh-wsl-cred",
       "tags": [
         "173787247/dsh-wsl-cred"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-db",
+      "title": "173787247/dsh-wsl-db",
+      "description": "Read-only psql + redis-cli probes.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-db",
+      "install": "github:173787247/dsh-wsl-db",
+      "tags": [
+        "173787247/dsh-wsl-db"
       ]
     },
     {
@@ -624,6 +657,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-git",
+      "title": "173787247/dsh-wsl-git",
+      "description": "Capped Git status / diff --stat (no full patches).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-git",
+      "install": "github:173787247/dsh-wsl-git",
+      "tags": [
+        "173787247/dsh-wsl-git"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-github",
       "title": "173787247/dsh-wsl-github",
       "description": "Uses a GitHub App to report open PRs and the latest Actions run for the current repo without returning secrets.",
@@ -635,6 +679,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-glab",
+      "title": "173787247/dsh-wsl-glab",
+      "description": "Read-only glab MR / issue / ci status.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-glab",
+      "install": "github:173787247/dsh-wsl-glab",
+      "tags": [
+        "173787247/dsh-wsl-glab"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-gpu",
       "title": "173787247/dsh-wsl-gpu",
       "description": "Probes nvidia-smi and GPU visibility inside WSL.",
@@ -643,6 +698,17 @@
       "install": "github:173787247/dsh-wsl-gpu",
       "tags": [
         "173787247/dsh-wsl-gpu"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-helm",
+      "title": "173787247/dsh-wsl-helm",
+      "description": "Read-only Helm list / status / history.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-helm",
+      "install": "github:173787247/dsh-wsl-helm",
+      "tags": [
+        "173787247/dsh-wsl-helm"
       ]
     },
     {
@@ -679,6 +745,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-k8s",
+      "title": "173787247/dsh-wsl-k8s",
+      "description": "Read-only kubectl get / describe / logs for dsh on WSL.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-k8s",
+      "install": "github:173787247/dsh-wsl-k8s",
+      "tags": [
+        "173787247/dsh-wsl-k8s"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-launch",
       "title": "173787247/dsh-wsl-launch",
       "description": "Launches allowlisted Windows apps such as VS Code, Explorer, and browsers from WSL.",
@@ -687,6 +764,39 @@
       "install": "github:173787247/dsh-wsl-launch",
       "tags": [
         "173787247/dsh-wsl-launch"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-llamacpp",
+      "title": "173787247/dsh-wsl-llamacpp",
+      "description": "OpenAI-compatible client for llama.cpp / Unsloth Desktop (default :8080).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-llamacpp",
+      "install": "github:173787247/dsh-wsl-llamacpp",
+      "tags": [
+        "173787247/dsh-wsl-llamacpp"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-mail",
+      "title": "173787247/dsh-wsl-mail",
+      "description": "Mail list/search via himalaya / notmuch (no send).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-mail",
+      "install": "github:173787247/dsh-wsl-mail",
+      "tags": [
+        "173787247/dsh-wsl-mail"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-media",
+      "title": "173787247/dsh-wsl-media",
+      "description": "Local media/doc pipeline: ffprobe, extract, thumbnail, PDF, ASR, pandoc, OCR, exif.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-media",
+      "install": "github:173787247/dsh-wsl-media",
+      "tags": [
+        "173787247/dsh-wsl-media"
       ]
     },
     {
@@ -745,6 +855,17 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-ollama",
+      "title": "173787247/dsh-wsl-ollama",
+      "description": "Local Ollama status / list / chat / embed for dsh on WSL.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-ollama",
+      "install": "github:173787247/dsh-wsl-ollama",
+      "tags": [
+        "173787247/dsh-wsl-ollama"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-open",
       "title": "173787247/dsh-wsl-open",
       "description": "Opens WSL Linux paths from DeepSeek Harness chat in the Windows default app or Explorer.",
@@ -778,6 +899,28 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-pkg",
+      "title": "173787247/dsh-wsl-pkg",
+      "description": "Dependency tree summaries: npm / pip / cargo.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-pkg",
+      "install": "github:173787247/dsh-wsl-pkg",
+      "tags": [
+        "173787247/dsh-wsl-pkg"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-playwright",
+      "title": "173787247/dsh-wsl-playwright",
+      "description": "Headless Playwright fetch (title + body text) in WSL.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-playwright",
+      "install": "github:173787247/dsh-wsl-playwright",
+      "tags": [
+        "173787247/dsh-wsl-playwright"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-port",
       "title": "173787247/dsh-wsl-port",
       "description": "Diagnoses WSL port listening and Windows localhost forwarding, with a 3080/3081 uiPlaybook for the dsh web relay and launch token.",
@@ -786,6 +929,39 @@
       "install": "github:173787247/dsh-wsl-port",
       "tags": [
         "173787247/dsh-wsl-port"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-rclone",
+      "title": "173787247/dsh-wsl-rclone",
+      "description": "Read-only rclone listremotes / lsf / about.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-rclone",
+      "install": "github:173787247/dsh-wsl-rclone",
+      "tags": [
+        "173787247/dsh-wsl-rclone"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-search",
+      "title": "173787247/dsh-wsl-search",
+      "description": "Sandboxed ripgrep / fd / ast-grep under allowRoots.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-search",
+      "install": "github:173787247/dsh-wsl-search",
+      "tags": [
+        "173787247/dsh-wsl-search"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-secret",
+      "title": "173787247/dsh-wsl-secret",
+      "description": "Read-only pass / age secrets with allowPrefixes; reveal defaults to false.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-secret",
+      "install": "github:173787247/dsh-wsl-secret",
+      "tags": [
+        "173787247/dsh-wsl-secret"
       ]
     },
     {
@@ -811,6 +987,50 @@
       ]
     },
     {
+      "id": "173787247/dsh-wsl-struct",
+      "title": "173787247/dsh-wsl-struct",
+      "description": "Sandboxed jq / yq / read-only sqlite3.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-struct",
+      "install": "github:173787247/dsh-wsl-struct",
+      "tags": [
+        "173787247/dsh-wsl-struct"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-systemd",
+      "title": "173787247/dsh-wsl-systemd",
+      "description": "Read-only systemd --user list / show / journal.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-systemd",
+      "install": "github:173787247/dsh-wsl-systemd",
+      "tags": [
+        "173787247/dsh-wsl-systemd"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-terraform",
+      "title": "173787247/dsh-wsl-terraform",
+      "description": "Terraform/OpenTofu plan summary + state list (never apply).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-terraform",
+      "install": "github:173787247/dsh-wsl-terraform",
+      "tags": [
+        "173787247/dsh-wsl-terraform"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-tmux",
+      "title": "173787247/dsh-wsl-tmux",
+      "description": "Read-only tmux list + capture-pane.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-tmux",
+      "install": "github:173787247/dsh-wsl-tmux",
+      "tags": [
+        "173787247/dsh-wsl-tmux"
+      ]
+    },
+    {
       "id": "173787247/dsh-wsl-tray",
       "title": "173787247/dsh-wsl-tray",
       "description": "Writes a Windows shortcut and tray launcher to start dsh web in WSL, with Health/Restart and the :3081 launch-token URL.",
@@ -819,6 +1039,28 @@
       "install": "github:173787247/dsh-wsl-tray",
       "tags": [
         "173787247/dsh-wsl-tray"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-vecmem",
+      "title": "173787247/dsh-wsl-vecmem",
+      "description": "Tiny local vector memory via Ollama embeddings and ~/.dsh/vecmem.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-vecmem",
+      "install": "github:173787247/dsh-wsl-vecmem",
+      "tags": [
+        "173787247/dsh-wsl-vecmem"
+      ]
+    },
+    {
+      "id": "173787247/dsh-wsl-vllm",
+      "title": "173787247/dsh-wsl-vllm",
+      "description": "OpenAI-compatible vLLM client (default :8000).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-wsl-vllm",
+      "install": "github:173787247/dsh-wsl-vllm",
+      "tags": [
+        "173787247/dsh-wsl-vllm"
       ]
     },
     {
@@ -5679,6 +5921,17 @@
       "install": "github:boogoo619/dsh-noteboard",
       "tags": [
         "boogoo619/dsh-noteboard"
+      ]
+    },
+    {
+      "id": "Boomerangz/dsh-openrouter-live",
+      "title": "Boomerangz/dsh-openrouter-live",
+      "description": "OpenRouter provider that reads the live /models list, so new models appear without a harness release: models sorted by name with input/output prices, per-model reasoning levels, image input, reasoning_details replay, Anthropic prompt caching, and actual spend per session including subagents from OpenRouter usage.cost, shown under the Web UI composer and by /cost.",
+      "category": "plugin",
+      "repo": "https://github.com/Boomerangz/dsh-openrouter-live",
+      "install": "github:Boomerangz/dsh-openrouter-live",
+      "tags": [
+        "boomerangz/dsh-openrouter-live"
       ]
     },
     {
@@ -11581,6 +11834,17 @@
       ]
     },
     {
+      "id": "Edge-Echo/dsh-driftwatch",
+      "title": "Edge-Echo/dsh-driftwatch",
+      "description": "Behavior-drift reports for DSH sessions: compares two session logs and reports tool-sequence alignment, tool mix, reasoning volume, timing, retries and file targets, with an optional CI threshold gate. Zero dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/Edge-Echo/dsh-driftwatch",
+      "install": "github:Edge-Echo/dsh-driftwatch",
+      "tags": [
+        "edge-echo/dsh-driftwatch"
+      ]
+    },
+    {
       "id": "Edge-Echo/dsh-netassist",
       "title": "Edge-Echo/dsh-netassist",
       "description": "Network and proxy doctor for DSH: checks system proxy settings, probes local proxy ports, detects TUN adapters, tests GitHub, TCP and HTTP reachability, scans hosts conflicts and prints concrete suggestions for what to change.",
@@ -16783,6 +17047,17 @@
       "install": "github:HUITianYi/dsh-whale-desktop-launcher",
       "tags": [
         "huitianyi/dsh-whale-desktop-launcher"
+      ]
+    },
+    {
+      "id": "hunan36/dsh-git-flow",
+      "title": "hunan36/dsh-git-flow",
+      "description": "Branch chip in the composer tool row that switches, creates, and refreshes workspace branches, commits a checked subset of changed files with a message the session's own model writes from the diff, and pushes the current branch.",
+      "category": "plugin",
+      "repo": "https://github.com/hunan36/dsh-git-flow",
+      "install": "github:hunan36/dsh-git-flow",
+      "tags": [
+        "hunan36/dsh-git-flow"
       ]
     },
     {
@@ -25606,6 +25881,17 @@
       ]
     },
     {
+      "id": "Martlet-Tech/dsh-open-folder-fix",
+      "title": "Martlet-Tech/dsh-open-folder-fix",
+      "description": "Fixes the Windows workspace-open action. The shipped opener runs `explorer.exe \"<file:// URI>\"`, which on some hosts reports success without raising a window — the exit-code verdict cannot tell an opened window from nothing happening. This routes that one action to `explorer.exe /e,<dir>`, which raises a window reliably, and leaves every other application in the menu on the shipped path.",
+      "category": "client",
+      "repo": "https://github.com/Martlet-Tech/dsh-open-folder-fix",
+      "install": "github:Martlet-Tech/dsh-open-folder-fix",
+      "tags": [
+        "martlet-tech/dsh-open-folder-fix"
+      ]
+    },
+    {
       "id": "marvin9551/dynamic-schulte-dsh",
       "title": "marvin9551/dynamic-schulte-dsh",
       "description": "Dynamic Schulte grid waiting-time mini-game: click 1..N in order on a static grid or a spinning roulette wheel while the model thinks.",
@@ -27698,7 +27984,7 @@
     {
       "id": "MyPanda-Hash/CHENGXIAO",
       "title": "MyPanda-Hash/CHENGXIAO",
-      "description": "Pairs two DeepSeek Harness machines on the same local network with a one-time code, letting one agent run tasks and exchange files on the other while each machine keeps its own files in place.",
+      "description": "Pairs two DeepSeek Harness machines with a one-time code - directly on a LAN, or across networks through an end-to-end-encrypted relay with a zero-config official default - so one agent can run tasks and exchange files on the other while each machine keeps its own files in place.",
       "category": "plugin",
       "repo": "https://github.com/MyPanda-Hash/CHENGXIAO",
       "install": "github:MyPanda-Hash/CHENGXIAO",
@@ -28100,6 +28386,17 @@
       "install": "github:NecromanAlbert/dsh-skill-slash-fuzzy",
       "tags": [
         "necromanalbert/dsh-skill-slash-fuzzy"
+      ]
+    },
+    {
+      "id": "NEINC1/muche-dsh-plugin",
+      "title": "NEINC1/muche-dsh-plugin",
+      "description": "Chat panel for the MuChe companion with per-user backend settings, plus an outbound bridge that runs tasks on the user's local dsh.",
+      "category": "plugin",
+      "repo": "https://github.com/NEINC1/muche-dsh-plugin",
+      "install": "github:NEINC1/muche-dsh-plugin",
+      "tags": [
+        "neinc1/muche-dsh-plugin"
       ]
     },
     {
@@ -31317,7 +31614,7 @@
     {
       "id": "ppy-web/dsh-plugin-xiaomi-mimo-tts",
       "title": "ppy-web/dsh-plugin-xiaomi-mimo-tts",
-      "description": "Adds Xiaomi MiMo text-to-speech controls for finalized assistant messages, with preset voices and custom voice design.",
+      "description": "Adds Xiaomi MiMo text-to-speech to DSH Web with assistant-message read-aloud, PCM streaming, preset and custom voice design, browser speech fallback, playback controls, and optional UI sounds.",
       "category": "plugin",
       "repo": "https://github.com/ppy-web/dsh-plugin-xiaomi-mimo-tts",
       "install": "github:ppy-web/dsh-plugin-xiaomi-mimo-tts",
@@ -32635,6 +32932,17 @@
       ]
     },
     {
+      "id": "rezon-aki/dsh-streamfold",
+      "title": "rezon-aki/dsh-streamfold",
+      "description": "Streaming-transcript fold for the DSH web UI: thinking and tool rows fold away while the newest thinking window opens itself; a finished turn scrolls back to your question, which also stays pinned at the top while you read; blue sparks fly from the thinking window edge and the answer writing head.",
+      "category": "client",
+      "repo": "https://github.com/rezon-aki/dsh-streamfold",
+      "install": "github:rezon-aki/dsh-streamfold",
+      "tags": [
+        "rezon-aki/dsh-streamfold"
+      ]
+    },
+    {
       "id": "RGarvel/dsh-channel-view",
       "title": "RGarvel/dsh-channel-view",
       "description": "Channel-grouped session view injected into the sidebar — Workspace/Channels tabs with live-running dots, archived grouping, orphan tagging, built purely on official extension surfaces and serving as the RFC-0001 reference implementation.",
@@ -33512,6 +33820,17 @@
       "install": "github:Saretheya/dsh-settings-nav-order",
       "tags": [
         "saretheya/dsh-settings-nav-order"
+      ]
+    },
+    {
+      "id": "Saretheya/dsh-tick",
+      "title": "Saretheya/dsh-tick",
+      "description": "Session-local scheduled tasks: inject a prompt into the current session after a delay, at a fixed time, or on a repeating interval, so the model wakes up and runs it on time. Manage them from a panel above the composer, the /schedule command, or seven model-facing tools. Timers freeze while DSH is closed and never auto-resume; pause keeps the remaining time, so resuming continues from where it stopped.",
+      "category": "plugin",
+      "repo": "https://github.com/Saretheya/dsh-tick",
+      "install": "github:Saretheya/dsh-tick",
+      "tags": [
+        "saretheya/dsh-tick"
       ]
     },
     {
@@ -37110,12 +37429,23 @@
     {
       "id": "ThinkofRain1213/deepseek-harness-wallet-patched",
       "title": "ThinkofRain1213/deepseek-harness-wallet-patched",
-      "description": "Balance, per-session cost and token breakdown, a 24-hour peak/off-peak price clock, Z.ai plan quota, and a local usage ledger, all following the host light/dark theme and language. Maintained fork of feibi-mochi/deepseek-harness-control-center with the interface available in English and Simplified Chinese.",
+      "description": "Maintained fork of feibi-mochi/deepseek-harness-control-center, which has not been updated since 2026-09-09. Pricing follows the official model pool instead of a hardcoded model prefix, so DeepSeek V4.1 Flash (`deepseek-flash`) is billed and shows its peak/off-peak clock, and the official price page is parsed structurally so a renamed or retired model no longer stops price sync. Adds an English interface beside the original Chinese. Otherwise the same plugin: balance, per-session cost and token breakdown, a 24-hour peak/off-peak clock, Z.ai plan quota, and a local usage ledger, following the host light/dark theme.",
       "category": "plugin",
       "repo": "https://github.com/ThinkofRain1213/deepseek-harness-wallet-patched",
       "install": "github:ThinkofRain1213/deepseek-harness-wallet-patched",
       "tags": [
         "thinkofrain1213/deepseek-harness-wallet-patched"
+      ]
+    },
+    {
+      "id": "ThinkofRain1213/dsh-smooth-cursor-patched",
+      "title": "ThinkofRain1213/dsh-smooth-cursor-patched",
+      "description": "Comet-mode animated caret for the DSH Web composer: a glowing trail glides to the text position, with configurable accent color, thickness, trail, and a 500 ms idle blink. Extends the surface to ask-question card inputs, and fixes the caret vanishing on an empty composer or first focus, forward drag-selection not following the pointer, soft line breaks measuring against the previous line, and the caret painting outside the composer when long input scrolls. Maintained fork of Lacquervii/smooth-cursor.",
+      "category": "client",
+      "repo": "https://github.com/ThinkofRain1213/dsh-smooth-cursor-patched",
+      "install": "github:ThinkofRain1213/dsh-smooth-cursor-patched",
+      "tags": [
+        "thinkofrain1213/dsh-smooth-cursor-patched"
       ]
     },
     {
@@ -38183,6 +38513,17 @@
       "install": "github:TYEclipse/dsh-units",
       "tags": [
         "tyeclipse/dsh-units"
+      ]
+    },
+    {
+      "id": "TYEclipse/dsh-webfetch",
+      "title": "TYEclipse/dsh-webfetch",
+      "description": "Web reading tools for text-only agents. Five read-only tools: web_fetch (any URL rendered as clean Markdown or plain text), web_links (inventory of a page's links), web_feed (RSS 2.0 / Atom entries), web_headers (HTTP status, response headers and redirect chain without downloading the body, HEAD with automatic GET fallback), and web_table (HTML tables extracted as structured rows with header detection and colspan/rowspan grid expansion). Transport is Node fetch plus a zero-dependency HTTP proxy implementation (CONNECT tunnelling, absolute-URI requests, NO_PROXY with suffix/wildcard/IPv4-CIDR matching, Proxy-Authorization). Zero runtime dependencies.",
+      "category": "plugin",
+      "repo": "https://github.com/TYEclipse/dsh-webfetch",
+      "install": "github:TYEclipse/dsh-webfetch",
+      "tags": [
+        "tyeclipse/dsh-webfetch"
       ]
     },
     {
@@ -42058,6 +42399,17 @@
       ]
     },
     {
+      "id": "XiangSu-ce/dsh-plugin-freecodego/tree/main/plugin/packages/freecodego/bundle-latest",
+      "title": "XiangSu-ce/dsh-plugin-freecodego#bundle-latest",
+      "description": "Unofficial FreeCodeGo for DeepSeek Harness: a managed free-model gateway and provider catalogs, image and video generation behind one settings switch, DeepSeek/Codex/Claude engine routing, an independent advisor reviewer, code review, code graphs, project memory, and an engineering team toolchain.",
+      "category": "plugin",
+      "repo": "https://github.com/XiangSu-ce/dsh-plugin-freecodego/tree/main/plugin/packages/freecodego/bundle-latest",
+      "install": "github:XiangSu-ce/dsh-plugin-freecodego/tree/main/plugin/packages/freecodego/bundle-latest",
+      "tags": [
+        "xiangsu-ce/dsh-plugin-freecodego#bundle-latest"
+      ]
+    },
+    {
       "id": "xianmua/dsh-apis-plugin",
       "title": "xianmua/dsh-apis-plugin",
       "description": "Registers any set of HTTP APIs as paired doc-query and request tools for the agent.",
@@ -42467,7 +42819,7 @@
     {
       "id": "xienda/dsh-jev-verify",
       "title": "xienda/dsh-jev-verify",
-      "description": "TypeSafe Jev (System One decision model) agent tools for DeepSeek Harness: jev_decision (choice/score/noul, parallel, typed answers + confidence), auto-guard (deterministic + Jev risk/loop checks), a local /jev dashboard, and an online verification benchmark (96.3% on 27 labeled questions, median ~283 ms on jev-latest, 2026-09-21). Honest by design: real API only, no mock fallback.",
+      "description": "TypeSafe Jev (System One decision model) for DeepSeek Harness, end to end: jev_decision (choice/score/noul, parallel, typed answers + confidence), a Settings > Plugins card for the API key and switches, inline tool views showing every decision in the conversation (answer, confidence, latency, cost), an auto-guard (deterministic + Jev risk/loop checks), a local /jev dashboard, and an online verification benchmark (96.3% on 27 labeled questions, median ~283 ms on jev-latest, 2026-09-21). Honest by design: real API only, no mock fallback.",
       "category": "plugin",
       "repo": "https://github.com/xienda/dsh-jev-verify",
       "install": "github:xienda/dsh-jev-verify",
@@ -46150,6 +46502,28 @@
       ]
     },
     {
+      "id": "zhxnix/dsh-sidebar-annotations",
+      "title": "zhxnix/dsh-sidebar-annotations",
+      "description": "Browser and mini-program element annotations with collapsible composer notes and source locations.",
+      "category": "client",
+      "repo": "https://github.com/zhxnix/dsh-sidebar-annotations",
+      "install": "github:zhxnix/dsh-sidebar-annotations",
+      "tags": [
+        "zhxnix/dsh-sidebar-annotations"
+      ]
+    },
+    {
+      "id": "zhxnix/dsh-wx-preview",
+      "title": "zhxnix/dsh-wx-preview",
+      "description": "Preview native WeChat Mini Programs in the DSH sidebar with a local runtime and WXML source locations.",
+      "category": "plugin",
+      "repo": "https://github.com/zhxnix/dsh-wx-preview",
+      "install": "github:zhxnix/dsh-wx-preview",
+      "tags": [
+        "zhxnix/dsh-wx-preview"
+      ]
+    },
+    {
       "id": "zhxqc/dsh-oh-my-theme",
       "title": "zhxqc/dsh-oh-my-theme",
       "description": "Web theme and file workspace plugin with global typography controls, @file mentions, a project file tree, Markdown preview, and a resizable side panel.",
@@ -47016,6 +47390,17 @@
       "install": "github:zsxh1990/pr-genius",
       "tags": [
         "zsxh1990/pr-genius"
+      ]
+    },
+    {
+      "id": "Ztyss/dsh-draft-fold",
+      "title": "Ztyss/dsh-draft-fold",
+      "description": "Folds long composer drafts into a compact summary card once a character threshold is reached, without changing message submission.",
+      "category": "client",
+      "repo": "https://github.com/Ztyss/dsh-draft-fold",
+      "install": "github:Ztyss/dsh-draft-fold",
+      "tags": [
+        "ztyss/dsh-draft-fold"
       ]
     },
     {
