@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-24T16:17:50.967Z",
-    "fetchedCount": 4279,
-    "count": 4295,
+    "generatedAt": "2026-09-24T17:32:58.742Z",
+    "fetchedCount": 4287,
+    "count": 4303,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2736,6 +2736,17 @@
       ]
     },
     {
+      "id": "adithyanraj03/dsh-schedule-later",
+      "title": "adithyanraj03/dsh-schedule-later",
+      "description": "Schedule a message into a dsh chat for later: a Schedule button in the message box with a date and time picker, a sidebar panel of pending messages across chats, delivery as a normal user message even with the browser closed, and schedule_message, list_scheduled_messages and cancel_scheduled_message tools so the model can come back to a chat on its own.",
+      "category": "plugin",
+      "repo": "https://github.com/adithyanraj03/dsh-schedule-later",
+      "install": "github:adithyanraj03/dsh-schedule-later",
+      "tags": [
+        "adithyanraj03/dsh-schedule-later"
+      ]
+    },
+    {
       "id": "AdonisSheldon/dsh-openai-oauth",
       "title": "AdonisSheldon/dsh-openai-oauth",
       "description": "Connect a ChatGPT account to Codex models in DeepSeek Harness through browser PKCE or device-code OAuth, with automatic token refresh and Web or headless login.",
@@ -2942,6 +2953,17 @@
       "install": "github:AI-Galaxy-GPU/dsh-sound",
       "tags": [
         "ai-galaxy-gpu/dsh-sound"
+      ]
+    },
+    {
+      "id": "ai-tools-mtl/Aurify/tree/main/packages/bundle-patent",
+      "title": "ai-tools-mtl/Aurify#bundle-patent",
+      "description": "Patent-writing gatekeeper for dsh - screens the idea against Chinese prior art first, then runs five-party alignment interviews, eight-chapter disclosure drafting, figures and simulation runs, seven-dimension review and docx/PDF export. Skills work out of the box; the search, export and experiment tools come from a bundled Python MCP service that ships disabled - one line in ~/.dsh/patent-services.yaml enables it, and uvx fetches the wheel from PyPI.",
+      "category": "plugin",
+      "repo": "https://github.com/ai-tools-mtl/Aurify/tree/main/packages/bundle-patent",
+      "install": "github:ai-tools-mtl/Aurify/tree/main/packages/bundle-patent",
+      "tags": [
+        "ai-tools-mtl/aurify#bundle-patent"
       ]
     },
     {
@@ -4716,7 +4738,7 @@
     {
       "id": "azazo1/dsh-write-protect",
       "title": "azazo1/dsh-write-protect",
-      "description": "Protect declared workspace subpaths such as .git from writes, and optionally grant extra writable roots under workspace-write.",
+      "description": "Keep declared workspace subpaths (e.g. .git) read-only, honor a read-only rules file at the workspace root, grant extra writable roots under workspace-write, and let the model request session-scoped write access; enforced for sandboxed CLI commands and the write/edit tools.",
       "category": "plugin",
       "repo": "https://github.com/azazo1/dsh-write-protect",
       "install": "github:azazo1/dsh-write-protect",
@@ -6707,7 +6729,7 @@
     {
       "id": "cayan0x/Lume",
       "title": "cayan0x/Lume",
-      "description": "DSH Desktop enhancement plugin: task-execution discipline plus a real relationship, per session. Discipline: layered injection (the system prompt carries only session-stable text, volatile content rides a tail snapshot so the prompt cache stays warm on every step), a methods layer (task contract with estimate-then-backfill counts, change ledger, hypothesis ledger including excluded hypotheses, and project knowledge accumulated per working directory across sessions, plus trajectory-based behaviour triggers that catch drifting exploration, editing without verifying and retrying a dead path with a verification fallback ladder, a document-editing methodology and a change-impact checklist), adaptive protocol tiers (full for tasks / lean for reasoning models, with casual turns told in the tail that task clauses do not apply), intent routing across Q&A, lookup, discussion, diagnosis and execution (diagnosis never fixes unasked), evidence recency (verify timestamps and causality before citing logs or old errors), real tool-result verification (failed or unknown results are never reported as done), self-healing on repeated failures with a cross-session reflection loop, compaction awareness that re-anchors state after the host condenses history, and document-capability awareness (probe for document tools and constrain accordingly: with tools, read before you write and read back before claiming done; without them, state the boundary instead of hand-parsing binary office files). Persona: distill named characters from chat logs, novels, scripts and character-setting documents, with tone, catchphrases and reply length anchored to real material statistics; long-term memory with automatic expiry for time-bound facts, corrections captured as style rules, approved replies pinned as corpus, two-way feedback that converges with use, memory star map, and persona card export/import. Constraints are injected only when relevant, so idle chat pays no extra tokens.",
+      "description": "DSH Desktop enhancement plugin — it puts verifiable facts on the table; constraints are injected only when relevant, so idle chat costs no extra tokens. 1) Task-execution discipline: each turn is classified from the sentence plus recent-turn trajectory (question / research / discussion / diagnosis / execute) with explicit boundaries, so questions do not touch files and diagnosis does not silently start fixing; it flags citations to code lines never opened this session, negative claims about symbols never seen, requirement items the deliverable does not cover, and unverified assumptions dressed up as open questions; at 75%/90% context pressure it warns and exports structured session memory (goal, settled decisions, open items, key locations) that a new session receives on its first turn; past sessions, including ones too full to continue, are re-distilled into cross-session knowledge at startup, idempotently. 2) Checkable artefacts: task contract (goal / scope / counts estimated then backfilled / completion criteria / non-goals); change ledger that auto-records every edit together with how it was verified, and surfaces still-unverified entries at delivery; hypothesis ledger including ruled-out items, where any conclusion requires evidence, the decision method and a counter-example check; design decisions (point / choice / rejected options / impact); project knowledge accumulated per working directory across sessions — numbered, deletable by name, sentences only, secrets rejected. 3) Behaviour triggers keyed on trajectory rather than wording: drifting exploration, editing without verifying, retrying a dead path, missing contract, missing design, stale hypotheses, criteria drift, knowledge not captured, editing a file never read this session; each notice carries concrete counts and repeats at most once every two turns. 4) Runtime metrics: route decisions, trigger hits, block assembly and external outcome signals are written to a local lume-metrics.jsonl and readable through lume_metrics, which reports trigger efficacy with an explicit observational caveat and excludes mechanisms that have no mechanical criterion. 5) Persona system: distil named characters from chat logs, novels, scripts and character-setting documents, with tone, catchphrases and reply length anchored to real material statistics; per-persona long-term memory plus temporary facts that expire after 30 days; corrections become style rules, approved replies are pinned as corpus, lexical leakage detection after a persona switch, memory star map, persona card export/import. Layered injection keeps session-stable text in the system prompt and sends volatile content as a tail snapshot, so the prompt cache stays valid.",
       "category": "plugin",
       "repo": "https://github.com/cayan0x/Lume",
       "install": "github:cayan0x/Lume",
@@ -11842,6 +11864,17 @@
       "install": "github:e2mcc/dsh-popout-sidebar",
       "tags": [
         "e2mcc/dsh-popout-sidebar"
+      ]
+    },
+    {
+      "id": "Eapp1e/dsh-poker",
+      "title": "Eapp1e/dsh-poker",
+      "description": "Texas Hold'em table for DeepSeek Harness: model-callable poker tools, six heuristic opponents, an optional coach, and a browser table whose buttons never post a chat message.",
+      "category": "plugin",
+      "repo": "https://github.com/Eapp1e/dsh-poker",
+      "install": "github:Eapp1e/dsh-poker",
+      "tags": [
+        "eapp1e/dsh-poker"
       ]
     },
     {
@@ -23122,6 +23155,17 @@
       ]
     },
     {
+      "id": "liaowenqi123/dsh-meeting-coordinator",
+      "title": "liaowenqi123/dsh-meeting-coordinator",
+      "description": "Meeting rooms for DSH sessions: joining a room grants the right to convene and the duty to attend, and a session belongs to at most one room. Convening forks each participant in with its own completed-turn context and with its tools stripped, a moderator that carries no context chooses the speakers, and every turn is appended to disk as it is spoken. After adjournment each participant receives its own minutes as a user turn and resumes work.",
+      "category": "plugin",
+      "repo": "https://github.com/liaowenqi123/dsh-meeting-coordinator",
+      "install": "github:liaowenqi123/dsh-meeting-coordinator",
+      "tags": [
+        "liaowenqi123/dsh-meeting-coordinator"
+      ]
+    },
+    {
       "id": "liaoyonghong/dsh-workspace-api",
       "title": "liaoyonghong/dsh-workspace-api",
       "description": "Exposes the DSH workspace as an HTTP API: browse, search and read files, and run natural-language agent tasks that answer with cited sources.",
@@ -29150,8 +29194,8 @@
     {
       "id": "Noob-stupid/dsh-plugin-gating-hub",
       "title": "Noob-stupid/dsh-plugin-gating-hub",
-      "description": "A plugin management panel: one-click enable/disable for installed plugins plus a GitHub dsh-plugin marketplace with details and one-click installs.",
-      "category": "dev-resource",
+      "description": "Framework-upgrade safety and plugin gating for DSH: a pre-upgrade session-format contract preflight that adapts incompatible plugins and agent presets before you upgrade, automatic rollback on failure, auto-quarantine of plugins that broke a boot, plus environment fingerprinting and a public contract-rule pack. The built-in multi-source marketplace is a discovery layer only.",
+      "category": "plugin",
       "repo": "https://github.com/Noob-stupid/dsh-plugin-gating-hub",
       "install": "github:Noob-stupid/dsh-plugin-gating-hub",
       "tags": [
@@ -32698,6 +32742,17 @@
       "install": "github:Raphaelutumn/dsh-mood",
       "tags": [
         "raphaelutumn/dsh-mood"
+      ]
+    },
+    {
+      "id": "rasyidmmz/dsh-ai-memory",
+      "title": "rasyidmmz/dsh-ai-memory",
+      "description": "Memory bridge between DeepSeek Harness and ai-memory: runs ai-memory's finalize-session when a DSH session ends, so the observations it already captured become searchable wiki pages. Skips subagents, queues concurrent session ends, and sweeps sessions abandoned by a forced restart. Requires a separately installed ai-memory server with its DSH lifecycle hooks wired by hand — ai-memory’s own install-hooks does not support DSH; this plugin only finalizes what capture has already recorded.",
+      "category": "plugin",
+      "repo": "https://github.com/rasyidmmz/dsh-ai-memory",
+      "install": "github:rasyidmmz/dsh-ai-memory",
+      "tags": [
+        "rasyidmmz/dsh-ai-memory"
       ]
     },
     {
@@ -36916,7 +36971,7 @@
     {
       "id": "syyr1987/dsh-linghun",
       "title": "syyr1987/dsh-linghun",
-      "description": "A cognitive-subject plugin for DeepSeek Harness: a customizable soul card (name, personality, communication style, and more), a cognition loop that makes every judgment traceable, and hippocampus memory that condenses experience into reusable knowledge. Not a persona card — auditable judgment.",
+      "description": "A judgment core for DeepSeek Harness: a cognition loop that gives every decision a source and attribution and drives planning to a close, hippocampus memory that condenses running experience into reusable knowledge, and a customizable persona card (name, personality, communication style). Requires DSH ^0.1.0-rc.7.",
       "category": "plugin",
       "repo": "https://github.com/syyr1987/dsh-linghun",
       "install": "github:syyr1987/dsh-linghun",
@@ -39745,6 +39800,17 @@
       "install": "github:wangtie-010101/wangtie-os",
       "tags": [
         "wangtie-010101/wangtie-os"
+      ]
+    },
+    {
+      "id": "wangxuewangxue98/dsh-motor-ai-l0",
+      "title": "wangxuewangxue98/dsh-motor-ai-l0",
+      "description": "Motor-design AI assistant plugin: requirement parsing → parameter identification → candidate matrix → Top10 verification. L0 is a millisecond-level broad filter (pure JS, zero solver dependency) that ranks candidates and emits the handoff payload for the L1/L2 precision tools; usable as a local agent preset and Cordis plugin. L1 (RMxprt) and L2 (Motor-CAD) are reserved in this version — the level gate fails fast above l0.",
+      "category": "plugin",
+      "repo": "https://github.com/wangxuewangxue98/dsh-motor-ai-l0",
+      "install": "github:wangxuewangxue98/dsh-motor-ai-l0",
+      "tags": [
+        "wangxuewangxue98/dsh-motor-ai-l0"
       ]
     },
     {
@@ -44731,6 +44797,17 @@
       ]
     },
     {
+      "id": "yq1930/dsh-skin-asuka-p01",
+      "title": "yq1930/dsh-skin-asuka-p01",
+      "description": "Unofficial Asuka-themed skin for DeepSeek Harness with dual character illustrations, day and night city-dome backdrops, and five appearance settings covering mode, backdrop, character position, backdrop intensity, and character size.",
+      "category": "client",
+      "repo": "https://github.com/yq1930/dsh-skin-asuka-p01",
+      "install": "github:yq1930/dsh-skin-asuka-p01",
+      "tags": [
+        "yq1930/dsh-skin-asuka-p01"
+      ]
+    },
+    {
       "id": "YRN-playmaker/dsh-wallpaper_share",
       "title": "YRN-playmaker/dsh-wallpaper_share",
       "description": "Syncs the wallpaper currently applied in Wallpaper Engine to the DSH Web UI background through a local bridge: preview/capture/full render modes, monitor lock, a wallpaper library panel for local and market content, focus lens with eye tracking, immersive mode, and a Windows app launcher that installs software from direct links or a cloud-drive share link and starts it with one click.",
@@ -46939,6 +47016,17 @@
       "install": "github:ZIye1208/dsh-github-mcp-hint",
       "tags": [
         "ziye1208/dsh-github-mcp-hint"
+      ]
+    },
+    {
+      "id": "ZiYuan258/dsh-skill-router",
+      "title": "ZiYuan258/dsh-skill-router",
+      "description": "On-demand skill tools for DeepSeek Harness: registers skill_search / skill_load / skill_ref so the model searches a staged skill library first and loads a skill body only when it needs it, keeping the library out of the resident session catalog and out of every turn's context; adds a Skills tab to the conversation view ring that reads back the whole session and lists which skills were actually loaded, and in which turn. Zero dependencies, and the records render client-side only, never entering the model's context.",
+      "category": "skill",
+      "repo": "https://github.com/ZiYuan258/dsh-skill-router",
+      "install": "github:ZiYuan258/dsh-skill-router",
+      "tags": [
+        "ziyuan258/dsh-skill-router"
       ]
     },
     {
