@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-24T05:25:55.270Z",
-    "fetchedCount": 4262,
-    "count": 4278,
+    "generatedAt": "2026-09-24T10:18:51.300Z",
+    "fetchedCount": 4278,
+    "count": 4294,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2942,6 +2942,17 @@
       "install": "github:AI-Galaxy-GPU/dsh-sound",
       "tags": [
         "ai-galaxy-gpu/dsh-sound"
+      ]
+    },
+    {
+      "id": "ai-yukin/dsh-0-tools",
+      "title": "ai-yukin/dsh-0-tools",
+      "description": "One-click free-model setup for DSH web, built for coding beginners: one-click installer for Windows (install.bat) and macOS/Linux (install.sh, v1.7.0+); four permanently free channels — Zhipu GLM (text + image), SiliconFlow (Qwen3-8B plus 15+ sub-9B models), iFlytek Spark Lite and the OpenRouter free pool, which routes through openrouter/auto and picks from a pool that changes over time; bottom-left setup hint hides once any free model is connected; real-time DeepSeek peak/off-peak pricing reminder; bundled beginner help center.",
+      "category": "plugin",
+      "repo": "https://github.com/ai-yukin/dsh-0-tools",
+      "install": "github:ai-yukin/dsh-0-tools",
+      "tags": [
+        "ai-yukin/dsh-0-tools"
       ]
     },
     {
@@ -6166,6 +6177,17 @@
       ]
     },
     {
+      "id": "Breeze136/dsh-kb-rag/tree/main/npm-package",
+      "title": "Breeze136/dsh-kb-rag#npm-package",
+      "description": "Local literature knowledge-base RAG: 10 tools (kb_ingest, kb_search, kb_rag, kb_zotero, kb_dedup, kb_clear, kb_fetch, kb_scope, kb_stats, kb_status), hybrid BM25+vector+reranker search, cited QA with clickable DOI links, all-local bge embeddings over a single-file SQLite index. Needs Python 3.9+ with pymupdf, faiss-cpu and sentence-transformers; the `npx dsh-kb-rag-install` installer sets those up and pre-downloads the model.",
+      "category": "plugin",
+      "repo": "https://github.com/Breeze136/dsh-kb-rag/tree/main/npm-package",
+      "install": "github:Breeze136/dsh-kb-rag/tree/main/npm-package",
+      "tags": [
+        "breeze136/dsh-kb-rag#npm-package"
+      ]
+    },
+    {
       "id": "BrianHIO-x/dsh-think-expand",
       "title": "BrianHIO-x/dsh-think-expand",
       "description": "Auto-expands every Think row after switching sessions, with a header switch to turn it on or off.",
@@ -6977,6 +6999,17 @@
       "install": "github:changingwang/dsh-stage-gate",
       "tags": [
         "changingwang/dsh-stage-gate"
+      ]
+    },
+    {
+      "id": "changliang-c/zemingxingxiao-brand-diagnosis",
+      "title": "changliang-c/zemingxingxiao-brand-diagnosis",
+      "description": "Registers the Zemingxingxiao five-element brand-diagnosis skill with five companion reference skills (theory, diagnosis playbook, 240-case library, visual templates, glossary), a system-prompt router, and the mandatory HTML report template with 13 theory diagrams.",
+      "category": "skill",
+      "repo": "https://github.com/changliang-c/zemingxingxiao-brand-diagnosis",
+      "install": "github:changliang-c/zemingxingxiao-brand-diagnosis",
+      "tags": [
+        "changliang-c/zemingxingxiao-brand-diagnosis"
       ]
     },
     {
@@ -16293,7 +16326,7 @@
     {
       "id": "hherosoul/dsh-smart-charts",
       "title": "hherosoul/dsh-smart-charts",
-      "description": "Chart generation skill that renders CSV, Excel, or JSON data into 26 types of interactive ECharts HTML, fully offline. Supports multi-file merge and sandboxed data transformation.",
+      "description": "Smart Charts skill: turns CSV/TSV/TXT/XLSX/XLS/JSON data files into standalone interactive ECharts HTML - 32 chart types including offline maps, 3 themes, no CDN. A --profile data profile (per-column dtype, cardinality, missingness, samples, statistics, entity grain, insight signals) lets the agent read the data and pick the chart itself; each chart embeds a fact sheet (plot_stats + data_preview) whose numbers are the only quotable values. LLM transform code runs in a restricted sandbox (blacklist + AST whitelist + safe builtins); --doctor self-checks the Python environment. Fully offline, ECharts bundled.",
       "category": "skill",
       "repo": "https://github.com/hherosoul/dsh-smart-charts",
       "install": "github:hherosoul/dsh-smart-charts",
@@ -16392,7 +16425,7 @@
     {
       "id": "hkkz9522/dsh-session-manager",
       "title": "hkkz9522/dsh-session-manager",
-      "description": "DSH Web session manager: delete, archive, move across workspaces, migrate preset; favorites, review-later, search, sort, priority, add tags and notes (manual / semi-automated). Suggestions are welcome on GitHub.",
+      "description": "DSH Web session manager: delete, archive, move across workspaces, migrate preset; favorites, review-later, search, sort, priority, add tags and notes; bulk processing. Suggestions and feedback are welcome on GitHub.",
       "category": "plugin",
       "repo": "https://github.com/hkkz9522/dsh-session-manager",
       "install": "github:hkkz9522/dsh-session-manager",
@@ -18895,6 +18928,17 @@
       "install": "github:jiang4wqy/dsh-dejaview",
       "tags": [
         "jiang4wqy/dsh-dejaview"
+      ]
+    },
+    {
+      "id": "jianghu-lao-yao/sh-volume-knob",
+      "title": "jianghu-lao-yao/sh-volume-knob",
+      "description": "Speaker button beside the composer microphone — one click reads the newest agent reply aloud through dsh-tts (browser voice as fallback), the next click stops, and a press-then-drag-up opens a vertical mixer for in-page media volume and system output volume.",
+      "category": "plugin",
+      "repo": "https://github.com/jianghu-lao-yao/sh-volume-knob",
+      "install": "github:jianghu-lao-yao/sh-volume-knob",
+      "tags": [
+        "jianghu-lao-yao/sh-volume-knob"
       ]
     },
     {
@@ -26475,6 +26519,39 @@
       ]
     },
     {
+      "id": "menotbobbybrown/dsh-plugin-browser",
+      "title": "menotbobbybrown/dsh-plugin-browser",
+      "description": "Native headless and visible Chromium browser automation agent for DeepSeek Harness with DOM tree extraction, screenshot capture, and built-in SSRF protection.",
+      "category": "plugin",
+      "repo": "https://github.com/menotbobbybrown/dsh-plugin-browser",
+      "install": "github:menotbobbybrown/dsh-plugin-browser",
+      "tags": [
+        "menotbobbybrown/dsh-plugin-browser"
+      ]
+    },
+    {
+      "id": "menotbobbybrown/dsh-plugin-mcp",
+      "title": "menotbobbybrown/dsh-plugin-mcp",
+      "description": "Universal Model Context Protocol (MCP) bridge for DeepSeek Harness: connects agents to stdio/sse/websocket MCP servers with a 10k dormant scale engine, sub-millisecond BM25 tool search, dynamic token budgeting, and a real-time web UI dashboard.",
+      "category": "plugin",
+      "repo": "https://github.com/menotbobbybrown/dsh-plugin-mcp",
+      "install": "github:menotbobbybrown/dsh-plugin-mcp",
+      "tags": [
+        "menotbobbybrown/dsh-plugin-mcp"
+      ]
+    },
+    {
+      "id": "menotbobbybrown/dsh-plugin-memory",
+      "title": "menotbobbybrown/dsh-plugin-memory",
+      "description": "Persistent long-term memory for DeepSeek Harness: a JSON store of typed entries (fact, preference, entity, rule, episodic) exposed as the memory_remember and memory_recall agent tools, with recall ranked by keyword overlap, importance and access frequency.",
+      "category": "plugin",
+      "repo": "https://github.com/menotbobbybrown/dsh-plugin-memory",
+      "install": "github:menotbobbybrown/dsh-plugin-memory",
+      "tags": [
+        "menotbobbybrown/dsh-plugin-memory"
+      ]
+    },
+    {
       "id": "mercy719/dsh-client-ui-weather",
       "title": "mercy719/dsh-client-ui-weather",
       "description": "Weather dashboard for the DeepSeek Harness Web GUI with city switching, current conditions, an eight-hour trend, and a five-day forecast.",
@@ -26670,6 +26747,17 @@
       "install": "github:miaomiao636/dsh-message-navigator",
       "tags": [
         "miaomiao636/dsh-message-navigator"
+      ]
+    },
+    {
+      "id": "Miaotofu01/Study-Mate",
+      "title": "Miaotofu01/Study-Mate",
+      "description": "Your AI learning companion: helping you plan your studies, understand concepts, and build projects to master a subject.",
+      "category": "plugin",
+      "repo": "https://github.com/Miaotofu01/Study-Mate",
+      "install": "github:Miaotofu01/Study-Mate",
+      "tags": [
+        "miaotofu01/study-mate"
       ]
     },
     {
@@ -27033,6 +27121,17 @@
       "install": "github:mingzeng21/dsh-stock-mentions",
       "tags": [
         "mingzeng21/dsh-stock-mentions"
+      ]
+    },
+    {
+      "id": "minivv/dsh-activity-bell",
+      "title": "minivv/dsh-activity-bell",
+      "description": "Sidebar activity bell: a red badge counts sessions that finished, and clicking it swaps the sidebar list from workspace grouping to a day-grouped recent-activity list with a green dot on completions that have not been opened.",
+      "category": "client",
+      "repo": "https://github.com/minivv/dsh-activity-bell",
+      "install": "github:minivv/dsh-activity-bell",
+      "tags": [
+        "minivv/dsh-activity-bell"
       ]
     },
     {
@@ -28400,6 +28499,17 @@
       ]
     },
     {
+      "id": "nengong-ai/dsh-keychain-credentials",
+      "title": "nengong-ai/dsh-keychain-credentials",
+      "description": "Pure JavaScript macOS Keychain credentials provider for DeepSeek Harness, replacing plaintext .credentials.yaml storage and fully supporting both refs and records without native builds, signing, or Xcode.",
+      "category": "plugin",
+      "repo": "https://github.com/nengong-ai/dsh-keychain-credentials",
+      "install": "github:nengong-ai/dsh-keychain-credentials",
+      "tags": [
+        "nengong-ai/dsh-keychain-credentials"
+      ]
+    },
+    {
       "id": "Neptune810/dsh-model-router",
       "title": "Neptune810/dsh-model-router",
       "description": "Sets the DeepSeek flash model's reasoning effort per step — thinking off for short cheap prompts, low for a plain request, high for engineering work — and raises it only on repeated tool failures. The model itself never changes; effort max is opt-in.",
@@ -28600,7 +28710,7 @@
     {
       "id": "nightosong/gord-dsh-worktree",
       "title": "nightosong/gord-dsh-worktree",
-      "description": "Git worktrees as five agent tools — list, create, inspect, remove, prune — plus a working-location picker on the New Session row, a Changes tab in the right sidebar that shows the uncommitted diff of the session directory file by file, and a panel that lists archived sessions with unarchive and delete; the repository is resolved from the session directory, removal refuses uncommitted or untracked work, and the main worktree is never removable.",
+      "description": "Git worktrees for DeepSeek Harness: five agent tools, a New Session picker that starts a session inside one, a sidebar tab for the uncommitted diff, a panel that unarchives or deletes archived sessions, and double-click rename. Removal refuses uncommitted or untracked changes and never removes the main worktree.",
       "category": "plugin",
       "repo": "https://github.com/nightosong/gord-dsh-worktree",
       "install": "github:nightosong/gord-dsh-worktree",
@@ -30355,6 +30465,17 @@
       "install": "github:pavangupta352/stalegreen/tree/main/dsh-plugin-stalegreen",
       "tags": [
         "pavangupta352/stalegreen#dsh-plugin-stalegreen"
+      ]
+    },
+    {
+      "id": "pbwheel/dsh-workbuddy-expert",
+      "title": "pbwheel/dsh-workbuddy-expert",
+      "description": "Brings WorkBuddy desktop-app experts into DSH: a settings-page market scans the local WorkBuddy expert directory (experts land there after you summon them in WorkBuddy) read-only for browsing, search and category filtering, with one-click install (exported to ~/.dsh/experts/ as role prompt + skills + avatar), update and uninstall; a picker capsule next to the input box switches the current session's expert — swapping role prompt, skills and an optional tool whitelist wholesale while keeping full session history, applied at the next model-request boundary.",
+      "category": "plugin",
+      "repo": "https://github.com/pbwheel/dsh-workbuddy-expert",
+      "install": "github:pbwheel/dsh-workbuddy-expert",
+      "tags": [
+        "pbwheel/dsh-workbuddy-expert"
       ]
     },
     {
@@ -37999,6 +38120,17 @@
       ]
     },
     {
+      "id": "tonylee2022/dsh-xai-oauth",
+      "title": "tonylee2022/dsh-xai-oauth",
+      "description": "Sign in to an xAI Grok subscription with device-code OAuth, refresh the access token, and use it as the xai route credential without an API key.",
+      "category": "plugin",
+      "repo": "https://github.com/tonylee2022/dsh-xai-oauth",
+      "install": "github:tonylee2022/dsh-xai-oauth",
+      "tags": [
+        "tonylee2022/dsh-xai-oauth"
+      ]
+    },
+    {
       "id": "tonytanglab/deepseek-harness-relay-mcp",
       "title": "tonytanglab/deepseek-harness-relay-mcp",
       "description": "Installs a Web-profile helper that diagnoses and writes MCP config so Codex, Cursor, or Claude Code can spawn dsh --profile codex.",
@@ -42234,6 +42366,17 @@
       ]
     },
     {
+      "id": "xchannel1987/dsh-sdd-progress-xc",
+      "title": "xchannel1987/dsh-sdd-progress-xc",
+      "description": "SDD task progress (todos) and progress ledger (sdd/progress.md) as a right-sidebar tab bound to the current session, rendered with the official MarkdownText, auto-refresh every 5s.",
+      "category": "client",
+      "repo": "https://github.com/xchannel1987/dsh-sdd-progress-xc",
+      "install": "github:xchannel1987/dsh-sdd-progress-xc",
+      "tags": [
+        "xchannel1987/dsh-sdd-progress-xc"
+      ]
+    },
+    {
       "id": "xchannel1987/dsh-session-xc",
       "title": "xchannel1987/dsh-session-xc",
       "description": "Session management enhancement plugin for DeepSeek Harness - workspace session count display, archived sessions panel with restore/delete, drag-and-drop session move across workspaces.",
@@ -43012,6 +43155,17 @@
       "install": "github:xingzhen199186/dsh-insight-tree",
       "tags": [
         "xingzhen199186/dsh-insight-tree"
+      ]
+    },
+    {
+      "id": "xingzhen199186/dsh-mini-remote",
+      "title": "xingzhen199186/dsh-mini-remote",
+      "description": "A minimal phone remote control for DeepSeek Harness: the phone page carries only the instruction you send and the AI's final conclusion, while tool calls, file access, sub-agent dispatch, and reasoning traces stay on the computer, reachable over LAN, Tailscale, or a Cloudflare tunnel with a QR code, link, and password for each route.",
+      "category": "plugin",
+      "repo": "https://github.com/xingzhen199186/dsh-mini-remote",
+      "install": "github:xingzhen199186/dsh-mini-remote",
+      "tags": [
+        "xingzhen199186/dsh-mini-remote"
       ]
     },
     {
@@ -46557,6 +46711,17 @@
       ]
     },
     {
+      "id": "zhy5/dsh-wx-bridge",
+      "title": "zhy5/dsh-wx-bridge",
+      "description": "Drive your local DSH from WeChat: a self-hosted iLink bridge over a persistent ACP session (context lives in DSH and is resumable), phone conversations grouped into the desktop workspace, with image recognition, file messages (Excel/Word/PDF, parsed by the agent itself) and voice transcripts. Access defaults to strict (only registered devices are served); the phone channel's permission preset is wide by design - see the README security section before sharing the bot.",
+      "category": "plugin",
+      "repo": "https://github.com/zhy5/dsh-wx-bridge",
+      "install": "github:zhy5/dsh-wx-bridge",
+      "tags": [
+        "zhy5/dsh-wx-bridge"
+      ]
+    },
+    {
       "id": "ZI-LV68/dsh-deepseek-model-router",
       "title": "ZI-LV68/dsh-deepseek-model-router",
       "description": "Auto-switch DeepSeek models: routes every request to the vision model when images are present, to the pro model for complex tasks, and to the fast model otherwise; includes a switch_model tool for manual overrides.",
@@ -47445,6 +47610,17 @@
       "install": "github:zuoguyoupan2023/adhdgofly-dsh-ext",
       "tags": [
         "zuoguyoupan2023/adhdgofly-dsh-ext"
+      ]
+    },
+    {
+      "id": "zuojinxin/dsh-provider-switch",
+      "title": "zuojinxin/dsh-provider-switch",
+      "description": "Enable or disable model providers, search models in the selector, and rename provider display names.",
+      "category": "plugin",
+      "repo": "https://github.com/zuojinxin/dsh-provider-switch",
+      "install": "github:zuojinxin/dsh-provider-switch",
+      "tags": [
+        "zuojinxin/dsh-provider-switch"
       ]
     },
     {
