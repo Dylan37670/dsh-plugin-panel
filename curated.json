@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-25T10:17:37.851Z",
-    "fetchedCount": 4323,
-    "count": 4339,
+    "generatedAt": "2026-09-25T16:18:00.478Z",
+    "fetchedCount": 4329,
+    "count": 4345,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -4639,6 +4639,17 @@
       ]
     },
     {
+      "id": "Astervolans/dsh-opencode-go-usage",
+      "title": "Astervolans/dsh-opencode-go-usage",
+      "description": "OpenCode GO quota widget pinned to the sidebar, with rolling/weekly/monthly usage bars, an elapsed-versus-remaining time bar under each, a same-origin usage proxy, an /opencode-go command, and the runtime x-opencode-session fix for GO gateway chat requests. Fork of yumusb/dsh-opencode-go-usage.",
+      "category": "plugin",
+      "repo": "https://github.com/Astervolans/dsh-opencode-go-usage",
+      "install": "github:Astervolans/dsh-opencode-go-usage",
+      "tags": [
+        "astervolans/dsh-opencode-go-usage"
+      ]
+    },
+    {
       "id": "asukasec/dsh-message-preview",
       "title": "asukasec/dsh-message-preview",
       "description": "Right-edge user-message navigator with an adaptive block layout that fits the available height, plus hover previews, keyboard controls, and click-to-jump navigation.",
@@ -6309,6 +6320,17 @@
       ]
     },
     {
+      "id": "btsd321/dsh-oh-my-terminal",
+      "title": "btsd321/dsh-oh-my-terminal",
+      "description": "Bottom terminal panel for the DSH Web GUI, providing multi-tab interactive terminals powered by node-pty (Windows ConPTY / POSIX openpty) with split panes, a side terminal list, and a dropdown new/split menu.",
+      "category": "client",
+      "repo": "https://github.com/btsd321/dsh-oh-my-terminal",
+      "install": "github:btsd321/dsh-oh-my-terminal",
+      "tags": [
+        "btsd321/dsh-oh-my-terminal"
+      ]
+    },
+    {
       "id": "btsd321/dsh-remote-explorer",
       "title": "btsd321/dsh-remote-explorer",
       "description": "Remote development launcher for DeepSeek Harness: provisions dsh on a remote host via SSH and connects from the local client, with LLM credentials proxied through a reverse tunnel so they never leave the local machine. Ships as both a standalone CLI and a dsh plugin with a session panel, /remote slash command and remote_* agent tools.",
@@ -7175,6 +7197,17 @@
       "install": "github:Che-Year/dsh-unidoc",
       "tags": [
         "che-year/dsh-unidoc"
+      ]
+    },
+    {
+      "id": "CheeseFox259/dsh-better-composer",
+      "title": "CheeseFox259/dsh-better-composer",
+      "description": "Markdown visual enhancement, local completions, paste chip references, and a live context map for DSH Web Composer.",
+      "category": "client",
+      "repo": "https://github.com/CheeseFox259/dsh-better-composer",
+      "install": "github:CheeseFox259/dsh-better-composer",
+      "tags": [
+        "cheesefox259/dsh-better-composer"
       ]
     },
     {
@@ -8140,6 +8173,17 @@
       "install": "github:Cola1018/dsh-aicc-zhunao",
       "tags": [
         "cola1018/dsh-aicc-zhunao"
+      ]
+    },
+    {
+      "id": "ColorlessBoy/dsh-opencode-usage",
+      "title": "ColorlessBoy/dsh-opencode-usage",
+      "description": "Shows the remaining OpenCode Go quota (5-hour, weekly, monthly) in the DeepSeek Harness Web composer dock.",
+      "category": "plugin",
+      "repo": "https://github.com/ColorlessBoy/dsh-opencode-usage",
+      "install": "github:ColorlessBoy/dsh-opencode-usage",
+      "tags": [
+        "colorlessboy/dsh-opencode-usage"
       ]
     },
     {
@@ -9814,17 +9858,6 @@
       "install": "github:dingminhua/dsh-connect-workbuddy",
       "tags": [
         "dingminhua/dsh-connect-workbuddy"
-      ]
-    },
-    {
-      "id": "dingminhua/dsh-sub-cli/tree/main/plugin",
-      "title": "dingminhua/dsh-sub-cli#plugin",
-      "description": "Install and call external Agent CLIs (Codex, Claude Code) from DSH without touching the system install. Each CLI gets its own Provider, model, reasoning effort and permission preset, callable directly or as a native subagent.",
-      "category": "plugin",
-      "repo": "https://github.com/dingminhua/dsh-sub-cli/tree/main/plugin",
-      "install": "github:dingminhua/dsh-sub-cli/tree/main/plugin",
-      "tags": [
-        "dingminhua/dsh-sub-cli#plugin"
       ]
     },
     {
@@ -17754,6 +17787,17 @@
       ]
     },
     {
+      "id": "idoall/dsh-lan-guard",
+      "title": "idoall/dsh-lan-guard",
+      "description": "LAN access for the official DSH Web UI through a gated reverse proxy: DSH keeps its own loopback binding, and a second port adds a password gate, self-signed HTTPS and per-device pairing that can be revoked individually, with a QR code to open it from a phone.",
+      "category": "plugin",
+      "repo": "https://github.com/idoall/dsh-lan-guard",
+      "install": "github:idoall/dsh-lan-guard",
+      "tags": [
+        "idoall/dsh-lan-guard"
+      ]
+    },
+    {
       "id": "idoall/dsh-notify",
       "title": "idoall/dsh-notify",
       "description": "In-page task notifications with collapsible status toasts, sound, and session navigation.",
@@ -18293,6 +18337,17 @@
       ]
     },
     {
+      "id": "itchenshi/dsh-gateway-models",
+      "title": "itchenshi/dsh-gateway-models",
+      "description": "Declares the OpenCode Go and Command Code route wire protocol and endpoint (so the API address never has to be typed), adds the DeepSeek V4.1 models to the OpenCode Go route and puts them first, completes the Command Code model list from its public catalog, and attaches a per-conversation x-opencode-session header to OpenCode requests (fixes 400 MissingSessionID).",
+      "category": "plugin",
+      "repo": "https://github.com/itchenshi/dsh-gateway-models",
+      "install": "github:itchenshi/dsh-gateway-models",
+      "tags": [
+        "itchenshi/dsh-gateway-models"
+      ]
+    },
+    {
       "id": "itchenshi/dsh-gui-last-session",
       "title": "itchenshi/dsh-gui-last-session",
       "description": "Reopens the conversation you were last in after restarting DeepSeek Harness, by keeping a pointer file under the DSH home directory instead of patching engine files.",
@@ -18317,23 +18372,12 @@
     {
       "id": "itchenshi/dsh-model-surplus",
       "title": "itchenshi/dsh-model-surplus",
-      "description": "Shows the active model's usage and remaining balance in the session header: OpenCode Go plan usage (rolling, weekly, monthly) with the selected model's monthly cap, and DeepSeek account balance.",
+      "description": "Shows the active model's usage and remaining balance in the session header: OpenCode Go plan usage (rolling, weekly, monthly) with the selected model's monthly cap, Command Code 5-hour and weekly window usage with remaining credits, and DeepSeek account balance.",
       "category": "plugin",
       "repo": "https://github.com/itchenshi/dsh-model-surplus",
       "install": "github:itchenshi/dsh-model-surplus",
       "tags": [
         "itchenshi/dsh-model-surplus"
-      ]
-    },
-    {
-      "id": "itchenshi/dsh-opencode-go-path",
-      "title": "itchenshi/dsh-opencode-go-path",
-      "description": "Declares the wire protocol for the opencode-go route so models the installed catalog does not describe resolve, adds the DeepSeek V4.1 models to that route when they are missing, and attaches a per-conversation x-opencode-session header to OpenCode requests.",
-      "category": "plugin",
-      "repo": "https://github.com/itchenshi/dsh-opencode-go-path",
-      "install": "github:itchenshi/dsh-opencode-go-path",
-      "tags": [
-        "itchenshi/dsh-opencode-go-path"
       ]
     },
     {
@@ -23416,6 +23460,17 @@
       "install": "github:licyer/dsh-token-monitor",
       "tags": [
         "licyer/dsh-token-monitor"
+      ]
+    },
+    {
+      "id": "lifangjin/dsh-paoding",
+      "title": "lifangjin/dsh-paoding",
+      "description": "Orchestration-mode preset generator for DSH: a lead agent delegates to four role helpers that carry only their own tools, configured per workspace through a web panel, with zero changes to the harness source.",
+      "category": "plugin",
+      "repo": "https://github.com/lifangjin/dsh-paoding",
+      "install": "github:lifangjin/dsh-paoding",
+      "tags": [
+        "lifangjin/dsh-paoding"
       ]
     },
     {
@@ -35143,6 +35198,17 @@
       ]
     },
     {
+      "id": "shiyan688/dsh-novel-craft",
+      "title": "shiyan688/dsh-novel-craft",
+      "description": "A novel-writing workbench for DeepSeek Harness: you tap thumbs-up or thumbs-down on candidate passages, and the model distils them into a short preference profile that carries into later drafting calls while the manuscript stays out of the drafting context. Adds a chapter board, per-chapter writing packs, annotation-scoped revision that rewrites only the annotated paragraph and verifies the rest byte-for-byte, a project ledger, and local pacing checks.",
+      "category": "plugin",
+      "repo": "https://github.com/shiyan688/dsh-novel-craft",
+      "install": "github:shiyan688/dsh-novel-craft",
+      "tags": [
+        "shiyan688/dsh-novel-craft"
+      ]
+    },
+    {
       "id": "Shiye-10Pages/dsh-memory-porter",
       "title": "Shiye-10Pages/dsh-memory-porter",
       "description": "Brings your existing Claude / ChatGPT history into DSH: instant zero-token import of the memories.json inside a Claude export, local Claude Code transcripts with no export needed, and conversations distilled through the model you already configured in DSH. Every memory carries verbatim evidence checked against the source by code — a paraphrase is dropped and counted, and evidence found only in the assistant turns is always routed to review rather than stored.",
@@ -37902,7 +37968,7 @@
     {
       "id": "THEWOLFWALKER/dsh-notifier",
       "title": "THEWOLFWALKER/dsh-notifier",
-      "description": "Multi-channel notifications and phone control for DSH: one `notify()` API across 27 channels, event-driven pushes, phone approvals and questions, phone task takeover (`/tasks` `/use`), images into the session, six inbound control channels, a loopback web console, bilingual messages (zh/en via `lang`), multi-agent routing, and zero runtime dependencies.",
+      "description": "DSH notification & remote-control plane: one `notify()` API across 28 outbound channels, six inbound control channels, phone approvals/questions/task control, a Native DSH Notify & Control UI, live outbound hot-apply, multi-agent routing, and zero runtime dependencies.",
       "category": "plugin",
       "repo": "https://github.com/THEWOLFWALKER/dsh-notifier",
       "install": "github:THEWOLFWALKER/dsh-notifier",
@@ -40069,7 +40135,7 @@
     {
       "id": "wangcangxing/ai-eight-honors-eight-shames",
       "title": "wangcangxing/ai-eight-honors-eight-shames",
-      "description": "DSH plugin that registers the ai-eight-honors-eight-shames skill: eight checkable working rules for coding agents (verify before calling, confirm ambiguity, cite evidence, reuse before creating, test before claiming done, follow local conventions, separate fact from inference, keep changes reversible) plus a ninth rule that logs each user request and the change made in two fixed report files at the workspace root.",
+      "description": "DSH plugin that registers the ai-eight-honors-eight-shames skill: eight checkable working rules for coding agents (verify before calling, confirm ambiguity, cite evidence, reuse before creating, test before claiming done, follow local conventions, separate fact from inference, keep changes reversible) plus a ninth rule that logs each user request and the change made in report files at the workspace root.",
       "category": "skill",
       "repo": "https://github.com/wangcangxing/ai-eight-honors-eight-shames",
       "install": "github:wangcangxing/ai-eight-honors-eight-shames",
