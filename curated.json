@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-25T16:18:00.478Z",
-    "fetchedCount": 4329,
-    "count": 4345,
+    "generatedAt": "2026-09-25T17:32:19.055Z",
+    "fetchedCount": 4347,
+    "count": 4363,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -4813,6 +4813,17 @@
       ]
     },
     {
+      "id": "azazo1/dsh-reduce-effects",
+      "title": "azazo1/dsh-reduce-effects",
+      "description": "Adds a UI effects page to Settings that switches off DSH Web animations and transitions, loading and progress animations, backdrop blur, smooth scrolling, hover title scroll, shadows, gradients and JS motion one category at a time, to cut browser rendering cost.",
+      "category": "client",
+      "repo": "https://github.com/azazo1/dsh-reduce-effects",
+      "install": "github:azazo1/dsh-reduce-effects",
+      "tags": [
+        "azazo1/dsh-reduce-effects"
+      ]
+    },
+    {
       "id": "azazo1/dsh-write-protect",
       "title": "azazo1/dsh-write-protect",
       "description": "Keep declared workspace subpaths (e.g. .git) read-only, honor a read-only rules file at the workspace root, grant extra writable roots under workspace-write, and let the model request session-scoped write access; enforced for sandboxed CLI commands and the write/edit tools.",
@@ -5173,6 +5184,17 @@
       "install": "github:BakaCirno233/dsh-session-delete",
       "tags": [
         "bakacirno233/dsh-session-delete"
+      ]
+    },
+    {
+      "id": "bakasbk/dsh-connect-comate",
+      "title": "bakasbk/dsh-connect-comate",
+      "description": "Connects the locally signed-in WPS Comate desktop account to DeepSeek Harness as a model provider, via a secure loopback shim.",
+      "category": "plugin",
+      "repo": "https://github.com/bakasbk/dsh-connect-comate",
+      "install": "github:bakasbk/dsh-connect-comate",
+      "tags": [
+        "bakasbk/dsh-connect-comate"
       ]
     },
     {
@@ -6009,6 +6031,17 @@
       "install": "github:BolunHan/cc-monitor/tree/main/dsh-cc-monitor",
       "tags": [
         "bolunhan/cc-monitor#dsh-cc-monitor"
+      ]
+    },
+    {
+      "id": "bonerush/dsh-obsidian-mem",
+      "title": "bonerush/dsh-obsidian-mem",
+      "description": "Project documents and long-term memory as plain Markdown in a dedicated Obsidian vault: six mem_* tools (search, read, write, log, brief, admin), one budgeted recall injection at the first step of a session, and automatic distillation of completed turns. Obsidian does not need to be running, and the vault stays readable with the plugin uninstalled.",
+      "category": "plugin",
+      "repo": "https://github.com/bonerush/dsh-obsidian-mem",
+      "install": "github:bonerush/dsh-obsidian-mem",
+      "tags": [
+        "bonerush/dsh-obsidian-mem"
       ]
     },
     {
@@ -7202,7 +7235,7 @@
     {
       "id": "CheeseFox259/dsh-better-composer",
       "title": "CheeseFox259/dsh-better-composer",
-      "description": "Markdown visual enhancement, local completions, paste chip references, and a live context map for DSH Web Composer.",
+      "description": "Markdown visual enhancement and session workbench for DSH Web Composer: live syntax presentation with caret-row source reveal, deterministic local completions and diagnostics; long pastes fold into persistent chips with inline context or file-mode delivery (@path across 50+ extensions) plus sidebar LLM rewrites (stop, preview diff, undo/redo); real-time context map with token gauge, composition breakdown, per-turn growth chart with anchor lines, in-place /compact, and turn forking.",
       "category": "client",
       "repo": "https://github.com/CheeseFox259/dsh-better-composer",
       "install": "github:CheeseFox259/dsh-better-composer",
@@ -7945,6 +7978,17 @@
       "install": "github:cjm-m/dsh-paste-code-block",
       "tags": [
         "cjm-m/dsh-paste-code-block"
+      ]
+    },
+    {
+      "id": "CJYLZS/dsh-browser",
+      "title": "CJYLZS/dsh-browser",
+      "description": "Give the dsh agent a real browser: each conversation gets its own Chrome or Edge process with its own profile and CDP port, driven by six tools and mirrored live in the right sidebar, where you can watch the work and take over by clicking or typing on the picture. Nothing else to install — it uses the Chrome or Edge already on the machine, downloads no browser, needs no companion app or extension, and keeps its tabs and sign-ins between tool calls.",
+      "category": "plugin",
+      "repo": "https://github.com/CJYLZS/dsh-browser",
+      "install": "github:CJYLZS/dsh-browser",
+      "tags": [
+        "cjylzs/dsh-browser"
       ]
     },
     {
@@ -9086,6 +9130,17 @@
       "install": "github:dannyvan/dsh-file-drop",
       "tags": [
         "dannyvan/dsh-file-drop"
+      ]
+    },
+    {
+      "id": "DanZai233/dsh-webask",
+      "title": "DanZai233/dsh-webask",
+      "description": "Adds a button beside the composer and a global hotkey palette (default mod+shift+k) that hand one-off questions to a web chat instead of into the harness context: the draft is lifted out of the composer, copied to the clipboard and opened in the templated URL. Ships target-site presets (DeepSeek, Kimi, Qwen, 豆包, 腾讯元宝, GLM, Gemini), a local question history that can be re-opened, copied, or inserted back into the composer, and a settings tab for site, URL template, hotkey, clipboard and history.",
+      "category": "client",
+      "repo": "https://github.com/DanZai233/dsh-webask",
+      "install": "github:DanZai233/dsh-webask",
+      "tags": [
+        "danzai233/dsh-webask"
       ]
     },
     {
@@ -12832,6 +12887,17 @@
       "install": "github:Fakek0f3sT/dsh-mcp-diff",
       "tags": [
         "fakek0f3st/dsh-mcp-diff"
+      ]
+    },
+    {
+      "id": "fakeNihilist/dsh-plugin-usage-stats",
+      "title": "fakeNihilist/dsh-plugin-usage-stats",
+      "description": "Adds a whole-corpus usage statistics page to DSH with daily and cumulative tokens, cache hit rate, per-model breakdown and a year-long activity heatmap, all read from the provider-reported usage.",
+      "category": "plugin",
+      "repo": "https://github.com/fakeNihilist/dsh-plugin-usage-stats",
+      "install": "github:fakeNihilist/dsh-plugin-usage-stats",
+      "tags": [
+        "fakenihilist/dsh-plugin-usage-stats"
       ]
     },
     {
@@ -17446,6 +17512,17 @@
       ]
     },
     {
+      "id": "hyzyn/dsh-plugin-kit/tree/main/packages/kit-settings",
+      "title": "hyzyn/dsh-plugin-kit#kit-settings",
+      "description": "Host page for kit plugin configuration in the DSH Web GUI: registers a \"Plugin configuration\" section in Settings — peer to the built-in General section — through the official settings.section slot and declares a settings.kit.item child slot, which dsh-plugin-kit plugins render their own config cards into. Installing it alone shows an empty page; cards appear as slot-registering kit plugins are installed.",
+      "category": "client",
+      "repo": "https://github.com/hyzyn/dsh-plugin-kit/tree/main/packages/kit-settings",
+      "install": "github:hyzyn/dsh-plugin-kit/tree/main/packages/kit-settings",
+      "tags": [
+        "hyzyn/dsh-plugin-kit#kit-settings"
+      ]
+    },
+    {
       "id": "hyzyn/dsh-plugin-kit/tree/main/packages/mcp",
       "title": "hyzyn/dsh-plugin-kit#mcp",
       "description": "MCP server configuration card for the DSH Web GUI: add / edit / enable / disable MCP servers over stdio (local subprocess) or streamable-http (remote), with js: prefixed expressions for env / header values, status badges, and hot-reload on save.",
@@ -18840,6 +18917,17 @@
       "install": "github:JayDong9130/dsh-evolution-lab",
       "tags": [
         "jaydong9130/dsh-evolution-lab"
+      ]
+    },
+    {
+      "id": "Jaylor-Wang/dsh-awesome-agent-preset",
+      "title": "Jaylor-Wang/dsh-awesome-agent-preset",
+      "description": "Ultra-lean daily coding agent preset for DeepSeek Harness (dsh) that strips heavy orchestration for fast, direct tool execution.",
+      "category": "plugin",
+      "repo": "https://github.com/Jaylor-Wang/dsh-awesome-agent-preset",
+      "install": "github:Jaylor-Wang/dsh-awesome-agent-preset",
+      "tags": [
+        "jaylor-wang/dsh-awesome-agent-preset"
       ]
     },
     {
@@ -20809,6 +20897,17 @@
       "install": "github:kagurazakayashi/dsh-startup-command",
       "tags": [
         "kagurazakayashi/dsh-startup-command"
+      ]
+    },
+    {
+      "id": "kahomesl/dsh-chat-diff-summary-legacy",
+      "title": "kahomesl/dsh-chat-diff-summary-legacy",
+      "description": "A per-turn change bar above the composer showing which files the turn changed and the line deltas, for DeepSeek Harness 0.1.5-rc.1 through 0.1.7.",
+      "category": "client",
+      "repo": "https://github.com/kahomesl/dsh-chat-diff-summary-legacy",
+      "install": "github:kahomesl/dsh-chat-diff-summary-legacy",
+      "tags": [
+        "kahomesl/dsh-chat-diff-summary-legacy"
       ]
     },
     {
@@ -23465,7 +23564,7 @@
     {
       "id": "lifangjin/dsh-paoding",
       "title": "lifangjin/dsh-paoding",
-      "description": "Orchestration-mode preset generator for DSH: a lead agent delegates to four role helpers that carry only their own tools, configured per workspace through a web panel, with zero changes to the harness source.",
+      "description": "Orchestration-mode preset generator for DSH: a lead agent delegates to four built-in role helpers that carry only their own tools, and the web panel adds or removes custom helpers with their own tools, skills, and models, per workspace — zero changes to the harness source.",
       "category": "plugin",
       "repo": "https://github.com/lifangjin/dsh-paoding",
       "install": "github:lifangjin/dsh-paoding",
@@ -28609,6 +28708,17 @@
       ]
     },
     {
+      "id": "nanami-0713/dsh-jev-decide",
+      "title": "nanami-0713/dsh-jev-decide",
+      "description": "TypeSafe Jev (System One decision model) as the jev_decide tool for DeepSeek Harness: noul, choice and score questions return calibrated probabilities; credentials reuse the DSH credential seam; 429/529 backoff retry built in.",
+      "category": "plugin",
+      "repo": "https://github.com/nanami-0713/dsh-jev-decide",
+      "install": "github:nanami-0713/dsh-jev-decide",
+      "tags": [
+        "nanami-0713/dsh-jev-decide"
+      ]
+    },
+    {
       "id": "Nanki-nn/dsh-answer-pet",
       "title": "Nanki-nn/dsh-answer-pet",
       "description": "Extensible animated response pet with blue-whale, orange-cat, and silver-shaded-cat themes, per-session progress, model and tool-call traces, token counts, output speed, elapsed time, and collapsible multi-session status cards.",
@@ -29090,6 +29200,17 @@
       "install": "github:nikoart-liu/dsh-open-in-x",
       "tags": [
         "nikoart-liu/dsh-open-in-x"
+      ]
+    },
+    {
+      "id": "nineknineTK/dsh-plugin-geo3d-modeling",
+      "title": "nineknineTK/dsh-plugin-geo3d-modeling",
+      "description": "Geological 3D modeling and 3D seismic processing workflow skill: SEG-Y volume parsing, CGCS2000 coordinate unification, fault representative line and exploration boundary shapefile output, and multi-mine 3D geology platform building.",
+      "category": "skill",
+      "repo": "https://github.com/nineknineTK/dsh-plugin-geo3d-modeling",
+      "install": "github:nineknineTK/dsh-plugin-geo3d-modeling",
+      "tags": [
+        "ninekninetk/dsh-plugin-geo3d-modeling"
       ]
     },
     {
@@ -30982,6 +31103,17 @@
       "install": "github:PensiveFei/dsh-voice-scribe",
       "tags": [
         "pensivefei/dsh-voice-scribe"
+      ]
+    },
+    {
+      "id": "perdakovich/dsh-prompt-edit",
+      "title": "perdakovich/dsh-prompt-edit",
+      "description": "In-place prompt editing in the web chat: cleanly forks session history at the edited turn, preserves image and file attachments, and auto-archives the superseded branch.",
+      "category": "client",
+      "repo": "https://github.com/perdakovich/dsh-prompt-edit",
+      "install": "github:perdakovich/dsh-prompt-edit",
+      "tags": [
+        "perdakovich/dsh-prompt-edit"
       ]
     },
     {
@@ -36815,6 +36947,17 @@
       ]
     },
     {
+      "id": "sujalmandal/dsh-tab-plan-toggle",
+      "title": "sujalmandal/dsh-tab-plan-toggle",
+      "description": "Toggles plan mode from the DSH Web composer with the Tab key, following the composer plan chip state and leaving the / and @ suggestion menus alone.",
+      "category": "client",
+      "repo": "https://github.com/sujalmandal/dsh-tab-plan-toggle",
+      "install": "github:sujalmandal/dsh-tab-plan-toggle",
+      "tags": [
+        "sujalmandal/dsh-tab-plan-toggle"
+      ]
+    },
+    {
       "id": "sujingkpo/dsh-auto-pass",
       "title": "sujingkpo/dsh-auto-pass",
       "description": "A continuation of simon300000/dsh-auto: the Auto Approve permission preset for the DSH Web UI reviews each approval with one single-shot model call instead of a reviewer subagent, auto-approves only the actions that pass and hands the rest to human approval, and remembers confirmed decisions as project- and global-scope allow/deny lists, with an approval timeline in the right sidebar.",
@@ -37389,7 +37532,7 @@
     {
       "id": "tabilet/tabilet-skills",
       "title": "tabilet/tabilet-skills",
-      "description": "Shared engineering skills, a read-only memory-bank dashboard, and workflow request previews for DSH.",
+      "description": "Shared engineering skills, a read-only memory-bank dashboard with SQLite audit guidance, and workflow request previews for DSH.",
       "category": "plugin",
       "repo": "https://github.com/tabilet/tabilet-skills",
       "install": "github:tabilet/tabilet-skills",
@@ -40245,7 +40388,7 @@
     {
       "id": "wangzhanchao883/dsh-word-vault",
       "title": "wangzhanchao883/dsh-word-vault",
-      "description": "English word bank for one or more children: words marked on textbook or workbook photos (highlighter, red pen) are found by their marks, then translated and stored in a local SQLite bank with an occurrence count; the clipboard picker, the photo route and dictation all land in the same bank. High-frequency words surface by count, three correct answers in a row flag a word as learned, and any selection prints as a memory card set (a word split into chunks, real IPA per chunk, a mnemonic hook, an A4 sheet of eight) in HTML, PDF or Word, with a print-and-answer exam page whose four options are set against each other for meaning.",
+      "description": "English word bank for one or more children: words marked on textbook or workbook photos (highlighter, red pen) are found by their marks, then translated and stored in a local SQLite bank with an occurrence count; the clipboard picker, the photo route and dictation all land in the same bank. High-frequency words surface by count, three correct answers in a row flag a word as learned, and any selection prints as a memory card set (a word split into chunks, real IPA per chunk, a mnemonic hook, an A4 sheet of eight) in HTML, PDF or Word, with a print-and-answer exam page whose four options are set against each other for meaning. Requires DSH 0.1.7 or newer (1.0.3 moves to the 0.1.7 settings contract); on 0.1.5 the settings panel does not appear - install dsh-word-vault@1.0.2 instead.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-word-vault",
       "install": "github:wangzhanchao883/dsh-word-vault",
@@ -42795,6 +42938,17 @@
       ]
     },
     {
+      "id": "xbzbing/dsh-git-panel",
+      "title": "xbzbing/dsh-git-panel",
+      "description": "IDE-style Git panel in the DSH Web GUI: a resident tab with a three-column overview (branch/tag list, searchable commit-history graph, commit detail with changed-file tree and message) and a changes page (stats bar, uncommitted list with per-file stage/unstage/discard, commit box with amend); side-by-side diffs carry lazy highlight.js syntax highlighting, on-demand between-hunk context expansion and word-level intra-line emphasis, with image files shown as before/after panes; plus a zsh-style branch marker in the input bar. Every git command runs as an argv array through the host subprocess service, cwd locked to the repo root.",
+      "category": "plugin",
+      "repo": "https://github.com/xbzbing/dsh-git-panel",
+      "install": "github:xbzbing/dsh-git-panel",
+      "tags": [
+        "xbzbing/dsh-git-panel"
+      ]
+    },
+    {
       "id": "xbzbing/dsh-openviking-manager",
       "title": "xbzbing/dsh-openviking-manager",
       "description": "Configuration UI for the official OpenViking memory plugin: connection and user-key setup, local connection diagnostics, a per-session memory toggle in the composer, memory isolation that keeps recall inside the current topic, and recall tuning for score threshold, injected item count, query expansion and excluded URIs.",
@@ -44731,6 +44885,17 @@
       ]
     },
     {
+      "id": "yfwu2020/dsh-selection-explain",
+      "title": "yfwu2020/dsh-selection-explain",
+      "description": "Select text in the DSH web UI to stream a translation and an explanation of what it means in that specific context, read against the conversation it came from; the panel keeps a replayable history and can be promoted into a full session.",
+      "category": "client",
+      "repo": "https://github.com/yfwu2020/dsh-selection-explain",
+      "install": "github:yfwu2020/dsh-selection-explain",
+      "tags": [
+        "yfwu2020/dsh-selection-explain"
+      ]
+    },
+    {
       "id": "ygcdsj/dsh-home-migrate",
       "title": "ygcdsj/dsh-home-migrate",
       "description": "Export and import DeepSeek Harness configuration across machines as same-OS .dshmig archives, with credential redaction, verification and rollback.",
@@ -44794,6 +44959,28 @@
       "install": "github:Yiipu/dsh-agentmemory",
       "tags": [
         "yiipu/dsh-agentmemory"
+      ]
+    },
+    {
+      "id": "Yijian-quiet/dsh-mol/tree/main/dsh-bundle",
+      "title": "Yijian-quiet/dsh-mol#dsh-bundle",
+      "description": "Registers the dsh-mol stdio MCP server, built on RDKit with no network access, into a DSH profile. It exposes 12 tools: three-level SMILES validation with human-readable diagnostics and character positions, molecular properties, drug-likeness and structural alerts, structure rendering to PNG/SVG, multi-molecule grids, format conversion (SMILES, InChI, InChIKey, MOL, SDF, formula), standardisation with a per-step change log, deduplication, SMARTS substructure matching, fingerprint similarity, and batch clean-up that reports every rejected row. The patch only registers the server; the tools live in this repository's Python package and must be installed first — the README gives a `pip install` route and a from-source route, and until the package is on PyPI the from-source one is what works.",
+      "category": "plugin",
+      "repo": "https://github.com/Yijian-quiet/dsh-mol/tree/main/dsh-bundle",
+      "install": "github:Yijian-quiet/dsh-mol/tree/main/dsh-bundle",
+      "tags": [
+        "yijian-quiet/dsh-mol#dsh-bundle"
+      ]
+    },
+    {
+      "id": "Yijian-quiet/dsh-mol/tree/main/dsh-ui",
+      "title": "Yijian-quiet/dsh-mol#dsh-ui",
+      "description": "A chemistry workbench panel in the DSH web UI. Draw structures on a Ketcher canvas (a script downloads the build; it renders locally in the browser with no backend), then compute on the current molecule with RDKit without calling a model — formula, molecular weight, exact mass, logP, TPSA, hydrogen-bond donors and acceptors, ring counts, Fsp3, stereocentres, Lipinski and Veber rule-by-rule checks, QED, PAINS/BRENK structural alerts and the Murcko scaffold, plus SMARTS substructure matching, fingerprint similarity, format conversion, standardisation and batch clean-up. A retrosynthesis tab talks to a pluggable backend (Retro* by default) over a single JSON-in/JSON-out process, and states what is missing when the backend is not installed instead of inventing a route. The calculations run in this repository's Python package (rdkit), which is installed with pip separately.",
+      "category": "plugin",
+      "repo": "https://github.com/Yijian-quiet/dsh-mol/tree/main/dsh-ui",
+      "install": "github:Yijian-quiet/dsh-mol/tree/main/dsh-ui",
+      "tags": [
+        "yijian-quiet/dsh-mol#dsh-ui"
       ]
     },
     {
@@ -45696,6 +45883,17 @@
       "install": "github:yushi-xxh/dsh-homepage-skin",
       "tags": [
         "yushi-xxh/dsh-homepage-skin"
+      ]
+    },
+    {
+      "id": "yusufameri/dsh-t3-model-picker",
+      "title": "yusufameri/dsh-t3-model-picker",
+      "description": "A port of the T3 Code model picker into the composer: a provider rail, search results grouped under provider headings, favorites kept in the browser, unavailable-provider badges, and Cmd/Ctrl+1..9 jump shortcuts for the first nine rows of the visible list.",
+      "category": "client",
+      "repo": "https://github.com/yusufameri/dsh-t3-model-picker",
+      "install": "github:yusufameri/dsh-t3-model-picker",
+      "tags": [
+        "yusufameri/dsh-t3-model-picker"
       ]
     },
     {
