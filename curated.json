@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-25T05:24:21.685Z",
-    "fetchedCount": 4312,
-    "count": 4328,
+    "generatedAt": "2026-09-25T10:17:37.851Z",
+    "fetchedCount": 4323,
+    "count": 4339,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -456,6 +456,39 @@
       "install": "github:162568316/dsh-tokenrhythm-bill",
       "tags": [
         "162568316/dsh-tokenrhythm-bill"
+      ]
+    },
+    {
+      "id": "173787247/dsh-device-bridge",
+      "title": "173787247/dsh-device-bridge",
+      "description": "Generic Companion-protocol bridge from DeepSeek Harness to phones/IoT/legacy agents.",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-device-bridge",
+      "install": "github:173787247/dsh-device-bridge",
+      "tags": [
+        "173787247/dsh-device-bridge"
+      ]
+    },
+    {
+      "id": "173787247/dsh-mac-companion",
+      "title": "173787247/dsh-mac-companion",
+      "description": "DeepSeek Harness to macOS companion daemon (notify / Shortcuts / clipboard).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-mac-companion",
+      "install": "github:173787247/dsh-mac-companion",
+      "tags": [
+        "173787247/dsh-mac-companion"
+      ]
+    },
+    {
+      "id": "173787247/dsh-remote-ssh",
+      "title": "173787247/dsh-remote-ssh",
+      "description": "Allowlisted SSH into Unix/AIX/macOS from DeepSeek Harness (no shell; read-only by default).",
+      "category": "plugin",
+      "repo": "https://github.com/173787247/dsh-remote-ssh",
+      "install": "github:173787247/dsh-remote-ssh",
+      "tags": [
+        "173787247/dsh-remote-ssh"
       ]
     },
     {
@@ -8547,6 +8580,17 @@
       "install": "github:curtainsmall/dsh-electro-lab",
       "tags": [
         "curtainsmall/dsh-electro-lab"
+      ]
+    },
+    {
+      "id": "curtainsmall/dsh-reckoner",
+      "title": "curtainsmall/dsh-reckoner",
+      "description": "A deterministic calculation engine for DeepSeek Harness, including a preset that guides the LLM to calculate through the engine rather than by text generation.",
+      "category": "plugin",
+      "repo": "https://github.com/curtainsmall/dsh-reckoner",
+      "install": "github:curtainsmall/dsh-reckoner",
+      "tags": [
+        "curtainsmall/dsh-reckoner"
       ]
     },
     {
@@ -18634,6 +18678,17 @@
       ]
     },
     {
+      "id": "jarvisluk/dsh-projectless-session",
+      "title": "jarvisluk/dsh-projectless-session",
+      "description": "Adds a Session without workspace entry to the DSH Workspace picker, creates isolated date-organized directories, and keeps started sessions resumable under Ungrouped.",
+      "category": "plugin",
+      "repo": "https://github.com/jarvisluk/dsh-projectless-session",
+      "install": "github:jarvisluk/dsh-projectless-session",
+      "tags": [
+        "jarvisluk/dsh-projectless-session"
+      ]
+    },
+    {
       "id": "jasen215/dsh-continual-harness",
       "title": "jasen215/dsh-continual-harness",
       "description": "Continual self-refinement loop: persistent memory, periodic review-and-refine, cross-session shared knowledge, and automatic rollback through a model-callable harness_refine tool.",
@@ -19885,6 +19940,17 @@
       "install": "github:john-walks-slow/dsh-simulated-life",
       "tags": [
         "john-walks-slow/dsh-simulated-life"
+      ]
+    },
+    {
+      "id": "john-walks-slow/dsh-wait-subagent",
+      "title": "john-walks-slow/dsh-wait-subagent",
+      "description": "Active wait for background subagents in DeepSeek Harness: registers a wait_subagent model tool that blocks until a named background continuable subagent settles, then returns its stop reason and closing message — optional timeout, membership gate rejects unknown ids, event-driven with zero polling. Closes the gap between run_in_background fire-and-return and the async settlement notice; wait for a background subagent without polling list_agents.",
+      "category": "plugin",
+      "repo": "https://github.com/john-walks-slow/dsh-wait-subagent",
+      "install": "github:john-walks-slow/dsh-wait-subagent",
+      "tags": [
+        "john-walks-slow/dsh-wait-subagent"
       ]
     },
     {
@@ -26092,7 +26158,7 @@
     {
       "id": "Marquez807/dsh-experience-memory",
       "title": "Marquez807/dsh-experience-memory",
-      "description": "Cross-session experience memory for DSH: a lesson is injected only when it cites a verifiable source and this turn is about the same thing, and just before an action only when the record declares which call it applies to. Controlled experiments on real model turns (0/18 vs 14/18; 0/6 vs 6/6) show it has prevented mistakes — for knowledge the user stated and no file states. What nobody looks up or confirms is retired, reversibly. Five tools and seven slash commands.",
+      "description": "Cross-session experience memory for DSH. Lessons are evidence-graded, injected when the turn is about the same thing, and shown just before an action only when the record declares which call it applies to. A rule that holds whatever the turn is about — \"always answer in Chinese\" — can be marked **standing** and is then carried every turn: measured on 24 isolated real-model turns, a standing rule is followed 6/6 against 0/18 for the controls (empty store, same record unmarked, unrelated standing record). A guess still cannot become always-on: a standing record needs a verified passage like any other. What nobody looks up is retired, reversibly. Five tools, seven slash commands, zero runtime dependencies.",
       "category": "plugin",
       "repo": "https://github.com/Marquez807/dsh-experience-memory",
       "install": "github:Marquez807/dsh-experience-memory",
@@ -35266,7 +35332,7 @@
     {
       "id": "SilenZerOrz/obsidian-dsh-acp",
       "title": "SilenZerOrz/obsidian-dsh-acp",
-      "description": "ACP adapter that drives DeepSeek Harness from Obsidian Agent Client (and other ACP clients): list, resume, fork and delete sessions, switch the model per session, preview a one-line summary, import external ACP sessions, and pull Obsidian Agent Client conversations into dsh native session storage.",
+      "description": "ACP adapter that drives DeepSeek Harness from Obsidian Agent Client (and other ACP clients): list, resume, fork and delete sessions, switch the model per session, preview a one-line summary, import external ACP sessions, and pull Obsidian Agent Client conversations into dsh native session storage. Requires DSH >= 0.1.5-rc.3.",
       "category": "plugin",
       "repo": "https://github.com/SilenZerOrz/obsidian-dsh-acp",
       "install": "github:SilenZerOrz/obsidian-dsh-acp",
@@ -38329,6 +38395,17 @@
       ]
     },
     {
+      "id": "toddpan/dsh-webapi",
+      "title": "toddpan/dsh-webapi",
+      "description": "Drive DSH from anything that speaks HTTP: 47 routes (REST + SSE) for workspaces, sessions (create/prompt, live SSE generation, history, stats, todos, cancel, ask-user Q&A), models and the global default model, providers, agent presets, settings namespaces, skills, and workspace files including resumable chunked upload — plus an OpenAI-compatible /chat/completions, a built-in OpenAPI 3.0 spec and an interactive request page. It only injects the host webServer and tools, so it rides on the DSH webserver (default prefix /api/v1) or its own port with optional API-key auth, and it ships a skill that teaches the DSH agent to call the API.",
+      "category": "plugin",
+      "repo": "https://github.com/toddpan/dsh-webapi",
+      "install": "github:toddpan/dsh-webapi",
+      "tags": [
+        "toddpan/dsh-webapi"
+      ]
+    },
+    {
       "id": "Tommy00748/dsh-theme-cyberpunk2077",
       "title": "Tommy00748/dsh-theme-cyberpunk2077",
       "description": "Cyberpunk 2077 / Night City theme: NC yellow and neon cyan identity, CRT scanlines, Kiroshi hover lock-on, combat-state HUD, synthesized typewriter and message SFX, and hidden easter eggs (relic / johnny).",
@@ -39803,17 +39880,6 @@
       ]
     },
     {
-      "id": "w2310670047-code/ai-eight-honors-eight-shames",
-      "title": "w2310670047-code/ai-eight-honors-eight-shames",
-      "description": "DSH plugin that registers the ai-eight-honors-eight-shames skill: eight checkable working rules for coding agents (verify before calling, confirm ambiguity, cite evidence, reuse before creating, test before claiming done, follow local conventions, separate fact from inference, keep changes reversible) plus a ninth rule that logs each user request and the change made in two fixed report files at the workspace root.",
-      "category": "skill",
-      "repo": "https://github.com/w2310670047-code/ai-eight-honors-eight-shames",
-      "install": "github:w2310670047-code/ai-eight-honors-eight-shames",
-      "tags": [
-        "w2310670047-code/ai-eight-honors-eight-shames"
-      ]
-    },
-    {
       "id": "w4xxx/dsh-xia-plugins/tree/main/packages/client-game-assistant",
       "title": "w4xxx/dsh-xia-plugins#packages/client-game-assistant",
       "description": "Sakura theme, companion notifications (approval/job/answer), message read-aloud, and voice settings for the DSH web GUI.",
@@ -39998,6 +40064,17 @@
       "install": "github:wangbobo-coder/gitee-ai-employee",
       "tags": [
         "wangbobo-coder/gitee-ai-employee"
+      ]
+    },
+    {
+      "id": "wangcangxing/ai-eight-honors-eight-shames",
+      "title": "wangcangxing/ai-eight-honors-eight-shames",
+      "description": "DSH plugin that registers the ai-eight-honors-eight-shames skill: eight checkable working rules for coding agents (verify before calling, confirm ambiguity, cite evidence, reuse before creating, test before claiming done, follow local conventions, separate fact from inference, keep changes reversible) plus a ninth rule that logs each user request and the change made in two fixed report files at the workspace root.",
+      "category": "skill",
+      "repo": "https://github.com/wangcangxing/ai-eight-honors-eight-shames",
+      "install": "github:wangcangxing/ai-eight-honors-eight-shames",
+      "tags": [
+        "wangcangxing/ai-eight-honors-eight-shames"
       ]
     },
     {
@@ -42649,6 +42726,17 @@
       "install": "github:xbzbing/dsh-auth-gateway",
       "tags": [
         "xbzbing/dsh-auth-gateway"
+      ]
+    },
+    {
+      "id": "xbzbing/dsh-openviking-manager",
+      "title": "xbzbing/dsh-openviking-manager",
+      "description": "Configuration UI for the official OpenViking memory plugin: connection and user-key setup, local connection diagnostics, a per-session memory toggle in the composer, memory isolation that keeps recall inside the current topic, and recall tuning for score threshold, injected item count, query expansion and excluded URIs.",
+      "category": "plugin",
+      "repo": "https://github.com/xbzbing/dsh-openviking-manager",
+      "install": "github:xbzbing/dsh-openviking-manager",
+      "tags": [
+        "xbzbing/dsh-openviking-manager"
       ]
     },
     {
@@ -47797,6 +47885,39 @@
       "install": "github:zoahdev/dsh-unplug",
       "tags": [
         "zoahdev/dsh-unplug"
+      ]
+    },
+    {
+      "id": "Zoria-Lind/dsh-behavior-enhancer",
+      "title": "Zoria-Lind/dsh-behavior-enhancer",
+      "description": "Tool-call discipline for DeepSeek Harness: injects a static behavior-constraint prompt section, drops the parallel pool to 1 after a tool failure (restoring after 3 consecutive successes), nudges the model to stop retrying after repeated failures, verifies writes with .bak rollback, gates high-risk commands, and tracks compliance stats via /behavior-status.",
+      "category": "plugin",
+      "repo": "https://github.com/Zoria-Lind/dsh-behavior-enhancer",
+      "install": "github:Zoria-Lind/dsh-behavior-enhancer",
+      "tags": [
+        "zoria-lind/dsh-behavior-enhancer"
+      ]
+    },
+    {
+      "id": "Zoria-Lind/dsh-ecolink/tree/main/adapter",
+      "title": "Zoria-Lind/dsh-ecolink#adapter",
+      "description": "DSH side of the dsh-ecolink memory ecosystem: bridges chat.deepseek.com and DeepSeek Harness through a browser extension that harvests DSM-format memory tags and injects recalled memories into web chats, a zero-dependency local service that writes a shared memory pool, and this adapter, which injects memories pre-step and offers /ecolink-push write-back; compression is transactional (staging pool with commit/rollback).",
+      "category": "plugin",
+      "repo": "https://github.com/Zoria-Lind/dsh-ecolink/tree/main/adapter",
+      "install": "github:Zoria-Lind/dsh-ecolink/tree/main/adapter",
+      "tags": [
+        "zoria-lind/dsh-ecolink#adapter"
+      ]
+    },
+    {
+      "id": "Zoria-Lind/dsh-token-optimizer",
+      "title": "Zoria-Lind/dsh-token-optimizer",
+      "description": "Token-cost pipeline for DeepSeek Harness: pressure-aware layered compaction (lossless projection below 40% context pressure, LLM summarization above), per-agent tool allowlisting, long-text-to-image with vision summarization, and a /token-status command tracking pressure, tiers, and saved tokens.",
+      "category": "plugin",
+      "repo": "https://github.com/Zoria-Lind/dsh-token-optimizer",
+      "install": "github:Zoria-Lind/dsh-token-optimizer",
+      "tags": [
+        "zoria-lind/dsh-token-optimizer"
       ]
     },
     {
