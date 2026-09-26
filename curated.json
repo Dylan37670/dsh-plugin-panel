@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-26T16:18:26.281Z",
-    "fetchedCount": 4354,
-    "count": 4370,
+    "generatedAt": "2026-09-26T16:45:35.746Z",
+    "fetchedCount": 4367,
+    "count": 4383,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -3704,6 +3704,17 @@
       ]
     },
     {
+      "id": "Andersen216/dsh-whale-girl-live2d",
+      "title": "Andersen216/dsh-whale-girl-live2d",
+      "description": "A Live2D whale-girl companion for the DeepSeek Harness Web UI: the model stays on screen and reacts to what the agent is actually doing (thinking, tool calls, streaming text, errors, turn completion); click her to send the agent a message and watch the reply stream into a speech bubble; right-click for a menu of expressions, dress-up items, desk scenes and one-shot animations, every action mapped from the original model author hotkey sheet so nothing overlaps and everything expires on its own. Non-commercial model assets (CC BY-NC-SA 4.0), MIT code, by Andersen216 (https://github.com/Andersen216).",
+      "category": "plugin",
+      "repo": "https://github.com/Andersen216/dsh-whale-girl-live2d",
+      "install": "github:Andersen216/dsh-whale-girl-live2d",
+      "tags": [
+        "andersen216/dsh-whale-girl-live2d"
+      ]
+    },
+    {
       "id": "Andiii208/dsh-ultramath",
       "title": "Andiii208/dsh-ultramath",
       "description": "Multi-agent workflow for math-modeling contests: the \"UltraMath\" preset runs a problem from reading through framework, derivation, coding, verification, paper and review, plus 4 single-stage role presets (mathematician, engineer, writer, reviewer) and 33 model-library skill docs.",
@@ -4441,6 +4452,17 @@
       ]
     },
     {
+      "id": "Archaofan/dsh-notify-relay",
+      "title": "Archaofan/dsh-notify-relay",
+      "description": "Routes eight DSH lifecycle events through dedup, quiet hours and digest batching into seven channels. Severity maps to the fields Bark, ntfy, Telegram and webhooks actually support; failed deliveries retry with jittered backoff and survive a restart; per-channel circuit breakers stop hammering a dead endpoint; and a self-check reports a degraded relay instead of going silent.",
+      "category": "plugin",
+      "repo": "https://github.com/Archaofan/dsh-notify-relay",
+      "install": "github:Archaofan/dsh-notify-relay",
+      "tags": [
+        "archaofan/dsh-notify-relay"
+      ]
+    },
+    {
       "id": "Areium/dsh-fail-logger",
       "title": "Areium/dsh-fail-logger",
       "description": "Auto-log failed tool calls across native tools, PTC run_code, and inline invocations: dedup and count root causes into a skill so repeated mistakes fade.",
@@ -4813,6 +4835,17 @@
       ]
     },
     {
+      "id": "azazo1/dsh-deep-diving-back",
+      "title": "azazo1/dsh-deep-diving-back",
+      "description": "Restores the blue shimmering Deep diving turn status row that DSH 0.1.6 and earlier showed at the end of the transcript.",
+      "category": "client",
+      "repo": "https://github.com/azazo1/dsh-deep-diving-back",
+      "install": "github:azazo1/dsh-deep-diving-back",
+      "tags": [
+        "azazo1/dsh-deep-diving-back"
+      ]
+    },
+    {
       "id": "azazo1/dsh-reduce-effects",
       "title": "azazo1/dsh-reduce-effects",
       "description": "Adds a UI effects page to Settings that switches off DSH Web animations and transitions, loading and progress animations, backdrop blur, smooth scrolling, hover title scroll, shadows, gradients and JS motion one category at a time, to cut browser rendering cost.",
@@ -4832,6 +4865,39 @@
       "install": "github:azazo1/dsh-write-protect",
       "tags": [
         "azazo1/dsh-write-protect"
+      ]
+    },
+    {
+      "id": "Azhe0306/dsh-connectors/tree/main/packages/balance-widget",
+      "title": "Azhe0306/dsh-connectors#balance-widget",
+      "description": "Session-header balance readout for DeepSeek Harness: shows the spendable account total (recharge and bonus wallets combined) in the conversation header, refreshed every two minutes, and renders nothing when the account is signed out or the query fails.",
+      "category": "plugin",
+      "repo": "https://github.com/Azhe0306/dsh-connectors/tree/main/packages/balance-widget",
+      "install": "github:Azhe0306/dsh-connectors/tree/main/packages/balance-widget",
+      "tags": [
+        "azhe0306/dsh-connectors#balance-widget"
+      ]
+    },
+    {
+      "id": "Azhe0306/dsh-connectors/tree/main/packages/browser-connector",
+      "title": "Azhe0306/dsh-connectors#browser-connector",
+      "description": "Browser automation connector: drives the local Edge or Chrome over the DevTools Protocol with zero runtime dependencies — launch a headless throwaway-profile browser or attach to one started with --remote-debugging-port, then navigate, read page text and interactive elements, click, type, and screenshot through 11 agent tools.",
+      "category": "plugin",
+      "repo": "https://github.com/Azhe0306/dsh-connectors/tree/main/packages/browser-connector",
+      "install": "github:Azhe0306/dsh-connectors/tree/main/packages/browser-connector",
+      "tags": [
+        "azhe0306/dsh-connectors#browser-connector"
+      ]
+    },
+    {
+      "id": "Azhe0306/dsh-connectors/tree/main/packages/desktop-connector",
+      "title": "Azhe0306/dsh-connectors#desktop-connector",
+      "description": "Windows desktop control connector: through 10 agent tools it captures the screen (including occluded and partially off-screen windows), lists and focuses windows, moves, clicks, drags and scrolls the mouse, and sends key chords or arbitrary Unicode text. Built on koffi FFI: no compiler, no per-call subprocess, and its own GDI screenshot plus PNG encoder.",
+      "category": "plugin",
+      "repo": "https://github.com/Azhe0306/dsh-connectors/tree/main/packages/desktop-connector",
+      "install": "github:Azhe0306/dsh-connectors/tree/main/packages/desktop-connector",
+      "tags": [
+        "azhe0306/dsh-connectors#desktop-connector"
       ]
     },
     {
@@ -6861,7 +6927,7 @@
     {
       "id": "cayan0x/Lume",
       "title": "cayan0x/Lume",
-      "description": "DSH Desktop enhancement plugin — it puts verifiable facts on the table; constraints are injected only when relevant, so idle chat costs no extra tokens. 1) Task-execution discipline: each turn is classified from the sentence plus recent-turn trajectory (question / research / discussion / diagnosis / execute) with explicit boundaries, so questions do not touch files and diagnosis does not silently start fixing; it flags citations to code lines never opened this session, negative claims about symbols never seen, requirement items the deliverable does not cover, and unverified assumptions dressed up as open questions; at 75%/90% context pressure it warns and exports structured session memory (goal, settled decisions, open items, key locations) that a new session receives on its first turn; past sessions, including ones too full to continue, are re-distilled into cross-session knowledge at startup, idempotently. 2) Checkable artefacts: task contract (goal / scope / counts estimated then backfilled / completion criteria / non-goals); change ledger that auto-records every edit together with how it was verified, and surfaces still-unverified entries at delivery; hypothesis ledger including ruled-out items, where any conclusion requires evidence, the decision method and a counter-example check; design decisions (point / choice / rejected options / impact); project knowledge accumulated per working directory across sessions — numbered, deletable by name, sentences only, secrets rejected. 3) Behaviour triggers keyed on trajectory rather than wording: drifting exploration, editing without verifying, retrying a dead path, missing contract, missing design, stale hypotheses, criteria drift, knowledge not captured, editing a file never read this session; each notice carries concrete counts and repeats at most once every two turns. 4) Runtime metrics: route decisions, trigger hits, block assembly and external outcome signals are written to a local lume-metrics.jsonl and readable through lume_metrics, which reports trigger efficacy with an explicit observational caveat and excludes mechanisms that have no mechanical criterion. 5) Persona system: distil named characters from chat logs, novels, scripts and character-setting documents, with tone, catchphrases and reply length anchored to real material statistics; per-persona long-term memory plus temporary facts that expire after 30 days; corrections become style rules, approved replies are pinned as corpus, lexical leakage detection after a persona switch, memory star map, persona card export/import. Layered injection keeps session-stable text in the system prompt and sends volatile content as a tail snapshot, so the prompt cache stays valid.",
+      "description": "DSH Desktop enhancement plugin: it puts verifiable facts on the table. Constraints are injected only when relevant, so idle chat costs no extra tokens; injection is layered (session-stable text in the system prompt, volatile content as a tail snapshot) and the prompt cache stays valid. Discipline: each turn is classified (question / research / discussion / diagnosis / execution) with boundaries enforced - no file edits on question turns, no unsolicited fixes on diagnosis turns; citing code lines not opened this session, negative claims about unseen symbols, requirements that do not match the deliverable, and dressing up “I did not check” as “waiting for your decision” are all called out; replies are written for humans - a code, field name or id must be explained in plain words the first time it appears. Memory and knowledge: 75%/90% context warnings plus an exported session recap (say \"continue\" in a new session); project knowledge accumulated across sessions by working directory, auto-captured and deletable by id. Inspectable artifacts: task contract / change record (auto-logged, unverified items flagged at delivery) / hypothesis record (conclusions must pass an evidence gate) / design decisions. Dashboard and personas: routing, trigger hits and block assembly are written to lume-metrics.jsonl and queryable via lume_metrics; personas are distilled from chat logs, novels, scripts or character sheets, with long-term and temporary memory, a memory star map and persona card export/import.",
       "category": "plugin",
       "repo": "https://github.com/cayan0x/Lume",
       "install": "github:cayan0x/Lume",
@@ -15491,6 +15557,17 @@
       ]
     },
     {
+      "id": "guooo1380/dsh-team-panel",
+      "title": "guooo1380/dsh-team-panel",
+      "description": "Counts token usage for one selected project per machine, syncs the totals to a self-hosted team server, and shows each member's project, spend and last active time in a sidebar panel.",
+      "category": "plugin",
+      "repo": "https://github.com/guooo1380/dsh-team-panel",
+      "install": "github:guooo1380/dsh-team-panel",
+      "tags": [
+        "guooo1380/dsh-team-panel"
+      ]
+    },
+    {
       "id": "gwsbhqt/dsh-insight",
       "title": "gwsbhqt/dsh-insight",
       "description": "Read-only insight panel for one profile: five views over the same data — config layers, plugin tree, services, tool names and models — each entry showing which layer inserted or disabled it and whether it is running.",
@@ -17465,6 +17542,17 @@
       "install": "github:huxint/dsh-team",
       "tags": [
         "huxint/dsh-team"
+      ]
+    },
+    {
+      "id": "huzhengbang2007/dsh-orca-glass",
+      "title": "huzhengbang2007/dsh-orca-glass",
+      "description": "DSH Web plugin that injects an SVG (feTurbulence + feDisplacementMap) refraction filter and applies it through backdrop-filter to panels, bubbles and the input card, and bundles the orca-scene skin with theme tokens plus light and dark backgrounds.",
+      "category": "client",
+      "repo": "https://github.com/huzhengbang2007/dsh-orca-glass",
+      "install": "github:huzhengbang2007/dsh-orca-glass",
+      "tags": [
+        "huzhengbang2007/dsh-orca-glass"
       ]
     },
     {
@@ -22847,6 +22935,17 @@
       ]
     },
     {
+      "id": "LeemanCheung/dsh-agent-arena",
+      "title": "LeemanCheung/dsh-agent-arena",
+      "description": "Compares coding agents in isolated Git worktrees with deterministic validation, scoring, and explicit winner application.",
+      "category": "plugin",
+      "repo": "https://github.com/LeemanCheung/dsh-agent-arena",
+      "install": "github:LeemanCheung/dsh-agent-arena",
+      "tags": [
+        "leemancheung/dsh-agent-arena"
+      ]
+    },
+    {
       "id": "LeemanCheung/dsh-agent-preset-recommender",
       "title": "LeemanCheung/dsh-agent-preset-recommender",
       "description": "Bounded, privacy-safe local scanner for Codex, Claude Code, WorkBuddy, and CodeBuddy metadata: atomically aggregates keyed evidence and deterministically advises built-in DSH presets and optional capabilities—without content retention, network access, or preset mutation.",
@@ -22880,6 +22979,17 @@
       ]
     },
     {
+      "id": "LeemanCheung/dsh-skin-studio",
+      "title": "LeemanCheung/dsh-skin-studio",
+      "description": "Local semantic-token theme editor with palette extraction, WCAG auditing, preview, and export.",
+      "category": "client",
+      "repo": "https://github.com/LeemanCheung/dsh-skin-studio",
+      "install": "github:LeemanCheung/dsh-skin-studio",
+      "tags": [
+        "leemancheung/dsh-skin-studio"
+      ]
+    },
+    {
       "id": "LeemanCheung/dsh-task-dag",
       "title": "LeemanCheung/dsh-task-dag",
       "description": "Projection-driven live DAG for a Session's subagents and durable workflows: status and navigation, deterministic deep-chain layout, fit/pan canvas controls, and current-session node rearrangement.",
@@ -22899,6 +23009,17 @@
       "install": "github:LeemanCheung/dsh-token-usage",
       "tags": [
         "leemancheung/dsh-token-usage"
+      ]
+    },
+    {
+      "id": "LeemanCheung/dsh-vibe-pack",
+      "title": "LeemanCheung/dsh-vibe-pack",
+      "description": "Transactional data-only configuration pack manager with integrity, ownership, preview, diff, and rollback safeguards.",
+      "category": "dev-resource",
+      "repo": "https://github.com/LeemanCheung/dsh-vibe-pack",
+      "install": "github:LeemanCheung/dsh-vibe-pack",
+      "tags": [
+        "leemancheung/dsh-vibe-pack"
       ]
     },
     {
@@ -26912,6 +27033,17 @@
       "install": "github:mengnanxyyyy/dsh-markdown-xyy",
       "tags": [
         "mengnanxyyyy/dsh-markdown-xyy"
+      ]
+    },
+    {
+      "id": "mengqi1436/DSH-Rtk-rewrite",
+      "title": "mengqi1436/DSH-Rtk-rewrite",
+      "description": "Replaces the web profile's pwsh shell executor with a subclass that rewrites every command through `rtk rewrite` before execution for token savings, running the original command unchanged on any rewrite failure (no equivalent, missing rtk, timeout) and keeping sandbox semantics intact.",
+      "category": "plugin",
+      "repo": "https://github.com/mengqi1436/DSH-Rtk-rewrite",
+      "install": "github:mengqi1436/DSH-Rtk-rewrite",
+      "tags": [
+        "mengqi1436/dsh-rtk-rewrite"
       ]
     },
     {
@@ -32478,6 +32610,17 @@
       "install": "github:qianyuan-ltd/dsh-qianyuan",
       "tags": [
         "qianyuan-ltd/dsh-qianyuan"
+      ]
+    },
+    {
+      "id": "qikairo7/dsh-gemini-pool",
+      "title": "qikairo7/dsh-gemini-pool",
+      "description": "Multi-account Google Gemini provider: picks the account with the most remaining quota, fails over on 429 with exponential cooldown, probes disabled accounts in the background, and ships a Chinese/English settings page.",
+      "category": "plugin",
+      "repo": "https://github.com/qikairo7/dsh-gemini-pool",
+      "install": "github:qikairo7/dsh-gemini-pool",
+      "tags": [
+        "qikairo7/dsh-gemini-pool"
       ]
     },
     {
