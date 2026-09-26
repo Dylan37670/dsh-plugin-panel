@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-25T22:18:16.535Z",
-    "fetchedCount": 4347,
-    "count": 4363,
+    "generatedAt": "2026-09-26T04:17:32.743Z",
+    "fetchedCount": 4353,
+    "count": 4369,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -186,7 +186,7 @@
     {
       "id": "0xRabit/dsh-crypto-portfolio",
       "title": "0xRabit/dsh-crypto-portfolio",
-      "description": "Crypto portfolio tracker for DSH: BTC / EVM (DeBank free+paid) / Solana / Hyperliquid L1 / CEX balances with multi-provider API failover, per-profile configs, scheduled daily refresh and trend charts (self-contained web dashboard).",
+      "description": "Self-hosted crypto portfolio dashboard: BTC, EVM (73 chains via DeBank), Solana, Dogecoin, Cardano, Hyperliquid L1, five exchanges (Binance, Bybit, Backpack, OKX, Bitget) and tokenised equities in one view, with multi-provider failover, custom asset labels, a tunable asset-health report, a shareable PNG card, per-source connection tests, multi-profile configs, scheduled refresh and zero-dependency charts (Python stdlib + vanilla JS, no CDN).",
       "category": "plugin",
       "repo": "https://github.com/0xRabit/dsh-crypto-portfolio",
       "install": "github:0xRabit/dsh-crypto-portfolio",
@@ -5811,6 +5811,17 @@
       "install": "github:Bing-Bryan/dsh-unread-dot",
       "tags": [
         "bing-bryan/dsh-unread-dot"
+      ]
+    },
+    {
+      "id": "Bingtang1019/dsh-ppt-fusion",
+      "title": "Bingtang1019/dsh-ppt-fusion",
+      "description": "Build PowerPoint decks from a brief: plan and storyboard gates, per-page authoring through pptwise and ppt-master, a design-profile pass, page-image snapshots with a render audit, and a tool that hands those pages to an image-capable model for review.",
+      "category": "skill",
+      "repo": "https://github.com/Bingtang1019/dsh-ppt-fusion",
+      "install": "github:Bingtang1019/dsh-ppt-fusion",
+      "tags": [
+        "bingtang1019/dsh-ppt-fusion"
       ]
     },
     {
@@ -16503,6 +16514,17 @@
       ]
     },
     {
+      "id": "Hercules-debug/huixuan-assistant",
+      "title": "Hercules-debug/huixuan-assistant",
+      "description": "Search, compare and pick Pinduoduo products from the DSH conversation, with price, sales, service tags, product images and promotion links from the official Pinduoduo open-platform API.",
+      "category": "plugin",
+      "repo": "https://github.com/Hercules-debug/huixuan-assistant",
+      "install": "github:Hercules-debug/huixuan-assistant",
+      "tags": [
+        "hercules-debug/huixuan-assistant"
+      ]
+    },
+    {
       "id": "Cavan-Ou/hermes-dsh-collab",
       "title": "hermes-dsh-collab",
       "titleZh": "Hermes 流水线协作",
@@ -24354,6 +24376,17 @@
       ]
     },
     {
+      "id": "Lixiuxiu559/AgentForge",
+      "title": "Lixiuxiu559/AgentForge",
+      "description": "One repository that installs as both a Claude Code plugin and a DSH plugin: six engineering skills (research, architecture scouting, implementation orchestration, three-axis diff review, complexity audit, mutation testing) plus one agentforge tool dispatching five subagents.",
+      "category": "plugin",
+      "repo": "https://github.com/Lixiuxiu559/AgentForge",
+      "install": "github:Lixiuxiu559/AgentForge",
+      "tags": [
+        "lixiuxiu559/agentforge"
+      ]
+    },
+    {
       "id": "liyu34/dsh-wsl-tray",
       "title": "liyu34/dsh-wsl-tray",
       "description": "Windows desktop shortcut and system-tray launcher for DSH running in WSL, with fully hidden startup, tray open/restart/exit menu, and a plugin-configuration card to manage the shortcut.",
@@ -29898,7 +29931,7 @@
     {
       "id": "nzl153/dsh-pet-whale",
       "title": "nzl153/dsh-pet-whale",
-      "description": "Desktop pet drawn from the official whale outline: pure-SVG animation follows agent state (thinking, working, celebrating, error), with poke and double-click flip interactions, cursor avoidance, 7 palettes, light/dark theme sync, and a playable web preview.",
+      "description": "Desktop pet drawn from the official whale outline, for both the desktop app and the web UI: SVG animations and facial expressions follow agent state (thinking, working, done, error, waiting for confirmation), and it can follow other running sessions with a count badge; poke it, drag it, shake it dizzy, squash it against a screen edge, or rub the cursor over its head for a headpat; 7 palettes, 4 sizes, synthesized sounds, light/dark theme sync, and a playable web preview.",
       "category": "plugin",
       "repo": "https://github.com/nzl153/dsh-pet-whale",
       "install": "github:nzl153/dsh-pet-whale",
@@ -37552,6 +37585,17 @@
       ]
     },
     {
+      "id": "taikaikaikai-pixel/dsh-codebuddy-plugin",
+      "title": "taikaikaikai-pixel/dsh-codebuddy-plugin",
+      "description": "Unofficial upstream bundle for DeepSeek Harness. CodeBuddy gateway with a runtime-synced model catalogue, per-model reasoning efforts, web search/fetch, image generation and a streaming credential bridge, plus TraeWork CN and Qoder CN subscription channels via local translation gateways and a key-type OpenAI-compatible provider registry, all managed from an accordion settings card.",
+      "category": "plugin",
+      "repo": "https://github.com/taikaikaikai-pixel/dsh-codebuddy-plugin",
+      "install": "github:taikaikaikai-pixel/dsh-codebuddy-plugin",
+      "tags": [
+        "taikaikaikai-pixel/dsh-codebuddy-plugin"
+      ]
+    },
+    {
       "id": "TaiyakiOffical/claude-style-skin",
       "title": "TaiyakiOffical/claude-style-skin",
       "description": "Claude-style warm-editorial skin for the DSH web GUI — ivory/warm-black canvas, a clay ember accent, serif display + sans UI + mono labels, hairline borders and pill CTAs, light/dark themes.",
@@ -39866,6 +39910,17 @@
       "install": "github:vitas/dsh-model-pricing",
       "tags": [
         "vitas/dsh-model-pricing"
+      ]
+    },
+    {
+      "id": "vitas/dsh-web-search-openrouter",
+      "title": "vitas/dsh-web-search-openrouter",
+      "description": "Runs the built-in web_search tool server-side on an OpenRouter-compatible gateway, so search uses the same endpoint and key as the chat models: three request protocols, every citation shape parsed (including snippets recovered from the cited span), and a settings card with a live connection test.",
+      "category": "plugin",
+      "repo": "https://github.com/vitas/dsh-web-search-openrouter",
+      "install": "github:vitas/dsh-web-search-openrouter",
+      "tags": [
+        "vitas/dsh-web-search-openrouter"
       ]
     },
     {
@@ -46422,6 +46477,17 @@
       "install": "github:zeng6125-rgb/dsh-llm-retry-settings",
       "tags": [
         "zeng6125-rgb/dsh-llm-retry-settings"
+      ]
+    },
+    {
+      "id": "zeng6125-rgb/dsh-usage-heatmap",
+      "title": "zeng6125-rgb/dsh-usage-heatmap",
+      "description": "Token usage dashboard in the DSH settings page: nine metric cards (total, today, yesterday, peak day, longest session, active-day streak, active days, sessions, subagent tokens), a GitHub-style daily/weekly/cumulative heatmap, and an activity insight list, aggregated locally from session logs and projection caches, keeping token history after a session is deleted.",
+      "category": "plugin",
+      "repo": "https://github.com/zeng6125-rgb/dsh-usage-heatmap",
+      "install": "github:zeng6125-rgb/dsh-usage-heatmap",
+      "tags": [
+        "zeng6125-rgb/dsh-usage-heatmap"
       ]
     },
     {
