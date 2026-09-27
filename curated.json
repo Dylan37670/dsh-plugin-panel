@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-27T10:18:30.299Z",
-    "fetchedCount": 4367,
-    "count": 4383,
+    "generatedAt": "2026-09-27T16:18:17.766Z",
+    "fetchedCount": 4369,
+    "count": 4385,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -401,6 +401,17 @@
       "install": "github:1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-organism",
       "tags": [
         "1420079678-ctrl/agent-body#dsh-organism"
+      ]
+    },
+    {
+      "id": "1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
+      "title": "1420079678-ctrl/agent-body#dsh-zero-residence",
+      "description": "A zero-residence context engine: large tool payloads are evicted from the live context into a queryable store, only pointers stay behind, and any payload can be reconstructed verbatim on demand — so per-turn prompt tokens stop growing with the transcript. It ships four capabilities: zr_recall rebuilds masked originals by tool-call id or session sequence from the persisted session log (the content is not resident, never lost), zr_ledger reports the attention integral and a three-part cost breakdown, zr_compact arms one forced compaction, and zr_fast runs long commands asynchronously and hands back a handle immediately.",
+      "category": "plugin",
+      "repo": "https://github.com/1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
+      "install": "github:1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
+      "tags": [
+        "1420079678-ctrl/agent-body#dsh-zero-residence"
       ]
     },
     {
@@ -40925,6 +40936,17 @@
       ]
     },
     {
+      "id": "weibaohui/dsh-file-share",
+      "title": "weibaohui/dsh-file-share",
+      "description": "Session workspace file manager: adds a \"Files\" tab to the conversation area to browse the current session workspace directory tree and manage it in place (upload, download, mkdir, rename, delete, search), with files mentionable into the composer for the agent to process.",
+      "category": "plugin",
+      "repo": "https://github.com/weibaohui/dsh-file-share",
+      "install": "github:weibaohui/dsh-file-share",
+      "tags": [
+        "weibaohui/dsh-file-share"
+      ]
+    },
+    {
       "id": "weibaohui/dsh-git-server",
       "title": "weibaohui/dsh-git-server",
       "description": "Git server: embeds ts-gogs (a TypeScript reimplementation of Gogs) and serves a full Git service on its own port — HTTP clone/push, web UI, issues/PRs/wiki — reusing user-management credentials, start/stop from the settings page.",
@@ -45974,14 +45996,14 @@
       ]
     },
     {
-      "id": "yunxiiQwQ/dsh-maid-whale-webUI/tree/main/maid-whale-webui",
-      "title": "yunxiiQwQ/dsh-maid-whale-webUI#maid-whale-webui",
-      "description": "DSH Web UI little whale-maid theme with light and dark palettes, ocean illustrations, hand-drawn frames, decorative assets, and a new built-in Codex-style pet.",
+      "id": "yunxiiQwQ/dsh-maid-whale-UI/tree/main/maid-whale-webui",
+      "title": "yunxiiQwQ/dsh-maid-whale-UI#maid-whale-webui",
+      "description": "Whale-maid theme for DSH desktop and Web UI with light and dark palettes, ocean illustrations, hand-drawn frames, and a native Windows companion.",
       "category": "client",
-      "repo": "https://github.com/yunxiiQwQ/dsh-maid-whale-webUI/tree/main/maid-whale-webui",
-      "install": "github:yunxiiQwQ/dsh-maid-whale-webUI/tree/main/maid-whale-webui",
+      "repo": "https://github.com/yunxiiQwQ/dsh-maid-whale-UI/tree/main/maid-whale-webui",
+      "install": "github:yunxiiQwQ/dsh-maid-whale-UI/tree/main/maid-whale-webui",
       "tags": [
-        "yunxiiqwq/dsh-maid-whale-webui#maid-whale-webui"
+        "yunxiiqwq/dsh-maid-whale-ui#maid-whale-webui"
       ]
     },
     {
