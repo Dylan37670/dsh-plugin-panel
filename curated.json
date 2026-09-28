@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-28T10:18:34.579Z",
-    "fetchedCount": 4377,
-    "count": 4393,
+    "generatedAt": "2026-09-28T16:18:25.969Z",
+    "fetchedCount": 4378,
+    "count": 4394,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1174,17 +1174,6 @@
       ]
     },
     {
-      "id": "1Ecc/dsh-lenovo-toolkit",
-      "title": "1Ecc/dsh-lenovo-toolkit",
-      "description": "Lenovo laptop diagnostics for DSH: battery health on macOS and Windows, plus Windows device, performance, storage, app and Wi-Fi checks, user-confirmed maintenance actions, and battery warranty, parts, store and appointment helpers.",
-      "category": "plugin",
-      "repo": "https://github.com/1Ecc/dsh-lenovo-toolkit",
-      "install": "github:1Ecc/dsh-lenovo-toolkit",
-      "tags": [
-        "1ecc/dsh-lenovo-toolkit"
-      ]
-    },
-    {
       "id": "1HelloMan1/dsh-usage-dashboard-plus",
       "title": "1HelloMan1/dsh-usage-dashboard-plus",
       "description": "Shows DeepSeek balance and estimated daily spend, merges external vision-call JSONL records, and adds a per-session dashboard with model statistics, TTFT, cache rate, call logs, cost estimates, filters, and CSV export.",
@@ -1281,6 +1270,17 @@
       "install": "github:2286893544/feishu-dsh-plugin",
       "tags": [
         "2286893544/feishu-dsh-plugin"
+      ]
+    },
+    {
+      "id": "2333hutao/dsh-ls125-uv-probe",
+      "title": "2333hutao/dsh-ls125-uv-probe",
+      "description": "Provides a skill for the LinShang LS125 UV irradiance meter and its UVALED-X3 probe: the reverse-engineered 9600 8N1 link (28-byte frames, CRC-16/MODBUS, poll and clear commands), a capture and decode toolchain, and a verified STM32F103 host firmware that reads the probe without the original meter. All code and documentation written by an AI agent (DeepSeek Harness).",
+      "category": "skill",
+      "repo": "https://github.com/2333hutao/dsh-ls125-uv-probe",
+      "install": "github:2333hutao/dsh-ls125-uv-probe",
+      "tags": [
+        "2333hutao/dsh-ls125-uv-probe"
       ]
     },
     {
@@ -4735,6 +4735,17 @@
       "install": "github:AtropinolTT/dsh-guide-dog",
       "tags": [
         "atropinoltt/dsh-guide-dog"
+      ]
+    },
+    {
+      "id": "Au1314/dsh-style-hub",
+      "title": "Au1314/dsh-style-hub",
+      "description": "Theme studio for the DeepSeek Harness web GUI: eight switchable preset styles, accent and panel-translucency fine-tuning, host-side wallpapers painted on the first frame, and a one-click fix when the wallpaper-engine glass tint greys out light styles.",
+      "category": "client",
+      "repo": "https://github.com/Au1314/dsh-style-hub",
+      "install": "github:Au1314/dsh-style-hub",
+      "tags": [
+        "au1314/dsh-style-hub"
       ]
     },
     {
@@ -13913,28 +13924,6 @@
       ]
     },
     {
-      "id": "Frank-NF/dsh-drop-md",
-      "title": "Frank-NF/dsh-drop-md",
-      "description": "Drag-and-drop enhancer for the composer: drop .md/.txt/.markdown to inline small files into the draft or save large ones to .dsh-drop with @-references (Shift forces inline), and drop SKILL.md packages to validate frontmatter and install them to project/user skill roots with one click - effective immediately via the skill watcher.",
-      "category": "plugin",
-      "repo": "https://github.com/Frank-NF/dsh-drop-md",
-      "install": "github:Frank-NF/dsh-drop-md",
-      "tags": [
-        "frank-nf/dsh-drop-md"
-      ]
-    },
-    {
-      "id": "Frank-NF/dsh-memory-nexus",
-      "title": "Frank-NF/dsh-memory-nexus",
-      "description": "Integrated memory and context management plugin: four-layer memory system (L2-L4), context compression/trimming/freezing, prompt orchestration, input box UI buttons, and enterprise security with role-based access control.",
-      "category": "plugin",
-      "repo": "https://github.com/Frank-NF/dsh-memory-nexus",
-      "install": "github:Frank-NF/dsh-memory-nexus",
-      "tags": [
-        "frank-nf/dsh-memory-nexus"
-      ]
-    },
-    {
       "id": "Freakz2z/dsh-catgirl-plugin",
       "title": "Freakz2z/dsh-catgirl-plugin",
       "description": "Token-efficient persona runtime for DeepSeek Harness with local catgirl rendering and progressive tool-schema disclosure.",
@@ -17743,6 +17732,17 @@
       ]
     },
     {
+      "id": "Iambatman1928/dsh-lawagent-ui",
+      "title": "Iambatman1928/dsh-lawagent-ui",
+      "description": "Legal training workbench: three-pane academic UI that reads the \"Minglü\" (lawagent preset) learning profile (case dossiers, flashcards, wrong-answer book, notes) and sends instructions into a Minglü session with one click.",
+      "category": "client",
+      "repo": "https://github.com/Iambatman1928/dsh-lawagent-ui",
+      "install": "github:Iambatman1928/dsh-lawagent-ui",
+      "tags": [
+        "iambatman1928/dsh-lawagent-ui"
+      ]
+    },
+    {
       "id": "Iambatman1928/dsh-lawkb-ui",
       "title": "Iambatman1928/dsh-lawkb-ui",
       "description": "Legal knowledge-base workbench: hybrid keyword/statistical/vector retrieval over local statute .doc/.docx corpora, faceted filtering, charge-name and civil-cause trees, a document editor, and four AI tools (citation check, contract review, AI analysis, AI drafting).",
@@ -18763,17 +18763,6 @@
       "install": "github:jackma5477001/dsh-system-monitor",
       "tags": [
         "jackma5477001/dsh-system-monitor"
-      ]
-    },
-    {
-      "id": "jackovibe/dsh-codex-pin",
-      "title": "jackovibe/dsh-codex-pin",
-      "description": "Pins sessions into a single Pinned section above every workspace group in the Web sidebar without touching the stored session order — the pin is a flag kept in the host settings document, and a right-click row menu adds rename, pin, fork, archive, delete and copy title or session id, with labels that follow the GUI language.",
-      "category": "plugin",
-      "repo": "https://github.com/jackovibe/dsh-codex-pin",
-      "install": "github:jackovibe/dsh-codex-pin",
-      "tags": [
-        "jackovibe/dsh-codex-pin"
       ]
     },
     {
@@ -23078,6 +23067,17 @@
       ]
     },
     {
+      "id": "LeemanCheung/dsh-whale-companion",
+      "title": "LeemanCheung/dsh-whale-companion",
+      "description": "Draggable whale companion with local progression, achievements, skins, and privacy-safe activity tracking.",
+      "category": "plugin",
+      "repo": "https://github.com/LeemanCheung/dsh-whale-companion",
+      "install": "github:LeemanCheung/dsh-whale-companion",
+      "tags": [
+        "leemancheung/dsh-whale-companion"
+      ]
+    },
+    {
       "id": "Leeminjing/dsh-eyes",
       "title": "Leeminjing/dsh-eyes",
       "description": "On-demand vision for text-only DeepSeek models: upload images, and the model calls a view_image tool backed by any OpenAI-compatible vision endpoint (Qwen/DashScope by default).",
@@ -27077,6 +27077,17 @@
       "install": "github:mengnanxyyyy/dsh-markdown-xyy",
       "tags": [
         "mengnanxyyyy/dsh-markdown-xyy"
+      ]
+    },
+    {
+      "id": "mengqi1436/dsh-db-tool",
+      "title": "mengqi1436/dsh-db-tool",
+      "description": "Chat-operated multi-database admin plugin for DeepSeek Harness: query and manage MySQL, PostgreSQL, GaussDB, MongoDB, Redis, Oracle, DM and SQLite from the conversation with project-scoped ro/rw grants, a sidebar management panel, schema browsing and data preview, and confirmation-gated dangerous operations.",
+      "category": "plugin",
+      "repo": "https://github.com/mengqi1436/dsh-db-tool",
+      "install": "github:mengqi1436/dsh-db-tool",
+      "tags": [
+        "mengqi1436/dsh-db-tool"
       ]
     },
     {
@@ -32503,9 +32514,20 @@
       ]
     },
     {
+      "id": "pure-craft/dsh-actions",
+      "title": "pure-craft/dsh-actions",
+      "description": "Deterministic project actions shared by people and agents: one actions.json, a right-sidebar run panel, and agent tools.",
+      "category": "client",
+      "repo": "https://github.com/pure-craft/dsh-actions",
+      "install": "github:pure-craft/dsh-actions",
+      "tags": [
+        "pure-craft/dsh-actions"
+      ]
+    },
+    {
       "id": "pure-craft/dsh-capability-panel",
       "title": "pure-craft/dsh-capability-panel",
-      "description": "See which skills and tools your agent can actually reach right now — true in-context state (loaded/truncated/evicted) and per-session switches.",
+      "description": "Manage MCP servers, skills, and tools for your agent — true in-context state (loaded/truncated/evicted) and per-session switches.",
       "category": "client",
       "repo": "https://github.com/pure-craft/dsh-capability-panel",
       "install": "github:pure-craft/dsh-capability-panel",
@@ -35305,17 +35327,6 @@
       "install": "github:sharewiner/dsh-model-management",
       "tags": [
         "sharewiner/dsh-model-management"
-      ]
-    },
-    {
-      "id": "shaun5297/dsh-launcher",
-      "title": "shaun5297/dsh-launcher",
-      "description": "One-click launcher for DeepSeek Harness: detects whether the backend is running, starts dsh web if needed, waits until ready, then opens the main page in a new Chrome window. Ships a cross-platform CLI (dsh-launcher start / open / status / make-shortcut) and the harness_launch agent tool.",
-      "category": "plugin",
-      "repo": "https://github.com/shaun5297/dsh-launcher",
-      "install": "github:shaun5297/dsh-launcher",
-      "tags": [
-        "shaun5297/dsh-launcher"
       ]
     },
     {
@@ -38505,6 +38516,17 @@
       ]
     },
     {
+      "id": "TianJie52009/Tdsh-emoji",
+      "title": "TianJie52009/Tdsh-emoji",
+      "description": "Adds standard Unicode emoji to dsh replies at the point that best matches the content, and keeps emoji out of any sentence that already carries a kaomoji.",
+      "category": "plugin",
+      "repo": "https://github.com/TianJie52009/Tdsh-emoji",
+      "install": "github:TianJie52009/Tdsh-emoji",
+      "tags": [
+        "tianjie52009/tdsh-emoji"
+      ]
+    },
+    {
       "id": "TiantianFlow/dsh-one-gateway",
       "title": "TiantianFlow/dsh-one-gateway",
       "description": "Private loopback DSH Web gateway for Tailscale Serve, Cloudflare Access, and Headscale TCP Serve, with exact principal allowlists and guided fail-closed setup.",
@@ -41637,17 +41659,6 @@
       "install": "github:wikkd/dsh-remote-access-web/tree/main/packages/bundle/remote-access-web",
       "tags": [
         "wikkd/dsh-remote-access-web#remote-access-web"
-      ]
-    },
-    {
-      "id": "wild-River2016/dsh-xiaohe-canvas",
-      "title": "wild-River2016/dsh-xiaohe-canvas",
-      "description": "Connects DeepSeek Harness to Xiaohe Canvas, letting you create nodes, build flows, and trigger AI image and video generation from chat.",
-      "category": "client",
-      "repo": "https://github.com/wild-River2016/dsh-xiaohe-canvas",
-      "install": "github:wild-River2016/dsh-xiaohe-canvas",
-      "tags": [
-        "wild-river2016/dsh-xiaohe-canvas"
       ]
     },
     {
