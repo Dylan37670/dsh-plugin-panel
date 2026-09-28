@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-28T16:18:25.969Z",
-    "fetchedCount": 4378,
-    "count": 4394,
+    "generatedAt": "2026-09-28T19:50:12.646Z",
+    "fetchedCount": 4382,
+    "count": 4398,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1138,6 +1138,17 @@
       "install": "github:1741505640/capmap-skills/tree/main/dsh-capmap-viz",
       "tags": [
         "1741505640/capmap-skills#dsh-capmap-viz"
+      ]
+    },
+    {
+      "id": "18569663yz-web/dsh-plugin-crypto-ticker",
+      "title": "18569663yz-web/dsh-plugin-crypto-ticker",
+      "description": "A live crypto ticker card in the DeepSeek Harness sidebar footer, above the balance and Settings, showing BTC, ETH, SOL and JUP prices, 24-hour change and 24-point sparklines, with a pulse on each price tick, zero dependencies and no API key.",
+      "category": "client",
+      "repo": "https://github.com/18569663yz-web/dsh-plugin-crypto-ticker",
+      "install": "github:18569663yz-web/dsh-plugin-crypto-ticker",
+      "tags": [
+        "18569663yz-web/dsh-plugin-crypto-ticker"
       ]
     },
     {
@@ -5041,6 +5052,17 @@
       "install": "github:baddying/dsh-geolibre",
       "tags": [
         "baddying/dsh-geolibre"
+      ]
+    },
+    {
+      "id": "baifagg/dsh-plugin-busy-workspace",
+      "title": "baifagg/dsh-plugin-busy-workspace",
+      "description": "Pins workspaces holding a running session to the top of the sidebar session list, and draws the running session row with an accent frame and tinted title, plus a short settle animation when a session stops running. Colours come from the active theme's own tokens, with the running accent taken from the token the status dot paints ongoing with.",
+      "category": "client",
+      "repo": "https://github.com/baifagg/dsh-plugin-busy-workspace",
+      "install": "github:baifagg/dsh-plugin-busy-workspace",
+      "tags": [
+        "baifagg/dsh-plugin-busy-workspace"
       ]
     },
     {
@@ -15961,6 +15983,17 @@
       "install": "github:happpsee/dsh-desktop-app",
       "tags": [
         "happpsee/dsh-desktop-app"
+      ]
+    },
+    {
+      "id": "HapyRain/dsh-router-laya",
+      "title": "HapyRain/dsh-router-laya",
+      "description": "Auto thinking-effort routing for dsh: a locally fine-tuned 7-question classifier (ModernBERT, 842MB, <1s CPU inference) picks low/high/max for no-intent messages; in-session retries escalate the tier (low to high to max) under exclusion constraints; the judge service fails safe to low if unreachable. A tier chip in the input bar shows the live tier and the last 20 judgments. All inference is local - task text never leaves the machine.",
+      "category": "client",
+      "repo": "https://github.com/HapyRain/dsh-router-laya",
+      "install": "github:HapyRain/dsh-router-laya",
+      "tags": [
+        "hapyrain/dsh-router-laya"
       ]
     },
     {
@@ -44255,6 +44288,17 @@
       "install": "github:Xliecc/dsh-session-theme",
       "tags": [
         "xliecc/dsh-session-theme"
+      ]
+    },
+    {
+      "id": "xling001/dsh-reading-companion",
+      "title": "xling001/dsh-reading-companion",
+      "description": "Local TXT reader in a right-sidebar tab plus a spoiler-safe AI reading companion: the model only sees what you have already read — the current chapter, the tail of the previous chapter, and a per-book background file it grows as you go. Excerpts, thoughts and the companion replies become structured Markdown notes exportable to Obsidian; raw text unlocks only for a book you mark as finished.",
+      "category": "plugin",
+      "repo": "https://github.com/xling001/dsh-reading-companion",
+      "install": "github:xling001/dsh-reading-companion",
+      "tags": [
+        "xling001/dsh-reading-companion"
       ]
     },
     {
