@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-29T16:18:27.872Z",
-    "fetchedCount": 4387,
-    "count": 4403,
+    "generatedAt": "2026-09-29T18:15:18.017Z",
+    "fetchedCount": 4392,
+    "count": 4408,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -835,7 +835,7 @@
     {
       "id": "173787247/dsh-wsl-media",
       "title": "173787247/dsh-wsl-media",
-      "description": "Local media/doc pipeline: ffprobe, extract, thumbnail, PDF, ASR, pandoc, OCR, exif.",
+      "description": "Local media/doc pipeline: ffprobe, extract, thumbnail, PDF, ASR, pandoc, OCR, exif (allowRoots include IM inbox).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-media",
       "install": "github:173787247/dsh-wsl-media",
@@ -989,7 +989,7 @@
     {
       "id": "173787247/dsh-wsl-search",
       "title": "173787247/dsh-wsl-search",
-      "description": "Sandboxed ripgrep / fd / ast-grep under allowRoots.",
+      "description": "Sandboxed ripgrep / fd / ast-grep under allowRoots (defaults include ~/.dsh/im-workspace).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-search",
       "install": "github:173787247/dsh-wsl-search",
@@ -1088,7 +1088,7 @@
     {
       "id": "173787247/dsh-wsl-vecmem",
       "title": "173787247/dsh-wsl-vecmem",
-      "description": "Tiny local vector memory via Ollama embeddings and ~/.dsh/vecmem.",
+      "description": "Tiny local vector memory via Ollama embeddings and ~/.dsh/vecmem (workspace namespaces; optional IM crumb via vecmemOnReply).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-vecmem",
       "install": "github:173787247/dsh-wsl-vecmem",
@@ -3052,6 +3052,17 @@
       "install": "github:AIcivilization/dsh-vps-manager",
       "tags": [
         "aicivilization/dsh-vps-manager"
+      ]
+    },
+    {
+      "id": "Aicksion/dsh-clean-desktop-shell-pro",
+      "title": "Aicksion/dsh-clean-desktop-shell-pro",
+      "description": "Enhanced desktop shell for DSH: auto-starts the local backend on launch (no browser tab), asks before closing the backend on quit, and starts the backend in parallel with Electron for faster cold start. Fork of dsh-clean-desktop-shell.",
+      "category": "client",
+      "repo": "https://github.com/Aicksion/dsh-clean-desktop-shell-pro",
+      "install": "github:Aicksion/dsh-clean-desktop-shell-pro",
+      "tags": [
+        "aicksion/dsh-clean-desktop-shell-pro"
       ]
     },
     {
@@ -12362,6 +12373,17 @@
       ]
     },
     {
+      "id": "eghrhegpe/dsh-connect-qoder",
+      "title": "eghrhegpe/dsh-connect-qoder",
+      "description": "Brings models from the Qoder app already signed in on this machine into DeepSeek Harness, with no token to configure, and shows each model rate and off-peak window on its settings card.",
+      "category": "plugin",
+      "repo": "https://github.com/eghrhegpe/dsh-connect-qoder",
+      "install": "github:eghrhegpe/dsh-connect-qoder",
+      "tags": [
+        "eghrhegpe/dsh-connect-qoder"
+      ]
+    },
+    {
       "id": "EIGHTfs/dsh-git-push",
       "title": "EIGHTfs/dsh-git-push",
       "description": "Git commit-and-push automation for DSH with pre-push auditing, rule-based quality scoring, SSH key generation, and a three-tab settings sidebar.",
@@ -12777,6 +12799,17 @@
       "install": "github:EternalNight996/memory-eternal",
       "tags": [
         "eternalnight996/memory-eternal"
+      ]
+    },
+    {
+      "id": "ethanwong-hk/dsh-thinking-guard",
+      "title": "ethanwong-hk/dsh-thinking-guard",
+      "description": "Circuit breaker for idle agent turns: watches agent/assistant-stream and cancels a turn that produces only reasoning — no text and no tool call — after 45s, after 80000 reasoning characters, or on a degenerate repetition pattern (exact repeat unit, sentence-template repeat, sparse repeat, or 6-gram density). On trip it injects a continue instruction that requires the next action to be a tool call, and ships 11 regression cases plus per-gate tuning.",
+      "category": "plugin",
+      "repo": "https://github.com/ethanwong-hk/dsh-thinking-guard",
+      "install": "github:ethanwong-hk/dsh-thinking-guard",
+      "tags": [
+        "ethanwong-hk/dsh-thinking-guard"
       ]
     },
     {
@@ -29005,6 +29038,17 @@
       ]
     },
     {
+      "id": "NamesMT/dsh-home-hosted",
+      "title": "NamesMT/dsh-home-hosted",
+      "description": "Starts your dsh web server at boot through home-hosted: runs that panel from the pinned copy it ships, installs or removes the panel's boot entry (systemd, launchd, XDG autostart, Windows Run key or Task Scheduler), and manages the panel's servers, boot entry and UI from a dsh settings page and six agent tools.",
+      "category": "plugin",
+      "repo": "https://github.com/NamesMT/dsh-home-hosted",
+      "install": "github:NamesMT/dsh-home-hosted",
+      "tags": [
+        "namesmt/dsh-home-hosted"
+      ]
+    },
+    {
       "id": "nanami-0713/dsh-jev-decide",
       "title": "nanami-0713/dsh-jev-decide",
       "description": "TypeSafe Jev (System One decision model) as the jev_decide tool for DeepSeek Harness: noul, choice and score questions return calibrated probabilities; credentials reuse the DSH credential seam; 429/529 backoff retry built in.",
@@ -31942,14 +31986,14 @@
       ]
     },
     {
-      "id": "pgmi-builds/better-dsh/tree/main/dashr",
-      "title": "pgmi-builds/better-dsh#dashr",
+      "id": "pgmi-builds/better-dsh/tree/main/better-dsh",
+      "title": "pgmi-builds/better-dsh#better-dsh",
       "description": "Make your dsh ready for serious coding. (Tools x Schemas)^REPL. `skill://`, `ctx://`, `agent://`, `dvc://`, `dsh://`, IPython REPL, Context as Variables, cross compactions recallable, full context revive. `hash-edit`, `dvc://browser`, subagent as function, workflow as function.",
       "category": "plugin",
-      "repo": "https://github.com/pgmi-builds/better-dsh/tree/main/dashr",
-      "install": "github:pgmi-builds/better-dsh/tree/main/dashr",
+      "repo": "https://github.com/pgmi-builds/better-dsh/tree/main/better-dsh",
+      "install": "github:pgmi-builds/better-dsh/tree/main/better-dsh",
       "tags": [
-        "pgmi-builds/better-dsh#dashr"
+        "pgmi-builds/better-dsh#better-dsh"
       ]
     },
     {
@@ -38672,7 +38716,7 @@
     {
       "id": "TikaFlow/dsh-model-fix",
       "title": "TikaFlow/dsh-model-fix",
-      "description": "Auto-fills reasoning-efforts, context windows, output limits and image modality for models from unofficial (custom) providers, with data from models.dev. Also provides setting cards to control plugin's behavior.",
+      "description": "Auto-fills reasoning-efforts, context windows, output limits and image modality fields for models from unofficial (custom) providers (with data from models.dev), and provides user experience improvements such as compatibility enhancement and remembering reasoning effort.",
       "category": "plugin",
       "repo": "https://github.com/TikaFlow/dsh-model-fix",
       "install": "github:TikaFlow/dsh-model-fix",
@@ -38964,6 +39008,17 @@
       "install": "github:toddpan/dsh-webapi",
       "tags": [
         "toddpan/dsh-webapi"
+      ]
+    },
+    {
+      "id": "toddpan/dsh-xiaozhi",
+      "title": "toddpan/dsh-xiaozhi",
+      "description": "Connects the Xiaozhi voice assistant to DSH Web over MCP: DSH is the tool provider, weaving 35 DSH Web endpoints into 16 voice-friendly tools for workspaces, sessions, chat, models, settings and files — outbound WebSocket to the Xiaozhi MCP access point by default (no public IP or port forwarding needed), several devices bound at once, plus a DSH settings page with live status.",
+      "category": "plugin",
+      "repo": "https://github.com/toddpan/dsh-xiaozhi",
+      "install": "github:toddpan/dsh-xiaozhi",
+      "tags": [
+        "toddpan/dsh-xiaozhi"
       ]
     },
     {
@@ -42847,6 +42902,17 @@
       "install": "github:wszhoho/dsh-file-attachment",
       "tags": [
         "wszhoho/dsh-file-attachment"
+      ]
+    },
+    {
+      "id": "wucl12/dsh-side-branch",
+      "title": "wucl12/dsh-side-branch",
+      "description": "Read-only side branch in the right sidebar: quote text to ask follow-ups without polluting the model context of the main session; every follow-up rebuilds the branch from the latest settled turns of the main session, and writes are refused at the tool-execution layer so the prompt prefix stays cacheable.",
+      "category": "client",
+      "repo": "https://github.com/wucl12/dsh-side-branch",
+      "install": "github:wucl12/dsh-side-branch",
+      "tags": [
+        "wucl12/dsh-side-branch"
       ]
     },
     {
@@ -47621,17 +47687,6 @@
       "install": "github:zhu1090093659/dsh-pet",
       "tags": [
         "zhu1090093659/dsh-pet"
-      ]
-    },
-    {
-      "id": "zhu1090093659/dsh-web-ui/tree/main/packages/dsh-tool-describe-image",
-      "title": "zhu1090093659/dsh-web-ui#packages/dsh-tool-describe-image",
-      "description": "A `describe_image` vision tool for text-only models: images (local path, URL, attachment) go to a configurable OpenAI-compatible vision endpoint and only the returned text enters the session.",
-      "category": "plugin",
-      "repo": "https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-tool-describe-image",
-      "install": "github:zhu1090093659/dsh-web-ui/tree/main/packages/dsh-tool-describe-image",
-      "tags": [
-        "zhu1090093659/dsh-web-ui#packages/dsh-tool-describe-image"
       ]
     },
     {
