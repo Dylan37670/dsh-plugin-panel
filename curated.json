@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-09-30T16:19:35.118Z",
-    "fetchedCount": 4392,
-    "count": 4408,
+    "generatedAt": "2026-09-30T18:07:41.621Z",
+    "fetchedCount": 4400,
+    "count": 4416,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -382,6 +382,17 @@
       ]
     },
     {
+      "id": "1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-anatomy-panel",
+      "title": "1420079678-ctrl/agent-body#dsh-anatomy-panel",
+      "description": "Anatomy panel for the Agent-Body organs: serves a live vitals dashboard at /anatomy inside the harness itself - organs, heartbeat, healing ledger, self-training counters and the real pulse stream - read straight from the runtime files rather than retyped. Host-only, no client bundle and no build step.",
+      "category": "client",
+      "repo": "https://github.com/1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-anatomy-panel",
+      "install": "github:1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-anatomy-panel",
+      "tags": [
+        "1420079678-ctrl/agent-body#dsh-anatomy-panel"
+      ]
+    },
+    {
       "id": "1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-cortex",
       "title": "1420079678-ctrl/agent-body#dsh-cortex",
       "description": "The memory organ of Agent-Body: after 2 minutes of silence it enters light sleep and after 5 minutes deep sleep, where deterministic rules distil real experience into memory cards (pitfalls, playbooks, hotspots, unresolved issues, facts). Incoming commands recall related cards by keyword and inject them into context; cards unused for long decay on a half-life and are archived rather than deleted. It also de-noises body-wide homeostasis warnings: repeats inside a window are counted instead of re-printed, and a warning that keeps recurring without ever healing converges into a known steady-state offset and goes quiet. Consolidation and recall make no model calls.",
@@ -406,7 +417,7 @@
     {
       "id": "1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
       "title": "1420079678-ctrl/agent-body#dsh-zero-residence",
-      "description": "A zero-residence context engine: large tool payloads are evicted from the live context into a queryable store, only pointers stay behind, and any payload can be reconstructed verbatim on demand — so per-turn prompt tokens stop growing with the transcript. It ships four capabilities: zr_recall rebuilds masked originals by tool-call id or session sequence from the persisted session log (the content is not resident, never lost), zr_ledger reports the attention integral and a three-part cost breakdown, zr_compact arms one forced compaction, and zr_fast runs long commands asynchronously and hands back a handle immediately.",
+      "description": "Zero-residence context engine: large tool payloads are evicted out of the live context into a queryable store and only deterministic pointers are left behind, so per-turn prompt tokens stop growing with the transcript. Any masked content is reconstructed verbatim from the session log on demand, by tool-call id or session seq.",
       "category": "plugin",
       "repo": "https://github.com/1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
       "install": "github:1420079678-ctrl/agent-body/tree/main/workspace/plugins/dsh-zero-residence",
@@ -571,7 +582,7 @@
     {
       "id": "173787247/dsh-wsl-compose",
       "title": "173787247/dsh-wsl-compose",
-      "description": "Docker Compose ps/logs; up/down double-gated.",
+      "description": "Docker Compose ps/logs with richer status; up/down double-gated.",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-compose",
       "install": "github:173787247/dsh-wsl-compose",
@@ -703,7 +714,7 @@
     {
       "id": "173787247/dsh-wsl-git",
       "title": "173787247/dsh-wsl-git",
-      "description": "Capped Git status / diff --stat (no full patches).",
+      "description": "Capped Git status / diff --stat / log --oneline (no full patches).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-git",
       "install": "github:173787247/dsh-wsl-git",
@@ -791,7 +802,7 @@
     {
       "id": "173787247/dsh-wsl-k8s",
       "title": "173787247/dsh-wsl-k8s",
-      "description": "Read-only kubectl get / describe / logs for dsh on WSL.",
+      "description": "Read-only kubectl get / describe / logs / contexts for dsh on WSL (configurable log tail).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-k8s",
       "install": "github:173787247/dsh-wsl-k8s",
@@ -890,7 +901,7 @@
     {
       "id": "173787247/dsh-wsl-obsidian",
       "title": "173787247/dsh-wsl-obsidian",
-      "description": "Bridges a WSL dsh agent to a Windows Obsidian vault on NTFS: obsidian_status/list/search/read/write/append, plus obsidian:// open via the Windows app. Keep the vault under /mnt/<drive>/ so Obsidian can watch files; Linux-disk vaults via \\\\wsl$ are unreliable.",
+      "description": "Bridges a WSL dsh agent to a Windows Obsidian vault on NTFS: status/list/search/read/write/append, wikilink resolve, write/append require confirm=true, plus obsidian:// open. Keep the vault under /mnt/<drive>/; Linux-disk vaults via \\\\wsl$ are unreliable.",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-obsidian",
       "install": "github:173787247/dsh-wsl-obsidian",
@@ -901,7 +912,7 @@
     {
       "id": "173787247/dsh-wsl-ollama",
       "title": "173787247/dsh-wsl-ollama",
-      "description": "Local Ollama status / list / chat / embed for dsh on WSL.",
+      "description": "Local Ollama status / list / chat / embed for dsh on WSL (unreachable status includes Windows/WSL gateway hints).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-ollama",
       "install": "github:173787247/dsh-wsl-ollama",
@@ -1011,7 +1022,7 @@
     {
       "id": "173787247/dsh-wsl-shot",
       "title": "173787247/dsh-wsl-shot",
-      "description": "Saves a Windows clipboard image into a WSL file.",
+      "description": "Saves a Windows clipboard image into a WSL file (clear ok:false + hint when clipboard has no image).",
       "category": "plugin",
       "repo": "https://github.com/173787247/dsh-wsl-shot",
       "install": "github:173787247/dsh-wsl-shot",
@@ -3536,6 +3547,17 @@
       "install": "github:All3nCN/dsh-qa-suite-N23",
       "tags": [
         "all3ncn/dsh-qa-suite-n23"
+      ]
+    },
+    {
+      "id": "AllenWES365/dsh-local-memory",
+      "title": "AllenWES365/dsh-local-memory",
+      "description": "Project-isolated long-term memory for DeepSeek Harness that keeps one bank per project and adds a cross-project view; it can also seed a project's memory from its git history without opening a session there.",
+      "category": "plugin",
+      "repo": "https://github.com/AllenWES365/dsh-local-memory",
+      "install": "github:AllenWES365/dsh-local-memory",
+      "tags": [
+        "allenwes365/dsh-local-memory"
       ]
     },
     {
@@ -16316,6 +16338,17 @@
       ]
     },
     {
+      "id": "hbgdjb/dsh-mimo-quota",
+      "title": "hbgdjb/dsh-mimo-quota",
+      "description": "Realtime model usage panel: tokens, cost, requests, trend and composition, with editable pricing.",
+      "category": "plugin",
+      "repo": "https://github.com/hbgdjb/dsh-mimo-quota",
+      "install": "github:hbgdjb/dsh-mimo-quota",
+      "tags": [
+        "hbgdjb/dsh-mimo-quota"
+      ]
+    },
+    {
       "id": "hccccc01333/dsh-excel-chat/tree/master/bundle",
       "title": "hccccc01333/dsh-excel-chat#bundle",
       "description": "Talk to Excel in DeepSeek Harness: create, edit, repair, and verify spreadsheets by conversation, with automatic formula health checks after every edit.",
@@ -19709,6 +19742,17 @@
       "install": "github:jiazz197-cmyk/omd-dsh/tree/main/packages/omd-dsh",
       "tags": [
         "jiazz197-cmyk/omd-dsh#packages/omd-dsh"
+      ]
+    },
+    {
+      "id": "jide315/dsh-reasoning-language",
+      "title": "jide315/dsh-reasoning-language",
+      "description": "Uses a configurable system-prompt section to request a chosen reasoning language (Simplified Chinese by default), and expands thinking rows by default while preserving rows the user manually collapses.",
+      "category": "client",
+      "repo": "https://github.com/jide315/dsh-reasoning-language",
+      "install": "github:jide315/dsh-reasoning-language",
+      "tags": [
+        "jide315/dsh-reasoning-language"
       ]
     },
     {
@@ -28730,6 +28774,17 @@
       ]
     },
     {
+      "id": "MurasakiIzumi/dsh-quake-alert",
+      "title": "MurasakiIzumi/dsh-quake-alert",
+      "description": "Real-time disaster alerts for DeepSeek Harness: Japan earthquakes (P2PQuake) and JMA EEW, tsunami and weather telegrams, global earthquakes (EMSC/USGS) and NOAA tsunamis, mainland China earthquakes (CENC via Wolfx) plus nmc.cn rainstorm and geological-hazard warnings, and US/Canadian NWS and ECCC flood, rainfall and storm-surge warnings — matched against your watch regions and thresholds.",
+      "category": "plugin",
+      "repo": "https://github.com/MurasakiIzumi/dsh-quake-alert",
+      "install": "github:MurasakiIzumi/dsh-quake-alert",
+      "tags": [
+        "murasakiizumi/dsh-quake-alert"
+      ]
+    },
+    {
       "id": "MurasakiIzumi/dsh-ticker-jp",
       "title": "MurasakiIzumi/dsh-ticker-jp",
       "description": "A floating stock ticker for DeepSeek Harness: real-time quotes for Nikkei 225 and TOPIX ETF out of the box, plus worldwide markets via Yahoo Finance — Japan (.T), US, Hong Kong (.HK), China (.SS/.SZ) and any other symbol — with a customizable watchlist, display aliases and 16 UI languages.",
@@ -33614,6 +33669,17 @@
       ]
     },
     {
+      "id": "Ray144165154/dsh-memory-loom",
+      "title": "Ray144165154/dsh-memory-loom",
+      "description": "Cross-session long-term memory: captures durable facts from each turn, auto-associates them by shared entity and tag, and recalls with BM25 plus spreading activation over the link graph.",
+      "category": "plugin",
+      "repo": "https://github.com/Ray144165154/dsh-memory-loom",
+      "install": "github:Ray144165154/dsh-memory-loom",
+      "tags": [
+        "ray144165154/dsh-memory-loom"
+      ]
+    },
+    {
       "id": "rayadesune/DeepSeek-Harness-chat-billing",
       "title": "rayadesune/DeepSeek-Harness-chat-billing",
       "description": "DeepSeek account balance, this session's billed spend, and today's total spend in the session-header badge; a turn-cost row in the message actions strip, a detail panel with per-model pricing and a today session-spend ranking. Official peak/off-peak pricing; balance from the real /user/balance API.",
@@ -34144,7 +34210,7 @@
     {
       "id": "RockingSisyphus/dsh-focus-supervisor/tree/main/dsh-plugin",
       "title": "RockingSisyphus/dsh-focus-supervisor#dsh-plugin",
-      "description": "AI self-discipline companion for DSH with one-time and recurring tasks, desktop evidence, native reminders, and window, tab or process intervention on Windows and GNOME Wayland.",
+      "description": "DSH self-discipline companion with recurring tasks, a gaze-tracking desktop mascot, evidence logs, final AI review, reminders, and window intervention on Windows and GNOME Wayland.",
       "category": "plugin",
       "repo": "https://github.com/RockingSisyphus/dsh-focus-supervisor/tree/main/dsh-plugin",
       "install": "github:RockingSisyphus/dsh-focus-supervisor/tree/main/dsh-plugin",
@@ -40278,7 +40344,7 @@
     {
       "id": "vitas/dsh-web-search-openrouter",
       "title": "vitas/dsh-web-search-openrouter",
-      "description": "Runs the built-in web_search tool server-side on an OpenRouter-compatible gateway, so search uses the same endpoint and key as the chat models: three request protocols, every citation shape parsed (including snippets recovered from the cited span), and a settings card with a live connection test.",
+      "description": "The built-in web_search bills a full model turn against DeepSeek's own endpoint; this runs it on an OpenRouter-compatible gateway instead, so search is billed where your chat already is, at the model and price you pick.",
       "category": "plugin",
       "repo": "https://github.com/vitas/dsh-web-search-openrouter",
       "install": "github:vitas/dsh-web-search-openrouter",
@@ -40999,6 +41065,17 @@
       "install": "github:wcytjy/dsh-meal-picker",
       "tags": [
         "wcytjy/dsh-meal-picker"
+      ]
+    },
+    {
+      "id": "WDahah/portable-dsh-multi-agent-plugin",
+      "title": "WDahah/portable-dsh-multi-agent-plugin",
+      "description": "Route each task to one model and its review to a different one, with qualification evidence, failover and a durable journal.",
+      "category": "plugin",
+      "repo": "https://github.com/WDahah/portable-dsh-multi-agent-plugin",
+      "install": "github:WDahah/portable-dsh-multi-agent-plugin",
+      "tags": [
+        "wdahah/portable-dsh-multi-agent-plugin"
       ]
     },
     {
@@ -47456,6 +47533,17 @@
       "install": "github:zhengjy01/dsh-start",
       "tags": [
         "zhengjy01/dsh-start"
+      ]
+    },
+    {
+      "id": "zhengjy01/dsh-task-dispatcher",
+      "title": "zhengjy01/dsh-task-dispatcher",
+      "description": "TickTick (滴答清单) daily task dispatcher: an interval timer pulls due tasks from a chosen list into a Markdown task file and notifies only when the task set changes (WeChat via ClawBot / flomo / macOS); it can also auto-execute each task in its own headless DSH session under a configurable timeout, optionally gated to DeepSeek's off-peak hours so peak-time work queues to the next off-peak window instead of starting, plus a settings panel for the deferred write-back queue and dispatcher_status / dispatcher_config / dispatcher_run / dispatcher_report tools.",
+      "category": "plugin",
+      "repo": "https://github.com/zhengjy01/dsh-task-dispatcher",
+      "install": "github:zhengjy01/dsh-task-dispatcher",
+      "tags": [
+        "zhengjy01/dsh-task-dispatcher"
       ]
     },
     {
