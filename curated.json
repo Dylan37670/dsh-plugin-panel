@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-01T16:18:38.015Z",
-    "fetchedCount": 4404,
-    "count": 4420,
+    "generatedAt": "2026-10-01T18:34:23.429Z",
+    "fetchedCount": 4412,
+    "count": 4428,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -13605,6 +13605,17 @@
       ]
     },
     {
+      "id": "Finderchangchang/brewreel/tree/main/integrations/deepseek-harness",
+      "title": "Finderchangchang/brewreel#deepseek-harness",
+      "description": "Makes 1080x1920 vertical promo videos from a storyboard JSON with 7 tools (doctor, setup, catalog, guide, validate, render, verify), rendered locally with Remotion.",
+      "category": "skill",
+      "repo": "https://github.com/Finderchangchang/brewreel/tree/main/integrations/deepseek-harness",
+      "install": "github:Finderchangchang/brewreel/tree/main/integrations/deepseek-harness",
+      "tags": [
+        "finderchangchang/brewreel#deepseek-harness"
+      ]
+    },
+    {
       "id": "fire-disposal/dsh-mojibake-interceptor",
       "title": "fire-disposal/dsh-mojibake-interceptor",
       "description": "Mojibake guard bundle for DSH: feature-based garbled-text detection before writes with review-then-release (an identical retry passes), plus pre-execution pwsh encoding audit (ANSI/GBK/UTF-16/Default), Windows and Chinese first.",
@@ -14743,6 +14754,17 @@
       "install": "github:Github-CJX/dsh-tool-imagegen",
       "tags": [
         "github-cjx/dsh-tool-imagegen"
+      ]
+    },
+    {
+      "id": "GitHub-Xzhi/dsh-simple-worktree-plus",
+      "title": "GitHub-Xzhi/dsh-simple-worktree-plus",
+      "description": "Manages Git worktrees in DeepSeek Harness with branch deletion controls and scoped workspace management.",
+      "category": "plugin",
+      "repo": "https://github.com/GitHub-Xzhi/dsh-simple-worktree-plus",
+      "install": "github:GitHub-Xzhi/dsh-simple-worktree-plus",
+      "tags": [
+        "github-xzhi/dsh-simple-worktree-plus"
       ]
     },
     {
@@ -21414,6 +21436,17 @@
       "install": "github:kanchengw/dsh-mindseye",
       "tags": [
         "kanchengw/dsh-mindseye"
+      ]
+    },
+    {
+      "id": "kangtsang/dsh-worktree-space",
+      "title": "kangtsang/dsh-worktree-space",
+      "description": "Worktree Space: puts a workspace task that spans one or more Git repositories in its own task space directory - each repository in it gets its own worktree on one shared task branch; the space is registered as a DSH Workspace so sessions start right there, and multiple tasks run side by side without interfering. Finishing a task can merge the work back into each repository's target branch, remove the worktrees, and file whatever Git does not track in an archive directory you choose.",
+      "category": "plugin",
+      "repo": "https://github.com/kangtsang/dsh-worktree-space",
+      "install": "github:kangtsang/dsh-worktree-space",
+      "tags": [
+        "kangtsang/dsh-worktree-space"
       ]
     },
     {
@@ -29643,6 +29676,17 @@
       ]
     },
     {
+      "id": "ninglovegithub/dsh-workspace-combiner",
+      "title": "ninglovegithub/dsh-workspace-combiner",
+      "description": "Multi-workspace manager: bind a docs anchor plus ordered code-project repositories into one session, injecting their absolute paths, a recursive file index, a server/client endpoint index and optional coding standards, and syncing writable directories into the sandbox.",
+      "category": "client",
+      "repo": "https://github.com/ninglovegithub/dsh-workspace-combiner",
+      "install": "github:ninglovegithub/dsh-workspace-combiner",
+      "tags": [
+        "ninglovegithub/dsh-workspace-combiner"
+      ]
+    },
+    {
       "id": "ningmengxr/dsh-task-control",
       "title": "ningmengxr/dsh-task-control",
       "description": "Task control for DeepSeek Harness: one-click emergency stop and force-termination of stuck downloads and tool calls, download progress, stuck detection, pwsh activity monitoring, and append-condition / pause / resume with invisible recovery.",
@@ -31147,6 +31191,17 @@
       "install": "github:paicat1/dsh-screenshot",
       "tags": [
         "paicat1/dsh-screenshot"
+      ]
+    },
+    {
+      "id": "Paimonshen/dsh-coding-plugin",
+      "title": "Paimonshen/dsh-coding-plugin",
+      "description": "Coding-learn floating panel: edits and runs Python/JavaScript/TypeScript/PowerShell with exit code and timing, grades JSON course lessons with progress export, keeps Markdown notes and snippet library, and sends code plus a question into the current conversation for the main model to answer.",
+      "category": "client",
+      "repo": "https://github.com/Paimonshen/dsh-coding-plugin",
+      "install": "github:Paimonshen/dsh-coding-plugin",
+      "tags": [
+        "paimonshen/dsh-coding-plugin"
       ]
     },
     {
@@ -32841,6 +32896,17 @@
       "install": "github:qcsjjjjj/dsh-hero-rightbar",
       "tags": [
         "qcsjjjjj/dsh-hero-rightbar"
+      ]
+    },
+    {
+      "id": "qcsjjjjj/dsh-planner",
+      "title": "qcsjjjjj/dsh-planner",
+      "description": "A planner board as a third tab beside chat and trajectory: a Monday-first month calendar above per-day cards holding title, note, times, three importance levels and a completion checkbox. Plans repeat daily, weekly or on weekdays with an optional end date; editing or deleting asks this occurrence versus the whole series; completion is tracked per day; one button clears a day while only skipping recurrent series. Five model tools let the agent read, write, delete, clear and undo plans in conversation.",
+      "category": "client",
+      "repo": "https://github.com/qcsjjjjj/dsh-planner",
+      "install": "github:qcsjjjjj/dsh-planner",
+      "tags": [
+        "qcsjjjjj/dsh-planner"
       ]
     },
     {
@@ -39088,6 +39154,17 @@
       ]
     },
     {
+      "id": "toddpan/dsh-feyagate",
+      "title": "toddpan/dsh-feyagate",
+      "description": "DSH plugin that installs, supervises and auto-upgrades the local miloco-mcp-server background service, bridges its MCP tools into DSH and adds service, account and license settings panels.",
+      "category": "plugin",
+      "repo": "https://github.com/toddpan/dsh-feyagate",
+      "install": "github:toddpan/dsh-feyagate",
+      "tags": [
+        "toddpan/dsh-feyagate"
+      ]
+    },
+    {
       "id": "toddpan/dsh-webapi",
       "title": "toddpan/dsh-webapi",
       "description": "Drive DSH from anything that speaks HTTP: 47 routes (REST + SSE) for workspaces, sessions (create/prompt, live SSE generation, history, stats, todos, cancel, ask-user Q&A), models and the global default model, providers, agent presets, settings namespaces, skills, and workspace files including resumable chunked upload — plus an OpenAI-compatible /chat/completions, a built-in OpenAPI 3.0 spec and an interactive request page. It only injects the host webServer and tools, so it rides on the DSH webserver (default prefix /api/v1) or its own port with optional API-key auth, and it ships a skill that teaches the DSH agent to call the API.",
@@ -43793,6 +43870,17 @@
       "install": "github:xianshu-virtuous/dsh-whale-companion",
       "tags": [
         "xianshu-virtuous/dsh-whale-companion"
+      ]
+    },
+    {
+      "id": "xianyuyijinban/boardwise/tree/main/dsh-plugin",
+      "title": "xianyuyijinban/boardwise#dsh-plugin",
+      "description": "Offline schematic review for EasyEDA Pro, exposed to dsh as four tools — one-shot checkup reports, architecture skeletons, an install doctor, and a live-editor bridge that prefers read-only actions, all driven by the local boardwise CLI.",
+      "category": "plugin",
+      "repo": "https://github.com/xianyuyijinban/boardwise/tree/main/dsh-plugin",
+      "install": "github:xianyuyijinban/boardwise/tree/main/dsh-plugin",
+      "tags": [
+        "xianyuyijinban/boardwise#dsh-plugin"
       ]
     },
     {
