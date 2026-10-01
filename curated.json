@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-01T10:18:13.076Z",
-    "fetchedCount": 4400,
-    "count": 4416,
+    "generatedAt": "2026-10-01T16:18:38.015Z",
+    "fetchedCount": 4404,
+    "count": 4420,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -16349,6 +16349,17 @@
       ]
     },
     {
+      "id": "hbgdjb/dsh-session-shield",
+      "title": "hbgdjb/dsh-session-shield",
+      "description": "Guards session logs from malformed model tool calls (empty id/name, non-string arguments) so a bad call can never make a session unloadable.",
+      "category": "plugin",
+      "repo": "https://github.com/hbgdjb/dsh-session-shield",
+      "install": "github:hbgdjb/dsh-session-shield",
+      "tags": [
+        "hbgdjb/dsh-session-shield"
+      ]
+    },
+    {
       "id": "hccccc01333/dsh-excel-chat/tree/master/bundle",
       "title": "hccccc01333/dsh-excel-chat#bundle",
       "description": "Talk to Excel in DeepSeek Harness: create, edit, repair, and verify spreadsheets by conversation, with automatic formula health checks after every edit.",
@@ -20248,6 +20259,17 @@
       "install": "github:JoblessJoe/dsh-vitals",
       "tags": [
         "joblessjoe/dsh-vitals"
+      ]
+    },
+    {
+      "id": "JoblessJoe/smart-compaction",
+      "title": "JoblessJoe/smart-compaction",
+      "description": "Lets the model trigger compaction itself at a safe point via a compact_now tool (works mid-turn), plus a context_status tool reporting real token usage against the session's actual context window.",
+      "category": "plugin",
+      "repo": "https://github.com/JoblessJoe/smart-compaction",
+      "install": "github:JoblessJoe/smart-compaction",
+      "tags": [
+        "joblessjoe/smart-compaction"
       ]
     },
     {
@@ -46260,6 +46282,17 @@
       ]
     },
     {
+      "id": "yuloong07-star/dsh-prompt-system",
+      "title": "yuloong07-star/dsh-prompt-system",
+      "description": "Prompt optimizer in the composer: rewrites the draft into an eleven-section analytical prompt using the conversation, workspace files and the session's selected model, with one-click undo.",
+      "category": "plugin",
+      "repo": "https://github.com/yuloong07-star/dsh-prompt-system",
+      "install": "github:yuloong07-star/dsh-prompt-system",
+      "tags": [
+        "yuloong07-star/dsh-prompt-system"
+      ]
+    },
+    {
       "id": "yumiao-dev/dsh-chat-thinking-editor",
       "title": "yumiao-dev/dsh-chat-thinking-editor",
       "description": "Adds an edit action to finalized assistant replies in DeepSeek Harness, letting you rewrite the reply text or reasoning chain; the edit is saved as a surface replacement.",
@@ -48303,6 +48336,17 @@
       "install": "github:zjuhbh/dsh-full-with-approval",
       "tags": [
         "zjuhbh/dsh-full-with-approval"
+      ]
+    },
+    {
+      "id": "zjukop/dsh-time-machine",
+      "title": "zjukop/dsh-time-machine",
+      "description": "Creates local, content-addressed workspace checkpoints with diff previews and two-phase restore confirmation.",
+      "category": "plugin",
+      "repo": "https://github.com/zjukop/dsh-time-machine",
+      "install": "github:zjukop/dsh-time-machine",
+      "tags": [
+        "zjukop/dsh-time-machine"
       ]
     },
     {
