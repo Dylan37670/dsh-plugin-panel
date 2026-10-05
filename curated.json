@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-05T10:17:56.307Z",
-    "fetchedCount": 4412,
-    "count": 4428,
+    "generatedAt": "2026-10-05T16:18:09.849Z",
+    "fetchedCount": 4418,
+    "count": 4434,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -12417,6 +12417,17 @@
       ]
     },
     {
+      "id": "EIGHTfs/dsh-session-conductor",
+      "title": "EIGHTfs/dsh-session-conductor",
+      "description": "Session management for DSH: archive/restore, batch & conditional delete, AI auto-rename, interrupted-session auto-resume, workspace grouping, undo last message, repair damaged session logs (seq-gap/EIO/dual-format), value analysis and full-text search — plus plan/closing template injection (system prompt + context).",
+      "category": "plugin",
+      "repo": "https://github.com/EIGHTfs/dsh-session-conductor",
+      "install": "github:EIGHTfs/dsh-session-conductor",
+      "tags": [
+        "eightfs/dsh-session-conductor"
+      ]
+    },
+    {
       "id": "EIGHTfs/dsh-session-migrate",
       "title": "EIGHTfs/dsh-session-migrate",
       "description": "Cross-version session migration for DSH: sweeps legacy session stores (v0 plaintext, .zstd and .zip exports), re-pins the header cwd to the target workspace and drops sessions in so the persistence layer upgrades them on open; settings sidebar with env/import/list/convert tabs plus a CLI (check / fix / import).",
@@ -15411,6 +15422,17 @@
       "install": "github:gorban/dsh-job-stop",
       "tags": [
         "gorban/dsh-job-stop"
+      ]
+    },
+    {
+      "id": "gordan-code/dsh-jev-advisor",
+      "title": "gordan-code/dsh-jev-advisor",
+      "description": "Adds a human-facing TypeSafe Jev second-opinion card to DSH multiple-choice prompts, showing recommendations, probability distributions, confidence, raw JSON, and one-click adoption.",
+      "category": "client",
+      "repo": "https://github.com/gordan-code/dsh-jev-advisor",
+      "install": "github:gordan-code/dsh-jev-advisor",
+      "tags": [
+        "gordan-code/dsh-jev-advisor"
       ]
     },
     {
@@ -28598,6 +28620,17 @@
       ]
     },
     {
+      "id": "MoruTeaven/dsh-key-panel",
+      "title": "MoruTeaven/dsh-key-panel",
+      "description": "A secret store for DSH Desktop that keeps API keys in one place and injects them into the assistant's shell as $DSH_* variables.",
+      "category": "plugin",
+      "repo": "https://github.com/MoruTeaven/dsh-key-panel",
+      "install": "github:MoruTeaven/dsh-key-panel",
+      "tags": [
+        "moruteaven/dsh-key-panel"
+      ]
+    },
+    {
       "id": "mov-eax-eax/dsh-token-anxiety",
       "title": "mov-eax-eax/dsh-token-anxiety",
       "description": "Live per-task token cost widget: peak/valley pricing windows, projected post-hike costs, sortable per-task cost table, multi-currency (COP/USD/CNY + ~40 more) with FX rates, and one-click streamed LLM explain of expensive tasks.",
@@ -37882,6 +37915,17 @@
       ]
     },
     {
+      "id": "sviktor75/dsh-sound-notification",
+      "title": "sviktor75/dsh-sound-notification",
+      "description": "Plays a chime when any session's response finishes (rising tone) or a question/approval is asked (falling tone), with a click-to-mute badge.",
+      "category": "plugin",
+      "repo": "https://github.com/sviktor75/dsh-sound-notification",
+      "install": "github:sviktor75/dsh-sound-notification",
+      "tags": [
+        "sviktor75/dsh-sound-notification"
+      ]
+    },
+    {
       "id": "swarm-apps/dsh-swarmdrop",
       "title": "swarm-apps/dsh-swarmdrop",
       "description": "Device channel between the agent and your own phone: it sends files it just produced, and you @-reference what your phone sent back. End-to-end encrypted P2P through the SwarmDrop CLI, with no account and no public IP; node status, paired devices and QR pairing sit in a sidebar panel.",
@@ -40650,9 +40694,20 @@
       ]
     },
     {
+      "id": "vv5v5/dsh-anima-rag",
+      "title": "vv5v5/dsh-anima-rag",
+      "description": "Anima-style vector memory for DSH: injects retrieved historical summaries into the system prompt each turn, exposes an anima_query semantic-search tool, and isolates the vector store per playthrough. SiliconFlow embeddings sent as array-shaped requests; timeouts and provider errors surface as honest, classified notes in the injection slot — never silent.",
+      "category": "plugin",
+      "repo": "https://github.com/vv5v5/dsh-anima-rag",
+      "install": "github:vv5v5/dsh-anima-rag",
+      "tags": [
+        "vv5v5/dsh-anima-rag"
+      ]
+    },
+    {
       "id": "vv5v5/dsh-memory-archive",
       "title": "vv5v5/dsh-memory-archive",
-      "description": "Memory archive and prompt viewer for DeepSeek Harness: read back what compaction folded out of context - browse past sessions or Tavern playthrough archives (summary, original text, state) with full-text search - and inspect the prompt each turn actually sent, listing every assembled system section with its order, character count, offset, hash and mutability, plus an assembly map, registry export, and honest diagnostics when a section is empty or its log cannot be read. Optionally provisions a roleplay agent preset.",
+      "description": "RP memory built on pmp tavern: RP history summaries ride the native compaction pipeline, with plain tool sessions kept out of the way. Full recall requires the downstream anima plugin. Requires the plugin-provided roleplay preset to be enabled.",
       "category": "plugin",
       "repo": "https://github.com/vv5v5/dsh-memory-archive",
       "install": "github:vv5v5/dsh-memory-archive",
@@ -48347,6 +48402,17 @@
       "install": "github:ZIye1208/dsh-github-mcp-hint",
       "tags": [
         "ziye1208/dsh-github-mcp-hint"
+      ]
+    },
+    {
+      "id": "ZiYuan258/dsh-prompt-enhance",
+      "title": "ZiYuan258/dsh-prompt-enhance",
+      "description": "Maintained fork of dsh-prompt-enhance, brought up to DSH 0.1.7 — the plugin would not even load on current hosts (InputState.imageIds became attachmentIds, so the composer button crashed the input box; settings.get() was removed; /enhance read a session id the agent no longer exposes). Rewrites default to reasoningEffort off, which measured 252 output tokens for a draft where the model default spent 2897, and a Settings page for all 17 fields is bundled. Verified on a real 0.1.7-rc.2 host: activation, a live HTTP enhancement request, /enhance in the GUI, and the Settings page reading and persisting configuration. 204 tests.",
+      "category": "plugin",
+      "repo": "https://github.com/ZiYuan258/dsh-prompt-enhance",
+      "install": "github:ZiYuan258/dsh-prompt-enhance",
+      "tags": [
+        "ziyuan258/dsh-prompt-enhance"
       ]
     },
     {
