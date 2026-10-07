@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-07T19:04:36.808Z",
-    "fetchedCount": 4414,
-    "count": 4430,
+    "generatedAt": "2026-10-07T22:22:14.803Z",
+    "fetchedCount": 4424,
+    "count": 4440,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -14001,6 +14001,50 @@
       ]
     },
     {
+      "id": "FNOSP/fnos-dsh/tree/main/plugins/dsh-codebuddy-plugin",
+      "title": "FNOSP/fnos-dsh#dsh-codebuddy-plugin",
+      "description": "Tencent CodeBuddy model provider for DeepSeek Harness that signs in with browser OAuth instead of an API key, lists the CodeBuddy model catalog with the context, output, tool-calling, reasoning and image capabilities of each model, keeps multiple accounts with automatic failover to the next usable one, shows remaining quota in the composer with a token and credit usage panel, and completes automatable CodeBuddy growth tasks per account with an execution log. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-codebuddy`.",
+      "category": "plugin",
+      "repo": "https://github.com/FNOSP/fnos-dsh/tree/main/plugins/dsh-codebuddy-plugin",
+      "install": "github:FNOSP/fnos-dsh/tree/main/plugins/dsh-codebuddy-plugin",
+      "tags": [
+        "fnosp/fnos-dsh#dsh-codebuddy-plugin"
+      ]
+    },
+    {
+      "id": "FNOSP/fnos-dsh/tree/main/plugins/dsh-codex-auth-plugin",
+      "title": "FNOSP/fnos-dsh#dsh-codex-auth-plugin",
+      "description": "ChatGPT account sign-in for DeepSeek Harness through a Codex browser OAuth flow with no API key and no workspace selection: subscribes the login to pi-ai's Codex provider, lets you set the global default Codex model and reasoning effort for new sessions, refreshes the model list from the signed-in account's own catalog endpoint, and shows the five-hour and weekly usage windows in the composer.",
+      "category": "plugin",
+      "repo": "https://github.com/FNOSP/fnos-dsh/tree/main/plugins/dsh-codex-auth-plugin",
+      "install": "github:FNOSP/fnos-dsh/tree/main/plugins/dsh-codex-auth-plugin",
+      "tags": [
+        "fnosp/fnos-dsh#dsh-codex-auth-plugin"
+      ]
+    },
+    {
+      "id": "FNOSP/fnos-dsh/tree/main/plugins/dsh-fnos-plugin",
+      "title": "FNOSP/fnos-dsh#dsh-fnos-plugin",
+      "description": "fnOS 飞牛 NAS integration for DeepSeek Harness, working through the fnOS browser SDK when the Web UI runs inside an fnOS app frame: follows the NAS theme while DSH is set to system preference, lists and revokes authorized NAS directory grants in Settings, opens files and links in the matching fnOS app, and syncs the DSH page title to the fnOS app window. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-fnos`.",
+      "category": "plugin",
+      "repo": "https://github.com/FNOSP/fnos-dsh/tree/main/plugins/dsh-fnos-plugin",
+      "install": "github:FNOSP/fnos-dsh/tree/main/plugins/dsh-fnos-plugin",
+      "tags": [
+        "fnosp/fnos-dsh#dsh-fnos-plugin"
+      ]
+    },
+    {
+      "id": "FNOSP/fnos-dsh/tree/main/plugins/dsh-semi-ui-showcase-plugin",
+      "title": "FNOSP/fnos-dsh#dsh-semi-ui-showcase-plugin",
+      "description": "Component checklist for the shared Semi Design package used by tnnevol DSH plugins, opened from a `Semi UI` button in a conversation header: 35 components plus a multi-account case page, organised into seven sidebar groups from inputs, forms, selectors and trees to tables, cards, overlays and feedback, each rendered live with a one-line description and a page outline, with light, dark and follow-system preview. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-semi-ui-showcase`.",
+      "category": "plugin",
+      "repo": "https://github.com/FNOSP/fnos-dsh/tree/main/plugins/dsh-semi-ui-showcase-plugin",
+      "install": "github:FNOSP/fnos-dsh/tree/main/plugins/dsh-semi-ui-showcase-plugin",
+      "tags": [
+        "fnosp/fnos-dsh#dsh-semi-ui-showcase-plugin"
+      ]
+    },
+    {
       "id": "foggy-projects/foggy-deepseek-harness-plugin",
       "title": "foggy-projects/foggy-deepseek-harness-plugin",
       "description": "Foggy Java data-analysis integration for DeepSeek Harness with a managed Runtime, CLI, Launcher, onboarding Skills, and semantic-layer workflows.",
@@ -14240,6 +14284,17 @@
       "install": "github:fuhefei/dsh-sentinel",
       "tags": [
         "fuhefei/dsh-sentinel"
+      ]
+    },
+    {
+      "id": "functy23/dsh-mcp-studio",
+      "title": "functy23/dsh-mcp-studio",
+      "description": "Manage MCP servers and skills from a panel in the DSH sidebar: edit rows in the profile or global cordis.patch.yml, toggle them, check whether an HTTP server answers, scan Claude Code / Codex / Cursor / Gemini configs and import the servers they declare, and browse, create, edit, enable or delete skills by rewriting the user-invocable policy in SKILL.md.",
+      "category": "plugin",
+      "repo": "https://github.com/functy23/dsh-mcp-studio",
+      "install": "github:functy23/dsh-mcp-studio",
+      "tags": [
+        "functy23/dsh-mcp-studio"
       ]
     },
     {
@@ -23958,6 +24013,17 @@
       ]
     },
     {
+      "id": "liaoyuqing/dsh_workspace_switch",
+      "title": "liaoyuqing/dsh_workspace_switch",
+      "description": "Per-workspace activation control: a dialog opened from the workspace row menu switches individual plugins, MCP servers, and skills on or off, and the host applies the choice in that workspace's own agent scope — a disabled skill leaves the model catalog, an MCP server has its mcp__<server>__ tools denied, and a plugin has the tool names its entry declares denied.",
+      "category": "plugin",
+      "repo": "https://github.com/liaoyuqing/dsh_workspace_switch",
+      "install": "github:liaoyuqing/dsh_workspace_switch",
+      "tags": [
+        "liaoyuqing/dsh_workspace_switch"
+      ]
+    },
+    {
       "id": "liaoyuqing/dsh-llm-error-retry",
       "title": "liaoyuqing/dsh-llm-error-retry",
       "description": "LLM request retry plugin for DeepSeek Harness: when a model request fails with a configured HTTP status code, machine code, or provider field=value match, it sleeps for the per-rule delay and re-issues the request automatically, so subscription quota and rate-limit errors (429 / insufficient_quota) do not interrupt a run.",
@@ -25265,6 +25331,17 @@
       ]
     },
     {
+      "id": "longgege-cd/dsh-skin-pixel-anime",
+      "title": "longgege-cd/dsh-skin-pixel-anime",
+      "description": "Pixel Dynamic Starfield theme: five palettes, four layered text schemes, five pixel fonts including a simplified-Chinese face, square or rounded corners, a rotating pixel starfield with meteors, and a header pixel clock — configured from its own settings tab.",
+      "category": "client",
+      "repo": "https://github.com/longgege-cd/dsh-skin-pixel-anime",
+      "install": "github:longgege-cd/dsh-skin-pixel-anime",
+      "tags": [
+        "longgege-cd/dsh-skin-pixel-anime"
+      ]
+    },
+    {
       "id": "longisland-icetea/dsh-lan-access",
       "title": "longisland-icetea/dsh-lan-access",
       "description": "Configurable LAN access for the DSH Web GUI: a settings tab binds the server to all interfaces, trusts only the addresses you configure, sets the browser session lifetime or removes the token login, and repairs the settings layer on non-loopback visits.",
@@ -25487,7 +25564,7 @@
     {
       "id": "loyalchiiina/dsh-model-fold",
       "title": "loyalchiiina/dsh-model-fold",
-      "description": "Groups the model picker by provider: the menu lists sources first, and each source opens its models in a slide-in side panel (default) or inline below the title, switchable by double-clicking the source title.",
+      "description": "Groups the DSH model picker by provider: the menu lists sources with their model counts, and clicking a source slides that provider's models out in a side panel (default) or expands them inline below the title, switchable by double-clicking the source title. The active model stays visible at a glance. Pure DOM enhancement with zero intrusion - the panel is plugin-owned DOM mounted on body and selection happens by programmatically clicking the real menu buttons, so no React-managed node is moved or removed, keeping the host rendering intact and coexisting with other UI plugins. Styling follows the host by reusing the official --dsw-* theme tokens, with an enforced opaque background, sufficient contrast, and one shared set of sizing and colour tokens for both menu levels. No network access and no telemetry. Built for DSH kernel 2.0.15-next.",
       "category": "plugin",
       "repo": "https://github.com/loyalchiiina/dsh-model-fold",
       "install": "github:loyalchiiina/dsh-model-fold",
@@ -26274,6 +26351,17 @@
       "install": "github:lynx-gt/dsh-subagent-tools",
       "tags": [
         "lynx-gt/dsh-subagent-tools"
+      ]
+    },
+    {
+      "id": "lyp88997/dsh-browser-service",
+      "title": "lyp88997/dsh-browser-service",
+      "description": "Gives DSH the full 33-tool browser surface (ctx.browser seam -> a self-hosted headless Chromium over CDP: one 127.0.0.1 daemon with Bearer-token auth, request-path whitelist and WebSocket rewriting, no root/GUI/Electron needed), plus a web panel — a real page you can click, scroll and type in, operation/console/network logs with one-click cleanup, a customizable window (border color, transparency, glass, fit-to-picture with no black bars, top-inset and self-centering) and an adjustable page size (1920x1080 by default) — plus a collapsed pill that can be dragged to any spot on the screen (free position), a live view that auto-resumes when you switch back to the web tab, and a 1920px default max edge for the live frame — and two bundled skills (browser, browser-runtime) served through the plugin built-in skill provider, so the skill centre lists them as system-level by default without writing into $DSH_HOME/skills.",
+      "category": "plugin",
+      "repo": "https://github.com/lyp88997/dsh-browser-service",
+      "install": "github:lyp88997/dsh-browser-service",
+      "tags": [
+        "lyp88997/dsh-browser-service"
       ]
     },
     {
@@ -28961,6 +29049,17 @@
       ]
     },
     {
+      "id": "MuzeWinter/dscomputer-control",
+      "title": "MuzeWinter/dscomputer-control",
+      "description": "Windows desktop automation for dsh: 14 tools that enumerate apps and windows, capture window screenshots that still work when the window is covered by other windows, read the accessibility tree, and perform real input — click, type text (CJK included), press key combinations, scroll and drag. Loads the official computer-use runtime (@oai/sky) already installed on the machine, discovering it by enumerating vendor directories, so vendor upgrades that change hash directories do not break it.",
+      "category": "plugin",
+      "repo": "https://github.com/MuzeWinter/dscomputer-control",
+      "install": "github:MuzeWinter/dscomputer-control",
+      "tags": [
+        "muzewinter/dscomputer-control"
+      ]
+    },
+    {
       "id": "muzyLink/dsh-subagent-profile",
       "title": "muzyLink/dsh-subagent-profile",
       "description": "Dispatch subagents with named profiles (model, reasoning effort, and tool scope per task), safety checks, cost estimation with savings comparison, and a full dispatch decision ledger.",
@@ -29431,6 +29530,17 @@
       "install": "github:nengong-ai/dsh-keychain-credentials",
       "tags": [
         "nengong-ai/dsh-keychain-credentials"
+      ]
+    },
+    {
+      "id": "Neo65536-engineer/dsh-agent-log",
+      "title": "Neo65536-engineer/dsh-agent-log",
+      "description": "Read-only work report rebuilt from local session logs: tools used and how often, commands run, files read and written, whether tests passed, failures and their causes, token usage, and whether the task finished.",
+      "category": "plugin",
+      "repo": "https://github.com/Neo65536-engineer/dsh-agent-log",
+      "install": "github:Neo65536-engineer/dsh-agent-log",
+      "tags": [
+        "neo65536-engineer/dsh-agent-log"
       ]
     },
     {
@@ -30866,7 +30976,7 @@
     {
       "id": "OMSociety/dsh-fishpai",
       "title": "OMSociety/dsh-fishpai",
-      "description": "WeChat article typesetting workbench: renders Markdown into inline-styled HTML you paste into the WeChat editor, with a right-sidebar panel and five model tools for block-level revision.",
+      "description": "WeChat Official Account typesetting workbench: renders Markdown into inline-styled HTML you paste straight into the WeChat editor, with a sidebar panel, 11 themes and five model tools for block-level revision.",
       "category": "plugin",
       "repo": "https://github.com/OMSociety/dsh-fishpai",
       "install": "github:OMSociety/dsh-fishpai",
@@ -30875,14 +30985,14 @@
       ]
     },
     {
-      "id": "OMSociety/kimi-ppt-skill",
-      "title": "OMSociety/kimi-ppt-skill",
-      "description": "DSH plugin bundling the kimi-ppt skill: create, edit and export presentations as a locally generated .pptx with Pillow-rendered previews. Derived from the MIT open-kimi-ppt-skill.",
+      "id": "OMSociety/dsh-kimi-ppt",
+      "title": "OMSociety/dsh-kimi-ppt",
+      "description": "DSH plugin bundling the kimi-ppt skill: create, edit and export PPT slides and presentations as a locally generated .pptx with Pillow-rendered previews, no browser needed.",
       "category": "skill",
-      "repo": "https://github.com/OMSociety/kimi-ppt-skill",
-      "install": "github:OMSociety/kimi-ppt-skill",
+      "repo": "https://github.com/OMSociety/dsh-kimi-ppt",
+      "install": "github:OMSociety/dsh-kimi-ppt",
       "tags": [
-        "omsociety/kimi-ppt-skill"
+        "omsociety/dsh-kimi-ppt"
       ]
     },
     {
@@ -35858,6 +35968,17 @@
       ]
     },
     {
+      "id": "ShiXiangYu2/dsh-feishu-remote",
+      "title": "ShiXiangYu2/dsh-feishu-remote",
+      "description": "Control a DeepSeek Harness agent from Feishu/Lark: send a task by DM, an agent runs it with your configured model and replies in the chat, and a feishu_send tool lets the agent push results. Uses lark-cli's WebSocket connection, so no public webhook is needed, and ships a resident launcher. Note: the plugin does not check who sent a message, so anyone who can DM the bot — by default, members of the Feishu tenant the app belongs to — can drive an agent running with the host's own model credentials and file permissions. Setup is not one `dsh plugin add`: `lark-cli` must be installed and authenticated once, and a Feishu self-built app with the permissions the README lists is required.",
+      "category": "plugin",
+      "repo": "https://github.com/ShiXiangYu2/dsh-feishu-remote",
+      "install": "github:ShiXiangYu2/dsh-feishu-remote",
+      "tags": [
+        "shixiangyu2/dsh-feishu-remote"
+      ]
+    },
+    {
       "id": "ShiXiangYu2/dsh-translate-pro",
       "title": "ShiXiangYu2/dsh-translate-pro",
       "description": "Professional translation for DSH: 18 target languages, 4 styles (formal/casual/technical/literal), glossary-controlled terminology, and whole-file translation (README/docs/subtitles) with Markdown/code-block format preservation; powered by DeepSeek via SiliconFlow.",
@@ -38571,6 +38692,17 @@
       ]
     },
     {
+      "id": "TetraSsky/dsh-hold",
+      "title": "TetraSsky/dsh-hold",
+      "description": "Holds a drafted message until the main agent is idle, no subagent is running and no background job is live, then sends it. Each hold takes an optional send time and a choice to queue, wait or steer, and lives on the host with its attachments so a restart does not lose it.",
+      "category": "plugin",
+      "repo": "https://github.com/TetraSsky/dsh-hold",
+      "install": "github:TetraSsky/dsh-hold",
+      "tags": [
+        "tetrassky/dsh-hold"
+      ]
+    },
+    {
       "id": "TetraSsky/dsh-offpeak",
       "title": "TetraSsky/dsh-offpeak",
       "description": "Holds DeepSeek model calls for the rest of each peak-hour window you configure instead of sending them, so they are billed at off-peak rates; also pauses active goals while it waits and shows the account balance with an 8-hour spend chart.",
@@ -39085,50 +39217,6 @@
       "install": "github:tmpdot/dsh-checkpoint-diff",
       "tags": [
         "tmpdot/dsh-checkpoint-diff"
-      ]
-    },
-    {
-      "id": "tnnevol/fn-os-apps/tree/main/plugins/dsh-codebuddy-plugin",
-      "title": "tnnevol/fn-os-apps#dsh-codebuddy-plugin",
-      "description": "Tencent CodeBuddy model provider for DeepSeek Harness that signs in with browser OAuth instead of an API key, lists the CodeBuddy model catalog with the context, output, tool-calling, reasoning and image capabilities of each model, keeps multiple accounts with automatic failover to the next usable one, shows remaining quota in the composer with a token and credit usage panel, and completes automatable CodeBuddy growth tasks per account with an execution log. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-codebuddy`.",
-      "category": "plugin",
-      "repo": "https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codebuddy-plugin",
-      "install": "github:tnnevol/fn-os-apps/tree/main/plugins/dsh-codebuddy-plugin",
-      "tags": [
-        "tnnevol/fn-os-apps#dsh-codebuddy-plugin"
-      ]
-    },
-    {
-      "id": "tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin",
-      "title": "tnnevol/fn-os-apps#dsh-codex-auth-plugin",
-      "description": "ChatGPT account sign-in for DeepSeek Harness through a Codex browser OAuth flow with no API key and no workspace selection: subscribes the login to pi-ai's Codex provider, lets you set the global default Codex model and reasoning effort for new sessions, refreshes the model list from the signed-in account's own catalog endpoint, and shows the five-hour and weekly usage windows in the composer.",
-      "category": "plugin",
-      "repo": "https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin",
-      "install": "github:tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin",
-      "tags": [
-        "tnnevol/fn-os-apps#dsh-codex-auth-plugin"
-      ]
-    },
-    {
-      "id": "tnnevol/fn-os-apps/tree/main/plugins/dsh-fnos-plugin",
-      "title": "tnnevol/fn-os-apps#dsh-fnos-plugin",
-      "description": "fnOS 飞牛 NAS integration for DeepSeek Harness, working through the fnOS browser SDK when the Web UI runs inside an fnOS app frame: follows the NAS theme while DSH is set to system preference, lists and revokes authorized NAS directory grants in Settings, opens files and links in the matching fnOS app, and syncs the DSH page title to the fnOS app window. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-fnos`.",
-      "category": "plugin",
-      "repo": "https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-fnos-plugin",
-      "install": "github:tnnevol/fn-os-apps/tree/main/plugins/dsh-fnos-plugin",
-      "tags": [
-        "tnnevol/fn-os-apps#dsh-fnos-plugin"
-      ]
-    },
-    {
-      "id": "tnnevol/fn-os-apps/tree/main/plugins/dsh-semi-ui-showcase-plugin",
-      "title": "tnnevol/fn-os-apps#dsh-semi-ui-showcase-plugin",
-      "description": "Component checklist for the shared Semi Design package used by tnnevol DSH plugins, opened from a `Semi UI` button in a conversation header: 35 components plus a multi-account case page, organised into seven sidebar groups from inputs, forms, selectors and trees to tables, cards, overlays and feedback, each rendered live with a one-line description and a page outline, with light, dark and follow-system preview. Install from npm with `dsh plugin --profile web add @tnnevol/dsh-semi-ui-showcase`.",
-      "category": "plugin",
-      "repo": "https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-semi-ui-showcase-plugin",
-      "install": "github:tnnevol/fn-os-apps/tree/main/plugins/dsh-semi-ui-showcase-plugin",
-      "tags": [
-        "tnnevol/fn-os-apps#dsh-semi-ui-showcase-plugin"
       ]
     },
     {
@@ -41329,6 +41417,17 @@
       "install": "github:weibaohui/dsh-continue",
       "tags": [
         "weibaohui/dsh-continue"
+      ]
+    },
+    {
+      "id": "weibaohui/dsh-dashboard",
+      "title": "weibaohui/dsh-dashboard",
+      "description": "Usage dashboard: offline-scans session logs to chart daily/weekly/monthly tokens, estimated costs, model/tool/skill/command leaderboards, output speed, working hours and quality metrics; gridstack+ECharts cards are drag-and-drop composable, with custom formulas and AI arrangement (prompt round-trip import).",
+      "category": "client",
+      "repo": "https://github.com/weibaohui/dsh-dashboard",
+      "install": "github:weibaohui/dsh-dashboard",
+      "tags": [
+        "weibaohui/dsh-dashboard"
       ]
     },
     {
@@ -47324,6 +47423,17 @@
       "install": "github:zerorigin-studio/dsh-desktop-shell",
       "tags": [
         "zerorigin-studio/dsh-desktop-shell"
+      ]
+    },
+    {
+      "id": "zeusxx/dsh-composer-live",
+      "title": "zeusxx/dsh-composer-live",
+      "description": "Live Markdown rendering and typing enhancements for the DSH web composer - syntax-highlighted code blocks, list/quote continuation, format toolbars.",
+      "category": "client",
+      "repo": "https://github.com/zeusxx/dsh-composer-live",
+      "install": "github:zeusxx/dsh-composer-live",
+      "tags": [
+        "zeusxx/dsh-composer-live"
       ]
     },
     {
