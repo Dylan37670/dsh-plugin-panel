@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-09T16:18:42.224Z",
-    "fetchedCount": 4460,
-    "count": 4476,
+    "generatedAt": "2026-10-09T18:31:04.670Z",
+    "fetchedCount": 4471,
+    "count": 4487,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1787,6 +1787,17 @@
       "install": "github:609476965/dsh-LorebookMD",
       "tags": [
         "609476965/dsh-lorebookmd"
+      ]
+    },
+    {
+      "id": "643048695/dsh-compaction-route",
+      "title": "643048695/dsh-compaction-route",
+      "description": "Route conversation-compaction calls to a chosen summarizer model in the Web settings page, and retry them on a configured fallback model when the primary ends in an error.",
+      "category": "plugin",
+      "repo": "https://github.com/643048695/dsh-compaction-route",
+      "install": "github:643048695/dsh-compaction-route",
+      "tags": [
+        "643048695/dsh-compaction-route"
       ]
     },
     {
@@ -5921,6 +5932,17 @@
       "install": "github:big0lives/dsh-web-window-companion",
       "tags": [
         "big0lives/dsh-web-window-companion"
+      ]
+    },
+    {
+      "id": "bigbigtooth/DSH-DevOps-Plugin",
+      "title": "bigbigtooth/DSH-DevOps-Plugin",
+      "description": "Remote operations for the DSH Web app: manages SSH servers, collects hardware and process metrics, inspects logs with a read-only AI pass, and deploys a Git repo over SSH using git pull --ff-only plus a health check. Credentials are AES-256-GCM encrypted. Linux and macOS hosts; no Windows support.",
+      "category": "plugin",
+      "repo": "https://github.com/bigbigtooth/DSH-DevOps-Plugin",
+      "install": "github:bigbigtooth/DSH-DevOps-Plugin",
+      "tags": [
+        "bigbigtooth/dsh-devops-plugin"
       ]
     },
     {
@@ -14078,6 +14100,17 @@
       ]
     },
     {
+      "id": "flyhigao/dsh-file-transfer",
+      "title": "flyhigao/dsh-file-transfer",
+      "description": "Adds download buttons to the document preview toolbar and the Files tree, packs a folder download into a streamed ZIP, and adds a Files-tree upload button that streams to the Host one file at a time, capped at 1 GiB and renamed with an (n) suffix instead of overwriting.",
+      "category": "client",
+      "repo": "https://github.com/flyhigao/dsh-file-transfer",
+      "install": "github:flyhigao/dsh-file-transfer",
+      "tags": [
+        "flyhigao/dsh-file-transfer"
+      ]
+    },
+    {
       "id": "flyhigao/dsh-produced-file-paths",
       "title": "flyhigao/dsh-produced-file-paths",
       "description": "Displays and copies absolute paths for files produced by DSH turns in remote Web.",
@@ -15678,6 +15711,17 @@
       ]
     },
     {
+      "id": "goodjin/dsh-superpowers",
+      "title": "goodjin/dsh-superpowers",
+      "description": "Runs Superpowers as an agent preset and gives each skill its own subagent model from a Settings table, so TDD, debugging and verification no longer all inherit the parent model.",
+      "category": "skill",
+      "repo": "https://github.com/goodjin/dsh-superpowers",
+      "install": "github:goodjin/dsh-superpowers",
+      "tags": [
+        "goodjin/dsh-superpowers"
+      ]
+    },
+    {
       "id": "GooodWei/arcana",
       "title": "GooodWei/arcana",
       "description": "A floating command deck that lists every slash command in DeepSeek Harness as runnable buttons, sorted by usage.",
@@ -16219,7 +16263,7 @@
     {
       "id": "hanzhangzzz/dsh-diagram",
       "title": "hanzhangzzz/dsh-diagram",
-      "description": "Editable Excalidraw diagrams for DeepSeek Harness conversations.",
+      "description": "Turns an article in the DSH conversation into an Excalidraw canvas in a session tab: the Agent drafts the structure with diagram_create, you edit labels, nodes and layout with autosave, export PNG, SVG or .excalidraw, and the Agent reads your edited canvas back with diagram_read. 0.6 adds an editable classification overview plus a complete detail index for large three-level trees.",
       "category": "plugin",
       "repo": "https://github.com/hanzhangzzz/dsh-diagram",
       "install": "github:hanzhangzzz/dsh-diagram",
@@ -19866,6 +19910,17 @@
       ]
     },
     {
+      "id": "jetformat/dsh-plugin",
+      "title": "jetformat/dsh-plugin",
+      "description": "Tools over the local jetformat CLI: convert DOCX, XLSX, and PPTX to PDF, extract text, validate files, and inspect, merge, extract pages from, or render PDFs. Requires the jetformat CLI.",
+      "category": "plugin",
+      "repo": "https://github.com/jetformat/dsh-plugin",
+      "install": "github:jetformat/dsh-plugin",
+      "tags": [
+        "jetformat/dsh-plugin"
+      ]
+    },
+    {
       "id": "JFWaskin/dsh-git-nexus",
       "title": "JFWaskin/dsh-git-nexus",
       "description": "Git and GitHub panel for the DSH web profile: stage/unstage/discard/diff, branches, commit, push/pull/sync, log, file browser, workflow board, and GitHub OAuth with PR creation.",
@@ -20809,6 +20864,17 @@
       "install": "github:JohnnyTing/dsh-official-homepage-theme",
       "tags": [
         "johnnyting/dsh-official-homepage-theme"
+      ]
+    },
+    {
+      "id": "johnsonspirit/ocean-wave-theme",
+      "title": "johnsonspirit/ocean-wave-theme",
+      "description": "Animated ocean waves with a whale swimming behind the page, plus translucent surfaces.",
+      "category": "client",
+      "repo": "https://github.com/johnsonspirit/ocean-wave-theme",
+      "install": "github:johnsonspirit/ocean-wave-theme",
+      "tags": [
+        "johnsonspirit/ocean-wave-theme"
       ]
     },
     {
@@ -27476,6 +27542,17 @@
       ]
     },
     {
+      "id": "MaybeJustLikeThis/rainbow-fart-dsh",
+      "title": "MaybeJustLikeThis/rainbow-fart-dsh",
+      "description": "Adds combo scoring, activity breakdowns, turn ratings, and optional Jev-based encouragement to DSH Web sessions.",
+      "category": "plugin",
+      "repo": "https://github.com/MaybeJustLikeThis/rainbow-fart-dsh",
+      "install": "github:MaybeJustLikeThis/rainbow-fart-dsh",
+      "tags": [
+        "maybejustlikethis/rainbow-fart-dsh"
+      ]
+    },
+    {
       "id": "mayf3/dsh-session-doctor",
       "title": "mayf3/dsh-session-doctor",
       "description": "Diagnose, unstick, and read DSH sessions: list sessions with agent status, read conversations, diagnose stuck agents, recover them with cancel+keepInbox, and send messages to other sessions.",
@@ -28683,6 +28760,17 @@
       "install": "github:MochiNek0/dsh-web-search-free",
       "tags": [
         "mochinek0/dsh-web-search-free"
+      ]
+    },
+    {
+      "id": "mocilukalbj/dsh-open-code-review",
+      "title": "mocilukalbj/dsh-open-code-review",
+      "description": "Alibaba Open Code Review for DSH: host-model delegation with native preview/rule tools and a review skill, plus optional OCR-managed reviews.",
+      "category": "plugin",
+      "repo": "https://github.com/mocilukalbj/dsh-open-code-review",
+      "install": "github:mocilukalbj/dsh-open-code-review",
+      "tags": [
+        "mocilukalbj/dsh-open-code-review"
       ]
     },
     {
@@ -35880,6 +35968,17 @@
       ]
     },
     {
+      "id": "seventeenlyc/agent-relay/tree/main/integrations/dsh-package",
+      "title": "seventeenlyc/agent-relay#dsh-package",
+      "description": "Cross-session handoff orchestration: six relay_* control tools, silent sidebar session materializer via session/create and session/prompt RPCs, DshHandoffHook for compaction/start and marker triggers, and a bundled agent-relay skill.",
+      "category": "plugin",
+      "repo": "https://github.com/seventeenlyc/agent-relay/tree/main/integrations/dsh-package",
+      "install": "github:seventeenlyc/agent-relay/tree/main/integrations/dsh-package",
+      "tags": [
+        "seventeenlyc/agent-relay#dsh-package"
+      ]
+    },
+    {
       "id": "severin-ye/uagent-sync/tree/master/packages/dsh",
       "title": "severin-ye/uagent-sync#packages/dsh",
       "description": "Cross-device workspace backup, restore, and ecosystem update via the uagent-sync CLI.",
@@ -39085,6 +39184,17 @@
       "install": "github:Thedeergod666/dsh-musage",
       "tags": [
         "thedeergod666/dsh-musage"
+      ]
+    },
+    {
+      "id": "Theflowyears/dsh-arknights-theme",
+      "title": "Theflowyears/dsh-arknights-theme",
+      "description": "Arknights theme for the DSH Web GUI: twelve full-screen wallpapers whose edge blur, feathering and glass opacity are computed per image; ink solved in OKLCH to hold WCAG AA; Rhodes Island iconography throughout; and approval and question cards signed with operator autographs.",
+      "category": "client",
+      "repo": "https://github.com/Theflowyears/dsh-arknights-theme",
+      "install": "github:Theflowyears/dsh-arknights-theme",
+      "tags": [
+        "theflowyears/dsh-arknights-theme"
       ]
     },
     {
@@ -42363,6 +42473,17 @@
       "install": "github:whiteS18/dsh-mcp-servers-panel",
       "tags": [
         "whites18/dsh-mcp-servers-panel"
+      ]
+    },
+    {
+      "id": "whiteS18/dsh-terminal-button",
+      "title": "whiteS18/dsh-terminal-button",
+      "description": "Embedded terminal for DeepSeek Harness: opens an in-app terminal panel in the right sidebar (DockKit) or bottom composer dock, with PSReadLine geometry protection and full theme sync.",
+      "category": "client",
+      "repo": "https://github.com/whiteS18/dsh-terminal-button",
+      "install": "github:whiteS18/dsh-terminal-button",
+      "tags": [
+        "whites18/dsh-terminal-button"
       ]
     },
     {
