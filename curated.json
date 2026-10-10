@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-10T16:17:35.074Z",
-    "fetchedCount": 4481,
-    "count": 4497,
+    "generatedAt": "2026-10-10T17:28:12.955Z",
+    "fetchedCount": 4489,
+    "count": 4505,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -3030,6 +3030,17 @@
       "install": "github:aerince/dsh-models-dev-reasoning",
       "tags": [
         "aerince/dsh-models-dev-reasoning"
+      ]
+    },
+    {
+      "id": "Aeroscis/dsh-temptask",
+      "title": "Aeroscis/dsh-temptask",
+      "description": "One-click temporary tasks for DeepSeek Harness — each task is a disposable timestamped workspace plus its own session, shown as a native sidebar workspace node.",
+      "category": "plugin",
+      "repo": "https://github.com/Aeroscis/dsh-temptask",
+      "install": "github:Aeroscis/dsh-temptask",
+      "tags": [
+        "aeroscis/dsh-temptask"
       ]
     },
     {
@@ -7945,6 +7956,17 @@
       "install": "github:chinosk6/dsh-roleplay",
       "tags": [
         "chinosk6/dsh-roleplay"
+      ]
+    },
+    {
+      "id": "chintoleung/dsh-ping",
+      "title": "chintoleung/dsh-ping",
+      "description": "Telegram notifications for DeepSeek Harness questions, approval requests, and completed turns. Notification-only: one runtime file, zero runtime dependencies, no custom question cards.",
+      "category": "plugin",
+      "repo": "https://github.com/chintoleung/dsh-ping",
+      "install": "github:chintoleung/dsh-ping",
+      "tags": [
+        "chintoleung/dsh-ping"
       ]
     },
     {
@@ -15054,6 +15076,28 @@
       ]
     },
     {
+      "id": "GIN0076/cross-session-memory",
+      "title": "GIN0076/cross-session-memory",
+      "description": "Cross-session lesson book (the agent wrong-answer notebook) for DeepSeek Harness: injects a memory index capped at 2 KB verbatim into every turn, adds mem_recall and mem_save model tools whose write gate demands four sections, a locatable reference and explicit human approval before anything reaches disk, registers the /memory command, and keeps every lesson as a zero-dependency Markdown entry in the .memory/ directory.",
+      "category": "plugin",
+      "repo": "https://github.com/GIN0076/cross-session-memory",
+      "install": "github:GIN0076/cross-session-memory",
+      "tags": [
+        "gin0076/cross-session-memory"
+      ]
+    },
+    {
+      "id": "GIN0076/dsh-token-usage",
+      "title": "GIN0076/dsh-token-usage",
+      "description": "Token usage panel in DeepSeek Harness Settings: folds session logs into day, week and month totals per model or per provider, persisted in the plugin storage domain and served over a same-origin /token-usage-rpc route; SVG line chart with crosshair hover, ranking with share and optional cost, cache hit-rate and cache read/write cards, a user-supplied price table priced per million tokens, daily and monthly budget alerts, CSV or JSON export of the current range, auto-refresh while visible, preset and custom start/end date ranges, and a rebuild that asks for confirmation before dropping history whose session logs no longer exist.",
+      "category": "plugin",
+      "repo": "https://github.com/GIN0076/dsh-token-usage",
+      "install": "github:GIN0076/dsh-token-usage",
+      "tags": [
+        "gin0076/dsh-token-usage"
+      ]
+    },
+    {
       "id": "GIT121995/dsh-memory-gate",
       "title": "GIT121995/dsh-memory-gate",
       "description": "Bounded local memory with CBDC authority gating: SQLite + FTS5 claims, scoped recall with explainable use/verify/ignore decisions and a full audit trail, /memory commands, ≤3-claim/1200-char injection per call, no extra model call.",
@@ -17179,6 +17223,17 @@
       "install": "github:HERO476/dsh-instruction-memory",
       "tags": [
         "hero476/dsh-instruction-memory"
+      ]
+    },
+    {
+      "id": "HERO476/dsh-sidecard-ask",
+      "title": "HERO476/dsh-sidecard-ask",
+      "description": "Select text in the DSH Web GUI and ask about it in place (floating button, or the Alt+Q shortcut): an independent subagent that inherits no parent context answers, streaming into a side card hosted by the native right sidebar, dsh-better-sidebar, or a built-in overlay — and the question can be routed to the main conversation instead.",
+      "category": "client",
+      "repo": "https://github.com/HERO476/dsh-sidecard-ask",
+      "install": "github:HERO476/dsh-sidecard-ask",
+      "tags": [
+        "hero476/dsh-sidecard-ask"
       ]
     },
     {
@@ -19929,6 +19984,17 @@
       "install": "github:JessenReinhart/dsh-tokenslash",
       "tags": [
         "jessenreinhart/dsh-tokenslash"
+      ]
+    },
+    {
+      "id": "Jessie-1939/whalepal/tree/main/packages/dsh-bridge",
+      "title": "Jessie-1939/whalepal#dsh-bridge",
+      "description": "Bridges DeepSeek Harness agent state (status, tool calls, errors, approval waits) over loopback to WhalePal, a standalone desktop pet app, so the desktop pet follows the real agent state instead of guessing from screenshots.",
+      "category": "plugin",
+      "repo": "https://github.com/Jessie-1939/whalepal/tree/main/packages/dsh-bridge",
+      "install": "github:Jessie-1939/whalepal/tree/main/packages/dsh-bridge",
+      "tags": [
+        "jessie-1939/whalepal#dsh-bridge"
       ]
     },
     {
@@ -24486,6 +24552,17 @@
       ]
     },
     {
+      "id": "liggest/dsh-alt-enter-newline",
+      "title": "liggest/dsh-alt-enter-newline",
+      "description": "Adds Alt+Enter as a newline to the DeepSeek Harness (dsh) web composer.",
+      "category": "client",
+      "repo": "https://github.com/liggest/dsh-alt-enter-newline",
+      "install": "github:liggest/dsh-alt-enter-newline",
+      "tags": [
+        "liggest/dsh-alt-enter-newline"
+      ]
+    },
+    {
       "id": "liguobao/ds-harness-remote",
       "title": "liguobao/ds-harness-remote",
       "description": "Multi-device remote access for DeepSeek Harness: continue an active session from your phone, tablet, browser, or another computer over an end-to-end encrypted channel (Noise IK + adaptive relay/WebRTC transport), with device authorization, ApiProxy-only remote capabilities, and read-only file preview via dsh-file-viewer — no shell, remote desktop, or write access.",
@@ -25269,7 +25346,7 @@
     {
       "id": "Lixiuxiu559/AgentForge",
       "title": "Lixiuxiu559/AgentForge",
-      "description": "One repository that installs as both a Claude Code plugin and a DSH plugin: six engineering skills (research, architecture scouting, implementation orchestration, three-axis diff review, complexity audit, mutation testing) plus one agentforge tool dispatching five subagents.",
+      "description": "Six engineering skills for Claude Code and DSH: research, architecture scouting, implementation orchestration, three-axis diff review, complexity audit and mutation testing. Skills delegate through the host’s generic subagent tools when available.",
       "category": "plugin",
       "repo": "https://github.com/Lixiuxiu559/AgentForge",
       "install": "github:Lixiuxiu559/AgentForge",
@@ -25960,7 +26037,7 @@
     {
       "id": "loyalchiiina/dsh-lobsterai-daddy",
       "title": "loyalchiiina/dsh-lobsterai-daddy",
-      "description": "Drags the LobsterDaddy multi-account console onto the DSH window as a floating ball: drag it anywhere and the position persists, click to slide out a drawer that embeds the full web console through a loopback-only same-origin reverse proxy (so the panel stays byte-identical to the browser version), plus a resizable persisted drawer, a live online/offline dot and an account-count badge.",
+      "description": "Turns the LobsterDaddy multi-account console into a floating ball in the DSH window: drag it anywhere and the position persists, and the panel can be set to follow the ball. Clicking it slides out a drawer that renders the console as native DOM (no iframe) from the loopback-only same-origin proxy, showing action buttons, the account LobsterAI is currently signed in as, and a per-account list with balance, check-in state and last check-in time; a resizable persisted drawer, a live online/offline dot and an account-count badge are included.",
       "category": "client",
       "repo": "https://github.com/loyalchiiina/dsh-lobsterai-daddy",
       "install": "github:loyalchiiina/dsh-lobsterai-daddy",
@@ -29997,7 +30074,7 @@
     {
       "id": "Neptune810/dsh-model-router",
       "title": "Neptune810/dsh-model-router",
-      "description": "Sets the DeepSeek flash model's reasoning effort per step — thinking off for short cheap prompts, low for a plain request, high for engineering work — and raises it only on repeated tool failures. The model itself never changes; effort max is opt-in.",
+      "description": "Keeps a pool of models and routes every agent step to one of them with its reasoning effort set — configured by clicking in the composer, no JSON needed. The router takes over the composer's model cell, so one control shows the session's model and reasoning effort alongside the router's own settings. Three authorization scopes (model / effort / full) where a manual pick only counts in the scope that owns it, and in effort scope the router is bound to the one model you choose. Task presets with per-model weights, vision routing for image steps, session signals (active todo, context pressure, token budget, subagent depth), and an optional semantic task classifier. Thinking stays on, because DeepSeek rejects a thinking-enabled request whose history contains a tool call made with thinking off.",
       "category": "plugin",
       "repo": "https://github.com/Neptune810/dsh-model-router",
       "install": "github:Neptune810/dsh-model-router",
@@ -41576,7 +41653,7 @@
     {
       "id": "wangzhanchao883/dsh-disk-manager",
       "title": "wangzhanchao883/dsh-disk-manager",
-      "description": "Scans the whole C drive and classifies every large folder into A/B/C/D/E/P (safe cache / relocatable / junction-movable / abandoned software / config-memory redline / personal files), then deletes, moves, or redirects on demand — with strong redline protection, dry-run preview and undo. Unknown software decided by LLM fallback + human confirmation.",
+      "description": "Scans the whole C drive and classifies every large folder into A/B/C/D/E/P (safe cache / relocatable / junction-movable / abandoned software / config-memory redline / personal files), then deletes, moves, or redirects on demand — with strong redline protection, dry-run preview and undo. Unknown software decided by LLM fallback + human confirmation. Works on DeepSeek Harness 0.1.7 through 0.2.x, tested on 0.2.0-rc.1.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-disk-manager",
       "install": "github:wangzhanchao883/dsh-disk-manager",
@@ -41598,7 +41675,7 @@
     {
       "id": "wangzhanchao883/dsh-lost-and-found",
       "title": "wangzhanchao883/dsh-lost-and-found",
-      "description": "Local file recall: indexes the folders you choose into one local SQLite database, so 'where did I put that file?' is one query instead of a disk walk. Caches, VCS and program folders are pruned per directory; each folder keeps its own incremental anchor, so a folder added later is backfilled in full. Read-only: it never modifies, moves or deletes your files.",
+      "description": "Local file recall: indexes the folders you choose into one local SQLite database, so 'where did I put that file?' is one query instead of a disk walk. Caches, VCS and program folders are pruned per directory; each folder keeps its own incremental anchor, so a folder added later is backfilled in full. Read-only: it never modifies, moves or deletes your files. Works on DeepSeek Harness 0.1.7 through 0.2.x, tested on 0.2.0-rc.1.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-lost-and-found",
       "install": "github:wangzhanchao883/dsh-lost-and-found",
@@ -41609,7 +41686,7 @@
     {
       "id": "wangzhanchao883/dsh-resume-screening",
       "title": "wangzhanchao883/dsh-resume-screening",
-      "description": "Resume screening plugin for HR in DeepSeek Harness: ingest up to 100k Word/PDF/Excel resumes into one searchable library with skills / coarse categories / ingest time, auto-ingest & de-dupe new resumes, then screen by plain-language criteria — rule pre-filter in the database plus LLM fine-judge on the shortlisted few, CSV export.",
+      "description": "Resume screening plugin for HR in DeepSeek Harness: ingest up to 100k Word/PDF/Excel resumes into one searchable library with skills / coarse categories / ingest time, auto-ingest & de-dupe new resumes, then screen by plain-language criteria — rule pre-filter in the database plus LLM fine-judge on the shortlisted few, CSV export. Works on DeepSeek Harness 0.1.7 through 0.2.x, tested on 0.2.0-rc.1.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-resume-screening",
       "install": "github:wangzhanchao883/dsh-resume-screening",
@@ -41631,7 +41708,7 @@
     {
       "id": "wangzhanchao883/dsh-word-vault",
       "title": "wangzhanchao883/dsh-word-vault",
-      "description": "English word bank for one or more children: words marked on textbook or workbook photos (highlighter, red pen) are found by their marks, then translated and stored in a local SQLite bank with an occurrence count; the clipboard picker, the photo route and dictation all land in the same bank. High-frequency words surface by count, three correct answers in a row flag a word as learned, and any selection prints as a memory card set (a word split into chunks, real IPA per chunk, a mnemonic hook, an A4 sheet of eight) in HTML, PDF or Word, with a print-and-answer exam page whose four options are set against each other for meaning. Requires DSH 0.1.7 or newer (1.0.3 moves to the 0.1.7 settings contract); on 0.1.5 the settings panel does not appear - install dsh-word-vault@1.0.2 instead.",
+      "description": "English word bank for one or more children: words marked on textbook or workbook photos (highlighter, red pen) are found by their marks, then translated and stored in a local SQLite bank with an occurrence count; the clipboard picker, the photo route and dictation all land in the same bank. High-frequency words surface by count, three correct answers in a row flag a word as learned, and any selection prints as a memory card set (a word split into chunks, real IPA per chunk, a mnemonic hook, an A4 sheet of eight) in HTML, PDF or Word, with a print-and-answer exam page whose four options are set against each other for meaning. Requires DSH 0.1.7 or newer (1.0.3 moved to the 0.1.7 settings contract); 1.0.4 is tested on 0.2.0-rc.1, so 0.1.7 through 0.2.x all work. On 0.1.5 the settings panel does not appear - install dsh-word-vault@1.0.2 instead.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-word-vault",
       "install": "github:wangzhanchao883/dsh-word-vault",
@@ -47324,6 +47401,17 @@
       "install": "github:yusufameri/dsh-t3-model-picker",
       "tags": [
         "yusufameri/dsh-t3-model-picker"
+      ]
+    },
+    {
+      "id": "yusufameri/dsh-t3-session-ui",
+      "title": "yusufameri/dsh-t3-session-ui",
+      "description": "Session-context surfaces ported from T3 Code: a session-row hover card showing machine, git branch, model, agent preset, approval policy and token usage, a status pill covering pending approval, awaiting input, working, error and subagent work, a provider and model chip, a per-session header strip, a lineage breadcrumb, row-menu actions that copy the context or run DSH compaction, and a preference row in DSH Settings for choosing which facts appear. Nothing is added to the composer.",
+      "category": "client",
+      "repo": "https://github.com/yusufameri/dsh-t3-session-ui",
+      "install": "github:yusufameri/dsh-t3-session-ui",
+      "tags": [
+        "yusufameri/dsh-t3-session-ui"
       ]
     },
     {
