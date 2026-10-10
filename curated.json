@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-10T06:23:10.043Z",
-    "fetchedCount": 4471,
-    "count": 4487,
+    "generatedAt": "2026-10-10T10:18:42.341Z",
+    "fetchedCount": 4481,
+    "count": 4497,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -9504,6 +9504,17 @@
       "install": "github:DamonKoy/dsh-web-ui/tree/main/packages/dsh-web-ui-settings",
       "tags": [
         "damonkoy/dsh-web-ui#dsh-web-ui-settings"
+      ]
+    },
+    {
+      "id": "danieldu168/dsh-stash",
+      "title": "danieldu168/dsh-stash",
+      "description": "Registers external databases and document corpora as callable model tools: a per-source access boundary, a credential reference ledger that never stores values, and a fetch ledger that keeps fingerprints and content hashes instead of payloads.",
+      "category": "plugin",
+      "repo": "https://github.com/danieldu168/dsh-stash",
+      "install": "github:danieldu168/dsh-stash",
+      "tags": [
+        "danieldu168/dsh-stash"
       ]
     },
     {
@@ -19712,6 +19723,17 @@
       ]
     },
     {
+      "id": "jeffreyren1/dsh-custom-js",
+      "title": "jeffreyren1/dsh-custom-js",
+      "description": "Load, edit, manage, and hot-reload trusted JavaScript and TypeScript userscripts in DeepSeek Harness.",
+      "category": "client",
+      "repo": "https://github.com/jeffreyren1/dsh-custom-js",
+      "install": "github:jeffreyren1/dsh-custom-js",
+      "tags": [
+        "jeffreyren1/dsh-custom-js"
+      ]
+    },
+    {
       "id": "JeffreySuen-x/dsh-skill-dossier",
       "title": "JeffreySuen-x/dsh-skill-dossier",
       "description": "Skill dossier + work report for DSH: browse, search and archive each skill (direction, scope, boundaries, scenarios), review or delete it, and roll daily briefs into daily, weekly and monthly reports.",
@@ -19929,6 +19951,17 @@
       "install": "github:JFWaskin/dsh-git-nexus",
       "tags": [
         "jfwaskin/dsh-git-nexus"
+      ]
+    },
+    {
+      "id": "jgao9906-droid/dsh-task-toast",
+      "title": "jgao9906-droid/dsh-task-toast",
+      "description": "Top-right status plate for six session states (complete, error, approval, question, unopenable, subagent), plus an OS notification when you are away.",
+      "category": "plugin",
+      "repo": "https://github.com/jgao9906-droid/dsh-task-toast",
+      "install": "github:jgao9906-droid/dsh-task-toast",
+      "tags": [
+        "jgao9906-droid/dsh-task-toast"
       ]
     },
     {
@@ -21441,7 +21474,7 @@
     {
       "id": "Jueze-2019/dsh-redteam-mode/tree/main/packages/redteam-bundle",
       "title": "Jueze-2019/dsh-redteam-mode#packages/redteam-bundle",
-      "description": "Red-team engagement mode: send one target organization name and a planner session runs a five-role execution team (recon, asset triage, vulnerability discovery, exploitation, internal pivot) at up to three concurrent agents, preflight-checking skills and resources and asking once for any missing key or VPS first, guided by a built-in first-run onboarding skill; scoring follows the merged intrusion scoring rules (8 categories / 25 points) with server-side caps, highest-privilege-wins and per-service dedup, and self-registered accounts never score; findings land in a local SQLite fact base with discovery timestamps, shown in a persistent right-side console of 12 tabs (asset mapping with a discovery timeline, agent roster, session/tunnel state, five-stage attack chain, scoring targets, a report that spells out how each score was obtained — actions, exact commands, credential provenance, tunnel build commands — a category-organised POC/EXP knowledge base and a skill library with per-skill usability verdicts); ships 23 native skills, 53 redteam_* tools and one-command self-update.",
+      "description": "Red-team engagement mode: send one target organization name and a planner session runs a five-role execution team (recon, asset triage, vulnerability discovery, exploitation, internal pivot) under a user-configurable concurrency limit (three by default, changed from the console and taking effect immediately), preflight-checking skills and resources and asking once for any missing key or VPS first, guided by a built-in first-run onboarding skill; scoring follows the merged intrusion scoring rules (8 categories / 25 points) with server-side caps, highest-privilege-wins and per-service dedup, and self-registered accounts never score — a login that fits no more specific category is scored as controlling a web application system rather than dropped; findings land in a local SQLite fact base with discovery timestamps, shown in a persistent right-side console of 9 tabs (asset mapping with a discovery timeline and the live test view, the agent roster with its concurrency setting and editable role prompts, session/tunnel state, findings — vulnerabilities, credentials and access sessions plus the attack files archived against each vulnerability — five-stage attack chain, scoring targets, an evidence-screenshot capability (register a screenshot per score point, at most three representative shots per point so a bulk result such as dozens of endpoints does not flood the console or the report, viewed inline in the console and embedded in the report, with on-site screenshots kept strictly apart from record-generated evidence cards), and a report that spells out how each score was obtained (actions, exact commands, credential provenance, tunnel build commands, a reproduction entry that is either a paste-ready HTTP request or a runnable command, plus success criteria and an evidence index), a category-organised POC/EXP knowledge base, and a skill library that reports for every unusable skill why it is unusable and the concrete steps to repair it); ships 14 reconnaissance/assessment skills (the npm package deliberately carries no tool auto-installer and no attack-chain skills — those ship as a separate toolkit Release attachment that the operator fetches and runs themselves), 56 redteam_* tools and one-command self-update.",
       "category": "plugin",
       "repo": "https://github.com/Jueze-2019/dsh-redteam-mode/tree/main/packages/redteam-bundle",
       "install": "github:Jueze-2019/dsh-redteam-mode/tree/main/packages/redteam-bundle",
@@ -23779,6 +23812,17 @@
       "install": "github:lehhair/dsh-diff-viewer",
       "tags": [
         "lehhair/dsh-diff-viewer"
+      ]
+    },
+    {
+      "id": "LeiSureYu/dsh-smart-download",
+      "title": "LeiSureYu/dsh-smart-download",
+      "description": "Multi-threaded downloader plugin for DeepSeek Harness with bundled aria2: probes the target for Range support, then picks aria2 (4 or 8 connections by file size) or falls back to curl.",
+      "category": "plugin",
+      "repo": "https://github.com/LeiSureYu/dsh-smart-download",
+      "install": "github:LeiSureYu/dsh-smart-download",
+      "tags": [
+        "leisureyu/dsh-smart-download"
       ]
     },
     {
@@ -27751,6 +27795,17 @@
       ]
     },
     {
+      "id": "menghuanshiguang/devctl-dsh",
+      "title": "menghuanshiguang/devctl-dsh",
+      "description": "Drive a DSH instance from another device: a host plugin opens a token-authenticated TCP port that a single-file Python CLI drives - listing and creating sessions, sending prompts with images, streaming replies, and switching models, permissions and workspaces.",
+      "category": "plugin",
+      "repo": "https://github.com/menghuanshiguang/devctl-dsh",
+      "install": "github:menghuanshiguang/devctl-dsh",
+      "tags": [
+        "menghuanshiguang/devctl-dsh"
+      ]
+    },
+    {
       "id": "mengnanxyyyy/dsh-markdown-xyy",
       "title": "mengnanxyyyy/dsh-markdown-xyy",
       "description": "Lightweight Markdown conversation theme plugin — enhances native color scheme with 4 built-in themes (light/dark dual), user-defined CSS themes, system-aware auto-switching, in-browser theme editor, designed to enhance reading speed and clarity.",
@@ -27913,6 +27968,17 @@
       "install": "github:merenguesL/dsh-tool-normalizer",
       "tags": [
         "merenguesl/dsh-tool-normalizer"
+      ]
+    },
+    {
+      "id": "MerkurevSergei/dsh-notion-oauth-ui",
+      "title": "MerkurevSergei/dsh-notion-oauth-ui",
+      "description": "Connect Notion from the GUI with OAuth 2.0 + PKCE — official Notion MCP, no integration token.",
+      "category": "plugin",
+      "repo": "https://github.com/MerkurevSergei/dsh-notion-oauth-ui",
+      "install": "github:MerkurevSergei/dsh-notion-oauth-ui",
+      "tags": [
+        "merkurevsergei/dsh-notion-oauth-ui"
       ]
     },
     {
@@ -31367,6 +31433,17 @@
       "install": "github:OMSociety/dsh-fishpai",
       "tags": [
         "omsociety/dsh-fishpai"
+      ]
+    },
+    {
+      "id": "OMSociety/dsh-git-forge",
+      "title": "OMSociety/dsh-git-forge",
+      "description": "Project-scoped Git credentials for DeepSeek Harness: forge accounts (GitHub, Gitea, GitLab, Bitbucket or a custom host) live in the right-sidebar \"Git Forge\" tab, are granted per project, and reach the agent as an HTTPS credential helper so the token never enters the conversation. Pushes to a host the project has not granted are rejected.",
+      "category": "plugin",
+      "repo": "https://github.com/OMSociety/dsh-git-forge",
+      "install": "github:OMSociety/dsh-git-forge",
+      "tags": [
+        "omsociety/dsh-git-forge"
       ]
     },
     {
@@ -37554,7 +37631,7 @@
     {
       "id": "STARDUSTLC666/dsh-hyperframes",
       "title": "STARDUSTLC666/dsh-hyperframes",
-      "description": "Twenty HyperFrames by HeyGen skills synced from the official upstream (HTML video authoring, animation, keyframes, audio/music-to-video, CLI, registry, slideshow, talking-head recut, website/product/PR-to-video and more), plus a bundled-resource health check.",
+      "description": "Twenty-one official HyperFrames by HeyGen skills synced from the official upstream (HTML video authoring, animation, keyframes, audio/music-to-video, CLI, registry, slideshow, talking-head recut, website/product/PR-to-video, Studio timeline conventions and more), plus a bundled-resource health check.",
       "category": "skill",
       "repo": "https://github.com/STARDUSTLC666/dsh-hyperframes",
       "install": "github:STARDUSTLC666/dsh-hyperframes",
@@ -37587,7 +37664,7 @@
     {
       "id": "STARDUSTLC666/dsh-remotion",
       "title": "STARDUSTLC666/dsh-remotion",
-      "description": "Official Remotion skill ported to DSH: programmatic video with React (animation/audio/captions/3D/charts/fonts, 38 rule files), plus a bundled-resource health check.",
+      "description": "Twelve official Remotion skills synced from the official upstream (programmatic video with React: animation, audio, captions, 3D, maps, charts, render, Studio), plus a bundled-resource health check.",
       "category": "skill",
       "repo": "https://github.com/STARDUSTLC666/dsh-remotion",
       "install": "github:STARDUSTLC666/dsh-remotion",
@@ -40991,6 +41068,17 @@
       ]
     },
     {
+      "id": "vitas/dsh-jev-subagent-dispatch",
+      "title": "vitas/dsh-jev-subagent-dispatch",
+      "description": "Cut LLM costs: a Jev (System One) classifier vets each turn against a declarative policy and recommends the subagent model route, so routine work runs at flash rates while the main model keeps the hard parts; explicit /route trigger, runtime delegation-capability gate, credential redaction, and offline policy replay over the verdict log.",
+      "category": "plugin",
+      "repo": "https://github.com/vitas/dsh-jev-subagent-dispatch",
+      "install": "github:vitas/dsh-jev-subagent-dispatch",
+      "tags": [
+        "vitas/dsh-jev-subagent-dispatch"
+      ]
+    },
+    {
       "id": "vitas/dsh-model-pricing",
       "title": "vitas/dsh-model-pricing",
       "description": "Model pricing for the DSH settings page: ~7,250 models / 213 providers with the harness catalog overlaid, honest lowest-listed comparison, session costs priced by the actual route, cache-leak attribution, and a verified promotion feed.",
@@ -43675,6 +43763,17 @@
       ]
     },
     {
+      "id": "wu81313-lab/dsh-company-kb",
+      "title": "wu81313-lab/dsh-company-kb",
+      "description": "Local-folder knowledge base for DSH: builds a SQLite FTS5 index over Office, text, PDF and scanned files, ships five tools (kb_search / kb_read / kb_list / kb_status / kb_session) plus a Web panel, and retrieves or syncs only when the user explicitly asks.",
+      "category": "plugin",
+      "repo": "https://github.com/wu81313-lab/dsh-company-kb",
+      "install": "github:wu81313-lab/dsh-company-kb",
+      "tags": [
+        "wu81313-lab/dsh-company-kb"
+      ]
+    },
+    {
       "id": "wucl12/dsh-side-branch",
       "title": "wucl12/dsh-side-branch",
       "description": "Read-only side branch in the right sidebar: quote text to ask follow-ups without polluting the model context of the main session; every follow-up rebuilds the branch from the latest settled turns of the main session, and writes are refused at the tool-execution layer so the prompt prefix stays cacheable.",
@@ -46169,6 +46268,17 @@
       "install": "github:yflmq001/dsh-cost-tracker",
       "tags": [
         "yflmq001/dsh-cost-tracker"
+      ]
+    },
+    {
+      "id": "yfwu2020/dsh-reply-visual",
+      "title": "yfwu2020/dsh-reply-visual",
+      "description": "Adds a diagram button under every finished reply in the DSH Web UI: the configured model writes a single-file HTML page with inline SVG and the right sidebar renders it in a sandboxed iframe, with diagram, source and original-text views, a per-session replay history that is served from a disk cache instead of calling the model again, redraw, and save to a .html file.",
+      "category": "plugin",
+      "repo": "https://github.com/yfwu2020/dsh-reply-visual",
+      "install": "github:yfwu2020/dsh-reply-visual",
+      "tags": [
+        "yfwu2020/dsh-reply-visual"
       ]
     },
     {
