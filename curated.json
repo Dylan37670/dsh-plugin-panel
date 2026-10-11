@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-11T10:17:45.091Z",
-    "fetchedCount": 4489,
-    "count": 4505,
+    "generatedAt": "2026-10-11T16:17:35.702Z",
+    "fetchedCount": 4500,
+    "count": 4516,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -4812,6 +4812,17 @@
       "install": "github:ash-qw/dsh-theme-prts",
       "tags": [
         "ash-qw/dsh-theme-prts"
+      ]
+    },
+    {
+      "id": "Asheblog/dsh-ollama-cloud",
+      "title": "Asheblog/dsh-ollama-cloud",
+      "description": "Ollama Cloud provider for DeepSeek Harness that configures the route on install, publishes each model's own thinking levels for the composer effort control, and shows account usage with an API-key field in the Models page and sidebar.",
+      "category": "plugin",
+      "repo": "https://github.com/Asheblog/dsh-ollama-cloud",
+      "install": "github:Asheblog/dsh-ollama-cloud",
+      "tags": [
+        "asheblog/dsh-ollama-cloud"
       ]
     },
     {
@@ -10942,7 +10953,7 @@
     {
       "id": "bycall/dsh-answer-reviewer",
       "title": "dsh-answer-reviewer",
-      "description": "Agentic answer reviewer for DeepSeek Harness: each final assistant turn is re-reviewed by a separate LLM graded 1-100; below-threshold scores steer the agent back with concrete feedback. The score is shown as a chip on the answer's action row (green pass / red needs-work, with retry count and reason on hover). Live gate config over a 127.0.0.1 HTTP server, plus a collapsed dock above the composer and an optional right-sidebar tab via dsh-better-sidebar.",
+      "description": "Agentic answer reviewer for DeepSeek Harness: each final assistant turn is re-reviewed by a separate LLM graded 1-100; below-threshold scores steer the agent back with concrete feedback. The score is shown as a chip on the answer's action row (green pass / red needs-work, with retry count and reason on hover). Live gate config from the Reviewer 配置 tab in the conversation view ring above the composer (对话 / 轨迹 / 记忆系统 / Reviewer 配置), from a 127.0.0.1 HTTP server, or from an optional right-sidebar tab via dsh-better-sidebar.",
       "category": "plugin",
       "repo": "https://github.com/bycall/dsh-answer-reviewer",
       "install": "github:bycall/dsh-answer-reviewer",
@@ -23155,6 +23166,17 @@
       ]
     },
     {
+      "id": "kyle123740/dsh-message-recall",
+      "title": "kyle123740/dsh-message-recall",
+      "description": "Adds hover Recall / Delete / Delete-onward actions to every message row: removes content from the model context and the transcript together via durable append-only tombstones, with an empty-content guard so old deletions can never break strict providers. Tested on the DSH 2.0 desktop.",
+      "category": "plugin",
+      "repo": "https://github.com/kyle123740/dsh-message-recall",
+      "install": "github:kyle123740/dsh-message-recall",
+      "tags": [
+        "kyle123740/dsh-message-recall"
+      ]
+    },
+    {
       "id": "KylinQ01/dsh-startup-animation",
       "title": "KylinQ01/dsh-startup-animation",
       "description": "Startup splash for DeepSeek Harness: an animated avatar with aurora, stardust, pointer parallax and a module-assembly entrance, plus the same image as the main-UI wallpaper; both images can be swapped from a settings page that previews the animation live.",
@@ -24549,6 +24571,17 @@
       "install": "github:lifeopsgo/dsh-capability-toggle-plugin",
       "tags": [
         "lifeopsgo/dsh-capability-toggle-plugin"
+      ]
+    },
+    {
+      "id": "lifeopsgo/dsh-lark-session-monitor-plugin",
+      "title": "lifeopsgo/dsh-lark-session-monitor-plugin",
+      "description": "Watches Feishu (Lark) conversations with your own user identity and forwards new messages as prompts into a chosen DeepSeek Harness session: per-monitor sender filters, @bot-mention bypass and keyword allow/block lists, auto-created pinned target sessions, and cursor-based polling that re-reads messages after a failed delivery.",
+      "category": "plugin",
+      "repo": "https://github.com/lifeopsgo/dsh-lark-session-monitor-plugin",
+      "install": "github:lifeopsgo/dsh-lark-session-monitor-plugin",
+      "tags": [
+        "lifeopsgo/dsh-lark-session-monitor-plugin"
       ]
     },
     {
@@ -30151,7 +30184,7 @@
     {
       "id": "nguyenduclong-ict/dsh-session-progress",
       "title": "nguyenduclong-ict/dsh-session-progress",
-      "description": "Session progress tracker: system prompt injection, live % calculation, and a slide-over drawer.",
+      "description": "Session progress tracking for DeepSeek Harness, without digging through the logs: the agent keeps a live nested checklist of the work — from a whole phase down to a single step — and every item carries a weight, so the ring and the % pill in the composer dock row always match reality. Hover it for the current activity, or open the Session Progress tab in the native right sidebar for the goal, the weighted checklist with per-item shares, the next steps and the working notes; when the session ends, the same checklist stands as a clean record of what got done.",
       "category": "plugin",
       "repo": "https://github.com/nguyenduclong-ict/dsh-session-progress",
       "install": "github:nguyenduclong-ict/dsh-session-progress",
@@ -31697,6 +31730,17 @@
       "install": "github:orangeshinee/dsh-mem0",
       "tags": [
         "orangeshinee/dsh-mem0"
+      ]
+    },
+    {
+      "id": "orzgithub/dsh-ollama",
+      "title": "orzgithub/dsh-ollama",
+      "description": "Use local Ollama in DSH with Ollama native API and params support.",
+      "category": "plugin",
+      "repo": "https://github.com/orzgithub/dsh-ollama",
+      "install": "github:orzgithub/dsh-ollama",
+      "tags": [
+        "orzgithub/dsh-ollama"
       ]
     },
     {
@@ -34857,6 +34901,17 @@
       ]
     },
     {
+      "id": "rinDBeans/codex-ui",
+      "title": "rinDBeans/codex-ui",
+      "description": "Codex-style appearance for the DSH Web interface: window edge hairlines and shadows, sidebar colours and row alignment, a model picker with a reasoning-effort power rail, composer and right-panel geometry, a full-page settings-modal pass, a Trajectory view exit, and a settings card for theme, accent, background, foreground, fonts, sidebar translucency and contrast.",
+      "category": "client",
+      "repo": "https://github.com/rinDBeans/codex-ui",
+      "install": "github:rinDBeans/codex-ui",
+      "tags": [
+        "rindbeans/codex-ui"
+      ]
+    },
+    {
       "id": "rinDBeans/dsh-miraculous-standard",
       "title": "rinDBeans/dsh-miraculous-standard",
       "description": "Unified anchored agent preset for DeepSeek V4 Pro/Flash on the official API and opencode-go: Minimal-exact two-tool first-request bootstrap, model-aware Pro/Flash paths, and epoch-aware catalog management for long-session stability.",
@@ -36471,6 +36526,17 @@
       "install": "github:shimingming520/dsh-conversation-process-collapse",
       "tags": [
         "shimingming520/dsh-conversation-process-collapse"
+      ]
+    },
+    {
+      "id": "shinelon/dsh-mcp-plugin",
+      "title": "shinelon/dsh-mcp-plugin",
+      "description": "Manage DSH MCP servers from the web settings panel: list, add, edit, remove, enable/disable with live status.",
+      "category": "client",
+      "repo": "https://github.com/shinelon/dsh-mcp-plugin",
+      "install": "github:shinelon/dsh-mcp-plugin",
+      "tags": [
+        "shinelon/dsh-mcp-plugin"
       ]
     },
     {
@@ -39308,6 +39374,50 @@
       ]
     },
     {
+      "id": "TGYD-helige/dsh-plugins/tree/main/packages/dsh-a2a",
+      "title": "TGYD-helige/dsh-plugins#dsh-a2a",
+      "description": "A2A protocol server for dsh agents, with JSON-RPC tasks, SSE streaming, cancellation, and an agent card.",
+      "category": "plugin",
+      "repo": "https://github.com/TGYD-helige/dsh-plugins/tree/main/packages/dsh-a2a",
+      "install": "github:TGYD-helige/dsh-plugins/tree/main/packages/dsh-a2a",
+      "tags": [
+        "tgyd-helige/dsh-plugins#dsh-a2a"
+      ]
+    },
+    {
+      "id": "TGYD-helige/dsh-plugins/tree/main/packages/dsh-langfuse",
+      "title": "TGYD-helige/dsh-plugins#dsh-langfuse",
+      "description": "Send dsh turn traces, LLM generations, tool spans, and subagent activity to Langfuse.",
+      "category": "plugin",
+      "repo": "https://github.com/TGYD-helige/dsh-plugins/tree/main/packages/dsh-langfuse",
+      "install": "github:TGYD-helige/dsh-plugins/tree/main/packages/dsh-langfuse",
+      "tags": [
+        "tgyd-helige/dsh-plugins#dsh-langfuse"
+      ]
+    },
+    {
+      "id": "TGYD-helige/dsh-plugins/tree/main/packages/dsh-policy",
+      "title": "TGYD-helige/dsh-plugins#dsh-policy",
+      "description": "Apply configurable allow, deny, and approval rules to dsh tool calls, including shell command patterns.",
+      "category": "plugin",
+      "repo": "https://github.com/TGYD-helige/dsh-plugins/tree/main/packages/dsh-policy",
+      "install": "github:TGYD-helige/dsh-plugins/tree/main/packages/dsh-policy",
+      "tags": [
+        "tgyd-helige/dsh-plugins#dsh-policy"
+      ]
+    },
+    {
+      "id": "TGYD-helige/dsh-plugins/tree/main/packages/dsh-storage",
+      "title": "TGYD-helige/dsh-plugins#dsh-storage",
+      "description": "Mirror dsh session events to MySQL, PostgreSQL, SQLite, or SQL Server while retaining local session files.",
+      "category": "plugin",
+      "repo": "https://github.com/TGYD-helige/dsh-plugins/tree/main/packages/dsh-storage",
+      "install": "github:TGYD-helige/dsh-plugins/tree/main/packages/dsh-storage",
+      "tags": [
+        "tgyd-helige/dsh-plugins#dsh-storage"
+      ]
+    },
+    {
       "id": "The-five-stooges/dsh-deepseek-usage",
       "title": "The-five-stooges/dsh-deepseek-usage",
       "description": "Shows the DeepSeek account balance as a row in the sidebar footer with a refresh button, and opens a popover with the balance card, daily token and estimated-cost charts over a 7/30-day window, a per-model table, and a link to the platform usage page. The balance comes from the official /user/balance endpoint; usage is aggregated from local DSH session logs and priced with the published peak/off-peak rate card in CNY, so it is labelled an estimate and its scope is stated on the panel.",
@@ -40812,6 +40922,17 @@
       "install": "github:usersx/dsh-automation-center",
       "tags": [
         "usersx/dsh-automation-center"
+      ]
+    },
+    {
+      "id": "Utmotc/dsh-balance-card",
+      "title": "Utmotc/dsh-balance-card",
+      "description": "Shows the API balance of the provider behind the current model as a dsh Web sidebar card, with per-package progress bars, currency/credit-aware units, a settings tab, and subscription and credit quota monitoring.",
+      "category": "client",
+      "repo": "https://github.com/Utmotc/dsh-balance-card",
+      "install": "github:Utmotc/dsh-balance-card",
+      "tags": [
+        "utmotc/dsh-balance-card"
       ]
     },
     {
@@ -44887,7 +45008,7 @@
     {
       "id": "xiaoyuyu6420/dsh-backup",
       "title": "xiaoyuyu6420/dsh-backup",
-      "description": "One-command backup & restore of DSH user data with a visual Settings panel: scheduled auto-backup, sha256 verification, hardened restore with auto-rollback, typed sub-backups (--types skills), credential redaction into a local vault, GitHub sync for cross-machine moves, and an out-of-process rescue channel that works even when the host won't boot. /backup doctor checks and repairs corrupt session logs from a known-good backup; migrate-check statically predicts which sessions a host upgrade would break (frozen event-list rules, filename/generation mismatch, hardlink support, legacy credentials layout) and the credential sentinel preserves pre-migration copies before the host rewrites them; smart backup snapshots before host upgrades and quarantines corrupt logs before rotation. macOS/Linux/Windows.",
+      "description": "One-command backup & restore of DSH user data with a visual Settings panel: scheduled auto-backup, sha256 verification, hardened restore with auto-rollback, typed sub-backups (--types), credential redaction into a local vault, GitHub sync for cross-machine moves, and an out-of-process rescue channel for when the host won't boot. /backup doctor checks and repairs corrupt session logs from a known-good backup; migrate-check predicts which sessions a host upgrade would break (frozen event-list rules, filename mismatch, legacy credentials); the credential sentinel preserves pre-migration copies before the host rewrites them; smart backup snapshots before host upgrades and quarantines corrupt logs before rotation; /backup check-update and /backup update report and install new releases (snapshotting first), and it spans DSH 0.1.1-rc.2 through 0.2.0-rc.1, including 0.2.0's install-time peer gate. macOS/Linux/Windows.",
       "category": "plugin",
       "repo": "https://github.com/xiaoyuyu6420/dsh-backup",
       "install": "github:xiaoyuyu6420/dsh-backup",
