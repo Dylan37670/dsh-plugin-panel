@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-11T16:17:35.702Z",
-    "fetchedCount": 4500,
-    "count": 4516,
+    "generatedAt": "2026-10-11T17:47:26.205Z",
+    "fetchedCount": 4508,
+    "count": 4524,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -6124,7 +6124,7 @@
     {
       "id": "Binaryinject/dsh-review-checkout",
       "title": "Binaryinject/dsh-review-checkout",
-      "description": "Codex-style review of session file changes: per-turn cards (optionally taking over the shell edited cards), a review tab with syntax-highlighted diffs, real line numbers, open-at-line and a draggable split, light/dark presets that follow the DSH theme, typography that follows DSH and installed skins (or any font on the machine, with a px stepper), and one-click per-turn revert — powered by the official session channel.",
+      "description": "Codex-style review of session file changes: per-turn cards (optionally taking over the shell edited cards) whose totals are the turn net diff, a review tab with syntax-highlighted diffs that never wrap, real line numbers, open-at-line and a draggable split, a hover preview of the whole file with three lines of context around each change, one-click per-turn revert, and the on-disk record size with a clear button in the review toolbar. Records are sharded per session, with content-addressed snapshot blobs that dedupe and are garbage collected. Light/dark presets follow the DSH theme, typography follows DSH and installed skins (or any font on the machine, with a px stepper), and a settings switch injects a think-in-Simplified-Chinese rule into the global AGENTS.md.",
       "category": "plugin",
       "repo": "https://github.com/Binaryinject/dsh-review-checkout",
       "install": "github:Binaryinject/dsh-review-checkout",
@@ -12505,6 +12505,17 @@
       ]
     },
     {
+      "id": "dzwalker/dsh-session-keepwarm",
+      "title": "dzwalker/dsh-session-keepwarm",
+      "description": "Keeps the most recently used sessions resident in the browser so switching back reuses the already loaded history instead of re-reading it; the number of resident sessions is configurable and the plugin can be switched off.",
+      "category": "plugin",
+      "repo": "https://github.com/dzwalker/dsh-session-keepwarm",
+      "install": "github:dzwalker/dsh-session-keepwarm",
+      "tags": [
+        "dzwalker/dsh-session-keepwarm"
+      ]
+    },
+    {
       "id": "e2mcc/dsh-popout-sidebar",
       "title": "e2mcc/dsh-popout-sidebar",
       "description": "Pop-out sidebar: lists artifacts and a file tree with multiple preview formats, pops out into a separate browser tab you can drag to another monitor, and coexists with other sidebar plugins simultaneously.",
@@ -18194,6 +18205,17 @@
       ]
     },
     {
+      "id": "hyperion2144/dsh-desktop-tauriapp",
+      "title": "hyperion2144/dsh-desktop-tauriapp",
+      "description": "Tauri 2 desktop app for DeepSeek Harness (macOS + Windows; installers on the repository's Releases page) with a built-in dsh runtime: tray-resident launcher with per-profile ports and windows, a process guardian that auto-heals up to three times, local or remote dsh, task-completion notifications with a Dock badge, and a live startup console. This plugin is the app's in-page half — its desktop chrome and notification bridge only take effect when DSH runs inside the desktop app; added to a regular DSH with `dsh plugin add`, it provides the bundled skill for packaging a DSH Web GUI as a Tauri app.",
+      "category": "client",
+      "repo": "https://github.com/hyperion2144/dsh-desktop-tauriapp",
+      "install": "github:hyperion2144/dsh-desktop-tauriapp",
+      "tags": [
+        "hyperion2144/dsh-desktop-tauriapp"
+      ]
+    },
+    {
       "id": "hyrinx/dsh-plugin-open-with",
       "title": "hyrinx/dsh-plugin-open-with",
       "description": "Adds a capsule split-button to the conversation header: launch VS Code, terminal, or File Explorer at the current workspace directory in one click.",
@@ -19316,17 +19338,6 @@
       ]
     },
     {
-      "id": "J0ss077/dsh-always-require-tools-approval",
-      "title": "J0ss077/dsh-always-require-tools-approval",
-      "description": "Requires one-shot user approval before configured tools (default bash, pwsh) execute — gated tools pause and ask, everything else delegates, and a missing approval channel fails closed.",
-      "category": "plugin",
-      "repo": "https://github.com/J0ss077/dsh-always-require-tools-approval",
-      "install": "github:J0ss077/dsh-always-require-tools-approval",
-      "tags": [
-        "j0ss077/dsh-always-require-tools-approval"
-      ]
-    },
-    {
       "id": "jack-ranbo/dsh-wsl-expose",
       "title": "jack-ranbo/dsh-wsl-expose",
       "description": "Expose the DSH Web GUI over IPv6 or IPv4 from WSL2 through a reverse proxy (Lucky): /wan up sets up the socat relay, Windows portproxy, firewall, and trusted-host fence, with a Settings card plus commands to configure the domain and ports.",
@@ -19665,6 +19676,17 @@
       "install": "github:jax629321/dsh-agent-hub",
       "tags": [
         "jax629321/dsh-agent-hub"
+      ]
+    },
+    {
+      "id": "jaychang1989/dsh-webchat",
+      "title": "jaychang1989/dsh-webchat",
+      "description": "Opens the official DeepSeek web app (chat.deepseek.com) inside DeepSeek Harness: one sidebar entry renders the real page in the center column through the desktop shell's native browser guest, and keeps you signed in across restarts. The official client keeps its model picker, deep think, smart search, history and attachments. Falls back to opening a window where no guest bridge exists.",
+      "category": "plugin",
+      "repo": "https://github.com/jaychang1989/dsh-webchat",
+      "install": "github:jaychang1989/dsh-webchat",
+      "tags": [
+        "jaychang1989/dsh-webchat"
       ]
     },
     {
@@ -28455,6 +28477,17 @@
       ]
     },
     {
+      "id": "MicroSharpAnt/dsh-theme-presets",
+      "title": "MicroSharpAnt/dsh-theme-presets",
+      "description": "Adds Nord, Dracula, Catppuccin, Tokyo Night, One Dark, Gruvbox, Solarized, GitHub, Everforest, Kanagawa and Rosé Pine presets to the DSH Web GUI theme picker, layered over the built-in light/dark/system appearance.",
+      "category": "client",
+      "repo": "https://github.com/MicroSharpAnt/dsh-theme-presets",
+      "install": "github:MicroSharpAnt/dsh-theme-presets",
+      "tags": [
+        "microsharpant/dsh-theme-presets"
+      ]
+    },
+    {
       "id": "mienfong/dsh-session-mgr",
       "title": "mienfong/dsh-session-mgr",
       "description": "Move, archive, restore, portable backup/export and import sessions across workspaces in the DeepSeek Harness web UI.",
@@ -28683,6 +28716,17 @@
       "install": "github:minybear/DeepSeek-Harness-Pet",
       "tags": [
         "minybear/deepseek-harness-pet"
+      ]
+    },
+    {
+      "id": "miqian-nomad/dsh-browser-playwright-codex",
+      "title": "miqian-nomad/dsh-browser-playwright-codex",
+      "description": "Browser automation for DSH: the agent fills in forms, scrapes lists and works across tabs in real pages, using the logins you already have. It drives its own visible window on your desktop — minimise it and it keeps working without stealing focus — and a sign-in, CAPTCHA or native dialog stops the run and hands the page back to you: it never confirms on your behalf. Login state persists (own profile plus session-cookie re-injection). 23 Playwright tools (20 always on, 3 gated and off by default), with a URL allowlist, dialog suspension and a CDP method allowlist that are mechanism-level and pinned by tests.",
+      "category": "plugin",
+      "repo": "https://github.com/miqian-nomad/dsh-browser-playwright-codex",
+      "install": "github:miqian-nomad/dsh-browser-playwright-codex",
+      "tags": [
+        "miqian-nomad/dsh-browser-playwright-codex"
       ]
     },
     {
@@ -29475,6 +29519,17 @@
       "install": "github:Mu-scorpio/token-usage-counter",
       "tags": [
         "mu-scorpio/token-usage-counter"
+      ]
+    },
+    {
+      "id": "mu915275-cmd/dsh-boot-animation",
+      "title": "mu915275-cmd/dsh-boot-animation",
+      "description": "Plays an intro full-frame on a new conversation, or every time you open the one you pinned. Four clips ship inside the plugin itself, embedded in code with no separate video files, and an in-app library switches between them, previews the choice, and accepts your own clip. The picker has two independent sections, so the intro animation and the workspace wallpaper are picked separately; the wallpaper can be a still or a looping tail of the last N seconds, with independent transparency for the picture and the sidebar plus three blur levels. The sidebar and the workspace also get a text colour each, for when the picture is at full strength and the theme own text no longer reads.",
+      "category": "client",
+      "repo": "https://github.com/mu915275-cmd/dsh-boot-animation",
+      "install": "github:mu915275-cmd/dsh-boot-animation",
+      "tags": [
+        "mu915275-cmd/dsh-boot-animation"
       ]
     },
     {
@@ -32951,6 +33006,17 @@
       "install": "github:phungthien269/dsh-token-stats",
       "tags": [
         "phungthien269/dsh-token-stats"
+      ]
+    },
+    {
+      "id": "PhysicalAI-0/dsh-paperforge",
+      "title": "PhysicalAI-0/dsh-paperforge",
+      "description": "Paper reading workbench: a paper library, the PDF beside Markdown notes and one dedicated AI session per paper. Highlights and region screenshots go straight into notes; select-to-ask sends the passage with its page; notes are editable in place with autosave; sessions can be combined into a Summary.",
+      "category": "plugin",
+      "repo": "https://github.com/PhysicalAI-0/dsh-paperforge",
+      "install": "github:PhysicalAI-0/dsh-paperforge",
+      "tags": [
+        "physicalai-0/dsh-paperforge"
       ]
     },
     {
@@ -41818,7 +41884,7 @@
     {
       "id": "wangzhanchao883/dsh-screenshot-capture",
       "title": "wangzhanchao883/dsh-screenshot-capture",
-      "description": "Point-and-shoot screenshot capture: a system floating window turns a new screenshot (or copied image) into an Obsidian note with comments and key-point marking, instant Tongyi Qianwen OCR, per-day merging, and an optional evening AI organization pass.",
+      "description": "Point-and-shoot screenshot capture: a system floating window turns a new screenshot (or copied image) into an Obsidian note with comments and key-point marking, instant OCR through the host DSH multimodal model (no extra API key needed, Tongyi Qianwen as fallback), a duplicate-screen guard, per-day merging, and an optional evening AI organization pass.",
       "category": "plugin",
       "repo": "https://github.com/wangzhanchao883/dsh-screenshot-capture",
       "install": "github:wangzhanchao883/dsh-screenshot-capture",
@@ -42905,6 +42971,17 @@
       ]
     },
     {
+      "id": "winditer/dsh-paste-spill",
+      "title": "winditer/dsh-paste-spill",
+      "description": "Folds each 4-50 KB paste in the DSH composer into its own chip (expand or delete it individually), and turns a paste of 50 KB or more into a real file attachment.",
+      "category": "client",
+      "repo": "https://github.com/winditer/dsh-paste-spill",
+      "install": "github:winditer/dsh-paste-spill",
+      "tags": [
+        "winditer/dsh-paste-spill"
+      ]
+    },
+    {
       "id": "winditer/dsh-prompt-optimizer",
       "title": "winditer/dsh-prompt-optimizer",
       "description": "Polishes the draft in the composer into a clearer, better-structured prompt from the ✨ button or Alt+O; streams the result live over SSE with reasoning shown first, and follows the session's default model with zero configuration or any OpenAI-compatible endpoint.",
@@ -43199,6 +43276,17 @@
       "install": "github:wjt0321/dsh-git-proxy",
       "tags": [
         "wjt0321/dsh-git-proxy"
+      ]
+    },
+    {
+      "id": "wjw99830/dsh-plugin-noema",
+      "title": "wjw99830/dsh-plugin-noema",
+      "description": "Shows per-turn changes in cyclomatic complexity, cognitive complexity, and maximum nesting depth for TypeScript, Python, and Go in the Web UI, with expandable file and function summaries for code review.",
+      "category": "plugin",
+      "repo": "https://github.com/wjw99830/dsh-plugin-noema",
+      "install": "github:wjw99830/dsh-plugin-noema",
+      "tags": [
+        "wjw99830/dsh-plugin-noema"
       ]
     },
     {
