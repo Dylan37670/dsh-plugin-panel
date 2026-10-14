@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-14T17:36:15.655Z",
-    "fetchedCount": 4657,
-    "count": 4673,
+    "generatedAt": "2026-10-14T22:18:01.139Z",
+    "fetchedCount": 4671,
+    "count": 4687,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -379,6 +379,17 @@
       "install": "github:133563825as-ai/dsh-api-dashboard",
       "tags": [
         "133563825as-ai/dsh-api-dashboard"
+      ]
+    },
+    {
+      "id": "1344738825/ai-look-up",
+      "title": "1344738825/ai-look-up",
+      "description": "AI Look-Up: detects aimless grinding (repeated commands, failure loops, long runs with no output) and injects mid-run self-review nudges, plus a real local-clock anchor so the agent stops estimating elapsed time.",
+      "category": "plugin",
+      "repo": "https://github.com/1344738825/ai-look-up",
+      "install": "github:1344738825/ai-look-up",
+      "tags": [
+        "1344738825/ai-look-up"
       ]
     },
     {
@@ -1633,6 +1644,17 @@
       "install": "github:398894496-arch/DSH-KRouter",
       "tags": [
         "398894496-arch/dsh-krouter"
+      ]
+    },
+    {
+      "id": "439436269-ctrl/dsh-pinned-sessions",
+      "title": "439436269-ctrl/dsh-pinned-sessions",
+      "description": "A pinned-sessions group in the sidebar, above the workspace list: every pinned session across all workspaces in one collapsible, searchable list, with click-to-open and a hover-revealed unpin button.",
+      "category": "client",
+      "repo": "https://github.com/439436269-ctrl/dsh-pinned-sessions",
+      "install": "github:439436269-ctrl/dsh-pinned-sessions",
+      "tags": [
+        "439436269-ctrl/dsh-pinned-sessions"
       ]
     },
     {
@@ -4075,6 +4097,17 @@
       "install": "github:alvinunreal/openpets/tree/main/packages/dsh",
       "tags": [
         "alvinunreal/openpets#dsh"
+      ]
+    },
+    {
+      "id": "Ame-Choo/dsh-study-coach",
+      "title": "Ame-Choo/dsh-study-coach",
+      "description": "Study coach for DeepSeek Harness: turns a course into a knowledge map of subject, module and unit, records mastery per unit in six stages, plans daily tasks against a materials index, keeps a wrong-answer book and spaced-repetition cards, and serves its own web panel.",
+      "category": "plugin",
+      "repo": "https://github.com/Ame-Choo/dsh-study-coach",
+      "install": "github:Ame-Choo/dsh-study-coach",
+      "tags": [
+        "ame-choo/dsh-study-coach"
       ]
     },
     {
@@ -8066,6 +8099,17 @@
       "install": "github:Cheeserackery/deepseek-time/tree/master/adapters/dsh",
       "tags": [
         "cheeserackery/deepseek-time#dsh"
+      ]
+    },
+    {
+      "id": "chen112233usa/dsh-typesafe-ai-skill",
+      "title": "chen112233usa/dsh-typesafe-ai-skill",
+      "description": "Registers the TypeSafe/Jev (System One) skill into DeepSeek Harness's global skill layer, so every session can classify, route, score, extract and gate on confidence using typed judgments instead of prompt-and-parse. Ships no API key; the user supplies OPENROUTER_API_KEY.",
+      "category": "skill",
+      "repo": "https://github.com/chen112233usa/dsh-typesafe-ai-skill",
+      "install": "github:chen112233usa/dsh-typesafe-ai-skill",
+      "tags": [
+        "chen112233usa/dsh-typesafe-ai-skill"
       ]
     },
     {
@@ -13591,6 +13635,17 @@
       "install": "github:errrepe/dsh-codegraph-plugin",
       "tags": [
         "errrepe/dsh-codegraph-plugin"
+      ]
+    },
+    {
+      "id": "eryi-lab/dsh-gsap",
+      "title": "eryi-lab/dsh-gsap",
+      "description": "Registers the eight official GSAP AI skills in DeepSeek Harness; the skill bodies ship inside the plugin, so it works after installing and restarting with no configuration, account or API key.",
+      "category": "skill",
+      "repo": "https://github.com/eryi-lab/dsh-gsap",
+      "install": "github:eryi-lab/dsh-gsap",
+      "tags": [
+        "eryi-lab/dsh-gsap"
       ]
     },
     {
@@ -20383,6 +20438,17 @@
       ]
     },
     {
+      "id": "JauLukNgai/dsh-on-phone",
+      "title": "JauLukNgai/dsh-on-phone",
+      "description": "Puts the DSH web UI on a phone browser over your own tailnet, with the remote channel built on Tailscale Serve. Both sides need only Tailscale: no dedicated app, no QR code, no login page, no account of its own, and no relay of your content. The desktop half runs on macOS, Windows or Linux.",
+      "category": "plugin",
+      "repo": "https://github.com/JauLukNgai/dsh-on-phone",
+      "install": "github:JauLukNgai/dsh-on-phone",
+      "tags": [
+        "jaulukngai/dsh-on-phone"
+      ]
+    },
+    {
       "id": "jax629321/dsh-agent-hub",
       "title": "jax629321/dsh-agent-hub",
       "description": "Group-chat multi-agent orchestration console for DSH: autonomous decision-making, task dispatch, verification and iterative optimization for long tasks; bundles its own backend, installs with `dsh plugin add`.",
@@ -26772,6 +26838,17 @@
       ]
     },
     {
+      "id": "Longxiangjunlin/dsh-endfield-theme",
+      "title": "Longxiangjunlin/dsh-endfield-theme",
+      "description": "Arknights: Endfield theme for the DeepSeek Harness Web GUI: charcoal and hazard-yellow industrial HUD, a boot splash injected ahead of the shell, a conversation backdrop, and a re-cut Windows title bar. Restyles the sidebar brand to 终末地工业 / ENDFIELD INDUSTRIES, which a URL flag reverts.",
+      "category": "client",
+      "repo": "https://github.com/Longxiangjunlin/dsh-endfield-theme",
+      "install": "github:Longxiangjunlin/dsh-endfield-theme",
+      "tags": [
+        "longxiangjunlin/dsh-endfield-theme"
+      ]
+    },
+    {
       "id": "loonai321/dsh-humanized-deepseek-maid",
       "title": "loonai321/dsh-humanized-deepseek-maid",
       "description": "Adds a configurable humanized whale-girl maid persona with immersive roleplay, speaking modes, and a lightweight layered memory with query-triggered recall.",
@@ -27649,6 +27726,17 @@
       "install": "github:lw-storm/dsh-plugin-noticeme",
       "tags": [
         "lw-storm/dsh-plugin-noticeme"
+      ]
+    },
+    {
+      "id": "lw0129a/dsh-app-packager/tree/main/packages/dsh-app-packager",
+      "title": "lw0129a/dsh-app-packager#dsh-app-packager",
+      "description": "Packaging pipeline for uni-app x projects: reads the local HBuilderX version, recommends and one-click installs the matching iOS / Android / HarmonyOS offline SDK (panel card with official download links), then drives the HBuilderX CLI to build, sign and upload apps from per-project config files; the engine also ships as list / doctor / check / build tools for the agent.",
+      "category": "plugin",
+      "repo": "https://github.com/lw0129a/dsh-app-packager/tree/main/packages/dsh-app-packager",
+      "install": "github:lw0129a/dsh-app-packager/tree/main/packages/dsh-app-packager",
+      "tags": [
+        "lw0129a/dsh-app-packager#dsh-app-packager"
       ]
     },
     {
@@ -34593,6 +34681,17 @@
       ]
     },
     {
+      "id": "praystring/dsh-send-debounce",
+      "title": "praystring/dsh-send-debounce",
+      "description": "Buffers consecutive short messages from the composer and merges them into one turn: no model wake-up until the user stops for a configurable silence window; long messages and attachments bypass the buffer.",
+      "category": "plugin",
+      "repo": "https://github.com/praystring/dsh-send-debounce",
+      "install": "github:praystring/dsh-send-debounce",
+      "tags": [
+        "praystring/dsh-send-debounce"
+      ]
+    },
+    {
       "id": "project-hy/dsh-claude-delegate",
       "title": "project-hy/dsh-claude-delegate",
       "description": "Delegates self-contained coding subtasks to the local Claude Code subscription through the official Agent SDK and returns the result to the host session. Nineteen per-call parameters control model, thinking effort, permission mode, allowed tools, turn count and budget cap; background jobs return a jobId immediately and stream incremental output; the result carries a session handle that can be passed back as resume to continue the same conversation; commands expected to run past ~20 seconds go through the built-in mcp__dsh__shell channel, which streams output line by line without consuming model context; a Claude Code monitor panel in the session lists jobs, renders the structured process, shows live output blocks and cancels a run; the delegation procedure ships as a runtime-registered skill, so installing the plugin installs the skill.",
@@ -38630,6 +38729,17 @@
       ]
     },
     {
+      "id": "smj-1680/dsh-plugin-liquid-glass",
+      "title": "smj-1680/dsh-plugin-liquid-glass",
+      "description": "A liquid glass UI plugin for the DSH desktop app. Works alongside most wallpaper plugins. Currently supports dark mode only.",
+      "category": "client",
+      "repo": "https://github.com/smj-1680/dsh-plugin-liquid-glass",
+      "install": "github:smj-1680/dsh-plugin-liquid-glass",
+      "tags": [
+        "smj-1680/dsh-plugin-liquid-glass"
+      ]
+    },
+    {
       "id": "snow-The/dsh-session-handoff",
       "title": "snow-The/dsh-session-handoff",
       "description": "Session handoff & context management: structured handoff documents (export/resume/status) so a fresh session can continue seamlessly, plus active context pruning (acp_* tools via the official compaction API with model-authored summaries).",
@@ -41959,6 +42069,17 @@
       ]
     },
     {
+      "id": "TwinsEarth/dsh-windows2macos",
+      "title": "TwinsEarth/dsh-windows2macos",
+      "description": "Run one instruction on every online Windows and macOS machine, across networks and regions: a dependency-free relay talks to each machine over outbound connections only (Tailscale, a public VPS behind TLS, or a tunnel), every machine runs the command in its own checkout, and results come back with a commit, a working-tree fingerprint and a command hash so an environment mismatch is reported as unverifiable instead of being mistaken for a different result. Sending work needs its own operator token, separate from the per-machine device token.",
+      "category": "plugin",
+      "repo": "https://github.com/TwinsEarth/dsh-windows2macos",
+      "install": "github:TwinsEarth/dsh-windows2macos",
+      "tags": [
+        "twinsearth/dsh-windows2macos"
+      ]
+    },
+    {
       "id": "txlznbzsdj-collab/dsh-deepseek-pet",
       "title": "txlznbzsdj-collab/dsh-deepseek-pet",
       "description": "Animated DeepSeek blue-whale desktop pet floating on the DSH Web page: draggable with speech bubbles and mood poses, a pet_say tool for the model to make it talk, and turn-start/end thinking and celebrating states.",
@@ -44266,6 +44387,17 @@
       "install": "github:whyihaveyou/dsh-suite/tree/main/packages/plugins/plugin-team-board",
       "tags": [
         "whyihaveyou/dsh-suite#plugin-team-board"
+      ]
+    },
+    {
+      "id": "WihteCo/dsh-opencode-go-quota",
+      "title": "WihteCo/dsh-opencode-go-quota",
+      "description": "OpenCode Go quota in the sidebar foot under the workspace list: one cell for the most constrained window plus a hover popover with the rolling 5-hour, weekly and monthly percents, each with a usage bar, an elapsed-time marker, the remaining share and a reset countdown, refreshed every 60 seconds from OpenCode's official usage API using the key already in the DSH credential store.",
+      "category": "plugin",
+      "repo": "https://github.com/WihteCo/dsh-opencode-go-quota",
+      "install": "github:WihteCo/dsh-opencode-go-quota",
+      "tags": [
+        "wihteco/dsh-opencode-go-quota"
       ]
     },
     {
@@ -47888,6 +48020,17 @@
       ]
     },
     {
+      "id": "Yaoxxxxxxx/dsh-plugins/tree/main/packages/dsh-focus-composer",
+      "title": "Yaoxxxxxxx/dsh-plugins#dsh-focus-composer",
+      "description": "Returns the caret to the session composer on Ctrl+I; the key is rebindable in Settings and works from any region of the desktop window.",
+      "category": "client",
+      "repo": "https://github.com/Yaoxxxxxxx/dsh-plugins/tree/main/packages/dsh-focus-composer",
+      "install": "github:Yaoxxxxxxx/dsh-plugins/tree/main/packages/dsh-focus-composer",
+      "tags": [
+        "yaoxxxxxxx/dsh-plugins#dsh-focus-composer"
+      ]
+    },
+    {
       "id": "yaways/dsh-subagent-claude-code-wrapper",
       "title": "yaways/dsh-subagent-claude-code-wrapper",
       "description": "Subagent delegation provider that runs any Claude-compatible CLI binary pointed at by a configurable executablePath field.",
@@ -49975,6 +50118,17 @@
       "install": "github:zhang-jiazhi/dsh-stats-panel",
       "tags": [
         "zhang-jiazhi/dsh-stats-panel"
+      ]
+    },
+    {
+      "id": "zhang-tod/dsh-win-notify",
+      "title": "zhang-tod/dsh-win-notify",
+      "description": "Host-layer Windows toast notifications for DeepSeek Harness: agent turn done, error or interruption, subagent done, and background job done, plus alerts when the model asks you a question or a tool approval is pending. The notification logic runs in the DSH host process, so toasts still arrive with the tab or the browser closed; a Win32 foreground probe suppresses them while you are looking at DSH. Windows only.",
+      "category": "plugin",
+      "repo": "https://github.com/zhang-tod/dsh-win-notify",
+      "install": "github:zhang-tod/dsh-win-notify",
+      "tags": [
+        "zhang-tod/dsh-win-notify"
       ]
     },
     {
