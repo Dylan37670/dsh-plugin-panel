@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-15T16:18:43.211Z",
-    "fetchedCount": 4727,
-    "count": 4743,
+    "generatedAt": "2026-10-15T17:21:20.966Z",
+    "fetchedCount": 4742,
+    "count": 4758,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -3473,14 +3473,14 @@
       ]
     },
     {
-      "id": "AIcivilization/deepseek-harness-vps",
-      "title": "AIcivilization/deepseek-harness-vps",
-      "description": "One-command VPS deployment for DeepSeek Harness: a zero-dependency login gateway with automatic HTTPS that proxies the native web UI, a token-protected setup wizard, and one-click DSH upgrades with automatic rollback; as a plugin it adds Settings → VPS Deploy with version, upgrade and gateway status, or the one-command setup when DSH is not yet on a VPS.",
+      "id": "AIcivilization/dsh-vps",
+      "title": "AIcivilization/dsh-vps",
+      "description": "One-command VPS deployment for DeepSeek Harness: a zero-dependency login gateway with automatic HTTPS that proxies the native web UI, a token-protected setup wizard, and one-click DSH upgrades with automatic rollback; as a plugin it adds Settings → VPS Deploy to install DSH on (or remove it from) a VPS over SSH from a form, plus version, upgrade, gateway status and a QR code to add DSH to a phone's home screen.",
       "category": "plugin",
-      "repo": "https://github.com/AIcivilization/deepseek-harness-vps",
-      "install": "github:AIcivilization/deepseek-harness-vps",
+      "repo": "https://github.com/AIcivilization/dsh-vps",
+      "install": "github:AIcivilization/dsh-vps",
       "tags": [
-        "aicivilization/deepseek-harness-vps"
+        "aicivilization/dsh-vps"
       ]
     },
     {
@@ -6471,6 +6471,17 @@
       "install": "github:bigharm/dsh-agentnoodle",
       "tags": [
         "bigharm/dsh-agentnoodle"
+      ]
+    },
+    {
+      "id": "bigricedumpling/deepseek-reader/tree/main/plugins/reader-workspace",
+      "title": "bigricedumpling/deepseek-reader#reader-workspace",
+      "description": "Typocket reads, edits and organizes local documents in DSH and previews workspace Markdown.",
+      "category": "plugin",
+      "repo": "https://github.com/bigricedumpling/deepseek-reader/tree/main/plugins/reader-workspace",
+      "install": "github:bigricedumpling/deepseek-reader/tree/main/plugins/reader-workspace",
+      "tags": [
+        "bigricedumpling/deepseek-reader#reader-workspace"
       ]
     },
     {
@@ -27212,6 +27223,28 @@
       ]
     },
     {
+      "id": "Lostforest7/dsh-revise",
+      "title": "Lostforest7/dsh-revise",
+      "description": "Visual frontend revision workbench: point at a real page element, describe the change, send it into the current DSH session, then review fixed-viewport before/after screenshots (1280x800 and 390x844) beside a captured source diff, accepting each revision item by item. Revision records are kept per session under .dsh-revise/ and export as a single portable HTML report.",
+      "category": "client",
+      "repo": "https://github.com/Lostforest7/dsh-revise",
+      "install": "github:Lostforest7/dsh-revise",
+      "tags": [
+        "lostforest7/dsh-revise"
+      ]
+    },
+    {
+      "id": "Lostforest7/dsh-sheetflow",
+      "title": "Lostforest7/dsh-sheetflow",
+      "description": "Recurring Excel template fill and reconciliation review: declare the file, sheet, header row, match key and amount columns once, preview every cell write before it lands, compare amounts as exact two-decimal values, list the unmatched rows as exceptions, and export a filled template copy with an HTML report and a JSON trace back to the source rows.",
+      "category": "plugin",
+      "repo": "https://github.com/Lostforest7/dsh-sheetflow",
+      "install": "github:Lostforest7/dsh-sheetflow",
+      "tags": [
+        "lostforest7/dsh-sheetflow"
+      ]
+    },
+    {
       "id": "LouisHaoL/dsh-timer-agent",
       "title": "LouisHaoL/dsh-timer-agent",
       "description": "Host-resident cron engine with a web jobs board and a timer_agent tool: fires real agent sessions on schedule, continuing a pinned session for context or starting fresh ones in a chosen project workspace.",
@@ -30413,6 +30446,17 @@
       ]
     },
     {
+      "id": "momasiku/dsh-pilot",
+      "title": "momasiku/dsh-pilot",
+      "description": "Windows desktop vision and control for any application that has a window — a native editor, Excel, a proprietary installer, a game launcher — rather than a browser: screen_view returns the live screen as a real image block the model can see (never OCR or a text summary), desktop_control drives the pointer, keyboard and windows inside that same per-monitor-DPI-aware pixel space, and desktop_sequence runs a whole batch of actions in one call — bounded by maxSequenceSteps (24 by default) — so a task costs one round trip and one frame instead of one of each per action.",
+      "category": "plugin",
+      "repo": "https://github.com/momasiku/dsh-pilot",
+      "install": "github:momasiku/dsh-pilot",
+      "tags": [
+        "momasiku/dsh-pilot"
+      ]
+    },
+    {
       "id": "Mombrane/dsh-subagent-monitor",
       "title": "Mombrane/dsh-subagent-monitor",
       "description": "Live subagent run monitor for the Web UI: a sidebar footer trigger plus a fixed top-right card panel showing each subagent of the current session in real time (running/elapsed, terminal outcomes, tree indent), with one-click jump into the child conversation and a return button, refresh-surviving and mobile-hidden by default.",
@@ -33284,6 +33328,17 @@
       ]
     },
     {
+      "id": "orphiczhou/dsh-region-probe",
+      "title": "orphiczhou/dsh-region-probe",
+      "description": "A read-only Cordis Inspect provider that lets an agent see the interface it is driving: outline() reports which UI regions the running shell actually rendered, with occupancy, geometry and current or past failure state; snapshot() returns one region's rendered node tree (tag, role, aria-label, own text, geometry, computed styles) addressed by slot key or CSS selector; failures() keeps a history of regions that failed to render and whether they recovered. Regions are addressed by the anchor the shell already writes for every slot, so it needs no region list and covers regions added later or contributed by other plugins. No UI, no tools, no dependencies, no network access.",
+      "category": "client",
+      "repo": "https://github.com/orphiczhou/dsh-region-probe",
+      "install": "github:orphiczhou/dsh-region-probe",
+      "tags": [
+        "orphiczhou/dsh-region-probe"
+      ]
+    },
+    {
       "id": "orphiczhou/dsh-session-tree",
       "title": "orphiczhou/dsh-session-tree",
       "description": "Replaces the left sidebar session list with a tree of every session and its nested subagent descendants, with click-through to each conversation's multi-turn history and a tree_send tool for messaging any continuable session anywhere in the tree.",
@@ -34964,6 +35019,17 @@
       "install": "github:polohot/dsh-adrian-inject-context",
       "tags": [
         "polohot/dsh-adrian-inject-context"
+      ]
+    },
+    {
+      "id": "pomelo-ccc/dsh-pi-composer",
+      "title": "pomelo-ccc/dsh-pi-composer",
+      "description": "Swaps the composer's model control for a PI-Desktop style picker: a two-pane menu with search and provider grouping, a reasoning-effort slider, ArrowUp/ArrowDown prompt-history recall, and a prompt-rewrite button with undo.",
+      "category": "client",
+      "repo": "https://github.com/pomelo-ccc/dsh-pi-composer",
+      "install": "github:pomelo-ccc/dsh-pi-composer",
+      "tags": [
+        "pomelo-ccc/dsh-pi-composer"
       ]
     },
     {
@@ -40722,7 +40788,7 @@
     {
       "id": "tabilet/tabilet-skills",
       "title": "tabilet/tabilet-skills",
-      "description": "Shared engineering skills, a read-only memory-bank dashboard with SQLite audit guidance, and workflow request previews for DSH.",
+      "description": "Shared engineering skills, a read-only memory-bank dashboard with stages and SQLite audit browsing, and workflow request previews for DSH.",
       "category": "plugin",
       "repo": "https://github.com/tabilet/tabilet-skills",
       "install": "github:tabilet/tabilet-skills",
@@ -43287,6 +43353,17 @@
       "install": "github:vitas/dsh-model-pricing",
       "tags": [
         "vitas/dsh-model-pricing"
+      ]
+    },
+    {
+      "id": "vitas/dsh-ocr-free",
+      "title": "vitas/dsh-ocr-free",
+      "description": "Local OCR using Apple Vision on macOS: text from screenshots, photos, and scans, with no install, no network and no API key.",
+      "category": "plugin",
+      "repo": "https://github.com/vitas/dsh-ocr-free",
+      "install": "github:vitas/dsh-ocr-free",
+      "tags": [
+        "vitas/dsh-ocr-free"
       ]
     },
     {
@@ -49342,7 +49419,7 @@
     {
       "id": "Yu-tao-Li/dsh-read-image-view",
       "title": "Yu-tao-Li/dsh-read-image-view",
-      "description": "Displays the images read in the conversation (read_image results) in the DSH Web GUI: a Read image row with a default-expanded message-style image card over a PS-style transparency checkerboard, merged read-N-images rows with side-by-side frames for multi-image requests, and an in-page full-resolution lightbox (zoom buttons, mouse wheel, 1:1 original size).",
+      "description": "Display read_image results in DSH Web and Desktop: complete previews, grouped multi-image galleries, transparency checkerboards, keyboard and touch zoom, and session-authorized loading. Verified with DSH Desktop 0.11.1 / Harness 0.2.0-rc.2.",
       "category": "client",
       "repo": "https://github.com/Yu-tao-Li/dsh-read-image-view",
       "install": "github:Yu-tao-Li/dsh-read-image-view",
@@ -49483,6 +49560,28 @@
       ]
     },
     {
+      "id": "yuehancn/dsh-tool-archive",
+      "title": "yuehancn/dsh-tool-archive",
+      "description": "Pack a directory into a deterministic tar, read an archive's contents without extracting it, unpack while refusing every member that could reach outside the destination, and verify what came out against what went in by SHA-256. No external dependency — the tar format is written and read in this plugin. Extraction is deliberately more permissive on reading than on writing, because a reader's job is to report what an archive says, while a writer must never emit what it cannot read back. A tar has no central index, so the walk tracks whether it reached the end-of-archive marker: without that, a half-file checksums fine and reads as complete.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-archive",
+      "install": "github:yuehancn/dsh-tool-archive",
+      "tags": [
+        "yuehancn/dsh-tool-archive"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-browser",
+      "title": "yuehancn/dsh-tool-browser",
+      "description": "Open a page, wait for it the way it actually needs, extract the readable article, and take a screenshot. Playwright is optional: when it is absent the tools fall back to a static fetch and say so in the result, because a page whose JavaScript never ran means something different from one that rendered. Content is chosen by scoring candidate subtrees on prose density rather than on tag names, so a container loses to the article inside it instead of winning by containing more of the document.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-browser",
+      "install": "github:yuehancn/dsh-tool-browser",
+      "tags": [
+        "yuehancn/dsh-tool-browser"
+      ]
+    },
+    {
       "id": "yuehancn/dsh-tool-comfyui",
       "title": "yuehancn/dsh-tool-comfyui",
       "description": "Generate images from chat by calling a fleet of local or LAN ComfyUI workers, with workflow templates, worker health checks and queue control.",
@@ -49491,6 +49590,17 @@
       "install": "github:yuehancn/dsh-tool-comfyui",
       "tags": [
         "yuehancn/dsh-tool-comfyui"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-epub",
+      "title": "yuehancn/dsh-tool-epub",
+      "description": "Read, build and take apart EPUB 3 books with no external dependency — the ZIP reader/writer and the XML scanner are both built in. Inspect metadata, reading order and TOC for structural problems, assemble a book from chapters, or split one back into per-chapter HTML.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-epub",
+      "install": "github:yuehancn/dsh-tool-epub",
+      "tags": [
+        "yuehancn/dsh-tool-epub"
       ]
     },
     {
@@ -49527,6 +49637,28 @@
       ]
     },
     {
+      "id": "yuehancn/dsh-tool-mining",
+      "title": "yuehancn/dsh-tool-mining",
+      "description": "Turn a GitHub repository's raw counts into a defensible judgement — contributor concentration and bus factor with single-author files, merge time reported as a median beside the mean so an outlier is visible rather than hidden, and an issue backlog with pull requests and drafts filtered out. Reads the public REST API with no SDK, and never claims a truncated page is the whole answer.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-mining",
+      "install": "github:yuehancn/dsh-tool-mining",
+      "tags": [
+        "yuehancn/dsh-tool-mining"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-notion",
+      "title": "yuehancn/dsh-tool-notion",
+      "description": "Convert Notion blocks and Markdown in both directions, with no API client and no external dependency. A Notion paragraph is an array of rich-text runs while Markdown says one string, so the two directions are a split and a merge rather than a pair of inverses — rich-text runs are cut at every annotation boundary one way and re-merged the other, with fences widened when the content already contains backticks. Reports every lossy step instead of swallowing it.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-notion",
+      "install": "github:yuehancn/dsh-tool-notion",
+      "tags": [
+        "yuehancn/dsh-tool-notion"
+      ]
+    },
+    {
       "id": "yuehancn/dsh-tool-ocr",
       "title": "yuehancn/dsh-tool-ocr",
       "description": "Extract text from an image or PDF, reading a born-digital text layer directly and falling through to a configured OCR engine for scans.",
@@ -49535,6 +49667,39 @@
       "install": "github:yuehancn/dsh-tool-ocr",
       "tags": [
         "yuehancn/dsh-tool-ocr"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-podcast",
+      "title": "yuehancn/dsh-tool-podcast",
+      "description": "Turn a raw recording into a published podcast with a local ffmpeg — detect chapter boundaries from silence, cut at those boundaries, normalise loudness to a broadcast target in two passes, and write an iTunes-compatible RSS feed whose enclosure byte lengths are measured from disk.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-podcast",
+      "install": "github:yuehancn/dsh-tool-podcast",
+      "tags": [
+        "yuehancn/dsh-tool-podcast"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-protobuf",
+      "title": "yuehancn/dsh-tool-protobuf",
+      "description": "Read, audit and diff Protocol Buffer definitions without installing protoc: a zero-dependency .proto parser exposing six tools (status, outline, describe, diff, audit, next_number). diff classifies every change as breaking, risky or additive and names the wire-format consequence; audit catches what protoc accepts but a reviewer should not — duplicated or illegal field numbers, reserved-range collisions, unresolved types, and unreserved gaps below the high-water mark.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-protobuf",
+      "install": "github:yuehancn/dsh-tool-protobuf",
+      "tags": [
+        "yuehancn/dsh-tool-protobuf"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-qrcode",
+      "title": "yuehancn/dsh-tool-qrcode",
+      "description": "Generate QR codes from a from-scratch ISO/IEC 18004 encoder with no external tools, plan symbol version and error-correction headroom before producing anything, and decode an existing symbol back to text.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-qrcode",
+      "install": "github:yuehancn/dsh-tool-qrcode",
+      "tags": [
+        "yuehancn/dsh-tool-qrcode"
       ]
     },
     {
