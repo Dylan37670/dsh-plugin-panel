@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-15T17:21:20.966Z",
-    "fetchedCount": 4742,
-    "count": 4758,
+    "generatedAt": "2026-10-15T22:18:18.700Z",
+    "fetchedCount": 4765,
+    "count": 4781,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -225,6 +225,17 @@
       "install": "github:1014029855/dsh-codevault",
       "tags": [
         "1014029855/dsh-codevault"
+      ]
+    },
+    {
+      "id": "1015677515/dsh-prompt-ErrorNotes-desk",
+      "title": "1015677515/dsh-prompt-ErrorNotes-desk",
+      "description": "Captures the agent's own self-reported mistakes into a categorised lesson library that is re-injected into the system prompt every turn (each captured draft is confirmed or edited by the user before it is recorded), and adds two conversation-header panels for editing the cross-conversation global prompt and a per-session prompt.",
+      "category": "plugin",
+      "repo": "https://github.com/1015677515/dsh-prompt-ErrorNotes-desk",
+      "install": "github:1015677515/dsh-prompt-ErrorNotes-desk",
+      "tags": [
+        "1015677515/dsh-prompt-errornotes-desk"
       ]
     },
     {
@@ -1801,6 +1812,17 @@
       ]
     },
     {
+      "id": "58catmiao/dsh-sciwork",
+      "title": "58catmiao/dsh-sciwork",
+      "description": "A research library panel and skill set for DSH: project folders, figures with registered provenance, drafts, references, data tables, journal profiles and submissions, plus writing, citation and Origin-plotting discipline for research agents.",
+      "category": "plugin",
+      "repo": "https://github.com/58catmiao/dsh-sciwork",
+      "install": "github:58catmiao/dsh-sciwork",
+      "tags": [
+        "58catmiao/dsh-sciwork"
+      ]
+    },
+    {
       "id": "598829314/oil-dsh-title",
       "title": "598829314/oil-dsh-title",
       "description": "Maintains stable emoji session titles in DeepSeek Harness after user prompts without adding naming messages.",
@@ -3121,6 +3143,17 @@
       ]
     },
     {
+      "id": "acdsh4869/dsh-aqua-theme",
+      "title": "acdsh4869/dsh-aqua-theme",
+      "description": "Aqua glassmorphism theme for the DSH Web UI, adapted to DSH v0.2.x and desktop v0.22.3+: the header, sidebar, composer, stats line and trajectory view become frosted glass panes over a live WebGL fluid board or an image/video wallpaper, with mica and compatibility layouts, adjustable blur, frost, hue and brightness, marine decorations (particle whale, fish, mesh, cursor glow), a one-click reset-to-defaults button, and a master switch whose off state restores the stock UI exactly; adapted from WYH66666666's original (0.1.x) and du-u-uck's 0.1.1-rc.2 port.",
+      "category": "client",
+      "repo": "https://github.com/acdsh4869/dsh-aqua-theme",
+      "install": "github:acdsh4869/dsh-aqua-theme",
+      "tags": [
+        "acdsh4869/dsh-aqua-theme"
+      ]
+    },
+    {
       "id": "acdsh4869/dsh-deepseek-web-relay",
       "title": "acdsh4869/dsh-deepseek-web-relay",
       "description": "Adds a native sidebar menu item in DSH that opens chat.deepseek.com in a standalone browser window with persistent login, and supports bidirectional text selection transfer between DSH and the web page.",
@@ -3591,6 +3624,17 @@
       "install": "github:Airmetro/dsh-update-checker",
       "tags": [
         "airmetro/dsh-update-checker"
+      ]
+    },
+    {
+      "id": "AirPineApplea/feiyu-memory",
+      "title": "AirPineApplea/feiyu-memory",
+      "description": "Cross-session persona and diary for DeepSeek Harness: a local gate decides whether a turn is worth remembering, then one extra model call turns it into a first-person diary entry plus an impression of the user, where every impression carries the specific moment that produced it. Later conversations inject about 2000 tokens of that as a self-memory block in three registers: a persona core, a section for judgements the model wrote itself, and the diary. There is a tool for the model to record a judgement in its own words, and a plain markdown hand-note file the human can write into which the plugin only ever reads. A sidebar panel lets you read, forget or export the archive, and forgetting demotes an entry rather than deleting it, so an old one still surfaces on a strong topical match. Local-only, secrets are stripped before anything is sent, and the archive is a plain folder you can read, edit or carry to another account. Zero runtime dependencies, no build step.",
+      "category": "plugin",
+      "repo": "https://github.com/AirPineApplea/feiyu-memory",
+      "install": "github:AirPineApplea/feiyu-memory",
+      "tags": [
+        "airpineapplea/feiyu-memory"
       ]
     },
     {
@@ -8124,6 +8168,17 @@
       ]
     },
     {
+      "id": "charliesbyte/dsh-workspace-activity",
+      "title": "charliesbyte/dsh-workspace-activity",
+      "description": "Shows a spinner on a sidebar workspace row while any of its sessions are running, and a short-lived finished mark after they stop.",
+      "category": "client",
+      "repo": "https://github.com/charliesbyte/dsh-workspace-activity",
+      "install": "github:charliesbyte/dsh-workspace-activity",
+      "tags": [
+        "charliesbyte/dsh-workspace-activity"
+      ]
+    },
+    {
       "id": "charrywhite/dsh-sticky-notes",
       "title": "charrywhite/dsh-sticky-notes",
       "description": "Draggable sticky notes with 9 skins, image notes, and agent-readable to-do lists for DeepSeek Harness.",
@@ -9163,6 +9218,17 @@
       "install": "github:codingayice/dsh-interview",
       "tags": [
         "codingayice/dsh-interview"
+      ]
+    },
+    {
+      "id": "COH2357/dsh-workspace-api-key",
+      "title": "COH2357/dsh-workspace-api-key",
+      "description": "Binds a separate DeepSeek API key to each workspace or session, warns when an effective key is stale or belongs to another provider, and never swaps a key on its own.",
+      "category": "plugin",
+      "repo": "https://github.com/COH2357/dsh-workspace-api-key",
+      "install": "github:COH2357/dsh-workspace-api-key",
+      "tags": [
+        "coh2357/dsh-workspace-api-key"
       ]
     },
     {
@@ -11060,6 +11126,17 @@
       ]
     },
     {
+      "id": "dirtywork22/dsh-client-ui-skin-bayern",
+      "title": "dirtywork22/dsh-client-ui-skin-bayern",
+      "description": "Bayern Munich skin for the dsh web GUI: home-red/away-white canvases, real match-photo backdrops for 19 first-team players plus drawn shirt, squad-wall, Allianz-Arena and plain backdrops, switchable player and accent colour.",
+      "category": "client",
+      "repo": "https://github.com/dirtywork22/dsh-client-ui-skin-bayern",
+      "install": "github:dirtywork22/dsh-client-ui-skin-bayern",
+      "tags": [
+        "dirtywork22/dsh-client-ui-skin-bayern"
+      ]
+    },
+    {
       "id": "LoserFox/distill",
       "title": "distill",
       "titleZh": "对话蒸馏",
@@ -11087,6 +11164,17 @@
       "install": "github:disyli/dsh-tool-call-stats",
       "tags": [
         "disyli/dsh-tool-call-stats"
+      ]
+    },
+    {
+      "id": "divineeagleblackhand/dsh-cost-receipt",
+      "title": "divineeagleblackhand/dsh-cost-receipt",
+      "description": "Shows what each assistant turn cost under every reply, priced from the token usage of that turn at the official peak and off-peak CNY rates, together with the account and bonus balances; when a turn cannot be priced it states the reason instead of guessing.",
+      "category": "plugin",
+      "repo": "https://github.com/divineeagleblackhand/dsh-cost-receipt",
+      "install": "github:divineeagleblackhand/dsh-cost-receipt",
+      "tags": [
+        "divineeagleblackhand/dsh-cost-receipt"
       ]
     },
     {
@@ -11164,6 +11252,17 @@
       "install": "github:DocJlm/dsh-arknights/tree/main/skins/pramanix-eyjafjalla",
       "tags": [
         "docjlm/dsh-arknights#pramanix-eyjafjalla"
+      ]
+    },
+    {
+      "id": "Domaki-co/dsh-message-forward",
+      "title": "Domaki-co/dsh-message-forward",
+      "description": "Cross-session message forwarding between DSH sessions: extract one model reply, a user message, or a multi-selected batch of messages and images from one session and deliver it into another, with silent send, draft fill, or send-and-jump delivery, plus prompt templates.",
+      "category": "plugin",
+      "repo": "https://github.com/Domaki-co/dsh-message-forward",
+      "install": "github:Domaki-co/dsh-message-forward",
+      "tags": [
+        "domaki-co/dsh-message-forward"
       ]
     },
     {
@@ -15563,6 +15662,17 @@
       ]
     },
     {
+      "id": "Galaxy-2001/Rhine-Lab-Codex-Theme/tree/main/dsh",
+      "title": "Galaxy-2001/Rhine-Lab-Codex-Theme#dsh",
+      "description": "Rhine Lab-inspired light and dark themes with animated backgrounds for DeepSeek Harness.",
+      "category": "client",
+      "repo": "https://github.com/Galaxy-2001/Rhine-Lab-Codex-Theme/tree/main/dsh",
+      "install": "github:Galaxy-2001/Rhine-Lab-Codex-Theme/tree/main/dsh",
+      "tags": [
+        "galaxy-2001/rhine-lab-codex-theme#dsh"
+      ]
+    },
+    {
       "id": "GanyuanRan/Aegis",
       "title": "GanyuanRan/Aegis",
       "description": "Software-engineering method pack for coding agents, with skills for baseline-first planning, systematic debugging, prompt hygiene, verification before completion, and repair/retirement tracking.",
@@ -17765,6 +17875,17 @@
       "install": "github:hccccc01333/dsh-excel-chat/tree/master/bundle",
       "tags": [
         "hccccc01333/dsh-excel-chat#bundle"
+      ]
+    },
+    {
+      "id": "HCGuo2000/hcguo-public/tree/main/plugins/amber-forge",
+      "title": "HCGuo2000/hcguo-public#amber-forge",
+      "description": "Amber CRT-style skin for DeepSeek Harness: overrides 14 theme tokens and 23 static palette entries, forces a monospace font stack everywhere outside KaTeX math, adds scanlines and a screen vignette, replaces the brand emblem with an inner SVG gear-and-skull mark whose corners are transparent, rewrites the new-session slogan, and raises the agent-preset selector width by 10%.",
+      "category": "client",
+      "repo": "https://github.com/HCGuo2000/hcguo-public/tree/main/plugins/amber-forge",
+      "install": "github:HCGuo2000/hcguo-public/tree/main/plugins/amber-forge",
+      "tags": [
+        "hcguo2000/hcguo-public#amber-forge"
       ]
     },
     {
@@ -23782,6 +23903,17 @@
       ]
     },
     {
+      "id": "kkwings/dsh-super-memory",
+      "title": "kkwings/dsh-super-memory",
+      "description": "Cross-compaction memory for a long session: on compaction it stores what is being dropped, and at question time it injects a few relevant passages (or nothing) so the model can recall what you decided before.",
+      "category": "plugin",
+      "repo": "https://github.com/kkwings/dsh-super-memory",
+      "install": "github:kkwings/dsh-super-memory",
+      "tags": [
+        "kkwings/dsh-super-memory"
+      ]
+    },
+    {
       "id": "klarkxy/dsh-plugin-autoevo",
       "title": "klarkxy/dsh-plugin-autoevo",
       "description": "Search-first capability workflow for DSH agents (v1.0.0): reuse local tools or review exact-source plugins before installation, adapt or create capabilities in managed source work, and use receipts that distinguish installed, loaded, activated, and verified states; version tools cover rollback, adoption, and upstream updates.",
@@ -26521,6 +26653,28 @@
       ]
     },
     {
+      "id": "liushQAQ/dsh-prompt-optimizer",
+      "title": "liushQAQ/dsh-prompt-optimizer",
+      "description": "Smart prompt optimization & dynamic thinking effort adaptation with composer capsule, DSH/custom models, undo/re-optimize, and native settings.",
+      "category": "client",
+      "repo": "https://github.com/liushQAQ/dsh-prompt-optimizer",
+      "install": "github:liushQAQ/dsh-prompt-optimizer",
+      "tags": [
+        "liushqaq/dsh-prompt-optimizer"
+      ]
+    },
+    {
+      "id": "liushQAQ/dsh-weixin-plus",
+      "title": "liushQAQ/dsh-weixin-plus",
+      "description": "WeChat bridge and native Web settings panel with QR scan login, live token health probe, and credential management.",
+      "category": "plugin",
+      "repo": "https://github.com/liushQAQ/dsh-weixin-plus",
+      "install": "github:liushQAQ/dsh-weixin-plus",
+      "tags": [
+        "liushqaq/dsh-weixin-plus"
+      ]
+    },
+    {
       "id": "liustack/modlens",
       "title": "liustack/modlens",
       "description": "Vision bridge for text-only models: paste an image, get structured JSON evidence (OCR, layout, semantics).",
@@ -26628,6 +26782,17 @@
       "install": "github:liyu34/dsh-wsl-tray",
       "tags": [
         "liyu34/dsh-wsl-tray"
+      ]
+    },
+    {
+      "id": "liyy996/dsh-theme-windowsxp",
+      "title": "liyy996/dsh-theme-windowsxp",
+      "description": "Windows XP (Luna) skin for the DSH web GUI: beige Luna panels, gradient buttons, #7F9DB9 input fields, rounded blue scrollbars and a CSS-drawn Bliss-style desktop, plus a chime when a turn finishes and a different cue when the agent stops for approval.",
+      "category": "client",
+      "repo": "https://github.com/liyy996/dsh-theme-windowsxp",
+      "install": "github:liyy996/dsh-theme-windowsxp",
+      "tags": [
+        "liyy996/dsh-theme-windowsxp"
       ]
     },
     {
@@ -31447,6 +31612,17 @@
       ]
     },
     {
+      "id": "nanshang328/dsh-desk-card",
+      "title": "nanshang328/dsh-desk-card",
+      "description": "Windows-only plugin that shows permission requests, waiting questions, task errors and finished turns as native card windows, and can allow a permission request straight from the card.",
+      "category": "plugin",
+      "repo": "https://github.com/nanshang328/dsh-desk-card",
+      "install": "github:nanshang328/dsh-desk-card",
+      "tags": [
+        "nanshang328/dsh-desk-card"
+      ]
+    },
+    {
       "id": "naodeng/dsh-qa",
       "title": "naodeng/dsh-qa",
       "description": "QA project workbench for dsh: manage test projects, requirements, test cases, defects, milestones, reports and approval gates through a browser UI and 18 QA-domain tools.",
@@ -35748,6 +35924,17 @@
       ]
     },
     {
+      "id": "quberi/dsh-quberi",
+      "title": "quberi/dsh-quberi",
+      "description": "Search your Quberi team knowledge base from DeepSeek Harness over OAuth, and save notes to it.",
+      "category": "plugin",
+      "repo": "https://github.com/quberi/dsh-quberi",
+      "install": "github:quberi/dsh-quberi",
+      "tags": [
+        "quberi/dsh-quberi"
+      ]
+    },
+    {
       "id": "que3sui/dsh-darwin/tree/main/packages/forge",
       "title": "que3sui/dsh-darwin#forge",
       "description": "Self-evolution actuator: consumes problem tickets mined from session logs, synthesizes skill candidates (zero-code tiers by default) behind an eval gate with hold-out canaries, then promotes to project .dsh/skills with human confirm and deterministic rollback.",
@@ -39565,6 +39752,17 @@
       ]
     },
     {
+      "id": "Ssrs-Pro-Max/dsh-image-tiler",
+      "title": "Ssrs-Pro-Max/dsh-image-tiler",
+      "description": "Shows oversized images to the model at readable resolution instead of one downscaled copy: before admission, a large upload is split into as many tiles as the attachment store allows (an 8000x8000 screenshot becomes 20 tiles of 2000x1600), so small text survives. Replaces the local attachment store; adds no settings of its own.",
+      "category": "plugin",
+      "repo": "https://github.com/Ssrs-Pro-Max/dsh-image-tiler",
+      "install": "github:Ssrs-Pro-Max/dsh-image-tiler",
+      "tags": [
+        "ssrs-pro-max/dsh-image-tiler"
+      ]
+    },
+    {
       "id": "stakeswky/awesome-dsh",
       "title": "stakeswky/awesome-dsh",
       "description": "Turns a stated need into a plugin choice: an agent skill that queries a catalog of the whole `dsh-plugin` topic (2600+ repos, recrawled every 6 hours, Chinese descriptions from Workers AI) through a ranked search API, then hands back the matching `dsh plugin add` command.",
@@ -40247,6 +40445,17 @@
       ]
     },
     {
+      "id": "sunrulin123/dsh-community-web-ui",
+      "title": "sunrulin123/dsh-community-web-ui",
+      "description": "Standalone remote Web UI for DeepSeek Harness with mobile viewport, soft-keyboard and touch-target adaptations while leaving the native Desktop presentation unchanged.",
+      "category": "plugin",
+      "repo": "https://github.com/sunrulin123/dsh-community-web-ui",
+      "install": "github:sunrulin123/dsh-community-web-ui",
+      "tags": [
+        "sunrulin123/dsh-community-web-ui"
+      ]
+    },
+    {
       "id": "sunshaobei/dsh-file-mention",
       "title": "sunshaobei/dsh-file-mention",
       "description": "Codex-style @file/@folder mentions for the DSH web composer: workspace file/folder picker menu, plain-text colored mention tokens via the platform lexicon scan, and a nested-git-aware file index.",
@@ -40662,6 +40871,17 @@
       "install": "github:swiftlc/dsh-annotation",
       "tags": [
         "swiftlc/dsh-annotation"
+      ]
+    },
+    {
+      "id": "swyc520/dsh-plugin-model-whitelist",
+      "title": "swyc520/dsh-plugin-model-whitelist",
+      "description": "Tick which models appear in the DSH model selector, and fold provider groups in the settings panel.",
+      "category": "client",
+      "repo": "https://github.com/swyc520/dsh-plugin-model-whitelist",
+      "install": "github:swyc520/dsh-plugin-model-whitelist",
+      "tags": [
+        "swyc520/dsh-plugin-model-whitelist"
       ]
     },
     {
@@ -48042,6 +48262,17 @@
       ]
     },
     {
+      "id": "xueyingneko/qqbridge-plus",
+      "title": "xueyingneko/qqbridge-plus",
+      "description": "Diving-Fish score lookup for MaimaiDX inside QQ, plus qq-bridge chat extensions. #查分 renders a B50 with song artwork from an OAuth authorisation that any member can use, and works without the bridge running; the extensions cover balance and auto-shutdown, reasoning tier switching by billing peak hours, holiday-table coverage, start/shutdown greetings, and an in-QQ feature toggle.",
+      "category": "plugin",
+      "repo": "https://github.com/xueyingneko/qqbridge-plus",
+      "install": "github:xueyingneko/qqbridge-plus",
+      "tags": [
+        "xueyingneko/qqbridge-plus"
+      ]
+    },
+    {
       "id": "xulelenlp/dsh-web-artifact-designer",
       "title": "xulelenlp/dsh-web-artifact-designer",
       "description": "Design-artifact skill adapted from Anthropic canvas-design / web-artifacts-builder: turns a design brief into a self-contained HTML/SVG artifact (posters, infographics, landing pages, charts, component mockups) with a pre-delivery quality checklist and an anti-AI-look pattern list.",
@@ -49260,6 +49491,17 @@
       "install": "github:yoshino-xiao7/dsh-grok-provider",
       "tags": [
         "yoshino-xiao7/dsh-grok-provider"
+      ]
+    },
+    {
+      "id": "youbaiyun/dsh-browser-crossplatform/tree/main/packages/bridge",
+      "title": "youbaiyun/dsh-browser-crossplatform#bridge",
+      "description": "Desktop half of the dsh browser extension: mounts a token-authenticated WebSocket bridge on the dsh webserver and exposes the browser_* tools that let the model read the tab you are on as text and act on it, with image recognition off until the user enables it.",
+      "category": "plugin",
+      "repo": "https://github.com/youbaiyun/dsh-browser-crossplatform/tree/main/packages/bridge",
+      "install": "github:youbaiyun/dsh-browser-crossplatform/tree/main/packages/bridge",
+      "tags": [
+        "youbaiyun/dsh-browser-crossplatform#bridge"
       ]
     },
     {
@@ -52505,6 +52747,17 @@
       "install": "github:zoahdev/dsh-unplug",
       "tags": [
         "zoahdev/dsh-unplug"
+      ]
+    },
+    {
+      "id": "Zoragyx/dsh-phone-pair/tree/main/plugin/dsh-phone-pair-kit",
+      "title": "Zoragyx/dsh-phone-pair#dsh-phone-pair-kit",
+      "description": "Requires the phone app, not just this plugin: the phone half is a separate APK and must be installed first — download it from https://github.com/Zoragyx/dsh-phone-pair/releases — otherwise the computer side has nothing to pair with. This package is the computer half: it enables the upstream remote-web-ui pairing plugin with a Cloudflare quick tunnel and a fixed relay subdomain, so one scan keeps the phone connected from anywhere.",
+      "category": "plugin",
+      "repo": "https://github.com/Zoragyx/dsh-phone-pair/tree/main/plugin/dsh-phone-pair-kit",
+      "install": "github:Zoragyx/dsh-phone-pair/tree/main/plugin/dsh-phone-pair-kit",
+      "tags": [
+        "zoragyx/dsh-phone-pair#dsh-phone-pair-kit"
       ]
     },
     {
