@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-15T10:18:18.120Z",
-    "fetchedCount": 4671,
-    "count": 4687,
+    "generatedAt": "2026-10-15T16:18:43.211Z",
+    "fetchedCount": 4727,
+    "count": 4743,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -2480,6 +2480,17 @@
       "install": "github:988hj7tczd-oss/harness-github",
       "tags": [
         "988hj7tczd-oss/harness-github"
+      ]
+    },
+    {
+      "id": "9931666/dsh-plugin-crossfire",
+      "title": "9931666/dsh-plugin-crossfire",
+      "description": "Adversarial review for DeepSeek Harness: put one settled plan on the stand, send read-only red-team experts at it by dimension, then split their findings into single defects you endorse or reject one by one. It never rewrites the plan and never fixes code.",
+      "category": "plugin",
+      "repo": "https://github.com/9931666/dsh-plugin-crossfire",
+      "install": "github:9931666/dsh-plugin-crossfire",
+      "tags": [
+        "9931666/dsh-plugin-crossfire"
       ]
     },
     {
@@ -6254,6 +6265,39 @@
       ]
     },
     {
+      "id": "better-er/dsh-mobile-drawer",
+      "title": "better-er/dsh-mobile-drawer",
+      "description": "Below 1024px the sidebar collapses to a 44px floating square and expands into a 280px overlay drawer; picking a session collapses it again and the focus grab that would raise the soft keyboard after a session switch is suppressed.",
+      "category": "client",
+      "repo": "https://github.com/better-er/dsh-mobile-drawer",
+      "install": "github:better-er/dsh-mobile-drawer",
+      "tags": [
+        "better-er/dsh-mobile-drawer"
+      ]
+    },
+    {
+      "id": "better-er/dsh-notify-ding",
+      "title": "better-er/dsh-notify-ding",
+      "description": "Browser system notification, sounded by the OS notification itself, when a session needs a reply or a run goes idle; no page-focus check, at most one notification per session with a newer one replacing the old, and an idle notice reports how many background tasks are still running.",
+      "category": "plugin",
+      "repo": "https://github.com/better-er/dsh-notify-ding",
+      "install": "github:better-er/dsh-notify-ding",
+      "tags": [
+        "better-er/dsh-notify-ding"
+      ]
+    },
+    {
+      "id": "better-er/dsh-pause",
+      "title": "better-er/dsh-pause",
+      "description": "Pauses the agent right before it sends the next model request of a tool round while keeping the composer usable: a bare Enter or the resume button lets it continue, and text typed meanwhile is sent along as a steering message; the pause never interrupts an in-flight API call and the model does not notice it.",
+      "category": "plugin",
+      "repo": "https://github.com/better-er/dsh-pause",
+      "install": "github:better-er/dsh-pause",
+      "tags": [
+        "better-er/dsh-pause"
+      ]
+    },
+    {
       "id": "better-er/dsh-peak-block",
       "title": "better-er/dsh-peak-block",
       "description": "During Beijing working-day peak hours (default 09:00-12:00 and 14:00-18:00) it blocks official DeepSeek requests or reroutes them to a configured target provider; off-peak traffic flows to official as usual.",
@@ -6262,6 +6306,17 @@
       "install": "github:better-er/dsh-peak-block",
       "tags": [
         "better-er/dsh-peak-block"
+      ]
+    },
+    {
+      "id": "better-er/dsh-remote-file-system",
+      "title": "better-er/dsh-remote-file-system",
+      "description": "Model-visible SSH file tools read_remote, write_remote and edit_remote: read a remote UTF-8 file with line-numbered paging, create a new remote file (an existing target is refused, there is no overwrite branch), and apply literal replacements with unique-match checking — all addressed through a single \"alias:path\" field whose alias comes from ~/.ssh/config.",
+      "category": "plugin",
+      "repo": "https://github.com/better-er/dsh-remote-file-system",
+      "install": "github:better-er/dsh-remote-file-system",
+      "tags": [
+        "better-er/dsh-remote-file-system"
       ]
     },
     {
@@ -6432,7 +6487,7 @@
     {
       "id": "biliye/dsh-voice-call",
       "title": "biliye/dsh-voice-call",
-      "description": "Voice call assistant for the DSH Web GUI: a draggable floating call ball, browser-side VAD that sends each utterance after a pause, FunASR HTTP or streaming speech recognition, MiniMax or OpenAI-compatible TTS replies, an optional wake-word mode with auto-sleep, and task dispatch to separate subagent sessions with progress, stop, and spoken completion reports.",
+      "description": "Voice call assistant for the DSH desktop app and the Web GUI (the same plugin, only the profile name differs): a draggable floating call ball, browser-side VAD that sends each utterance after a pause, speech recognition through the local SenseVoice model already downloaded by the official voice-input plugin (no second model), FunASR HTTP or streaming, or a cloud-compatible API, MiniMax / MiMo-V2.5-TTS (director mode and voice clone) / OpenAI-compatible TTS replies, an optional wake-word mode with auto-sleep, and task dispatch to separate sessions with progress, stop, and spoken completion reports.",
       "category": "plugin",
       "repo": "https://github.com/biliye/dsh-voice-call",
       "install": "github:biliye/dsh-voice-call",
@@ -7252,6 +7307,17 @@
       "install": "github:Buzzso/dsh-sev",
       "tags": [
         "buzzso/dsh-sev"
+      ]
+    },
+    {
+      "id": "bvbhu/dsh-quilt-compact",
+      "title": "bvbhu/dsh-quilt-compact",
+      "description": "Compaction backend that replaces the default compaction-basic: it summarizes the conversation with a configurable pool of low-cost models, sizes each chunk to the chosen model's context window, and merges all digests in one call, with per-route cooldown and session-model fallback.",
+      "category": "plugin",
+      "repo": "https://github.com/bvbhu/dsh-quilt-compact",
+      "install": "github:bvbhu/dsh-quilt-compact",
+      "tags": [
+        "bvbhu/dsh-quilt-compact"
       ]
     },
     {
@@ -8421,6 +8487,17 @@
       ]
     },
     {
+      "id": "chickmat/dsh-system-net",
+      "title": "chickmat/dsh-system-net",
+      "description": "Make DSH follow your system network settings: route through the OS proxy and trust its certificate store, so TLS-intercepting accelerators work without environment variables or a restart.",
+      "category": "plugin",
+      "repo": "https://github.com/chickmat/dsh-system-net",
+      "install": "github:chickmat/dsh-system-net",
+      "tags": [
+        "chickmat/dsh-system-net"
+      ]
+    },
+    {
       "id": "chidaic/dsh-agent-notify",
       "title": "chidaic/dsh-agent-notify",
       "description": "Windows system-level notifications when the agent finishes a task or needs your input: task-done, question, approval and plan-review alerts via the browser Notification API, click-to-open the session, background-only mode, and a first-level settings page (Settings → 任务提示).",
@@ -9485,6 +9562,17 @@
       ]
     },
     {
+      "id": "cspyz/dsh-terse-mode",
+      "title": "cspyz/dsh-terse-mode",
+      "description": "Four adjustable terse levels plus independent switches for reasoning effort, web search and subagents, on the conversation header and in the Settings page. No output ceiling.",
+      "category": "client",
+      "repo": "https://github.com/cspyz/dsh-terse-mode",
+      "install": "github:cspyz/dsh-terse-mode",
+      "tags": [
+        "cspyz/dsh-terse-mode"
+      ]
+    },
+    {
       "id": "ct-jaryn/dsh-plugin-baizhi-agent-toolkit",
       "title": "ct-jaryn/dsh-plugin-baizhi-agent-toolkit",
       "description": "Optional DSH configuration bundle that connects the existing MCP client to hosted BaizhiCloud Agent Toolkit using a user-provided BAIZHI_API_KEY Bearer header; tool calls may incur charges.",
@@ -9779,6 +9867,17 @@
       "install": "github:d-ouyang/dsh-plugin-ascension",
       "tags": [
         "d-ouyang/dsh-plugin-ascension"
+      ]
+    },
+    {
+      "id": "d0ublecl1ck/dsh-hide-empty-workspace",
+      "title": "d0ublecl1ck/dsh-hide-empty-workspace",
+      "description": "Auto-hide a sidebar workspace the moment its last unarchived session is archived, and add a \"隐藏工作区\" entry to each workspace row's own \"...\" menu. The restore entry sits at the bottom of the sidebar. It only toggles display and never archives, deletes or rewrites a workspace.",
+      "category": "client",
+      "repo": "https://github.com/d0ublecl1ck/dsh-hide-empty-workspace",
+      "install": "github:d0ublecl1ck/dsh-hide-empty-workspace",
+      "tags": [
+        "d0ublecl1ck/dsh-hide-empty-workspace"
       ]
     },
     {
@@ -13044,6 +13143,17 @@
       ]
     },
     {
+      "id": "DynaMyhome/dsh-notes",
+      "title": "DynaMyhome/dsh-notes",
+      "description": "Notes workspace in the right sidebar: a notes tree beside a live-preview Markdown editor with tabs, split panes, outline and trash, over plain .md files plus a thin per-workspace index that agents organize through one `knowledge` tool.",
+      "category": "plugin",
+      "repo": "https://github.com/DynaMyhome/dsh-notes",
+      "install": "github:DynaMyhome/dsh-notes",
+      "tags": [
+        "dynamyhome/dsh-notes"
+      ]
+    },
+    {
       "id": "DZQJOKER/dsh-plugin-local-model",
       "title": "DZQJOKER/dsh-plugin-local-model",
       "description": "Local model plugin for DeepSeek Harness: manage GGUF models in settings, auto-launch llama.cpp on first message, and auto-unload after 5 minutes of idle time to free VRAM.",
@@ -14892,6 +15002,17 @@
       ]
     },
     {
+      "id": "Fnckerpoi/dsh-plugin-nexus-sdlc",
+      "title": "Fnckerpoi/dsh-plugin-nexus-sdlc",
+      "description": "Declares a spec-driven development agent preset with a Chinese persona and four static Claude Code/Codex delegation tools for planning, implementation, review and knowledge distillation; roles are prompt-guided, not an automatic state machine.",
+      "category": "plugin",
+      "repo": "https://github.com/Fnckerpoi/dsh-plugin-nexus-sdlc",
+      "install": "github:Fnckerpoi/dsh-plugin-nexus-sdlc",
+      "tags": [
+        "fnckerpoi/dsh-plugin-nexus-sdlc"
+      ]
+    },
+    {
       "id": "Fnckerpoi/dsh-plugin-sirchmunk",
       "title": "Fnckerpoi/dsh-plugin-sirchmunk",
       "description": "DSH settings section for managing a local Sirchmunk knowledge backend: graph inspection, cluster management, audit history, runtime metrics, and privacy controls.",
@@ -15252,6 +15373,17 @@
       "install": "github:FuncWei/dsh-wechat-mp-studio",
       "tags": [
         "funcwei/dsh-wechat-mp-studio"
+      ]
+    },
+    {
+      "id": "Funny1Potato/dsh-outsourcing-expert",
+      "title": "Funny1Potato/dsh-outsourcing-expert",
+      "description": "Agent presets whose leader does no work itself: every non-management tool call is denied at the harness boundary so the task has to go to a subagent, after a one-time lookup of the available subagent models and a per-task model choice; a second preset deliberately picks the model least suited to the task.",
+      "category": "plugin",
+      "repo": "https://github.com/Funny1Potato/dsh-outsourcing-expert",
+      "install": "github:Funny1Potato/dsh-outsourcing-expert",
+      "tags": [
+        "funny1potato/dsh-outsourcing-expert"
       ]
     },
     {
@@ -16569,6 +16701,28 @@
       ]
     },
     {
+      "id": "GrannyProgramming/dsh-dario-sidecar",
+      "title": "GrannyProgramming/dsh-dario-sidecar",
+      "description": "Harness-owned lifecycle for the dario proxy — starts it with your harness, readiness-gates it, and stops it when the harness stops, so subscription-backed (Claude/ChatGPT) model routes just work.",
+      "category": "plugin",
+      "repo": "https://github.com/GrannyProgramming/dsh-dario-sidecar",
+      "install": "github:GrannyProgramming/dsh-dario-sidecar",
+      "tags": [
+        "grannyprogramming/dsh-dario-sidecar"
+      ]
+    },
+    {
+      "id": "GreatArrow-ai/dsh-greatarrow",
+      "title": "GreatArrow-ai/dsh-greatarrow",
+      "description": "Connects dsh to the GreatArrow.ai MCP server over Streamable HTTP, so the agent can search and save workspace memories, tasks and decisions shared with your other AI clients; a config-only bundle that reads the token from great-arrow.token in the dsh home, never from the environment.",
+      "category": "plugin",
+      "repo": "https://github.com/GreatArrow-ai/dsh-greatarrow",
+      "install": "github:GreatArrow-ai/dsh-greatarrow",
+      "tags": [
+        "greatarrow-ai/dsh-greatarrow"
+      ]
+    },
+    {
       "id": "GreenLv/dsh-completion-guard",
       "title": "GreenLv/dsh-completion-guard",
       "description": "Keeps DSH agents from forgetting your requirements during long tasks. It saves important conditions and completion evidence locally, brings them back after context compaction or session resume, and stops partial work from being reported as the whole task done.",
@@ -16844,14 +16998,14 @@
       ]
     },
     {
-      "id": "H1Kariiiiiii/dsh-desktop-launcher2",
-      "title": "H1Kariiiiiii/dsh-desktop-launcher2",
-      "description": "One-click desktop launcher for DSH Web: creates a Windows .lnk with a WPF-style startup popup (progress + timeout), then opens the authenticated browser; plus a floating shutdown button that exits dsh gracefully via ctx.appExit.",
+      "id": "H1Kariiiiiii/dsh-icon-console",
+      "title": "H1Kariiiiiii/dsh-icon-console",
+      "description": "Icon console for the DSH desktop app: import one icon and apply it to the desktop and Start Menu shortcuts (immediately), the application window image and the system tray image (after a restart), with automatic backup, one-click restore, a named icon library, and restart/exit controls.",
       "category": "client",
-      "repo": "https://github.com/H1Kariiiiiii/dsh-desktop-launcher2",
-      "install": "github:H1Kariiiiiii/dsh-desktop-launcher2",
+      "repo": "https://github.com/H1Kariiiiiii/dsh-icon-console",
+      "install": "github:H1Kariiiiiii/dsh-icon-console",
       "tags": [
-        "h1kariiiiiii/dsh-desktop-launcher2"
+        "h1kariiiiiii/dsh-icon-console"
       ]
     },
     {
@@ -16910,6 +17064,39 @@
       ]
     },
     {
+      "id": "Han-1413141/dsh-autocompose",
+      "title": "Han-1413141/dsh-autocompose",
+      "description": "Find and compose DSH plugins from a task description, then open an independent chat environment or install the plan into the current profile.",
+      "category": "dev-resource",
+      "repo": "https://github.com/Han-1413141/dsh-autocompose",
+      "install": "github:Han-1413141/dsh-autocompose",
+      "tags": [
+        "han-1413141/dsh-autocompose"
+      ]
+    },
+    {
+      "id": "Han-1413141/dsh-codex-computer-use",
+      "title": "Han-1413141/dsh-codex-computer-use",
+      "description": "Let a DSH model inspect and operate Windows applications through an installed Codex Computer Use runtime, with per-session app approval.",
+      "category": "plugin",
+      "repo": "https://github.com/Han-1413141/dsh-codex-computer-use",
+      "install": "github:Han-1413141/dsh-codex-computer-use",
+      "tags": [
+        "han-1413141/dsh-codex-computer-use"
+      ]
+    },
+    {
+      "id": "Han-1413141/dsh-compat-guardian",
+      "title": "Han-1413141/dsh-compat-guardian",
+      "description": "Detect DSH plugin conflicts and loading failures, quarantine affected bundles and recover them, with offline startup rescue.",
+      "category": "plugin",
+      "repo": "https://github.com/Han-1413141/dsh-compat-guardian",
+      "install": "github:Han-1413141/dsh-compat-guardian",
+      "tags": [
+        "han-1413141/dsh-compat-guardian"
+      ]
+    },
+    {
       "id": "Han-1413141/dsh-cost-meter",
       "title": "Han-1413141/dsh-cost-meter",
       "description": "Per-session and daily API cost, budget with usage %, official balance, history dashboard, and one-click official price sync with peak/off-peak pricing.",
@@ -16918,6 +17105,17 @@
       "install": "github:Han-1413141/dsh-cost-meter",
       "tags": [
         "han-1413141/dsh-cost-meter"
+      ]
+    },
+    {
+      "id": "Han-1413141/dsh-pnpm-build-control",
+      "title": "Han-1413141/dsh-pnpm-build-control",
+      "description": "Control pnpm build-script approval across DSH profiles from Add Plugin, and repair same-Git-URL updates on DSH 0.2.0-rc.2.",
+      "category": "plugin",
+      "repo": "https://github.com/Han-1413141/dsh-pnpm-build-control",
+      "install": "github:Han-1413141/dsh-pnpm-build-control",
+      "tags": [
+        "han-1413141/dsh-pnpm-build-control"
       ]
     },
     {
@@ -16940,6 +17138,28 @@
       "install": "github:Han-1413141/dsh-ui-hub",
       "tags": [
         "han-1413141/dsh-ui-hub"
+      ]
+    },
+    {
+      "id": "Han-1413141/dsh-visual-edit",
+      "title": "Han-1413141/dsh-visual-edit",
+      "description": "Select elements, draw arrows or frame areas in DSH previews, send visual feedback to chat and compare before-and-after snapshots.",
+      "category": "plugin",
+      "repo": "https://github.com/Han-1413141/dsh-visual-edit",
+      "install": "github:Han-1413141/dsh-visual-edit",
+      "tags": [
+        "han-1413141/dsh-visual-edit"
+      ]
+    },
+    {
+      "id": "Han-1413141/dsh-wsl-native",
+      "title": "Han-1413141/dsh-wsl-native",
+      "description": "Use Windows and native Linux DSH sessions in one Windows window, with WSL environment switching and bidirectional system tools.",
+      "category": "plugin",
+      "repo": "https://github.com/Han-1413141/dsh-wsl-native",
+      "install": "github:Han-1413141/dsh-wsl-native",
+      "tags": [
+        "han-1413141/dsh-wsl-native"
       ]
     },
     {
@@ -18202,6 +18422,17 @@
       "install": "github:hmr-BH/dsh-round-rightclick",
       "tags": [
         "hmr-bh/dsh-round-rightclick"
+      ]
+    },
+    {
+      "id": "hmtxj/dsh-model-modality",
+      "title": "hmtxj/dsh-model-modality",
+      "description": "Per-model input type and thinking level declarations on the 模型 settings page — 输入类型 checkboxes on every provider card, and a 思考等级 field in the provider 编辑 dialog. Writes the official pi-ai input and reasoningEfforts fields.",
+      "category": "plugin",
+      "repo": "https://github.com/hmtxj/dsh-model-modality",
+      "install": "github:hmtxj/dsh-model-modality",
+      "tags": [
+        "hmtxj/dsh-model-modality"
       ]
     },
     {
@@ -24497,6 +24728,17 @@
       ]
     },
     {
+      "id": "lctfwyt/dsh-liuyao",
+      "title": "lctfwyt/dsh-liuyao",
+      "description": "Liuyao divination in one click — ask a question, cast the six-line hexagram, and let AI interpret it for you; every cast is saved locally.",
+      "category": "plugin",
+      "repo": "https://github.com/lctfwyt/dsh-liuyao",
+      "install": "github:lctfwyt/dsh-liuyao",
+      "tags": [
+        "lctfwyt/dsh-liuyao"
+      ]
+    },
+    {
       "id": "lcthe/dsh-hermes-memory",
       "title": "lcthe/dsh-hermes-memory",
       "description": "Scoped persistent memory for DSH: memory_save/search/replace/remove/list across global, user, project and failure scopes, DSH storage-domain persistence with secret and prompt-injection scanning, session-scope search, retention cleanup, and optional session-start injection; standing context via memory_pin/memory_pins/memory_unpin.",
@@ -25011,6 +25253,17 @@
       "install": "github:Leo-Ayh-Oday/dsh-orcana/tree/main/packages/dsh-bundle",
       "tags": [
         "leo-ayh-oday/dsh-orcana#dsh-bundle"
+      ]
+    },
+    {
+      "id": "Leo-Cjw/dsh-pharos",
+      "title": "Leo-Cjw/dsh-pharos",
+      "description": "Desktop notifications for DSH: a system toast, a per-kind chime and a tab-title marker when the agent needs you (approval, plan review, question) or a reply finishes in the background; errors, interrupts, usage limits and multi-agent workflow progress alert too. A host half adds SSE delivery, webhook push (WeCom/Feishu/DingTalk/generic), per-turn token/cache/TPS stats, plus three message-format presets (concise, detailed, custom); settings changes auto-save.",
+      "category": "plugin",
+      "repo": "https://github.com/Leo-Cjw/dsh-pharos",
+      "install": "github:Leo-Cjw/dsh-pharos",
+      "tags": [
+        "leo-cjw/dsh-pharos"
       ]
     },
     {
@@ -25847,6 +26100,17 @@
       "install": "github:linkingoscar/dsh-attachment-formats",
       "tags": [
         "linkingoscar/dsh-attachment-formats"
+      ]
+    },
+    {
+      "id": "linner1224/dsh-video-coursemap",
+      "title": "linner1224/dsh-video-coursemap",
+      "description": "Watches the foreground browser window, recognizes video courses, classifies them by subject, fetches Bilibili metadata/danmaku/comments, and generates Markdown + Mermaid knowledge maps and Word study manuals.",
+      "category": "plugin",
+      "repo": "https://github.com/linner1224/dsh-video-coursemap",
+      "install": "github:linner1224/dsh-video-coursemap",
+      "tags": [
+        "linner1224/dsh-video-coursemap"
       ]
     },
     {
@@ -26959,14 +27223,25 @@
       ]
     },
     {
-      "id": "LoveDoLove/Project-Memory-Agent/tree/main/dsh-plugin",
-      "title": "LoveDoLove/Project-Memory-Agent#dsh-plugin",
-      "description": "DSH bundle plugin that mounts 8 Project Memory skills, bootstraps memory architecture on first use, and registers codebase-memory bridge tools.",
+      "id": "LoveDoLove/dsh-codebase-memory-mcp",
+      "title": "LoveDoLove/dsh-codebase-memory-mcp",
+      "description": "Codebase Memory MCP bridge for DeepSeek Harness: six knowledge-graph code tools, auto-started background daemon with visualization Web UI, and bundled agent skill.",
       "category": "plugin",
-      "repo": "https://github.com/LoveDoLove/Project-Memory-Agent/tree/main/dsh-plugin",
-      "install": "github:LoveDoLove/Project-Memory-Agent/tree/main/dsh-plugin",
+      "repo": "https://github.com/LoveDoLove/dsh-codebase-memory-mcp",
+      "install": "github:LoveDoLove/dsh-codebase-memory-mcp",
       "tags": [
-        "lovedolove/project-memory-agent#dsh-plugin"
+        "lovedolove/dsh-codebase-memory-mcp"
+      ]
+    },
+    {
+      "id": "LoveDoLove/Veyra",
+      "title": "LoveDoLove/Veyra",
+      "description": "Engineering intelligence for coding agents — persistent, evidence-aware, project-isolated engineering memory with unified hybrid search (memory + RAG documentation) for DeepSeek Harness.",
+      "category": "plugin",
+      "repo": "https://github.com/LoveDoLove/Veyra",
+      "install": "github:LoveDoLove/Veyra",
+      "tags": [
+        "lovedolove/veyra"
       ]
     },
     {
@@ -28818,6 +29093,17 @@
       ]
     },
     {
+      "id": "mcf171/dsh-session-delete",
+      "title": "mcf171/dsh-session-delete",
+      "description": "Permanently delete a session from the session row menu — archives the id, removes the log directory and drops the row at once, with a Delete shortcut; built only on shipped extension points, and a session that was merely opened stays deletable.",
+      "category": "plugin",
+      "repo": "https://github.com/mcf171/dsh-session-delete",
+      "install": "github:mcf171/dsh-session-delete",
+      "tags": [
+        "mcf171/dsh-session-delete"
+      ]
+    },
+    {
       "id": "MDR-EX1000/dsh-desktop-kit",
       "title": "MDR-EX1000/dsh-desktop-kit",
       "description": "macOS desktop shell for the DSH web UI: a plugin plus a small Tauri/WKWebView window over the loopback web surface — real macOS fullscreen, single instance, external links delegated to the system browser, and browser-style zoom.",
@@ -30107,7 +30393,7 @@
     {
       "id": "moguiyu/dsh-tavily/tree/main/packages/dsh-tavily",
       "title": "moguiyu/dsh-tavily#packages/dsh-tavily",
-      "description": "Tavily search with multiple API keys, key rotation and failover, a usage gauge, and a settings card.",
+      "description": "Tavily search, extract, map and crawl tools with multi-key rotation, failover on HTTP 401/429/432/433, and a load-balance mode that caps in-flight requests per Tavily account, plus a key and usage card on the Plugins page. The built-in web_search is never replaced.",
       "category": "plugin",
       "repo": "https://github.com/moguiyu/dsh-tavily/tree/main/packages/dsh-tavily",
       "install": "github:moguiyu/dsh-tavily/tree/main/packages/dsh-tavily",
@@ -30567,6 +30853,17 @@
       ]
     },
     {
+      "id": "mrzturn/dsh-switchman",
+      "title": "mrzturn/dsh-switchman",
+      "description": "Turns the main model into a dispatcher: six pools (economy/mechanical/main/hard/vision/review) route each subtask to the right model, with ranking and per-route reasoning-effort pins. A context watermark (50k/90k/130k) nudges delegation early and, at the force level, forks a backup session, writes a handover doc, compacts, and continues without losing in-flight subagent work; /ctx-pause, /ctx-resume and /ctx-handover pause, resume or trigger the same machinery by hand. Optional Agent Teams mode adds persistent teammates and a shared task board; /vision lets text-only models handle images via the vision pool; tiered verification sends bigger diffs to a tester and an independent reviewer. Settings UI, READMEs and the conversation / code-comment / document language preferences all cover the same 11 languages (en, zh, zh-TW, ja, ko, de, es, fr, it, pt, ru); the plugin UI follows the DSH app locale unless forced otherwise. Bundles three skills: read-only MySQL/Redis verification, commit-message generation, and a requirements/design document convention.",
+      "category": "plugin",
+      "repo": "https://github.com/mrzturn/dsh-switchman",
+      "install": "github:mrzturn/dsh-switchman",
+      "tags": [
+        "mrzturn/dsh-switchman"
+      ]
+    },
+    {
       "id": "MS666666/dsh-archive-manager",
       "title": "MS666666/dsh-archive-manager",
       "description": "Archive manager for DSH Web: list archived sessions in the Settings page and delete them for real, including their log, archive marker, and projection cache.",
@@ -30630,6 +30927,17 @@
       "install": "github:MuAllen/dsh-gateway-wallet",
       "tags": [
         "muallen/dsh-gateway-wallet"
+      ]
+    },
+    {
+      "id": "MuFeng262/dsh-thinking-slider",
+      "title": "MuFeng262/dsh-thinking-slider",
+      "description": "Replaces the composer model selector with a \"model · reasoning level\" trigger that opens a card holding the model-switch entry and a gradient particle slider for changing reasoning effort, and shows the model name alone when a model reports no reasoning levels.",
+      "category": "client",
+      "repo": "https://github.com/MuFeng262/dsh-thinking-slider",
+      "install": "github:MuFeng262/dsh-thinking-slider",
+      "tags": [
+        "mufeng262/dsh-thinking-slider"
       ]
     },
     {
@@ -30828,6 +31136,17 @@
       "install": "github:MyRemme/dsh-computer-use-guard",
       "tags": [
         "myremme/dsh-computer-use-guard"
+      ]
+    },
+    {
+      "id": "Mzy123l/dsh-plugin-remote-access",
+      "title": "Mzy123l/dsh-plugin-remote-access",
+      "description": "Exposes the local DSH web GUI to one chosen CIDR range only (Tailscale by default) instead of binding 0.0.0.0: the proxy listens on addresses inside that range, rejects peers outside it, and admits clients by either a tokenised URL or a 4-12 character alphanumeric access code. Remote pages can be forced into a phone layout without changing the local UI, and the official appearance, font size, transcript view, code view and performance settings can be stored in the plugin config and re-applied on every remote page load.",
+      "category": "plugin",
+      "repo": "https://github.com/Mzy123l/dsh-plugin-remote-access",
+      "install": "github:Mzy123l/dsh-plugin-remote-access",
+      "tags": [
+        "mzy123l/dsh-plugin-remote-access"
       ]
     },
     {
@@ -31301,6 +31620,17 @@
       "install": "github:Neptune810/dsh-power-button",
       "tags": [
         "neptune810/dsh-power-button"
+      ]
+    },
+    {
+      "id": "Nethur-auro/dsh-multi-root-explorer",
+      "title": "Nethur-auro/dsh-multi-root-explorer",
+      "description": "Replaces the sidebar workspace region with a two-tab browser: several workspace roots stay registered side by side while conversations are filed under the real working directory of each session, with a read-only resource tree that previews files in the right sidebar. Hiding is per tab, display-only and fully reversible; a resource folder or file can be copied as a path or dragged into the composer as a native reference, and @ completion covers every registered root rather than the working directory alone.",
+      "category": "client",
+      "repo": "https://github.com/Nethur-auro/dsh-multi-root-explorer",
+      "install": "github:Nethur-auro/dsh-multi-root-explorer",
+      "tags": [
+        "nethur-auro/dsh-multi-root-explorer"
       ]
     },
     {
@@ -34362,6 +34692,17 @@
       ]
     },
     {
+      "id": "pk14742952-AD/dsh-host-rsi",
+      "title": "pk14742952-AD/dsh-host-rsi",
+      "description": "DSH host plugin for local and API LLMs: per-use continual self-improvement with counter-reason self-checks, critic escalation, inverted-index memory retrieval, coding-loop convergence steering, and a five-state delivery guard.",
+      "category": "plugin",
+      "repo": "https://github.com/pk14742952-AD/dsh-host-rsi",
+      "install": "github:pk14742952-AD/dsh-host-rsi",
+      "tags": [
+        "pk14742952-ad/dsh-host-rsi"
+      ]
+    },
+    {
       "id": "PKUfudawei/dsh-capability-menu",
       "title": "PKUfudawei/dsh-capability-menu",
       "description": "Prevents request context bloat in DeepSeek Harness: catalogs MCP tools and skills under ctx.capability, exposes them in exposed/progressive/blocked tiers, and invokes low-frequency ones on demand via meta_search/meta_invoke, with a visual settings tab.",
@@ -34601,6 +34942,17 @@
       "install": "github:PolinniZhong/dsh-session-workbench",
       "tags": [
         "polinnizhong/dsh-session-workbench"
+      ]
+    },
+    {
+      "id": "PolinniZhong/dsh-skill-intelligence",
+      "title": "PolinniZhong/dsh-skill-intelligence",
+      "description": "Read-only Skill inspector for DeepSeek Harness. It shows which Skills a conversation actually loaded — from observed loading evidence only — and which Skills the current environment can discover, and gives each Skill a detail page that keeps its declaration apart from its run: the body split into structure, declared workflow and progressive disclosure, the run logic read from local receipts, and the per-step evidence behind each claim. Evidence is never promoted into a conclusion — a step with no observed evidence is reported as such, not as executed or not executed — and the run's instruction hash is shown beside the current definition as match, mismatch or unavailable. It also reads the body, offers a Chinese reading version, and can clone a Skill into a local copy. It never writes back to the source Skill and never runs its scripts.",
+      "category": "skill",
+      "repo": "https://github.com/PolinniZhong/dsh-skill-intelligence",
+      "install": "github:PolinniZhong/dsh-skill-intelligence",
+      "tags": [
+        "polinnizhong/dsh-skill-intelligence"
       ]
     },
     {
@@ -35495,6 +35847,17 @@
       ]
     },
     {
+      "id": "QXingYShu/dsh-comfyui-image",
+      "title": "QXingYShu/dsh-comfyui-image",
+      "description": "Generate images from the agent on the user's own GPU by queueing a workflow on a local ComfyUI install over its HTTP API: Z-Image-Turbo for fast drafts and Qwen-Image-2.1 for final assets and legible in-image text. Registers comfyui_generate and comfyui_status plus a skill covering model selection and prompt craft, has no runtime dependencies, and starts ComfyUI headless when no server is listening.",
+      "category": "plugin",
+      "repo": "https://github.com/QXingYShu/dsh-comfyui-image",
+      "install": "github:QXingYShu/dsh-comfyui-image",
+      "tags": [
+        "qxingyshu/dsh-comfyui-image"
+      ]
+    },
+    {
       "id": "qys0012/dsh-hotspots",
       "title": "qys0012/dsh-hotspots",
       "description": "Real-time hot topics panel for the DSH web GUI: AI news and engineering news, each item with a distilled summary and the source link, shown from a sidebar entry with three views, keyword/source filters, read-state marking and hotkeys.",
@@ -36166,6 +36529,17 @@
       ]
     },
     {
+      "id": "ricardochen1996/dsh-browser-use",
+      "title": "ricardochen1996/dsh-browser-use",
+      "description": "Browser provider for DeepSeek Harness: hand it a web task — open a page, click, type, fill a form, read what is on it — and it drives a real browser step by step, seeing an indexed table of what can be done on the current page instead of raw HTML or screenshots. Each step is one bundled-Jev decision rather than a full model turn (1.1 s median per step versus 2.8–3.6 s for chat-model turns in the repo benchmark), and the main conversation receives only the conclusion, so its context does not grow with the page. Targets come from the page it just read and a changed page is re-read rather than clicked blind, and it runs in the browser that Session owns, leaving your everyday Chrome untouched unless you switch to attach mode.",
+      "category": "plugin",
+      "repo": "https://github.com/ricardochen1996/dsh-browser-use",
+      "install": "github:ricardochen1996/dsh-browser-use",
+      "tags": [
+        "ricardochen1996/dsh-browser-use"
+      ]
+    },
+    {
       "id": "rice-awa/dsh-lan-gateway",
       "title": "rice-awa/dsh-lan-gateway",
       "description": "Publishes the DSH Web GUI to LAN or internet with dsh kept on loopback. Every source must sign in for an HMAC session cookie unless passwordless LAN is opted into. Adds self-signed or custom TLS, a secureCookies override for plaintext-HTTP proxies, and a UUID shim for plain-HTTP origins.",
@@ -36449,6 +36823,17 @@
       "install": "github:ruanhaodong-tt/dsh-security-guard",
       "tags": [
         "ruanhaodong-tt/dsh-security-guard"
+      ]
+    },
+    {
+      "id": "ruanimal/dsh-bash-env",
+      "title": "ruanimal/dsh-bash-env",
+      "description": "Replaces the built-in bash executor so every command gets an environment resolved from its own working directory: configurable PATH prepends, Python venv activation and mise shims, with a dedicated section in the Web UI settings.",
+      "category": "plugin",
+      "repo": "https://github.com/ruanimal/dsh-bash-env",
+      "install": "github:ruanimal/dsh-bash-env",
+      "tags": [
+        "ruanimal/dsh-bash-env"
       ]
     },
     {
@@ -37593,6 +37978,28 @@
       "install": "github:SeverusZh/dsh-yolo-mode",
       "tags": [
         "severuszh/dsh-yolo-mode"
+      ]
+    },
+    {
+      "id": "sgzeng/pbfuzz/tree/master/packages/dsh-kanalyzer",
+      "title": "sgzeng/pbfuzz#dsh-kanalyzer",
+      "description": "LLVM static-analysis plugin that builds whole-program bitcode for C/C++ projects and runs kernel-analyzer (KAMain) reachability analysis on it, providing kanalyzer_* tools to the agent and a ctx.kanalyzer service to other plugins.",
+      "category": "plugin",
+      "repo": "https://github.com/sgzeng/pbfuzz/tree/master/packages/dsh-kanalyzer",
+      "install": "github:sgzeng/pbfuzz/tree/master/packages/dsh-kanalyzer",
+      "tags": [
+        "sgzeng/pbfuzz#dsh-kanalyzer"
+      ]
+    },
+    {
+      "id": "sgzeng/pbfuzz/tree/master/packages/dsh-pbfuzz",
+      "title": "sgzeng/pbfuzz#dsh-pbfuzz",
+      "description": "Directed fuzzing driven by an LLM agent: from a target repository and a bug (CVE description, patch, crash trace, or file:line), it runs a PLAN, IMPLEMENT, EXECUTE, REFLECT loop in which the model writes Python input generators, until an input triggers the campaign's stderr-pattern oracle or the campaign stops.",
+      "category": "plugin",
+      "repo": "https://github.com/sgzeng/pbfuzz/tree/master/packages/dsh-pbfuzz",
+      "install": "github:sgzeng/pbfuzz/tree/master/packages/dsh-pbfuzz",
+      "tags": [
+        "sgzeng/pbfuzz#dsh-pbfuzz"
       ]
     },
     {
@@ -39688,7 +40095,7 @@
     {
       "id": "sujalmandal/dsh-tab-plan-toggle",
       "title": "sujalmandal/dsh-tab-plan-toggle",
-      "description": "Toggles plan mode from the DSH Web composer with the Tab key, following the composer plan chip state and leaving the / and @ suggestion menus alone.",
+      "description": "Tab to toggle plan mode on/off.",
       "category": "client",
       "repo": "https://github.com/sujalmandal/dsh-tab-plan-toggle",
       "install": "github:sujalmandal/dsh-tab-plan-toggle",
@@ -40914,6 +41321,17 @@
       ]
     },
     {
+      "id": "The-latest-one/dsh-branch-workspace-folders",
+      "title": "The-latest-one/dsh-branch-workspace-folders",
+      "description": "Heap-allocated stack-safe fork tree with two-track indentation, title marquee, and physical cascade purge.",
+      "category": "client",
+      "repo": "https://github.com/The-latest-one/dsh-branch-workspace-folders",
+      "install": "github:The-latest-one/dsh-branch-workspace-folders",
+      "tags": [
+        "the-latest-one/dsh-branch-workspace-folders"
+      ]
+    },
+    {
       "id": "theBigGavin/marketingdashboard",
       "title": "theBigGavin/marketingdashboard",
       "description": "Zero-key market data MCP server (dsh bundle): 5 MCP tools for A-share/HK/US quotes, sector rankings, futures, money flow and 7x24 news, with a three-tier upstream fallback.",
@@ -41505,6 +41923,17 @@
       "install": "github:toddpan/dsh-xiaozhi",
       "tags": [
         "toddpan/dsh-xiaozhi"
+      ]
+    },
+    {
+      "id": "Tommy00748/dsh-self-evolution",
+      "title": "Tommy00748/dsh-self-evolution",
+      "description": "Bounded self-managed long-term memory (Hermes-style MEMORY.md / USER.md with hard character limits and a safety scan), a review that runs after every turn and writes plain-language notes or refines an existing skill instead of adding a near-duplicate, a curator that finds and surgically repairs skills the loader would silently discard, cross-session search over past messages, and a learning card above the composer that appears only when there is news and asks before it deletes or rewords a memory.",
+      "category": "plugin",
+      "repo": "https://github.com/Tommy00748/dsh-self-evolution",
+      "install": "github:Tommy00748/dsh-self-evolution",
+      "tags": [
+        "tommy00748/dsh-self-evolution"
       ]
     },
     {
@@ -42608,6 +43037,28 @@
       ]
     },
     {
+      "id": "Very12345/dsh-archive-delete",
+      "title": "Very12345/dsh-archive-delete",
+      "description": "Archived-session management with single and batch deletion, native workspace registry cleanup, and deferred file cleanup while the host holds session resources.",
+      "category": "plugin",
+      "repo": "https://github.com/Very12345/dsh-archive-delete",
+      "install": "github:Very12345/dsh-archive-delete",
+      "tags": [
+        "very12345/dsh-archive-delete"
+      ]
+    },
+    {
+      "id": "Very12345/dsh-bash-windows",
+      "title": "Very12345/dsh-bash-windows",
+      "description": "Windows settings switch that replaces PowerShell with Git Bash across the four built-in presets, including a persistent terminal in minimal mode.",
+      "category": "plugin",
+      "repo": "https://github.com/Very12345/dsh-bash-windows",
+      "install": "github:Very12345/dsh-bash-windows",
+      "tags": [
+        "very12345/dsh-bash-windows"
+      ]
+    },
+    {
       "id": "Very12345/dsh-computer-use-windows",
       "title": "Very12345/dsh-computer-use-windows",
       "description": "Windows desktop control with window-bound screenshots and accessibility state, text readback, DSH approvals, and activity overlays.",
@@ -42616,6 +43067,17 @@
       "install": "github:Very12345/dsh-computer-use-windows",
       "tags": [
         "very12345/dsh-computer-use-windows"
+      ]
+    },
+    {
+      "id": "Very12345/dsh-ssh-workspace",
+      "title": "Very12345/dsh-ssh-workspace",
+      "description": "SSH workspaces for Linux/macOS with SSH config import, remote folder selection, and file tools, Bash and persistent remote terminals following native DSH session permissions.",
+      "category": "plugin",
+      "repo": "https://github.com/Very12345/dsh-ssh-workspace",
+      "install": "github:Very12345/dsh-ssh-workspace",
+      "tags": [
+        "very12345/dsh-ssh-workspace"
       ]
     },
     {
@@ -44203,6 +44665,17 @@
       ]
     },
     {
+      "id": "whding110/dsh-dev-progress-memory",
+      "title": "whding110/dsh-dev-progress-memory",
+      "description": "Per-turn development progress memory: completed turns are classified into date-indexed Markdown files under doc/progress/ with a maintained INDEX.md, system-level bugs are kept in a cross-project SYSTEM_MEMORY.md and re-injected on error keywords, and a progress_read tool loads full documents on demand.",
+      "category": "plugin",
+      "repo": "https://github.com/whding110/dsh-dev-progress-memory",
+      "install": "github:whding110/dsh-dev-progress-memory",
+      "tags": [
+        "whding110/dsh-dev-progress-memory"
+      ]
+    },
+    {
       "id": "white-sand-grand/dsh-plugin-doctor",
       "title": "white-sand-grand/dsh-plugin-doctor",
       "description": "Community search, similarity analysis, and install/dedupe/build-it-yourself decisions for the dsh-plugin ecosystem.",
@@ -44676,6 +45149,17 @@
       ]
     },
     {
+      "id": "Witherwithwinter/DSH-Codinput",
+      "title": "Witherwithwinter/DSH-Codinput",
+      "description": "Replaces the chat composer with an editor-style input panel on CodeMirror 6: line numbers, edit + markdown-preview split, a floating window mode and a full-height sidebar tab — one input surface at a time. Drafts ride the official input machine; the official voice-input button is rendered when the host provides one, and the stats row and context meter read the same data as the official dock.",
+      "category": "client",
+      "repo": "https://github.com/Witherwithwinter/DSH-Codinput",
+      "install": "github:Witherwithwinter/DSH-Codinput",
+      "tags": [
+        "witherwithwinter/dsh-codinput"
+      ]
+    },
+    {
       "id": "wiyi/dsh-web-service-manager",
       "title": "wiyi/dsh-web-service-manager",
       "description": "Manage the DSH web service from a settings panel: status, version, restart, stop, and one-click updates.",
@@ -44772,6 +45256,17 @@
       "install": "github:wjt0321/dsh-git-proxy",
       "tags": [
         "wjt0321/dsh-git-proxy"
+      ]
+    },
+    {
+      "id": "wjvalue/dsh-mac-keep-awake",
+      "title": "wjvalue/dsh-mac-keep-awake",
+      "description": "macOS only: holds a PreventUserIdleSystemSleep assertion (caffeinate -i -w <host pid>) while any DSH session runs, and releases it when the last one stops, so a long turn is not cut off by idle sleep. The display may still turn off. It keeps holding through the maintenance phase, where Agent.status reports idle and a long manual /compact runs, via the compaction/start and compaction/end events. It reconciles against ctx.agents.list() every 60s, so a session already running when the plugin is hot-reloaded is picked up at once instead of at the next turn boundary. A failed hold retries with exponential backoff capped at 60s and never gives up; release escalates from SIGTERM to SIGKILL after 2s, and -w lets caffeinate exit by itself if the host dies. No browser half — configured through the profile patch. 51 tests, including two that read pmset -g assertions on real hardware.",
+      "category": "plugin",
+      "repo": "https://github.com/wjvalue/dsh-mac-keep-awake",
+      "install": "github:wjvalue/dsh-mac-keep-awake",
+      "tags": [
+        "wjvalue/dsh-mac-keep-awake"
       ]
     },
     {
@@ -46381,6 +46876,17 @@
       ]
     },
     {
+      "id": "Xian-JL/dsh-Xiao-theme",
+      "title": "Xian-JL/dsh-Xiao-theme",
+      "description": "Xiao character theme for DeepSeek Harness Web and Desktop with light and dark palettes, selectable illustrations, a draggable companion, session-state feedback, and optional official DeepSeek balance display.",
+      "category": "client",
+      "repo": "https://github.com/Xian-JL/dsh-Xiao-theme",
+      "install": "github:Xian-JL/dsh-Xiao-theme",
+      "tags": [
+        "xian-jl/dsh-xiao-theme"
+      ]
+    },
+    {
       "id": "XiangSu-ce/dsh-plugin-freecodego/tree/main/plugin/packages/freecodego/bundle-latest",
       "title": "XiangSu-ce/dsh-plugin-freecodego#bundle-latest",
       "description": "Unofficial FreeCodeGo for DeepSeek Harness: DeepSeek, Codex and Claude engines over one session and toolchain, with a 0-token free access channel for deepseek-v4.1-flash, deepseek-v4-pro, deepseek-v4-flash-free, glm-5.3-flash, grok-4.6, kimi-k3, nemotron-3-ultra-free, muse-spark-1.3, Qwen 3.8 Flash and mimo-v2.6-flash-free, plus a keyless private-key gateway.",
@@ -47129,6 +47635,17 @@
       ]
     },
     {
+      "id": "xkjxziochu/dsh-input-optimizer",
+      "title": "xkjxziochu/dsh-input-optimizer",
+      "description": "Rewrites the draft in the DSH composer into a clearer, more executable prompt through the harness's own LLM routes, showing an original/optimized comparison before you adopt it.",
+      "category": "client",
+      "repo": "https://github.com/xkjxziochu/dsh-input-optimizer",
+      "install": "github:xkjxziochu/dsh-input-optimizer",
+      "tags": [
+        "xkjxziochu/dsh-input-optimizer"
+      ]
+    },
+    {
       "id": "xlennart/dsh-auto-review-jev",
       "title": "xlennart/dsh-auto-review-jev",
       "description": "DeepSeek Harness approval guardian: a reviewer model decides permission requests before they reach you, with a System One decision-API backend (TypeSafe Jev, SiliconFlow, self-hosted Laya), a configurable low-confidence policy and an allow-rule whitelist.",
@@ -47742,6 +48259,17 @@
       "install": "github:yangdongzhen590/dsh-knj-workflow",
       "tags": [
         "yangdongzhen590/dsh-knj-workflow"
+      ]
+    },
+    {
+      "id": "Yangi-252410/dsh-import-repositories",
+      "title": "Yangi-252410/dsh-import-repositories",
+      "description": "Runs git in the Host process so push, pull and fetch work inside the agent sandbox; exposes 8 agent tools (status, diff, log, stage, commit, push, fetch, pull) and 11 slash commands including /git-status, /git-commit, /git-tag and /git-name-set.",
+      "category": "plugin",
+      "repo": "https://github.com/Yangi-252410/dsh-import-repositories",
+      "install": "github:Yangi-252410/dsh-import-repositories",
+      "tags": [
+        "yangi-252410/dsh-import-repositories"
       ]
     },
     {
@@ -48955,6 +49483,72 @@
       ]
     },
     {
+      "id": "yuehancn/dsh-tool-comfyui",
+      "title": "yuehancn/dsh-tool-comfyui",
+      "description": "Generate images from chat by calling a fleet of local or LAN ComfyUI workers, with workflow templates, worker health checks and queue control.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-comfyui",
+      "install": "github:yuehancn/dsh-tool-comfyui",
+      "tags": [
+        "yuehancn/dsh-tool-comfyui"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-gzh-publisher",
+      "title": "yuehancn/dsh-tool-gzh-publisher",
+      "description": "WeChat Official Account pipeline: validate a draft against a publish gate, then push it into the draft box.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-gzh-publisher",
+      "install": "github:yuehancn/dsh-tool-gzh-publisher",
+      "tags": [
+        "yuehancn/dsh-tool-gzh-publisher"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-invoice",
+      "title": "yuehancn/dsh-tool-invoice",
+      "description": "Pull invoice number, date, parties, tax IDs and the amount/tax/total triplet out of text, then verify that amount plus tax really equals the total and flag documents that do not reconcile.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-invoice",
+      "install": "github:yuehancn/dsh-tool-invoice",
+      "tags": [
+        "yuehancn/dsh-tool-invoice"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-media",
+      "title": "yuehancn/dsh-tool-media",
+      "description": "Drive a local ffmpeg as six structured tools: probe a file's streams, transcode or trim it, pull evenly-spaced frames or the audio track, and compress video to a byte budget with two-pass encoding.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-media",
+      "install": "github:yuehancn/dsh-tool-media",
+      "tags": [
+        "yuehancn/dsh-tool-media"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-ocr",
+      "title": "yuehancn/dsh-tool-ocr",
+      "description": "Extract text from an image or PDF, reading a born-digital text layer directly and falling through to a configured OCR engine for scans.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-ocr",
+      "install": "github:yuehancn/dsh-tool-ocr",
+      "tags": [
+        "yuehancn/dsh-tool-ocr"
+      ]
+    },
+    {
+      "id": "yuehancn/dsh-tool-subtitle",
+      "title": "yuehancn/dsh-tool-subtitle",
+      "description": "Read, write, convert and retime a subtitle track across SRT, WebVTT and ASS, audit it for over-long or unreadable cues, and transcribe audio through a configured speech recogniser.",
+      "category": "plugin",
+      "repo": "https://github.com/yuehancn/dsh-tool-subtitle",
+      "install": "github:yuehancn/dsh-tool-subtitle",
+      "tags": [
+        "yuehancn/dsh-tool-subtitle"
+      ]
+    },
+    {
       "id": "Yuer6327/NoLetMe",
       "title": "Yuer6327/NoLetMe",
       "description": "Real-time 'We need…' and 'Let me…' reasoning-trajectory keyword stats for the DeepSeek Harness web chat.",
@@ -49997,6 +50591,17 @@
       "install": "github:zenvertao/dsh-inline-comments",
       "tags": [
         "zenvertao/dsh-inline-comments"
+      ]
+    },
+    {
+      "id": "zepeng-jin/dsh-completion-notifier",
+      "title": "zepeng-jin/dsh-completion-notifier",
+      "description": "Native macOS completion notifications and user approval alerts with Settings UI for DeepSeek Harness.",
+      "category": "plugin",
+      "repo": "https://github.com/zepeng-jin/dsh-completion-notifier",
+      "install": "github:zepeng-jin/dsh-completion-notifier",
+      "tags": [
+        "zepeng-jin/dsh-completion-notifier"
       ]
     },
     {
@@ -51218,6 +51823,17 @@
       "install": "github:zizhongfeiyang/dsh-settings-drawer",
       "tags": [
         "zizhongfeiyang/dsh-settings-drawer"
+      ]
+    },
+    {
+      "id": "zjhaaa042-cloud/dsh-mobile-notify",
+      "title": "zjhaaa042-cloud/dsh-mobile-notify",
+      "description": "Mobile push when a DSH task goes idle, over 10 channels: ntfy, Bark, DingTalk, WeCom, Feishu, ServerChan, PushPlus, Telegram, Qmsg and generic webhooks. The message carries the session, workspace, elapsed time, turn number and a reply excerpt, and it runs host-side rather than in the browser page.",
+      "category": "plugin",
+      "repo": "https://github.com/zjhaaa042-cloud/dsh-mobile-notify",
+      "install": "github:zjhaaa042-cloud/dsh-mobile-notify",
+      "tags": [
+        "zjhaaa042-cloud/dsh-mobile-notify"
       ]
     },
     {
