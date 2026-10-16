@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-16T04:59:33.095Z",
-    "fetchedCount": 4765,
-    "count": 4781,
+    "generatedAt": "2026-10-16T10:18:13.545Z",
+    "fetchedCount": 4782,
+    "count": 4798,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -1658,6 +1658,17 @@
       ]
     },
     {
+      "id": "3ChatAI-NCT/3chatai-deepseek-harness-plugin",
+      "title": "3ChatAI-NCT/3chatai-deepseek-harness-plugin",
+      "description": "Connect DeepSeek Harness to 3Chat via OAuth for customer and conversation search, context retrieval, confirmed messaging, and batch-send tracking.",
+      "category": "plugin",
+      "repo": "https://github.com/3ChatAI-NCT/3chatai-deepseek-harness-plugin",
+      "install": "github:3ChatAI-NCT/3chatai-deepseek-harness-plugin",
+      "tags": [
+        "3chatai-nct/3chatai-deepseek-harness-plugin"
+      ]
+    },
+    {
       "id": "439436269-ctrl/dsh-pinned-sessions",
       "title": "439436269-ctrl/dsh-pinned-sessions",
       "description": "A pinned-sessions group in the sidebar, above the workspace list: every pinned session across all workspaces in one collapsible, searchable list, with click-to-open and a hover-revealed unpin button.",
@@ -1666,6 +1677,17 @@
       "install": "github:439436269-ctrl/dsh-pinned-sessions",
       "tags": [
         "439436269-ctrl/dsh-pinned-sessions"
+      ]
+    },
+    {
+      "id": "439436269-ctrl/dsh-session-path",
+      "title": "439436269-ctrl/dsh-session-path",
+      "description": "Copies a session log path (or a paste-ready handoff block) and turns the multi-frame zstd log into a readable file another session can continue from.",
+      "category": "plugin",
+      "repo": "https://github.com/439436269-ctrl/dsh-session-path",
+      "install": "github:439436269-ctrl/dsh-session-path",
+      "tags": [
+        "439436269-ctrl/dsh-session-path"
       ]
     },
     {
@@ -3429,6 +3451,17 @@
       ]
     },
     {
+      "id": "agi321/dsh-temp-chat",
+      "title": "agi321/dsh-temp-chat",
+      "description": "Runs /single-turn and /multi-turn answers in isolated sub-agents so results stay in the current chat and never enter the main model context.",
+      "category": "plugin",
+      "repo": "https://github.com/agi321/dsh-temp-chat",
+      "install": "github:agi321/dsh-temp-chat",
+      "tags": [
+        "agi321/dsh-temp-chat"
+      ]
+    },
+    {
       "id": "AHIOSUZ/dsh-workspace-tools",
       "title": "AHIOSUZ/dsh-workspace-tools",
       "description": "Applies per-workspace default Agent and permission presets to new root sessions automatically (Settings - Workspace defaults), using only official extension points.",
@@ -5090,6 +5123,17 @@
       ]
     },
     {
+      "id": "arnen7000/DSH-Workbuddy-WebSearch",
+      "title": "arnen7000/DSH-Workbuddy-WebSearch",
+      "description": "Makes the WorkBuddy desktop app's web search the dsh web_search provider, reusing the app's existing sign-in with no extra configuration.",
+      "category": "plugin",
+      "repo": "https://github.com/arnen7000/DSH-Workbuddy-WebSearch",
+      "install": "github:arnen7000/DSH-Workbuddy-WebSearch",
+      "tags": [
+        "arnen7000/dsh-workbuddy-websearch"
+      ]
+    },
+    {
       "id": "arrow949/dsh-turn-approval",
       "title": "arrow949/dsh-turn-approval",
       "description": "Turn-scoped “Allow for this task” approvals: automatically allow matching `danger-full-access` escalations only for the current task, then expire.",
@@ -6724,6 +6768,17 @@
       "install": "github:bitxeno/dsh-github-picker",
       "tags": [
         "bitxeno/dsh-github-picker"
+      ]
+    },
+    {
+      "id": "bjzkhy/dsh-multiplatform-balance",
+      "title": "bjzkhy/dsh-multiplatform-balance",
+      "description": "Agent skill and tool for querying multi-platform model account balances: DeepSeek, Doubao / Volcengine, Qwen / Alibaba Cloud, Hunyuan / Tencent Cloud, and custom HTTP endpoints. Read-only, with 60s cache.",
+      "category": "skill",
+      "repo": "https://github.com/bjzkhy/dsh-multiplatform-balance",
+      "install": "github:bjzkhy/dsh-multiplatform-balance",
+      "tags": [
+        "bjzkhy/dsh-multiplatform-balance"
       ]
     },
     {
@@ -8366,6 +8421,17 @@
       ]
     },
     {
+      "id": "ChengX0721/dsh-client-ui-skin-alice-greyrat",
+      "title": "ChengX0721/dsh-client-ui-skin-alice-greyrat",
+      "description": "A pale rose-and-gold Mushoku Tensei skin for the DSH web GUI: an arcane sigil and two full-body Eris figures behind the conversation, a young Eris standee and gilt plugin glyphs in the sidebar, and its own settings card.",
+      "category": "client",
+      "repo": "https://github.com/ChengX0721/dsh-client-ui-skin-alice-greyrat",
+      "install": "github:ChengX0721/dsh-client-ui-skin-alice-greyrat",
+      "tags": [
+        "chengx0721/dsh-client-ui-skin-alice-greyrat"
+      ]
+    },
+    {
       "id": "ChengxiuCDP/dsh-plugin-advisor",
       "title": "ChengxiuCDP/dsh-plugin-advisor",
       "description": "Quality-aware in-agent plugin discovery: a find_dsh_plugins tool that ranks the whole dsh-plugin topic through a daily quality-scored index (installable manifest, curated listing, license, activity) merged with a live gh search — zero LLM API cost, risk flags and exact install commands in every result.",
@@ -8962,7 +9028,7 @@
     {
       "id": "ciskonc/dsh-context-imports",
       "title": "ciskonc/dsh-context-imports",
-      "description": "Reads the files that AGENTS.md references with @path imports and injects their content into model context at session start, with byte budgets, compaction re-seeding and a six-language settings card.",
+      "description": "Reads the files that AGENTS.md references with @path imports and injects their content into model context at session start, with byte budgets, compaction re-seeding and a six-language settings card. v0.2.3 targets DSH 0.1.7+ (hardened for 0.2.0-rc.2+); use 0.1.x on DSH 0.1.5.",
       "category": "plugin",
       "repo": "https://github.com/ciskonc/dsh-context-imports",
       "install": "github:ciskonc/dsh-context-imports",
@@ -10587,6 +10653,28 @@
       ]
     },
     {
+      "id": "DeepseekDays/dsh-ofm-model-manager",
+      "title": "DeepseekDays/dsh-ofm-model-manager",
+      "description": "Per-model enable/disable and renaming for every provider in DeepSeek Harness: a panel at the bottom of Settings - Models with a search box, status chips with counts, a provider filter, collapsible provider groups with group-level switches, and batch actions scoped to the current view. Disabled models leave the model picker and custom names replace the built-in ones. Preferences persist in the profile and apply immediately, without reloading the page or restarting DSH.",
+      "category": "plugin",
+      "repo": "https://github.com/DeepseekDays/dsh-ofm-model-manager",
+      "install": "github:DeepseekDays/dsh-ofm-model-manager",
+      "tags": [
+        "deepseekdays/dsh-ofm-model-manager"
+      ]
+    },
+    {
+      "id": "DeepseekDays/dsh-provider-toggle",
+      "title": "DeepseekDays/dsh-provider-toggle",
+      "description": "Adds a one-click switch to every provider row in Settings - Models: turn a provider off and it leaves the model picker, turn it back on and it returns. It works by wrapping the model catalog call, so it affects the catalog and the picker only, never routing, keys or provider config; existing sessions that already use such a model keep working.",
+      "category": "plugin",
+      "repo": "https://github.com/DeepseekDays/dsh-provider-toggle",
+      "install": "github:DeepseekDays/dsh-provider-toggle",
+      "tags": [
+        "deepseekdays/dsh-provider-toggle"
+      ]
+    },
+    {
       "id": "DeepseekHarnessPlugins/Notification",
       "title": "DeepseekHarnessPlugins/Notification",
       "description": "Task-completion notifications: desktop alerts via macOS Notification Center and Windows Toast, plus mobile push through Bark, ntfy, ServerChan or any webhook when an agent run goes idle, errors or blocks.",
@@ -10606,6 +10694,39 @@
       "install": "github:wangzhuoyuan229-source/DeepSeekLauncher",
       "tags": [
         "deepseeklauncher"
+      ]
+    },
+    {
+      "id": "deepsleepAquarium/dsh-whale-post/tree/main/packages/bus",
+      "title": "deepsleepAquarium/dsh-whale-post#bus",
+      "description": "File-backed post office between DeepSeek Harness sessions: every letter is sealed with an HMAC and a body digest, recipients are resolved through a roster interface, and delivery is offline-first, so an undeliverable letter waits in the mailbox instead of being lost.",
+      "category": "plugin",
+      "repo": "https://github.com/deepsleepAquarium/dsh-whale-post/tree/main/packages/bus",
+      "install": "github:deepsleepAquarium/dsh-whale-post/tree/main/packages/bus",
+      "tags": [
+        "deepsleepaquarium/dsh-whale-post#bus"
+      ]
+    },
+    {
+      "id": "deepsleepAquarium/dsh-whale-post/tree/main/packages/gate",
+      "title": "deepsleepAquarium/dsh-whale-post#gate",
+      "description": "Daily sending quotas and quiet hours for agent mailboxes: letters are counted in named buckets that each carry a per-day limit, the day boundary is configurable, and a quiet window tells the core to hold online letters rather than deliver them.",
+      "category": "plugin",
+      "repo": "https://github.com/deepsleepAquarium/dsh-whale-post/tree/main/packages/gate",
+      "install": "github:deepsleepAquarium/dsh-whale-post/tree/main/packages/gate",
+      "tags": [
+        "deepsleepaquarium/dsh-whale-post#gate"
+      ]
+    },
+    {
+      "id": "deepsleepAquarium/dsh-whale-post/tree/main/packages/verify",
+      "title": "deepsleepAquarium/dsh-whale-post#verify",
+      "description": "Verifies letters signed by other agents: a canonical field order, digest and HMAC checks, and fail-closed handling of missing or unregistered fields. Off by default; when enabled, a letter that fails any check is refused rather than delivered.",
+      "category": "plugin",
+      "repo": "https://github.com/deepsleepAquarium/dsh-whale-post/tree/main/packages/verify",
+      "install": "github:deepsleepAquarium/dsh-whale-post/tree/main/packages/verify",
+      "tags": [
+        "deepsleepaquarium/dsh-whale-post#verify"
       ]
     },
     {
@@ -20196,6 +20317,17 @@
       ]
     },
     {
+      "id": "irisblackwood/focus-guard/tree/main/packages/core",
+      "title": "irisblackwood/focus-guard#core",
+      "description": "Blocks AI coding agents from editing files without evidence and from running unapproved high-risk commands, and tells quoted dangerous strings apart from commands actually being executed.",
+      "category": "plugin",
+      "repo": "https://github.com/irisblackwood/focus-guard/tree/main/packages/core",
+      "install": "github:irisblackwood/focus-guard/tree/main/packages/core",
+      "tags": [
+        "irisblackwood/focus-guard#core"
+      ]
+    },
+    {
       "id": "Isanti2016/dsh-console",
       "title": "Isanti2016/dsh-console",
       "description": "Slash-command console for dsh: /web start|stop|restart|status, /tunnel SSH forward management, one-shot /ask, and a console TUI launcher.",
@@ -21051,6 +21183,17 @@
       "install": "github:jerryqx/dsh-ximalaya",
       "tags": [
         "jerryqx/dsh-ximalaya"
+      ]
+    },
+    {
+      "id": "jerryxff26-alt/dsh-delivery-board",
+      "title": "jerryxff26-alt/dsh-delivery-board",
+      "description": "Delivery board for client-project teams: stage pipeline (default or governance template, or custom stages), cards with owner, due date, acceptance criteria and DoD, an automatic handoff audit log when a card changes stage, a progress/risk/blocker/decision log, a weekly Markdown client report, a loopback-only drag-and-drop board and a read-only HTML export; state lives in delivery.json in the workspace (11 delivery_* tools plus a /delivery command).",
+      "category": "plugin",
+      "repo": "https://github.com/jerryxff26-alt/dsh-delivery-board",
+      "install": "github:jerryxff26-alt/dsh-delivery-board",
+      "tags": [
+        "jerryxff26-alt/dsh-delivery-board"
       ]
     },
     {
@@ -26939,6 +27082,17 @@
       ]
     },
     {
+      "id": "llafztq/dsh-video-tool",
+      "title": "llafztq/dsh-video-tool",
+      "description": "Video editing toolset for DSH: probe, trim, concat, audio handling, subtitle burn-in, transform, transcode and frame grabbing, powered by ffmpeg downloaded on first use.",
+      "category": "plugin",
+      "repo": "https://github.com/llafztq/dsh-video-tool",
+      "install": "github:llafztq/dsh-video-tool",
+      "tags": [
+        "llafztq/dsh-video-tool"
+      ]
+    },
+    {
       "id": "lldois/dsh-jev",
       "title": "lldois/dsh-jev",
       "description": "Semantic tool routing, skill discovery, and typed System One decisions for DeepSeek Harness powered by TypeSafe Jev.",
@@ -28562,6 +28716,28 @@
       "install": "github:Machine-126/dsh-alert-sound",
       "tags": [
         "machine-126/dsh-alert-sound"
+      ]
+    },
+    {
+      "id": "MacilyDots/dsh-olivia-bridge",
+      "title": "MacilyDots/dsh-olivia-bridge",
+      "description": "Reimplements the shut-down BSide: Olivia Lin letter API on loopback so the game client keeps sending and receiving letters: every incoming letter is delivered to one persistent DSH agent session, and the reply is written back to the local letter store.",
+      "category": "plugin",
+      "repo": "https://github.com/MacilyDots/dsh-olivia-bridge",
+      "install": "github:MacilyDots/dsh-olivia-bridge",
+      "tags": [
+        "macilydots/dsh-olivia-bridge"
+      ]
+    },
+    {
+      "id": "MacilyDots/dsh-prompt-inject",
+      "title": "MacilyDots/dsh-prompt-inject",
+      "description": "Registers a configurable prompt variable so an agent preset whose persona uses complete: true can still receive an injected text block; the plugin ships no content of its own and reads the text from its config.",
+      "category": "plugin",
+      "repo": "https://github.com/MacilyDots/dsh-prompt-inject",
+      "install": "github:MacilyDots/dsh-prompt-inject",
+      "tags": [
+        "macilydots/dsh-prompt-inject"
       ]
     },
     {
@@ -35283,6 +35459,17 @@
       "install": "github:praystring/dsh-send-debounce",
       "tags": [
         "praystring/dsh-send-debounce"
+      ]
+    },
+    {
+      "id": "prgrmrwy/dsh-sidebar-session-provider-icon",
+      "title": "prgrmrwy/dsh-sidebar-session-provider-icon",
+      "description": "DeepSeek Harness plugin: show a provider + model icon in the sidebar for every session, updated live from the composer model selector with a last-request fallback for history sessions; aggregator routes render the provider logo with a 10px model logo in the corner.",
+      "category": "client",
+      "repo": "https://github.com/prgrmrwy/dsh-sidebar-session-provider-icon",
+      "install": "github:prgrmrwy/dsh-sidebar-session-provider-icon",
+      "tags": [
+        "prgrmrwy/dsh-sidebar-session-provider-icon"
       ]
     },
     {
