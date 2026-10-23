@@ -1,8 +1,8 @@
 {
   "manifest": {
-    "generatedAt": "2026-10-22T22:17:49.071Z",
-    "fetchedCount": 6559,
-    "count": 6574,
+    "generatedAt": "2026-10-23T04:17:42.309Z",
+    "fetchedCount": 6565,
+    "count": 6580,
     "source": "awesome-dsh-plugin",
     "schema": "plugin-panel-curated@1"
   },
@@ -93,6 +93,17 @@
       "install": "github:030611/qiushi-dsh-evidence-audit",
       "tags": [
         "030611/qiushi-dsh-evidence-audit"
+      ]
+    },
+    {
+      "id": "0disoft/dsh-ci-diet",
+      "title": "0disoft/dsh-ci-diet",
+      "description": "Finds wasted GitHub Actions runner time and proposes small, reviewable workflow patches, with explicit approval before any edit and a DSH settings page for analysis rules, history limits, storage, and cost estimation.",
+      "category": "plugin",
+      "repo": "https://github.com/0disoft/dsh-ci-diet",
+      "install": "github:0disoft/dsh-ci-diet",
+      "tags": [
+        "0disoft/dsh-ci-diet"
       ]
     },
     {
@@ -14030,7 +14041,7 @@
     {
       "id": "day-day-dream/dsh-page-refresh/tree/main/plugins/dsh-page-refresh",
       "title": "day-day-dream/dsh-page-refresh#dsh-page-refresh",
-      "description": "Adds a refresh button to the conversation header in DeepSeek Harness, reloading the current page in one click without losing the conversation. Desktop-first, client-only, zero tokens.",
+      "description": "Adds a refresh button and a power menu (restart / close DeepSeek Harness) to the conversation header. Client-only, zero tokens, no dependencies. The power menu is Windows-only.",
       "category": "client",
       "repo": "https://github.com/day-day-dream/dsh-page-refresh/tree/main/plugins/dsh-page-refresh",
       "install": "github:day-day-dream/dsh-page-refresh/tree/main/plugins/dsh-page-refresh",
@@ -31141,6 +31152,39 @@
       ]
     },
     {
+      "id": "k0ndrateff/dsh-plugins/tree/main/packages/atlassian",
+      "title": "k0ndrateff/dsh-plugins#atlassian",
+      "description": "Jira and Confluence for DeepSeek Harness: the tools of Atlassian remote MCP server, a result card for issues and pages, and an issue panel.",
+      "category": "plugin",
+      "repo": "https://github.com/k0ndrateff/dsh-plugins/tree/main/packages/atlassian",
+      "install": "github:k0ndrateff/dsh-plugins/tree/main/packages/atlassian",
+      "tags": [
+        "k0ndrateff/dsh-plugins#atlassian"
+      ]
+    },
+    {
+      "id": "k0ndrateff/dsh-plugins/tree/main/packages/gitlab",
+      "title": "k0ndrateff/dsh-plugins#gitlab",
+      "description": "Merge requests, review threads and pipeline job logs for GitLab over its REST API with a personal access token, in a side panel, with comment, reply, resolve and approve actions that wait for confirmation. Reads need the read_api scope, writes need api.",
+      "category": "plugin",
+      "repo": "https://github.com/k0ndrateff/dsh-plugins/tree/main/packages/gitlab",
+      "install": "github:k0ndrateff/dsh-plugins/tree/main/packages/gitlab",
+      "tags": [
+        "k0ndrateff/dsh-plugins#gitlab"
+      ]
+    },
+    {
+      "id": "k0ndrateff/dsh-plugins/tree/main/packages/sentry",
+      "title": "k0ndrateff/dsh-plugins#sentry",
+      "description": "Sentry for DeepSeek Harness: the tools of Sentry MCP server, a result card, and an issue panel with resolve, ignore and assign.",
+      "category": "plugin",
+      "repo": "https://github.com/k0ndrateff/dsh-plugins/tree/main/packages/sentry",
+      "install": "github:k0ndrateff/dsh-plugins/tree/main/packages/sentry",
+      "tags": [
+        "k0ndrateff/dsh-plugins#sentry"
+      ]
+    },
+    {
       "id": "k2d5rqjpkg-art/dsh-auto-vision",
       "title": "k2d5rqjpkg-art/dsh-auto-vision",
       "description": "Auto-switch the DeepSeek route to the vision model on demand: flash main session switches (A), pro keeps deep reasoning and delegates image reading to a vision subagent (B), subagents always switch, with fatal-failure fallback. No manual model switching.",
@@ -46156,7 +46200,7 @@
     {
       "id": "pearjelly/deep-blend/tree/main/packages/deepblend/bundle",
       "title": "pearjelly/deep-blend#bundle",
-      "description": "Create editable Blender product scenes in DSH. Start from speaker, cup and lamp recipes or imported models; view saved results on the Lighttable, compare revisions, and adjust dimensions, materials, cameras and lights. Render images or saved-shot videos and export an editable revision with its assets. Native geometry inspections, immutable revisions and an approval gate help preserve existing work. Supports DSH 0.2.1-rc.1 and the legacy host, with 18 tools for modeling, review and delivery.",
+      "description": "Create editable Blender product scenes in DSH. Start from speaker, cup and lamp recipes or imported models; view saved results on the Lighttable, compare revisions, and adjust dimensions, materials, cameras and lights. Place static models on actual mesh surfaces in one saved operation. Render images or saved-shot videos and export an editable revision with its assets. Native geometry inspections, immutable revisions and an approval gate help preserve existing work. Supports DSH 0.2.1-rc.1 and the legacy host, with 19 tools for modeling, review and delivery.",
       "category": "plugin",
       "repo": "https://github.com/pearjelly/deep-blend/tree/main/packages/deepblend/bundle",
       "install": "github:pearjelly/deep-blend/tree/main/packages/deepblend/bundle",
@@ -56454,6 +56498,17 @@
       "install": "github:tensor-x/dsh-tauri-monitor",
       "tags": [
         "tensor-x/dsh-tauri-monitor"
+      ]
+    },
+    {
+      "id": "Tests4gptplay/dsh-kujira-persona",
+      "title": "Tests4gptplay/dsh-kujira-persona",
+      "description": "Injects a bundled whale-girl persona from editable Markdown files into DSH system prompts, with next-request updates, optional agent edits, and upgrade sync that preserves local changes.",
+      "category": "plugin",
+      "repo": "https://github.com/Tests4gptplay/dsh-kujira-persona",
+      "install": "github:Tests4gptplay/dsh-kujira-persona",
+      "tags": [
+        "tests4gptplay/dsh-kujira-persona"
       ]
     },
     {
@@ -71557,6 +71612,17 @@
       "install": "github:zizhongfeiyang/dsh-settings-drawer",
       "tags": [
         "zizhongfeiyang/dsh-settings-drawer"
+      ]
+    },
+    {
+      "id": "zjbc2000/attention-plugins",
+      "title": "zjbc2000/attention-plugins",
+      "description": "Task-priority session notifications for DSH: main-line sessions alert immediately on completion or failure, side-line completions can be batched into one alert, and questions or permission requests alert as they arrive; supports multiple main-line markers and a balanced mode that treats every session as main-line while nothing is marked.",
+      "category": "plugin",
+      "repo": "https://github.com/zjbc2000/attention-plugins",
+      "install": "github:zjbc2000/attention-plugins",
+      "tags": [
+        "zjbc2000/attention-plugins"
       ]
     },
     {
